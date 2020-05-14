@@ -1,0 +1,34 @@
+@import '../../utils/variables';
+
+.campaignsContainer {
+  display: flex;
+  flex-direction: column;
+  & .campaigns:first-of-type {
+    background: $lightGrey;
+  }
+}
+.campaigns {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  min-height: 700px;
+  padding: 0 18px 100px 18px;
+  box-sizing: border-box;
+}
+.sectionHeader {
+  color: $darkGrey;
+  line-height: 1.5;
+  text-align: center;
+
+  min-height: 150px;
+}
+.campaignsRow {
+  display: grid;
+  justify-content: center;
+  max-width: $max-width;
+  align-items: center;
+  width: 100%;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-gap: 14px;
+}

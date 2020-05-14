@@ -1,0 +1,32 @@
+@import '../../utils/variables';
+
+.appDownloadContainer {
+  background: $brand;
+  display: flex;
+  flex-direction: column;
+  // justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  min-height: 550px;
+  color: $white;
+  position: relative;
+}
+.downloadContent {
+  position: relative;
+  z-index: 10;
+  height: 400px;
+  margin: auto;
+}
+.downloadDescription {
+  width: 50%;
+}
+.downloadBtns {
+  display: flex;
+}
+.appImage {
+  position: absolute;
+  width: 400px;
+  bottom: -10px;
+  left: 50%;
+  z-index: 0;
+}

@@ -10,8 +10,6 @@ const TopNav = () => {
 
   const toggleNav = () => setNav((prev) => !prev);
 
-  window.console.log(navOpen);
-
   return (
     <div className={classes.navContainer}>
       <div className={classes.navItems}>

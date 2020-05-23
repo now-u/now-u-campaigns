@@ -4,14 +4,23 @@
   background: $brand;
   display: flex;
   flex-direction: column;
-  // justify-content: center;
   align-items: center;
   overflow: hidden;
   min-height: 550px;
   color: $white;
+  margin-top: 80px;
   position: relative;
+  width: 100vw;
+}
+.header {
+  position: relative;
+  z-index: 1;
+  margin-block-end: 0.5em;
 }
 .downloadContent {
+  display: flex;
+  flex-direction: column;
+  padding: 18px;
   position: relative;
   z-index: 10;
   height: 400px;
@@ -19,14 +28,30 @@
 }
 .downloadDescription {
   width: 50%;
+  min-width: 300px;
+  position: relative;
+  z-index: 1;
 }
 .downloadBtns {
   display: flex;
+  flex-flow: wrap;
+  width: 60%;
+  z-index: 2;
+  & button {
+    width: 40%;
+    max-width: 170px;
+  }
+  & img {
+    max-width: 100%;
+  }
 }
 .appImage {
   position: absolute;
-  width: 400px;
-  bottom: -10px;
-  left: 50%;
+  width: 65vw;
+  max-width: 400px;
+  bottom: -60px;
+  // margin-left: auto;
+  // left: 0;
+  right: -30px;
   z-index: 0;
 }

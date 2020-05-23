@@ -5,7 +5,8 @@
   flex-direction: column;
   justify-content: flex-end;
   box-shadow: $campaignBoxShadow;
-  height: 450px;
+  height: 500px;
+  max-height: 500px;
   max-width: 500px;
   width: inherit;
   margin: auto;

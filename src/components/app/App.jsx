@@ -1,7 +1,7 @@
 import React from 'react';
-import { BrowserRouter, Switch, Route, Link } from 'react-router-dom';
+import { BrowserRouter, Switch, Route, Link, Redirect } from 'react-router-dom';
 import { TopNav } from '../index';
-import { Campaigns } from '../../domain';
+import { Campaigns, Campaign } from '../../domain';
 import './App.scss';
 
 const App = () => {
@@ -13,8 +13,9 @@ const App = () => {
         </div>
         <TopNav />
         <Switch>
-          <Route path="/" exact component={() => <div />} />
           <Route path="/campaigns" exact component={Campaigns} />
+          <Route path="/campaigns/:id" exact component={Campaign} />
+          <Redirect to={'/campaigns'} />
         </Switch>
       </div>
     </BrowserRouter>

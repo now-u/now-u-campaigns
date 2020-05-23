@@ -18,8 +18,11 @@ h3 {
   margin-block-start: 0em;
 }
 h4 {
-  font-size: calc(16px + (28 - 16) * ((100vw - 375px) / (1920 - 375)));
-  margin-block-end: 0.3em;
+  font-size: calc(18px + (28 - 18) * ((100vw - 375px) / (1920 - 375)));
+  margin-block-end: 0em;
   margin-block-start: 0em;
   font-weight: $bold;
+}
+p {
+  font-size: calc(16px + (20 - 16) * ((100vw - 375px) / (1920 - 375)));
 }

@@ -3,11 +3,11 @@
 .campaignsContainer {
   display: flex;
   flex-direction: column;
-  & .campaigns:first-of-type {
+  & .campaignSection:first-of-type {
     background: $lightGrey;
   }
 }
-.campaigns {
+.campaignSection {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -29,6 +29,10 @@
   max-width: $max-width;
   align-items: center;
   width: 100%;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   grid-gap: 14px;
+}
+.noCampaigns {
+  grid-column: 1/4;
+  color: $grey;
 }

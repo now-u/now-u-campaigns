@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
-import { AppDownload } from '../../components';
+import { AppDownload, TopNav } from '../../components';
 import CampaignSection from './campaigns_section/CampaignsSection';
 import classes from './Campaigns.module.scss';
 
@@ -13,16 +13,18 @@ const Campaigns = () => {
       const resp = await fetch('https://now-u-api.herokuapp.com/api/v1/articles');
       const campaigns = await resp.json();
       setCampaigns(campaigns?.data);
-      window.console.log(campaigns);
     };
     fetchCampaigns();
   }, []);
   return (
-    <div className={classes.campaignsContainer}>
-      <CampaignSection title="Active Campaigns" campaigns={campaigns} />
-      {upcomingCampaigns && <CampaignSection title="Upcoming Campaigns" campaigns={upcomingCampaigns} />}
-      <AppDownload />
-    </div>
+    <>
+      <TopNav />
+      <div className={classes.campaignsContainer}>
+        <CampaignSection title="Active Campaigns" campaigns={campaigns} />
+        {upcomingCampaigns && <CampaignSection title="Upcoming Campaigns" campaigns={upcomingCampaigns} />}
+        <AppDownload />
+      </div>
+    </>
   );
 };
 

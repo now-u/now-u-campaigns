@@ -1,93 +1,39 @@
 @import '../../utils/variables';
 
 .navContainer {
-  position: sticky;
-  height: 120px;
-  padding: 18px;
-  top: 0px;
-  box-sizing: border-box;
-  background: $white;
-  z-index: 2;
-}
-.navItems {
-  z-index: 100;
-  margin: auto;
-  max-width: $max-width;
-  align-items: center;
-  box-sizing: border-box;
   display: flex;
-  justify-content: flex-end;
-  height: 100%;
-  width: 100%;
-  & a {
-    margin-right: auto;
+  padding: 18px;
+  left: 0;
+  right: 0;
+  height: auto;
+  position: sticky;
+  z-index: 3;
+  top: 0;
+  & .nav_icon {
+    color: black !important;
   }
+}
+.logoContainer {
+  height: 50px;
 }
 .logo {
-  height: 40px;
+  padding: 15px 0 15px 0;
+  width: 120px;
 }
-.menu {
-  overflow: hidden;
-}
-.navIcon {
-  background: #333;
-  height: 3px;
-  position: relative;
-  transition: background 0.2s ease-out;
-  width: 24px;
-  display: none;
-  cursor: pointer;
-  @media (max-width: 700px) {
-    display: block;
+.navMenu {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  height: auto;
+  & li {
+    list-style: none;
+    padding: 0 0 0 25px;
+    display: inline-block;
+    & a {
+      font-size: 16px;
+      font-weight: 600;
+      text-decoration: none;
+      color: black;
+    }
   }
 }
-
-.menuBtn:checked {
-  visibility: hidden;
-}
-.navIcon:before,
-.navIcon:after {
-  background: #333;
-  content: '';
-  display: block;
-  height: 3px;
-  position: absolute;
-  transition: all 0.2s ease-out;
-  width: 100%;
-  top: -8px;
-}
-.navIcon:before {
-  top: 8px;
-}
-.menuBtn {
-  display: none;
-}
-
-.navLink {
-  text-decoration: none;
-  color: $black;
-  font-weight: $semi-bold;
-  margin-left: 40px;
-}
-.headerBtn {
-  margin-left: 60px;
-}
-// @media (max-width: 990px) {
-//   // a {
-//   //   float: left;
-//   //   padding: 20px 30px;
-//   // }
-//   .menu {
-//     display: none;
-//     // display: flex;
-//     flex-direction: column;
-//     background: $blue;
-//     // max-width: none;
-//     // clear: none;
-//     // float: right;
-//     // max-height: none;
-//   }
-//   .menuIcon {
-//     display: none;
-//   }
-// }

@@ -6,28 +6,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-.App {
-  margin: auto;
-  position: relative;
-}
-
 a {
   text-decoration: none;
 }
 
-.announcements {
-  display: block;
-  height: auto;
-  padding: 10px 20px;
-  background: $blue;
-  text-align: center;
-  color: white;
-  & a {
-    color: $brand;
-    font-weight: $semi-bold;
-  }
-}
 .material-icons {
   font-size: inherit;
 }

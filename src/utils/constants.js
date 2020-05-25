@@ -1,6 +1,7 @@
 export const navLinks = [
-  { display: 'Our Story', path: '/our-story' },
-  { display: 'now-U App', path: '/the-app' },
-  { display: 'Get Involved', path: '/get-inv' },
-  { display: 'Campaigns', path: '/campaigns' },
+  { display: 'Home', path: '/#home' },
+  { display: 'Campaigns', path: '/#campaigns' },
+  { display: 'Our Story', path: '/our_story' },
+  { display: 'Our App', path: '/#the_app' },
+  { display: 'Get Involved', path: '/#get_involved' },
 ];

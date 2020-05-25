@@ -11,6 +11,8 @@ This repo is currently focused on creating a SPA to display campaigns. Its scope
 
 The homepage files are separated into both the /public and /src/domain/home folders. Eventually we can consolidate all the homepage assets into the /home folders when we migrate everything to React.
 
+`.env` file is added to commit for eslint so be sure to remove this if adding new environment variables
+
 ## To Dos
 
 1. Standardize font-sizes across app

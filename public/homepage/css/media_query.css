@@ -1,0 +1,372 @@
+/* 960 */
+@media screen and (max-width: 960px) {
+
+/* HEADER SECTION */
+    #header_text_container {
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    /* .topnav a.active {
+        padding: 5px 10px;
+        border-radius: 3px;
+        background-color: #FF8800;
+        color: white;
+    } */
+
+    .topnav li {
+        display: none;
+    }
+
+    .topnav a.nav_icon {
+        float: right;
+        display: block;
+        font-size: 20px;
+        color: white;
+    }
+
+    nav ul li a {
+        color: white;
+    }
+
+    .nav_bg {
+        display: none;
+    }
+
+    .NavContainer {
+        position: inherit;
+    }
+
+    .LogoContainer {
+        display: none;
+    }
+
+    #header_info_container {
+        margin: 0;
+    }
+
+    #header_text_container small {
+        padding: 0 0 10px 0;
+    }
+
+    header h2 {
+        padding: 0 0 50px 0;
+    }
+
+    /* #timer_container p {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    line-height: 55px;
+} */
+/* HEADER SECTION */    
+
+/* OUR STORY */
+    #timer_container {
+        width: auto;
+        padding: 0 20px 0 20px;
+    }
+
+    #timer_header {
+        margin: 50px 0 0 0;
+    }
+
+    /* #background_container {
+        display: grid;
+    } */
+
+    .left_content p {
+        font-size: 14px;
+    }
+/* OUR STORY */ 
+
+/* THE APP */
+
+    .the_app_container {
+        height: auto;
+    }
+
+    #campaigns_heading p {
+        padding: 0 30px 0 30px;
+        font-size: 14px;
+    }
+
+    .campaigns_info {
+        display: block;
+    }
+
+    .info_container {
+        margin-bottom: 50px;
+    }
+
+    .info_container img {
+        width: auto;
+    }
+
+    /* #app_background_container {
+        display: grid;
+        height: auto;
+    } */
+
+    #app_background_container .right_content {
+        padding: 50px;
+    }
+
+    /* #app_background_container .left_content img, #background_container .right_content img {
+        width: auto;
+    } */
+
+    .left_content #b, .left_content #g {
+        display: none;
+    }
+
+    #app_background_container .right_content p {
+        font-size: 14px;
+    }
+/* THE APP */
+
+/* GET INVOLVED */
+    .get_involved_container {
+        padding-top: 80px;
+        height: auto;
+        padding-bottom: 80px;
+    }
+
+    .get_involved_container p {
+        font-size: 14px;
+    }
+
+    /* #forms_container form label {
+        display: block;
+    } */
+/* GET INVOLVED */
+
+/* FOOTER */
+    #social_icons_container {
+        width: auto;
+    }
+/* FOOTER */
+
+}
+
+@media screen and (max-width: 960px) {
+
+    nav ul {
+        display: block;
+        float: none;
+        padding: 0;
+    }
+
+    .topnav.responsive li a span {
+        display: none;
+    }
+
+    .topnav.responsive {
+        position: relative;
+    }
+
+    .topnav.responsive .nav_icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .topnav.responsive li {
+        padding: 0 0 20px 0;
+        float: none;
+        display: block;
+        text-align: center;
+    }
+}
+/* 960 */
+
+/* 740 */
+@media screen and (max-width: 740px) {
+
+/* HEADER SECTION */
+    #header_text_container {
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    /* .topnav a.active {
+        padding: 5px 10px;
+        border-radius: 3px;
+        background-color: #FF8800;
+        color: white;
+    } */
+
+    .topnav li {
+        display: none;
+    }
+
+    .topnav a.nav_icon {
+      float: right;
+      display: block;
+      font-size: 20px;
+      color: white;
+    }
+
+    .nav_bg {
+        display: none;
+    }
+
+    .NavContainer {
+        position: inherit;
+    }
+
+    .LogoContainer {
+        display: none;
+    }
+
+    #header_info_container {
+        margin: 0;
+    }
+
+    #timer_container p {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    line-height: 55px;
+}
+/* HEADER SECTION */    
+
+/* OUR STORY */
+    #timer_container {
+        width: auto;
+        padding: 0 20px 0 20px;
+    }
+
+    #timer_header {
+        margin: 50px 0 0 0;
+    }
+
+    #background_container {
+        display: grid;
+    }
+
+    .left_content p {
+        font-size: 14px;
+    }
+/* OUR STORY */ 
+
+/* CAMPAIGNS */
+    .info_container img {
+        width: 100%;
+}   
+/* CAMPAIGNS */
+
+/* THE APP */
+    #campaigns_heading p {
+        padding: 0 30px 0 30px;
+        font-size: 14px;
+    }
+
+    .campaigns_info {
+        display: block;
+    }
+
+    .info_container {
+        margin-bottom: 50px;
+    }
+
+    #app_background_container {
+        display: grid;
+        height: auto;
+    }
+
+    #app_background_container .right_content {
+        padding: 50px;
+    }
+
+    #app_background_container .left_content img, #background_container .right_content img {
+        width: 80vw;
+        padding: 50px 0 0 0;
+    }
+
+    .left_content #b, .left_content #g {
+        display: none;
+    }
+
+    #app_background_container .right_content p {
+        font-size: 14px;
+    }
+/* THE APP */
+
+/* GET INVOLVED */
+    .get_involved_container {
+        padding-top: 80px;
+        height: auto;
+        padding-bottom: 80px;
+    }
+
+    .get_involved_container p {
+        font-size: 14px;
+    }
+
+    /* #forms_container form label {
+        display: block;
+    } */
+/* GET INVOLVED */
+
+/* FOOTER */
+    #social_icons_container {
+        width: auto;
+    }
+/* FOOTER */
+
+}
+
+/* RESPONSIVE NAVIGATION */  
+@media screen and (max-width: 740px) {
+
+    nav ul {
+        float: none;
+        padding: 0;
+    }
+
+    .topnav.responsive li a span {
+        display: none;
+    }
+
+    .topnav.responsive {
+        position: relative;
+    }
+
+    .topnav.responsive .nav_icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+
+    .topnav.responsive li {
+        padding: 0 0 20px 0;
+        float: none;
+        display: block;
+        text-align: center;
+    }
+}
+  /* RESPONSIVE NAVIGATION */
+  /* 740 */
+
+@media screen and (max-width: 640px) {
+  #forms_container form label {
+      display: block;
+  }
+
+  #required_val {
+      width: 165px;
+  }
+
+  #patern_val {
+      width: 215px;
+  }
+}
+
+@media only screen and (max-width: 850px) and (orientation: landscape) {
+    .device-rotate {
+        display: block;
+        min-width: -webkit-fill-available !important;
+        min-height: -webkit-fill-available !important;
+    }
+}

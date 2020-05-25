@@ -1,24 +1,10 @@
 import React from 'react';
-import { Text } from '../../components';
-import { roadSign } from '../../assets';
-import classes from './Homepage.module.scss';
+import htmlContent from './index.html';
 
-const Homepage = () => {
-  return (
-    <div className={classes.homepageContainer}>
-      <div className={classes.greeting}>
-        <Text className={classes.greetingMsg} type="h1">
-          It&apos;s time to change together.
-        </Text>
-      </div>
-      <div className={classes.homepageImg}>
-        <img src={roadSign} alt="person choosing path" />
-      </div>
-      <div className={classes.scrollNotice}>
-        <Text type="h4">Are you ready?</Text>
-      </div>
-    </div>
-  );
-};
+// assets for this page are separated into the public folder and src/domain/home folder
+// they will be consolidated once we migrate everything to react
+// please refer to the index.html file in the public folder for more details
 
-export default Homepage;
+export default function Homepage() {
+  return <div dangerouslySetInnerHTML={{ __html: htmlContent }} />;
+}

@@ -11,8 +11,8 @@
     "react-scripts": "3.4.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
     "lint": "eslint"
   },
   "babel": {
@@ -42,15 +42,18 @@
     "@babel/plugin-proposal-optional-chaining": "^7.9.0",
     "@babel/preset-react": "^7.9.4",
     "babel-eslint": "^10.1.0",
+    "copy-webpack-plugin": "^6.0.1",
     "css-loader": "^3.5.3",
+    "customize-cra": "^0.9.1",
     "eslint": "^6.8.0",
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.19.0",
     "eslint-plugin-react-hooks": "^2.5.1",
-    "mini-css-extract-plugin": "^0.9.0",
+    "html-loader": "^1.1.0",
     "node-sass": "^4.14.1",
     "prettier": "^2.0.5",
+    "react-app-rewired": "^2.1.6",
     "sass-loader": "^8.0.2",
     "style-loader": "^1.2.1"
   }

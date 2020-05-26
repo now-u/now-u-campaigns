@@ -1,0 +1,23 @@
+@import '../../utils/variables';
+
+.campaignPoster {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  box-shadow: $campaignBoxShadow;
+  height: 500px;
+  max-height: 500px;
+  max-width: 500px;
+  width: inherit;
+  margin: auto;
+  border-radius: 8px;
+  color: $white;
+  padding: 18px;
+  box-sizing: border-box;
+  background-blend-mode: overlay;
+  background-color: $activeOverlay;
+}
+.campaignBtn {
+  width: 100%;
+  justify-content: space-between;
+}

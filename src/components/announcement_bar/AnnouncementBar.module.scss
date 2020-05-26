@@ -1,0 +1,12 @@
+.announcements {
+  display: block;
+  height: auto;
+  padding: 10px 20px;
+  background: $blue;
+  text-align: center;
+  color: white;
+  & a {
+    color: $brand;
+    font-weight: $semi-bold;
+  }
+}

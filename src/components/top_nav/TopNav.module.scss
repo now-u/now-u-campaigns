@@ -1,0 +1,39 @@
+@import '../../utils/variables';
+
+.navContainer {
+  display: flex;
+  padding: 18px;
+  left: 0;
+  right: 0;
+  height: auto;
+  position: sticky;
+  z-index: 3;
+  top: 0;
+  & .nav_icon {
+    color: black !important;
+  }
+}
+.logoContainer {
+  height: 50px;
+}
+.logo {
+  padding: 15px 0 15px 0;
+  width: 120px;
+}
+.navMenu {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  height: auto;
+  & li {
+    list-style: none;
+    padding: 0 0 0 25px;
+    display: inline-block;
+    & a {
+      font-size: 16px;
+      font-weight: 600;
+      text-decoration: none;
+      color: black;
+    }
+  }
+}

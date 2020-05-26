@@ -1,0 +1,47 @@
+@import '../../utils/variables';
+
+.buttonContainer {
+  min-height: 40px;
+  border-radius: 8px;
+  border: unset;
+  padding: 0 16px;
+  font-size: 17px;
+  font-weight: $semi-bold;
+  cursor: pointer;
+  transition: filter 0.2s;
+  outline: none;
+  display: flex;
+  align-items: center;
+  margin-right: 14px;
+  margin-bottom: 14px;
+  &:hover {
+    filter: contrast(0.6);
+  }
+}
+.primary {
+  background-color: $brand;
+  color: $white;
+}
+.secondary {
+  border: 2px solid $brand;
+  color: $brand;
+}
+.flat {
+  box-shadow: $brandBoxShadow;
+  color: $brand;
+}
+.other {
+  background: transparent;
+  padding: 0px;
+}
+.small {
+  font-size: 14px;
+  padding: 6px 16px;
+}
+.large {
+  height: 48px;
+}
+.disabled {
+  opacity: 0.6;
+  pointer-events: none;
+}

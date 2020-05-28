@@ -21,7 +21,7 @@ const TopNav = () => {
   return (
     <div className={classNames(classes.navContainer, { [classes.navClose]: navClose })}>
       <div className={classes.navContent}>
-        <Link to={'/#home'} className={classes.logoContainer}>
+        <Link to={'/'} className={classes.logoContainer}>
           <img className={classes.logo} src={nowUOrange} alt="logo" />
         </Link>
         <nav id="navigation" className={classes.navigation}>
@@ -46,9 +46,11 @@ const TopNav = () => {
               );
             })}
             <li id="signup_btn">
-              <a href="#get_involved">
-                <Button type="primary">Sign up!</Button>
-              </a>
+              <Link scroll={(el) => el.scrollIntoView({ behavior: 'smooth' })} to="/#get_involved">
+                <Button id="sign up" type="primary">
+                  Sign up!
+                </Button>
+              </Link>
             </li>
           </ul>
         </nav>

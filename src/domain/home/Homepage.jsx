@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Text, Button, CampaignsGroup } from '../../components';
+import { NavHashLink as Link } from 'react-router-hash-link';
 import scroll from '../../assets/images/header/icons/scroll.png';
 import ourStory from '../../assets/images/main/our_story_img.png';
 import theApp from '../../assets/images/main/the_app.png';
@@ -7,19 +8,18 @@ import classes from './Homepage.module.scss';
 
 const Homepage = () => {
   const [state, setState] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
-  const [inputError, setError] = useState('Email is required');
 
   useEffect(() => {
     const launchDate = new Date('July 1, 2020 00:00:00').getTime();
     const setCountDown = setInterval(() => {
-      var now = new Date().getTime();
+      const now = new Date().getTime();
 
-      var distance = launchDate - now;
+      const distance = launchDate - now;
 
-      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
       setState({ days, hours, minutes, seconds });
     }, 1000);
     return () => clearInterval(setCountDown);
@@ -71,9 +71,11 @@ const Homepage = () => {
               worth capturing. By forcing us to stop and look at the world around us, coronavirus offers us a chance -
               an opportunity we can’t miss - to start shaping a better world and a better future.
             </Text>
-            <Button variant="primary" to="#get_involved">
-              Find out more
-            </Button>
+            <Link scroll={(el) => el.scrollIntoView({ behavior: 'smooth' })} to="/#get_involved">
+              <Button variant="primary" to="#get_involved">
+                Find out more
+              </Button>
+            </Link>
           </div>
           <div className={classes.storyRight}>
             <img src={ourStory} alt="choose direction" />
@@ -112,6 +114,7 @@ const Homepage = () => {
             className="validate"
             autoComplete="off"
             target="_blank"
+            rel="noopener noreferrer"
           >
             <div className={classes.formInputs}>
               <div className={classes.inputWrapper}>
@@ -129,7 +132,7 @@ const Homepage = () => {
           </form>
           <Text type="p">
             Also, help us out by leaving your feedback{' '}
-            <a href="https://forms.gle/c67832H8tFrS9aKD7" target="_blank">
+            <a href="https://forms.gle/c67832H8tFrS9aKD7" target="_blank" rel="noopener noreferrer">
               here
             </a>
             .
@@ -137,13 +140,24 @@ const Homepage = () => {
         </div>
       </div>
       <div className={classes.footer}>
-        <a href="https://www.facebook.com/nowufb" className="fa fa-facebook" target="_blank"></a>
-        <a href="https://twitter.com/now_u_app" className="fa fa-twitter" target="_blank"></a>
-        <a href="https://www.instagram.com/now_u_app/" className="fa fa-instagram" target="_blank"></a>
+        <a
+          href="https://www.facebook.com/nowufb"
+          className="fa fa-facebook"
+          target="_blank"
+          rel="noopener noreferrer"
+        ></a>
+        <a href="https://twitter.com/now_u_app" className="fa fa-twitter" target="_blank" rel="noopener noreferrer"></a>
+        <a
+          href="https://www.instagram.com/now_u_app/"
+          className="fa fa-instagram"
+          target="_blank"
+          rel="noopener noreferrer"
+        ></a>
         <a
           href="https://www.linkedin.com/company/now-u/?viewAsMember=true"
           className="fa fa-linkedin"
           target="_blank"
+          rel="noopener noreferrer"
         ></a>
       </div>
     </div>

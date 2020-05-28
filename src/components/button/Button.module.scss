@@ -4,16 +4,13 @@
   min-height: 40px;
   border-radius: 8px;
   border: unset;
-  padding: 0 16px;
+  padding: 0 18px;
   font-size: 17px;
   font-weight: $semi-bold;
   cursor: pointer;
   transition: filter 0.2s;
   outline: none;
-  display: flex;
-  align-items: center;
-  margin-right: 14px;
-  margin-bottom: 14px;
+  width: fit-content;
   &:hover {
     filter: contrast(0.6);
   }
@@ -27,7 +24,6 @@
   color: $brand;
 }
 .flat {
-  box-shadow: $brandBoxShadow;
   color: $brand;
 }
 .other {

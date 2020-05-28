@@ -1,0 +1,211 @@
+@import '../../utils/variables';
+
+.welcomeScreenContainer {
+  color: $white;
+  background: $brandGradient;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
+  padding-top: 5vh;
+}
+.appLaunch {
+  margin-block-end: 0em;
+}
+.timerContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 95%;
+  max-width: 1000px;
+  align-items: center;
+  grid-gap: 5%;
+}
+.timeWrapper {
+  & h2 {
+    border: 5px solid $blue;
+    line-height: 2;
+    border-radius: 20px;
+    background: $white;
+    padding: 0 15px;
+    color: $blue;
+  }
+  & p {
+    margin-block-end: 0em;
+  }
+}
+.headerTextContainer {
+  margin-top: 1em;
+  padding: 18px;
+  & h1 {
+    font-weight: $blackBold;
+  }
+  & h3 {
+    font-weight: $regular;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+  }
+  & p {
+    display: inline-grid;
+  }
+  & img {
+    margin: auto;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: $small) {
+  .timeWrapper {
+    & h2 {
+      font-size: calc(20px + (45 - 20) * ((100vw - 320px) / (480 - 320)));
+    }
+  }
+}
+
+// our story!
+.ourStoryContainer {
+  background: $purple;
+  color: $white;
+  padding-bottom: 100px;
+}
+.storyContentContainer {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap-reverse;
+  height: 100%;
+  max-width: calc(15vw + 1400px);
+  justify-content: space-between;
+  margin-left: auto;
+  padding: 18px;
+}
+.storyLeft {
+  width: 50vw;
+  max-width: 750px;
+  & button {
+    margin-top: 16px;
+  }
+}
+.storyRight {
+  max-width: 700px;
+  margin-top: 100px;
+  width: 45vw;
+  min-width: 300px;
+  margin-left: auto;
+  & img {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: $medium) {
+  .storyLeft {
+    width: 100%;
+    text-align: center;
+  }
+  .storyRight {
+    width: 80vw;
+  }
+}
+
+// the app
+.theAppContainer {
+  color: $white;
+  background: $brandGradient;
+  padding-bottom: 100px;
+}
+.appContentContainer {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap-reverse;
+  height: 100%;
+  max-width: calc(15vw + 1400px);
+  justify-content: center;
+  padding: 18px;
+  margin: auto;
+}
+.appLeft {
+  width: 50vw;
+  max-width: 750px;
+  margin-top: 100px;
+  min-width: 300px;
+  & img {
+    max-width: 100%;
+  }
+}
+.appRight {
+  max-width: 700px;
+  width: 45vw;
+  & img {
+    max-width: 100%;
+  }
+}
+@media (max-width: $medium) {
+  .appRight {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+// sign up
+.getInvolvedContainer {
+  background: $lightGrey;
+  color: $darkGrey;
+  padding: 100px 18px;
+}
+.getInvolvedContent {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: fit-content;
+  & button {
+    margin: 40px 0 20px 0;
+  }
+  & a {
+    color: #ff8800;
+  }
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+.formInputs {
+  flex-wrap: wrap;
+  display: flex;
+}
+.inputWrapper {
+  display: flex;
+  flex-direction: column;
+}
+label {
+  line-height: 2;
+  font-weight: $semi-bold;
+}
+input {
+  border: 2px solid transparent;
+  box-shadow: $boxShadow;
+  margin-right: 24px;
+  width: 250px;
+  height: 40px;
+  border-radius: 6px;
+  outline: none;
+  padding-left: 8px;
+  transition: border 0.3s;
+  &:focus {
+    border: 2px solid $brand;
+  }
+}
+.inputError {
+  color: $red;
+  font-size: 14px;
+  margin-block-start: 0.3em;
+}
+.footer {
+  padding: 40px;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 28px;
+  & a {
+    color: $black;
+    padding: 0 20px;
+  }
+}

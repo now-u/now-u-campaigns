@@ -1,24 +1,22 @@
 @import '../../utils/variables';
-h1.text {
+h1 {
   margin-block-end: 0em;
   margin-block-start: 0em;
-  font-size: calc(80px + (175 - 80) * ((100vw - 375px) / (1920 - 375)));
+  font-size: calc(30px + (90 - 30) * ((100vw - 320px) / (1920 - 320)));
 }
-h2.text {
-  font-size: calc(38px + (62 - 38) * ((100vw - 375px) / (1920 - 375)));
+h2 {
+  font-size: calc(34px + (62 - 34) * ((100vw - 320px) / (1920 - 320)));
 }
-h3.text {
-  font-size: 40px;
+h3 {
+  font-size: calc(18px + (40 - 18) * ((100vw - 320px) / (1920 - 320)));
   font-weight: $semi-bold;
-  margin-block-end: 0.2em;
-  margin-block-start: 0em;
 }
-h4.text {
-  font-size: calc(18px + (28 - 18) * ((100vw - 375px) / (1920 - 375)));
+h4 {
+  font-size: calc(18px + (28 - 18) * ((100vw - 320px) / (1920 - 320)));
   margin-block-end: 0.4em;
   margin-block-start: 0em;
   font-weight: $bold;
 }
-p.text {
-  font-size: calc(16px + (30 - 16) * ((100vw - 375px) / (1920 - 375)));
+p {
+  font-size: calc(14px + (30 - 14) * ((100vw - 320px) / (1920 - 320)));
 }

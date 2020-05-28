@@ -1,39 +1,101 @@
 @import '../../utils/variables';
 
 .navContainer {
-  display: flex;
+  width: 100%;
   padding: 18px;
-  left: 0;
-  right: 0;
   height: auto;
   position: sticky;
-  z-index: 3;
+  z-index: 2;
+  background: $white;
+  box-sizing: border-box;
+  max-height: 100px;
   top: 0;
-  & .nav_icon {
-    color: black !important;
-  }
+  box-shadow: $boxShadow;
+  transition: max-height 0.7s;
+  overflow: hidden;
+}
+.navContent {
+  max-width: $max-width;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
 }
 .logoContainer {
-  height: 50px;
+  margin-top: 1.2em;
+  margin-bottom: 1em;
+  width: 25vh;
+  max-width: 220px;
+  min-width: 100px;
 }
 .logo {
-  padding: 15px 0 15px 0;
-  width: 120px;
-}
-.navMenu {
-  display: flex;
-  justify-content: space-evenly;
   width: 100%;
-  height: auto;
-  & li {
-    list-style: none;
-    padding: 0 0 0 25px;
-    display: inline-block;
-    & a {
-      font-size: 16px;
-      font-weight: 600;
-      text-decoration: none;
-      color: black;
+}
+.navigation {
+  display: flex;
+  max-width: 900px;
+  width: calc(100% - 250px);
+}
+ul {
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  display: flex;
+  list-style: none;
+  box-sizing: border-box;
+}
+.navLink {
+  font-weight: $semi-bold;
+  color: $black;
+  &:hover {
+    border-bottom: 3px solid $brand;
+  }
+}
+.navIcon {
+  display: none;
+}
+
+@media (max-width: $medium) {
+  .navIcon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: fit-content;
+    cursor: pointer;
+    width: 30px;
+    margin-left: auto;
+    margin-top: 1.2em;
+    & > div {
+      transform-origin: left;
+      height: 3px;
+      width: inherit;
+      background: $black;
+      transition: transform 0.7s;
+      margin-bottom: 8px;
+    }
+  }
+  .navigation {
+    width: 100%;
+    display: block;
+    & ul {
+      display: flex;
+      margin-top: 1.5em;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+    & li {
+      padding: 6px;
+    }
+  }
+  .navClose {
+    max-height: 320px;
+    & .navIcon > div:nth-child(1) {
+      transform: rotate(45deg);
+    }
+    & .navIcon > div:nth-child(2) {
+      visibility: hidden;
+    }
+    & .navIcon > div:nth-child(3) {
+      transform: rotate(-45deg);
     }
   }
 }

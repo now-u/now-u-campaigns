@@ -1,17 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { useHistory } from 'react-router-dom';
 import classNames from 'classnames';
 import classes from './Button.module.scss';
 
-const Button = ({
-  id,
-  children,
-  variant = 'primary',
-  disabled,
-  size = 'medium',
-  className,
-  onClick,
-}) => {
+const Button = ({ id, children, type, variant = 'primary', disabled, size = 'medium', className, onClick, to }) => {
+  const history = useHistory();
+  const toPath = () => {
+    history.push(to);
+  };
   const buttonClassNames = classNames(className, classes[variant], [classes[size]], {
     [classes.disabled]: disabled,
   });
@@ -19,8 +16,9 @@ const Button = ({
     <button
       id={id}
       name={id}
+      type={type}
       className={classNames(classes.buttonContainer, buttonClassNames)}
-      onClick={onClick}
+      onClick={onClick || toPath}
     >
       {children}
     </button>
@@ -34,7 +32,9 @@ Button.propTypes = {
   disabled: PropTypes.bool,
   size: PropTypes.string,
   className: PropTypes.string,
-  onClick: PropTypes.onClick,
+  onClick: PropTypes.func,
+  to: PropTypes.string,
+  type: PropTypes.string,
 };
 
 export default Button;

@@ -10,8 +10,8 @@ const Text = ({ type = 'h3', className, children }) => {
 
 Text.propTypes = {
   type: PropTypes.string.isRequired,
-  className: PropTypes.className,
-  children: PropTypes.string,
+  className: PropTypes.string,
+  children: PropTypes.any,
 };
 
 export default Text;

@@ -8,8 +8,10 @@ body {
 }
 a {
   text-decoration: none;
+  &.selected {
+    border-bottom: 3px solid $brand;
+  }
 }
-
 .material-icons {
   font-size: inherit;
 }

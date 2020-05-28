@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/static/css/main.8fa0c318.chunk.css",
+    "main.js": "/static/js/main.9be7c50a.chunk.js",
+    "main.js.map": "/static/js/main.9be7c50a.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.2f77087f.js",
+    "runtime-main.js.map": "/static/js/runtime-main.2f77087f.js.map",
+    "static/js/2.de6c7474.chunk.js": "/static/js/2.de6c7474.chunk.js",
+    "static/js/2.de6c7474.chunk.js.map": "/static/js/2.de6c7474.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.9291b6f57ff3cf7a53b2d6b2a8c3c3bf.js": "/precache-manifest.9291b6f57ff3cf7a53b2d6b2a8c3c3bf.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.8fa0c318.chunk.css.map": "/static/css/main.8fa0c318.chunk.css.map",
+    "static/js/2.de6c7474.chunk.js.LICENSE.txt": "/static/js/2.de6c7474.chunk.js.LICENSE.txt",
+    "static/media/app-download.svg": "/static/media/app-download.9377dd96.svg",
+    "static/media/apple-store.svg": "/static/media/apple-store.5130b020.svg",
+    "static/media/google-store.svg": "/static/media/google-store.9932622c.svg",
+    "static/media/now-u-logo-orange.svg": "/static/media/now-u-logo-orange.23fe7730.svg",
+    "static/media/our_story_img.png": "/static/media/our_story_img.02c2e18c.png",
+    "static/media/road-sign.svg": "/static/media/road-sign.c0d9ab35.svg",
+    "static/media/the_app.png": "/static/media/the_app.465387fd.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2f77087f.js",
+    "static/js/2.de6c7474.chunk.js",
+    "static/css/main.8fa0c318.chunk.css",
+    "static/js/main.9be7c50a.chunk.js"
+  ]
+}

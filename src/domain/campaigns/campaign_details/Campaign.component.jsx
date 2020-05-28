@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import ReactPlayer from 'react-player';
-import { AppDownload, Text, TopNav } from '../../../components';
+import { AppDownload, Text} from '../../../components';
 import classes from './Campaign.module.scss';
 
 const Campaign = ({ campaign: { header_image, title, participants = '88098', video_link } }) => {

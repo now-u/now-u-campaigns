@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
-import { AppDownload, TopNav } from '../../components';
+import { AppDownload } from '../../components';
 import CampaignSection from './campaigns_section/CampaignsSection';
 import classes from './Campaigns.module.scss';
 

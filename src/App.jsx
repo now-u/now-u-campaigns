@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, HashRouter, Switch, Route, Redirect } from 'react-router-dom';
+import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 import { Campaigns, Campaign, Homepage } from './domain';
 import { TopNav, AnnounceBar } from './components';
 import './App.scss';

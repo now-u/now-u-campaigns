@@ -17,14 +17,11 @@ const Campaigns = () => {
     fetchCampaigns();
   }, []);
   return (
-    <>
-      <TopNav />
-      <div className={classes.campaignsContainer}>
-        <CampaignSection title="Active Campaigns" campaigns={campaigns} />
-        {upcomingCampaigns && <CampaignSection title="Upcoming Campaigns" campaigns={upcomingCampaigns} />}
-        <AppDownload />
-      </div>
-    </>
+    <div className={classes.campaignsContainer}>
+      <CampaignSection title="Active Campaigns" campaigns={campaigns} />
+      {upcomingCampaigns && <CampaignSection title="Upcoming Campaigns" campaigns={upcomingCampaigns} />}
+      <AppDownload />
+    </div>
   );
 };
 

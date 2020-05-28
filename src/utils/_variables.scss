@@ -6,6 +6,7 @@ $red: #d30001;
 $sunflower: #f3b700;
 $salomie: #ffdc79;
 $blue: #011a43;
+$purple: #2f2e41;
 $black: #000000;
 $white: #ffffff;
 $grey: #888888;
@@ -15,8 +16,12 @@ $activeOverlay: rgba(0, 0, 0, 0.3);
 $pastOverlay: rgba(204, 204, 204, 0.5);
 $whiteGradient: linear-gradient(#fff, #eee 100%);
 
-//  grid - padding/margins: 18px, gutter/gap: 14px;
-$brandBoxShadow: 0px 3px 10px 0px rgba(253, 136, 36, 0.15);
+// gradients
+$brandGradient: linear-gradient($brand, $red);
+
+//  box shadow
+$boxShadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+
 $campaignBoxShadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.16);
 
 // font-weight
@@ -29,3 +34,5 @@ $blackBold: 900;
 
 // screen sizes
 $max-width: 1400px;
+$medium: 768px;
+$small: 480px;

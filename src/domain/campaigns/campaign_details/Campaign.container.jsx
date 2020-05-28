@@ -11,7 +11,6 @@ const CampaignContainer = () => {
       const resp = await fetch(`https://now-u-api.herokuapp.com/api/v1/articles/${params.id}`);
       const campaign = await resp.json();
       setCampaign(campaign.data);
-      window.console.log(campaign, '***');
     };
     fetchCampaign();
   }, []);

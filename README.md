@@ -13,6 +13,8 @@ The homepage files are separated into both the /public and /src/domain/home fold
 
 `.env` file is added to commit for eslint so be sure to remove this if adding new environment variables
 
+To deploy to github pages for testing run `npm run deploy`
+
 ## To Dos
 
 1. Wire up app download buttons

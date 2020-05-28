@@ -53,12 +53,24 @@
     cursor: pointer;
   }
 }
-
+.downArrow {
+  animation: pulseDown 1s infinite;
+}
 @media (max-width: $small) {
   .timeWrapper {
     & h2 {
       font-size: calc(20px + (45 - 20) * ((100vw - 320px) / (480 - 320)));
     }
+  }
+}
+
+@keyframes pulseDown {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
   }
 }
 
@@ -171,6 +183,7 @@ form {
 .formInputs {
   flex-wrap: wrap;
   display: flex;
+  justify-content: space-between;
 }
 .inputWrapper {
   display: flex;

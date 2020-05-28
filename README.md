@@ -15,9 +15,6 @@ The homepage files are separated into both the /public and /src/domain/home fold
 
 ## To Dos
 
-1. Standardize font-sizes across app
-2. Add animations for hamburger menu when toggling nav
-3. Possibly add an announcements bar at the top of every page which displays the latest campaign added
-4. Wire up app download buttons
-5. Fetch real campaign data
-6. Must determine what the nav bar should look like when on /campaigns route
+1. Wire up app download buttons
+2. Fetch real campaign data
+3. Must determine what the nav bar should look like when on /campaigns route

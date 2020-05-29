@@ -74,3 +74,12 @@ jobs:
 
           docker tag $IMAGE_NAME $IMAGE_ID:$VERSION
           docker push $IMAGE_ID:$VERSION
+        
+      - name: executing remote ssh commands using ssh key
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.KEY }}
+          port: ${{ secrets.PORT }}
+          script: ./traefik/deploy-scripts/web-deploy

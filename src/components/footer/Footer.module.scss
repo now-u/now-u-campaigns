@@ -1,0 +1,17 @@
+@import '../../utils/variables';
+
+.footer {
+  padding: 40px;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 28px;
+  & a {
+    color: $black;
+    padding: 0 20px;
+  }
+}
+@media (max-width: $medium) {
+  .footer {
+    justify-content: center;
+  }
+}

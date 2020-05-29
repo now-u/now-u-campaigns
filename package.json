@@ -13,9 +13,9 @@
     "react-scripts": "3.4.1"
   },
   "scripts": {
-    "start": "react-app-rewired start",
-    "build": "react-app-rewired build",
-    "lint": "eslint",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "lint": "eslint .",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
@@ -52,7 +52,6 @@
     "eslint-plugin-react": "^7.19.0",
     "eslint-plugin-react-hooks": "^2.5.1",
     "gh-pages": "^2.2.0",
-    "html-loader": "^1.1.0",
     "node-sass": "^4.14.1",
     "prettier": "^2.0.5",
     "react-app-rewired": "^2.1.6"

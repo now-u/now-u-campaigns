@@ -35,7 +35,7 @@ const TopNav = () => {
               return (
                 <li key={display}>
                   <Link
-                    scroll={(el) => el.scrollIntoView({ behavior: 'smooth' })}
+                    scroll={(el) => el.scrollIntoView({ behavior: 'smooth', block: 'end' })}
                     className={classes.navLink}
                     activeClassName={'/' + active === path ? 'selected' : undefined}
                     to={path}

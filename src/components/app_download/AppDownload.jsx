@@ -11,7 +11,8 @@ const AppDownload = () => {
           Download our app to take part
         </Text>
         <Text type="p" className={classes.downloadDescription}>
-          To get involved and sign up to a campaign, download &apos;now-u&apos; from the App store on your smart phone.
+          To get involved and sign up to a campaign, download &apos;now-u&apos; from the app store on your smart phone
+          on the 1st July.
         </Text>
         <div className={classes.downloadBtns}>
           <Button variant="other">

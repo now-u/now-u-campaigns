@@ -18,5 +18,5 @@ To deploy to github pages for testing run `npm run deploy`
 ## To Dos
 
 1. Wire up app download buttons
-2. Fetch real campaign data
-3. Must determine what the nav bar should look like when on /campaigns route
+2. Must determine what the nav bar should look like when on /campaigns route
+3. Add parallax back to images

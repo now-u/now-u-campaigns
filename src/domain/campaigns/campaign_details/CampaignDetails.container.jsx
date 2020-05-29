@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useRouteMatch } from 'react-router-dom';
-import Campaign from './Campaign.component';
+import { campaignsURL } from '../../../utils/constants';
+import Campaign from './CampaignDetails.component';
 
 const CampaignContainer = () => {
   const { params } = useRouteMatch();
@@ -8,12 +9,12 @@ const CampaignContainer = () => {
 
   useEffect(() => {
     const fetchCampaign = async () => {
-      const resp = await fetch(`https://now-u-api.herokuapp.com/api/v1/campaigns/${params.id}`);
+      const resp = await fetch(`${campaignsURL}/${params.id}`);
       const campaign = await resp.json();
       setCampaign(campaign.data);
     };
     fetchCampaign();
-  }, []);
+  }, [params.id]);
 
   if (!campaign) return null;
   return <Campaign campaign={campaign} />;

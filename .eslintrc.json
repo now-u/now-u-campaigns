@@ -15,13 +15,15 @@
     "ecmaVersion": 11,
     "sourceType": "module"
   },
-  "plugins": ["react"],
+  "plugins": ["react", "react-hooks"],
   "parser": "babel-eslint",
   "rules": {
     "no-unused-vars": "error",
     "no-unused-expressions": "error",
     "no-var": "error",
     "prefer-const": "error",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
     "no-console": "error",
     "import/no-named-as-default-member": 0
   }

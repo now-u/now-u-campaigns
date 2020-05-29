@@ -8,10 +8,12 @@ const CampaignPoster = ({ campaign: { id, title = 'Coming soon..', number_of_cam
   return (
     <div key={id} className={classes.campaignPoster} style={{ backgroundImage: `url(${header_image})` }}>
       <Text type="h3">{title}</Text>
-      <Text className={classes.participants} type="h4">
-        <i className="material-icons">group</i>
-        &nbsp;{number_of_campaigners} people have joined
-      </Text>
+      {number_of_campaigners > 1 && (
+        <Text className={classes.participants} type="h4">
+          <i className="material-icons">group</i>
+          &nbsp;{number_of_campaigners} people have joined
+        </Text>
+      )}
       <Link to={`/campaigns/${id}`}>
         <Button id={id} className={classes.campaignBtn} variant="primary">
           See more

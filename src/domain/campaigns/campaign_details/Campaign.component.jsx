@@ -2,10 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import ReactPlayer from 'react-player';
-import { AppDownload, Text} from '../../../components';
+import { AppDownload, Text } from '../../../components';
 import classes from './Campaign.module.scss';
 
-const Campaign = ({ campaign: { header_image, title, participants = '88098', video_link } }) => {
+const Campaign = ({
+  campaign: { header_image, title, video_link, actions, number_of_campaigners, description_web },
+}) => {
   return (
     <div className={classes.campaignContainer}>
       <div className={classes.header}>
@@ -23,7 +25,7 @@ const Campaign = ({ campaign: { header_image, title, participants = '88098', vid
           <div className={classes.participants}>
             <Text type="h4">
               <i className="material-icons">group</i>
-              &nbsp;{participants} people have joined
+              &nbsp;{number_of_campaigners} people have joined
             </Text>
             <Text type="h4">You can too, on our app</Text>
           </div>
@@ -43,21 +45,7 @@ const Campaign = ({ campaign: { header_image, title, participants = '88098', vid
           This is a caption that concludes the key message of the video
         </Text>
         <ReactPlayer className={classes.video} url={video_link} width="100%" height="45vh" />
-        <Text type="p">
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-          dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-          clita kasd gubergren, no sea takimata sanctus est.
-        </Text>
-        <Text type="p">
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-          dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-          clita kasd gubergren, no sea takimata sanctus est.
-        </Text>
-        <Text type="p">
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-          dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-          clita kasd gubergren, no sea takimata sanctus est.
-        </Text>
+        <Text type="p">{description_web}</Text>
       </div>
       <div className={classes.actionContainer}>
         <Text className={classes.subtitle} type="h2">
@@ -67,21 +55,15 @@ const Campaign = ({ campaign: { header_image, title, participants = '88098', vid
           Complete weekly actions on our app to help us tackle this challenge. Here are some examples of how you can
           help today.
         </Text>
-        <div className={classes.actionItem}>
-          <div className={classes.divider} />
-          <i className="material-icons">assignment_turned_in</i>
-          <Text type="h4">Watch this 5-minute video to learn more about this challenge</Text>
-        </div>
-        <div className={classes.actionItem}>
-          <div className={classes.divider} />
-          <i className="material-icons">assignment_turned_in</i>
-          <Text type="h4">Watch this 5-minute video to learn more about this challenge</Text>
-        </div>
-        <div className={classes.actionItem}>
-          <div className={classes.divider} />
-          <i className="material-icons">assignment_turned_in</i>
-          <Text type="h4">Watch this 5-minute video to learn more about this challenge</Text>
-        </div>
+        {actions.map(({ title }) => {
+          return (
+            <div key={title} className={classes.actionItem}>
+              <div className={classes.divider} />
+              <i className="material-icons">assignment_turned_in</i>
+              <Text type="h4">{title}</Text>
+            </div>
+          );
+        })}
       </div>
       <AppDownload />
     </div>

@@ -5,7 +5,7 @@ import classes from './AnnouncementBar.module.scss';
 const App = () => {
   return (
     <div className={classes.announcements}>
-      Latest campaign: Announcement about latest campaign <Link to={'/campaigns'}> &nbsp;Check it out!</Link>
+      New campaigns added <Link to={'/campaigns'}> &nbsp;Check them out!</Link>
     </div>
   );
 };

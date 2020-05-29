@@ -10,7 +10,7 @@ const Campaigns = () => {
 
   useEffect(() => {
     const fetchCampaigns = async () => {
-      const resp = await fetch('https://now-u-api.herokuapp.com/api/v1/articles');
+      const resp = await fetch('https://now-u-api.herokuapp.com/api/v1/campaigns');
       const campaigns = await resp.json();
       setCampaigns(campaigns?.data);
     };

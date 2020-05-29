@@ -5,3 +5,5 @@ export const navLinks = [
   { display: 'Our Story', path: '/#our_story' },
   { display: 'Get Involved', path: '/#get_involved' },
 ];
+
+export const campaigns = 'https://now-u-api.herokuapp.com/api/v1/campaigns';

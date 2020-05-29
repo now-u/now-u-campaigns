@@ -165,7 +165,7 @@
   margin: auto;
   width: fit-content;
   & button {
-    margin-bottom: 20px;
+    margin: 20px 0;
   }
   & a {
     color: #ff8800;
@@ -194,7 +194,7 @@ input {
   border: 2px solid transparent;
   box-shadow: $boxShadow;
   margin-right: 24px;
-  width: 250px;
+  width: 270px;
   height: 40px;
   border-radius: 6px;
   outline: none;

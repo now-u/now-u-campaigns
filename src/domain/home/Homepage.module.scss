@@ -24,7 +24,7 @@
 .timeWrapper {
   & h2 {
     border: 5px solid $blue;
-    line-height: 2;
+    line-height: 2.5;
     border-radius: 20px;
     background: $white;
     padding: 0 15px;
@@ -86,13 +86,12 @@
   flex-wrap: wrap-reverse;
   height: 100%;
   max-width: calc(15vw + 1400px);
-  justify-content: space-between;
   margin-left: auto;
   padding: 18px;
 }
 .storyLeft {
-  width: 50vw;
-  max-width: 750px;
+  width: 40vw;
+  margin-left: auto;
   & button {
     margin-top: 16px;
   }
@@ -137,7 +136,7 @@
 .appLeft {
   width: 50vw;
   max-width: 750px;
-  margin-top: 100px;
+  margin-top: 50px;
   min-width: 300px;
   & img {
     max-width: 100%;
@@ -146,9 +145,6 @@
 .appRight {
   max-width: 700px;
   width: 45vw;
-  & img {
-    max-width: 100%;
-  }
 }
 @media (max-width: $medium) {
   .appRight {
@@ -169,7 +165,7 @@
   margin: auto;
   width: fit-content;
   & button {
-    margin: 40px 0 20px 0;
+    margin-bottom: 20px;
   }
   & a {
     color: #ff8800;
@@ -188,6 +184,7 @@ form {
 .inputWrapper {
   display: flex;
   flex-direction: column;
+  margin-bottom: 24px;
 }
 label {
   line-height: 2;
@@ -211,14 +208,4 @@ input {
   color: $red;
   font-size: 14px;
   margin-block-start: 0.3em;
-}
-.footer {
-  padding: 40px;
-  display: flex;
-  justify-content: flex-end;
-  font-size: 28px;
-  & a {
-    color: $black;
-    padding: 0 20px;
-  }
 }

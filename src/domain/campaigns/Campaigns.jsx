@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import PropTypes from 'prop-types';
-import { AppDownload } from '../../components';
-import CampaignSection from './campaigns_section/CampaignsSection';
+import { AppDownload, CampaignsGroup } from '../../components';
+import { campaignsURL } from '../../utils/constants';
 import classes from './Campaigns.module.scss';
 
 const Campaigns = () => {
@@ -10,7 +9,7 @@ const Campaigns = () => {
 
   useEffect(() => {
     const fetchCampaigns = async () => {
-      const resp = await fetch('https://now-u-api.herokuapp.com/api/v1/campaigns');
+      const resp = await fetch(campaignsURL);
       const campaigns = await resp.json();
       setCampaigns(campaigns?.data);
     };
@@ -18,16 +17,11 @@ const Campaigns = () => {
   }, []);
   return (
     <div className={classes.campaignsContainer}>
-      <CampaignSection title="Active Campaigns" campaigns={campaigns} />
-      {upcomingCampaigns && <CampaignSection title="Upcoming Campaigns" campaigns={upcomingCampaigns} />}
+      <CampaignsGroup title="Active Campaigns" campaigns={campaigns} />
+      {upcomingCampaigns && <CampaignsGroup title="Upcoming Campaigns" campaigns={upcomingCampaigns} />}
       <AppDownload />
     </div>
   );
-};
-
-Campaigns.propTypes = {
-  activeCampaigns: PropTypes.array,
-  upcomingCampaigns: PropTypes.array,
 };
 
 export default Campaigns;

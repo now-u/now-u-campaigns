@@ -20,8 +20,8 @@ const OurStory = () => {
             opportunity we can’t miss - to start shaping a better world and a better future.
           </Text>
           <Link scroll={(el) => el.scrollIntoView({ behavior: 'smooth' })} to="/#get_involved">
-            <Button variant="primary" to="#get_involved">
-              Find out more
+            <Button variant="primary" to="#get_involved" size="large">
+              Ready to act now?
             </Button>
           </Link>
         </div>

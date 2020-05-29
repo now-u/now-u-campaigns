@@ -85,13 +85,12 @@
   align-items: center;
   flex-wrap: wrap-reverse;
   height: 100%;
-  max-width: calc(15vw + 1400px);
-  margin-left: auto;
+  max-width: $max-width;
+  margin: auto;
   padding: 18px;
 }
 .storyLeft {
   width: 40vw;
-  margin-left: auto;
   & button {
     margin-top: 16px;
   }
@@ -101,7 +100,9 @@
   margin-top: 100px;
   width: 45vw;
   min-width: 300px;
+  position: absolute;
   margin-left: auto;
+  right: 0;
   & img {
     max-width: 100%;
   }
@@ -113,6 +114,7 @@
     text-align: center;
   }
   .storyRight {
+    position: relative;
     width: 80vw;
   }
 }

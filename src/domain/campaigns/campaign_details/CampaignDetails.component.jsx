@@ -22,7 +22,7 @@ const Campaign = ({
         <Text className={classes.title} type="h1">
           {title}
         </Text>
-        {!!number_of_campaigners && (
+        {number_of_campaigners > 1 && (
           <div className={classes.meta}>
             <div className={classes.participants}>
               <Text type="h4">
@@ -66,7 +66,7 @@ const Campaign = ({
               <div className={classes.actionItem}>
                 <div className={classes.divider} />
                 <i className="material-icons">assignment_turned_in</i>
-                <Text type="h4">{title}</Text>
+                <Text type="h4">Coming soon...</Text>
               </div>
             </a>
           );

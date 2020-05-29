@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/now-u-campaigns/static/css/main.8fa0c318.chunk.css",
-    "main.js": "/now-u-campaigns/static/js/main.5eabc9c6.chunk.js",
-    "main.js.map": "/now-u-campaigns/static/js/main.5eabc9c6.chunk.js.map",
+    "main.css": "/now-u-campaigns/static/css/main.186a6933.chunk.css",
+    "main.js": "/now-u-campaigns/static/js/main.aff03e50.chunk.js",
+    "main.js.map": "/now-u-campaigns/static/js/main.aff03e50.chunk.js.map",
     "runtime-main.js": "/now-u-campaigns/static/js/runtime-main.23d60944.js",
     "runtime-main.js.map": "/now-u-campaigns/static/js/runtime-main.23d60944.js.map",
-    "static/js/2.de6c7474.chunk.js": "/now-u-campaigns/static/js/2.de6c7474.chunk.js",
-    "static/js/2.de6c7474.chunk.js.map": "/now-u-campaigns/static/js/2.de6c7474.chunk.js.map",
+    "static/js/2.65fee542.chunk.js": "/now-u-campaigns/static/js/2.65fee542.chunk.js",
+    "static/js/2.65fee542.chunk.js.map": "/now-u-campaigns/static/js/2.65fee542.chunk.js.map",
     "index.html": "/now-u-campaigns/index.html",
-    "precache-manifest.4281d679e01b32321a28a5d8c9a9f5e8.js": "/now-u-campaigns/precache-manifest.4281d679e01b32321a28a5d8c9a9f5e8.js",
+    "precache-manifest.7a20e0efe7dd6c66f1a2e9952a555aeb.js": "/now-u-campaigns/precache-manifest.7a20e0efe7dd6c66f1a2e9952a555aeb.js",
     "service-worker.js": "/now-u-campaigns/service-worker.js",
-    "static/css/main.8fa0c318.chunk.css.map": "/now-u-campaigns/static/css/main.8fa0c318.chunk.css.map",
-    "static/js/2.de6c7474.chunk.js.LICENSE.txt": "/now-u-campaigns/static/js/2.de6c7474.chunk.js.LICENSE.txt",
+    "static/css/main.186a6933.chunk.css.map": "/now-u-campaigns/static/css/main.186a6933.chunk.css.map",
+    "static/js/2.65fee542.chunk.js.LICENSE.txt": "/now-u-campaigns/static/js/2.65fee542.chunk.js.LICENSE.txt",
     "static/media/app-download.svg": "/now-u-campaigns/static/media/app-download.9377dd96.svg",
     "static/media/apple-store.svg": "/now-u-campaigns/static/media/apple-store.5130b020.svg",
     "static/media/google-store.svg": "/now-u-campaigns/static/media/google-store.9932622c.svg",
@@ -22,8 +22,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.23d60944.js",
-    "static/js/2.de6c7474.chunk.js",
-    "static/css/main.8fa0c318.chunk.css",
-    "static/js/main.5eabc9c6.chunk.js"
+    "static/js/2.65fee542.chunk.js",
+    "static/css/main.186a6933.chunk.css",
+    "static/js/main.aff03e50.chunk.js"
   ]
 }

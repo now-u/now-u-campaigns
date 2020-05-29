@@ -26,4 +26,10 @@ FROM nginx:stable-alpine
 COPY --from=build /app/build /usr/share/nginx/html/
 #COPY --from=build /nginx /etc/nginx/
 EXPOSE 80
-CMD ["nginx", "-g", "daemon off;"]
+#CMD ["nginx", "-g", "daemon off;"]
+
+COPY entrypoint.sh /usr/bin/
+RUN chmod +x /usr/bin/entrypoint.sh
+
+ENTRYPOINT ["entrypoint.sh"]
+

@@ -55,4 +55,5 @@ jobs:
             cd now-u-campaigns
             git pull
             cd ../traefik
+            docker-compose build web
             ./deploy-scripts/web-deploy

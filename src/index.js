@@ -4,21 +4,23 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 import ReactGA from 'react-ga';
-import TagManager from 'react-gtm-module'
+import TagManager from 'react-gtm-module';
 import ReactPixel from 'react-facebook-pixel';
 
-const trackingId = "UA-164779666-1"; // Replace with your Google Analytics tracking ID
+const trackingId = 'UA-164779666-1'; // Replace with your Google Analytics tracking ID
+
 ReactGA.initialize(trackingId);
+ReactGA.pageview(window.location.pathname + window.location.search);
 
 const tagManagerArgs = {
-    gtmId: trackingId
-}
- 
-TagManager.initialize(tagManagerArgs)
+  gtmId: trackingId,
+};
+
+TagManager.initialize(tagManagerArgs);
 
 const options = {
-    autoConfig: true, 	// set pixel's autoConfig
-    debug: false, 		// enable logs
+  autoConfig: true, // set pixel's autoConfig
+  debug: false, // enable logs
 };
 ReactPixel.init('2581817878752174', options);
 

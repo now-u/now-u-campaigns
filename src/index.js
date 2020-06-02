@@ -2,6 +2,18 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import ReactGA from 'react-ga';
+
+import TagManager from 'react-gtm-module'
+
+const trackingId = "G-XE0EZQRZE3"; // Replace with your Google Analytics tracking ID
+ReactGA.initialize(trackingId);
+
+const tagManagerArgs = {
+    gtmId: trackingId
+}
+ 
+TagManager.initialize(tagManagerArgs)
 
 ReactDOM.render(
   <React.StrictMode>

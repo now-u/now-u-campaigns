@@ -2,11 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+
 import ReactGA from 'react-ga';
-
 import TagManager from 'react-gtm-module'
+import ReactPixel from 'react-facebook-pixel';
 
-const trackingId = "G-XE0EZQRZE3"; // Replace with your Google Analytics tracking ID
+const trackingId = "UA-164779666-1"; // Replace with your Google Analytics tracking ID
 ReactGA.initialize(trackingId);
 
 const tagManagerArgs = {
@@ -14,6 +15,15 @@ const tagManagerArgs = {
 }
  
 TagManager.initialize(tagManagerArgs)
+
+const options = {
+    autoConfig: true, 	// set pixel's autoConfig
+    debug: false, 		// enable logs
+};
+ReactPixel.init('2581817878752174', options);
+
+// Tracks page views (more useful in future versions)
+ReactPixel.pageView();
 
 ReactDOM.render(
   <React.StrictMode>

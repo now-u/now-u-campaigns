@@ -89,5 +89,5 @@ jobs:
           port: ${{ secrets.PORT }}
           script: |
             cd ./traefik
-            docker pull docker.pkg.github.com/now-u/now-u-api/web:${{steps.vars.outputs.tag}}
-            docker service update --image docker.pkg.github.com/now-u/now-u-api/web:${{steps.vars.outputs.tag}} web_web
+            docker pull docker.pkg.github.com/now-u/now-u-web/web:${{steps.vars.outputs.tag}}
+            docker service update --image docker.pkg.github.com/now-u/now-u-web/web:${{steps.vars.outputs.tag}} web_web

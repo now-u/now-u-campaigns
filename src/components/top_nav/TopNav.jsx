@@ -18,6 +18,15 @@ const TopNav = () => {
     setNav(false);
   }, [location.hash]);
 
+  const scrollWithOffset = (el, offset) => {
+    const elementPosition = el.offsetTop - offset;
+    window.scroll({
+      top: elementPosition,
+      left: 0,
+      behavior: "smooth"
+    });
+  }
+
   return (
     <div className={classNames(classes.navContainer, { [classes.navClose]: navClose })}>
       <div className={classes.navContent}>
@@ -35,7 +44,7 @@ const TopNav = () => {
               return (
                 <li key={display}>
                   <Link
-                    scroll={(el) => el.scrollIntoView({ behavior: 'smooth', block: 'end' })}
+                    scroll={(el) => scrollWithOffset(el, 100)}
                     className={classes.navLink}
                     activeClassName={'/' + active === path ? 'selected' : undefined}
                     to={path}

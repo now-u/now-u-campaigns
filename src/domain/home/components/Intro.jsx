@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Text } from '../../../components';
 import scroll from '../../../assets/images/header/icons/scroll.png';
 import classes from '../Homepage.module.scss';
+import { Link } from "react-scroll";
 
 const Intro = () => {
   const [state, setState] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
@@ -49,7 +50,10 @@ const Intro = () => {
         <Text type="h1">It’s time to change together&#46;</Text>
         <Text type="h3">Find out how you can get involved</Text>
         <Text type="p">
-          Get ready <img className={classes.downArrow} src={scroll} alt="image" />
+          Get ready 
+          <Link to="our_story" smooth={true} duration={500} offset={-100} >
+            <img className={classes.downArrow} src={scroll} alt="image" />
+          </Link>
         </Text>
       </div>
     </div>

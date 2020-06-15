@@ -8,7 +8,8 @@ const Homepage = () => {
 
   useEffect(() => {
     const fetchCampaigns = async () => {
-      const resp = await fetch('https://now-u-api.herokuapp.com/api/v1/campaigns');
+      //const resp = await fetch('https://now-u-api.herokuapp.com/api/v1/campaigns');
+      const resp = await fetch('https://api.now-u.com/api/v1/campaigns');
       const campaigns = await resp.json();
       setCampaigns(campaigns?.data);
     };

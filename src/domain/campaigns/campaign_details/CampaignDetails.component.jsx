@@ -60,13 +60,13 @@ const Campaign = ({
           Complete weekly actions on our app to help us tackle this challenge. Here are some examples of how you can
           help today.
         </Text>
-        {actions.map(({ title }) => {
+        {actions.map(({ title, link }) => {
           return (
-            <a key={title} href="https://now-u.com/" target="_blank" rel="noopener noreferrer">
+            <a key={title} href={link} target="_blank" rel="noopener noreferrer">
               <div className={classes.actionItem}>
                 <div className={classes.divider} />
                 <i className="material-icons">assignment_turned_in</i>
-                <Text type="h4">Coming soon...</Text>
+                <Text type="h4">{title}</Text>
               </div>
             </a>
           );

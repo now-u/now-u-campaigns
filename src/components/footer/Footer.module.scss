@@ -3,14 +3,27 @@
 .footer {
   padding: 40px;
   display: flex;
-  justify-content: flex-end;
+  flex-wrap: wrap-reverse;
+  justify-content: space-between;
   font-size: 28px;
   & a {
     color: $black;
     padding: 0 20px;
   }
 }
-@media (max-width: $medium) {
+
+.links {
+  font-size: 18px;
+}
+
+.socialLinks {
+  display: flex;
+}
+
+@media (max-width: $small) {
+  .links {
+    margin-top: 24px;
+  }
   .footer {
     justify-content: center;
   }

@@ -23,6 +23,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 2em;
+    row-gap: 1em;
     justify-items: center;
     max-width: 100%;
     overflow: hidden;
@@ -55,6 +56,9 @@
     text-align: left;
     padding: 5px 15px;
     justify-content: space-around;
+    > div {
+        padding: 5px 0px;
+    }
 }
 
 .blogHashtags{
@@ -62,14 +66,14 @@
     a {
         font-weight: normal;
         font-size: 17px;
-        color: #707070;
+        color: $blogHashtagColor;
         padding-right: 10px;
     }
 }
 
 .blogTitle{
-    font-weight: bold;
-    font-size: 24px;
+    font-weight: $bold;
+    font-size: 22px;
     line-height: 27px;
     text-align: left;
     color: $black;
@@ -81,5 +85,5 @@
     font-size: 17px;
     line-height: 30px;
     text-align: left;
-    color: #011a43;
+    color: $blogAuthorColor;
 }

@@ -1,0 +1,18 @@
+@import '../../utils/variables';
+
+.downloadBtns {
+  display: flex;
+  margin: 2em 0;
+  justify-content: space-between;
+  max-width: 600px;
+  flex-wrap: wrap;
+  & a {
+    display: flex;
+    width: 48%;
+    max-width: 300px;
+  }
+  & img {
+    max-width: 100%;
+    width: 90%;
+  }
+}

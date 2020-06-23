@@ -1,6 +1,10 @@
 export { default as nowUOrange } from './now-u-logo-orange.svg';
 export { default as roadSign } from './road-sign.svg';
 export { default as appDownload } from './app-download.svg';
-export { default as appleStore } from './apple-store.svg';
-export { default as googleStore } from './google-store.svg';
+export { default as appleStore } from './apple-store.png';
+export { default as googleStore } from './google-store.png';
 export { default as privacyNotice } from './now-u_privacy-notice.pdf';
+export { default as worldIllustration } from './world_illustration.svg';
+export { default as ourStory } from './our_story_img.png';
+export { default as theApp } from './the_app.png';
+export * from './homepage';

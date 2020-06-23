@@ -21,8 +21,12 @@
   color: $white;
 }
 .secondary {
-  border: 2px solid $brand;
   color: $brand;
+}
+.inverted {
+  border: 1px solid $white;
+  color: white;
+  background: transparent;
 }
 .flat {
   color: $brand;

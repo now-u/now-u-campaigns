@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavHashLink as Link } from 'react-router-hash-link';
 import { Text, Button } from '../../../components';
-import ourStory from '../../../assets/images/main/our_story_img.png';
+import { ourStory } from '../../../assets';
 import classes from '../Homepage.module.scss';
 
 const OurStory = () => {

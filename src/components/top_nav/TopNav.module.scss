@@ -2,37 +2,38 @@
 
 .navContainer {
   width: 100%;
-  padding: 18px;
   height: auto;
-  position: sticky;
   z-index: 2;
-  background: $white;
+  background: transparent;
   box-sizing: border-box;
   max-height: 100px;
   top: 0;
+  position: sticky;
+  padding: 12px 18px;
   box-shadow: $boxShadow;
-  transition: max-height 0.7s;
-  overflow: hidden;
+  background: $white;
 }
 .navContent {
-  max-width: $max-width;
   display: flex;
   justify-content: space-between;
   margin: auto;
+  position: relative;
+  align-items: center;
 }
 .logoContainer {
-  margin-top: 1.2em;
-  margin-bottom: 1em;
+  display: flex;
   width: 25vh;
-  max-width: 220px;
-  min-width: 100px;
+  height: fit-content;
+  max-width: 240px;
+  min-width: 150px;
+  border-radius: 10px;
 }
 .logo {
   width: 100%;
 }
 .navigation {
   display: flex;
-  max-width: 900px;
+  max-width: 800px;
   width: calc(100% - 250px);
 }
 ul {
@@ -45,13 +46,51 @@ ul {
 }
 .navLink {
   font-weight: $semi-bold;
-  color: $black;
+  color: $blue;
+  font-size: calc(14px + (24 - 14) * ((100vw - 320px) / (1920 - 320)));
+  transition: color 0.4s;
   &:hover {
-    border-bottom: 3px solid $brand;
+    color: $brand;
   }
 }
 .navIcon {
   display: none;
+}
+
+.mobileMenu {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  background: $white;
+  width: 100%;
+  left: 0;
+  color: $blue;
+  height: fit-content;
+  box-sizing: border-box;
+  box-shadow: $boxShadow;
+  border-radius: 10px;
+  visibility: hidden;
+  transform: translateY(-150%);
+  top: 0;
+  transition: all 0.4s ease;
+  padding: 1em;
+  & i {
+    font-size: 24px;
+    margin-left: auto;
+  }
+}
+.mobileMenuHeader {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1em;
+  & .logo {
+    width: 150px;
+  }
+}
+.mobileNavLink {
+  line-height: 2.5;
+  color: $blue;
+  text-decoration: none;
 }
 
 @media (max-width: $medium) {
@@ -61,41 +100,32 @@ ul {
     justify-content: center;
     height: fit-content;
     cursor: pointer;
-    width: 30px;
+    width: 24px;
     margin-left: auto;
-    margin-top: 1.2em;
+    margin-top: 0.5em;
     & > div {
       transform-origin: left;
       height: 3px;
       width: inherit;
-      background: $black;
+      background: $blue;
       transition: transform 0.7s;
-      margin-bottom: 8px;
+      margin-bottom: 6px;
     }
+  }
+  .navRow {
+    display: none;
   }
   .navigation {
     width: 100%;
     display: block;
-    & ul {
-      display: flex;
-      margin-top: 1.5em;
-      flex-direction: column;
-      align-items: flex-end;
-    }
     & li {
       padding: 6px;
     }
   }
   .navClose {
-    max-height: 340px;
-    & .navIcon > div:nth-child(1) {
-      transform: rotate(45deg);
-    }
-    & .navIcon > div:nth-child(2) {
-      visibility: hidden;
-    }
-    & .navIcon > div:nth-child(3) {
-      transform: rotate(-45deg);
+    & .mobileMenu {
+      visibility: visible;
+      transform: translateY(0%);
     }
   }
 }

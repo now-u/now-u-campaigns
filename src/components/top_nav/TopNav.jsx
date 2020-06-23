@@ -1,31 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import classNames from 'classnames';
-import { useLocation } from 'react-router-dom';
-import { NavHashLink as Link } from 'react-router-hash-link';
-import { Button } from '../../components';
+import { Link } from 'react-router-dom';
 import { nowUOrange } from '../../assets';
-import { navLinks } from '../../utils/constants';
+import { navLinks, mobileNavLinks } from '../../utils/constants';
 import classes from './TopNav.module.scss';
 
 const TopNav = () => {
-  const location = useLocation();
   const [navClose, setNav] = useState(false);
-  const [active, setActive] = useState('');
   const toggleNav = () => setNav((prev) => !prev);
-
-  useEffect(() => {
-    setActive(location.hash);
-    setNav(false);
-  }, [location.hash]);
-
-  const scrollWithOffset = (el, offset) => {
-    const elementPosition = el.offsetTop - offset;
-    window.scroll({
-      top: elementPosition,
-      left: 0,
-      behavior: "smooth"
-    });
-  }
 
   return (
     <div className={classNames(classes.navContainer, { [classes.navClose]: navClose })}>
@@ -39,28 +21,41 @@ const TopNav = () => {
             <div />
             <div />
           </div>
+          <div className={classes.mobileMenu}>
+            <div className={classes.mobileMenuHeader}>
+              <img className={classes.logo} src={nowUOrange} alt="logo" />
+              <i className="material-icons" onClick={toggleNav}>
+                close
+              </i>
+            </div>
+            {mobileNavLinks.map(({ display, path, external }) => {
+              return path ? (
+                <Link key={display} className={classes.mobileNavLink} to={path}>
+                  {display}
+                </Link>
+              ) : (
+                <a
+                  key={display}
+                  className={classes.mobileNavLink}
+                  href={external}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {display}
+                </a>
+              );
+            })}
+          </div>
           <ul className={classes.navRow}>
             {navLinks.map(({ display, path }) => {
               return (
                 <li key={display}>
-                  <Link
-                    scroll={(el) => scrollWithOffset(el, 100)}
-                    className={classes.navLink}
-                    activeClassName={'/' + active === path ? 'selected' : undefined}
-                    to={path}
-                  >
+                  <Link activeClassName="selected" className={classes.navLink} to={path}>
                     {display}
                   </Link>
                 </li>
               );
             })}
-            <li id="signup_btn">
-              <Link scroll={(el) => el.scrollIntoView({ behavior: 'smooth' })} to="/#get_involved">
-                <Button id="sign up" type="primary">
-                  Sign up!
-                </Button>
-              </Link>
-            </li>
           </ul>
         </nav>
       </div>

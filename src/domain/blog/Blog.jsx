@@ -27,6 +27,30 @@ const Blog = () => {
                         blogHashtags={["refugee", "migrants", "UK"]}
                         blogImageSrc="https://www.onblastblog.com/wp-content/uploads/2018/05/free-images-for-blogs.jpeg"
                     />
+                    <BlogPost
+                        blogTitle="The impacts of climate change on the water crisis"
+                        blogAuthor="Helene McHugh"
+                        blogHashtags={["climatechange", "WASH"]}
+                        blogImageSrc="https://www.onblastblog.com/wp-content/uploads/2018/05/free-images-for-blogs.jpeg"
+                    />
+                    <BlogPost
+                        blogTitle="The impacts of climate change on the water crisis"
+                        blogAuthor="Helene McHugh"
+                        blogHashtags={["climatechange", "WASH"]}
+                        blogImageSrc="https://www.onblastblog.com/wp-content/uploads/2018/05/free-images-for-blogs.jpeg"
+                    />
+                    <BlogPost
+                        blogTitle="The impacts of climate change on the water crisis"
+                        blogAuthor="Helene McHugh"
+                        blogHashtags={["climatechange", "WASH"]}
+                        blogImageSrc="https://www.onblastblog.com/wp-content/uploads/2018/05/free-images-for-blogs.jpeg"
+                    />
+                    <BlogPost
+                        blogTitle="The impacts of climate change on the water crisis"
+                        blogAuthor="Helene McHugh"
+                        blogHashtags={["climatechange", "WASH"]}
+                        blogImageSrc="https://www.onblastblog.com/wp-content/uploads/2018/05/free-images-for-blogs.jpeg"
+                    />
                 </div>
                 <div className={classes.blogAds}>
                     Blog ads

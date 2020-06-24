@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 import { Campaigns, Campaign, Homepage } from './domain';
-import { TopNav, AnnounceBar } from './components';
+import { AnnounceBar, TopNav, Footer } from './components';
 import './App.scss';
 
 const App = () => {
@@ -17,6 +17,7 @@ const App = () => {
           <Redirect to={'/'} />
         </Switch>
       </div>
+      <Footer />
     </BrowserRouter>
   );
 };

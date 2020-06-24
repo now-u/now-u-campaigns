@@ -1,6 +1,6 @@
 import React from 'react';
 import { Text } from '../../../components';
-import theApp from '../../../assets/images/main/the_app.png';
+import { theApp } from '../../../assets';
 import classes from '../Homepage.module.scss';
 
 const TheApp = () => {

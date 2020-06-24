@@ -2,13 +2,14 @@
 h1 {
   margin-block-end: 0em;
   margin-block-start: 0em;
-  font-size: calc(30px + (90 - 30) * ((100vw - 320px) / (1920 - 320)));
+  line-height: 1;
+  font-size: calc(40px + (90 - 40) * ((100vw - 320px) / (1920 - 320)));
 }
 h2 {
   font-size: calc(28px + (62 - 28) * ((100vw - 320px) / (1920 - 320)));
 }
 h3 {
-  font-size: calc(18px + (40 - 18) * ((100vw - 320px) / (1920 - 320)));
+  font-size: calc(26px + (40 - 26) * ((100vw - 320px) / (1920 - 320)));
   font-weight: $semi-bold;
 }
 h4 {
@@ -18,5 +19,5 @@ h4 {
   font-weight: $bold;
 }
 p {
-  font-size: calc(16px + (30 - 16) * ((100vw - 320px) / (1920 - 320)));
+  font-size: calc(20px + (30 - 20) * ((100vw - 320px) / (1920 - 320)));
 }

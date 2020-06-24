@@ -25,6 +25,7 @@
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
     "no-console": "error",
-    "import/no-named-as-default-member": 0
+    "import/no-named-as-default-member": 0,
+    "react/no-unescaped-entities": "warn"
   }
 }

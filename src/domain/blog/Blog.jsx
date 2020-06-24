@@ -1,7 +1,7 @@
 import React from 'react';
 import classes from './Blog.module.scss';
 
-import { Text, Footer } from '../../components';
+import { Text, Footer, AppDownloadSquare } from '../../components';
 import { BlogPost } from './components';
 import BlogSearchControls from './components/BlogSearchControls';
 
@@ -67,7 +67,7 @@ const Blog = () => {
                     </div>
                 </div>
                 <div className={classes.blogAds}>
-                    Blog ads
+                    <AppDownloadSquare />
                 </div>
             </div>
             <Footer/>

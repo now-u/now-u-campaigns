@@ -23,3 +23,4 @@ export { default as faq } from './faq/faq.png';
 export { default as aboutUs } from './about-us/about-us.png';
 export { default as ourMission } from './about-us/our-mission.png';
 export { default as ourStoryImg } from './about-us/our-story.png';
+export { default as searchIcon } from './search-icon.svg';

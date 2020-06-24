@@ -1,0 +1,21 @@
+@import '../../utils//variables';
+
+.title {
+    padding-bottom: 5px;
+}
+
+.input {
+    display: flex;
+    margin-right: 10px;
+    input {
+        width: 100%;
+        margin-right: 0px;
+        &::placeholder {
+            color: $brand;
+            font-weight: $semi-bold;
+        }
+    }
+    img {
+        cursor: pointer;
+    }
+}

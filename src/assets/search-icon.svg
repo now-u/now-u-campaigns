@@ -1,0 +1,7 @@
+<svg id="search-icon" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+  <rect id="Rectangle_6326" width="48" height="48" rx="8" fill="#f80"/>
+  <svg id="search" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="-10 -10 48 48">
+    <path d="M0,0H24V24H0Z" fill="none"/>
+    <path d="M15.5,14h-.79l-.28-.27a6.518,6.518,0,1,0-.7.7l.27.28v.79l4.25,4.25a1.054,1.054,0,0,0,1.49-1.49Zm-6,0A4.5,4.5,0,1,1,14,9.5,4.494,4.494,0,0,1,9.5,14Z" transform="translate(0.751 0.751)" fill="#fff"/>
+  </svg>
+</svg>

@@ -6,3 +6,4 @@ export { default as AppDownload } from './app_download/AppDownload';
 export { default as AnnounceBar } from './announcement_bar/AnnouncementBar';
 export { default as CampaignsGroup } from './campaigns_group/CampaignsGroup';
 export { default as Footer } from './footer/Footer';
+export { default as SearchBox } from './search_box/SearchBox';

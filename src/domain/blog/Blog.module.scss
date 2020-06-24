@@ -1,7 +1,7 @@
 @import '../../utils//variables';
 
 .header {
-    background-color: $headerBackground;
+    background-color: $lightGrey;
     text-align: center;
 }
 
@@ -15,19 +15,31 @@
     display: grid;
     grid-template-columns: 2.5fr 1fr;
     background: $whiteGradient;
+    text-align: center;
 }
 
 .blogs {
+    max-width: 100%;
+    padding: 50px;
     border-right: 1pt solid;
+}
+
+.highlightedBlog {
+    padding-bottom: 20px;
+    img {
+        height: 300px;
+        width: 100%;
+    }
+}
+
+.blogList {
     text-align: center;
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 2em;
     row-gap: 1em;
     justify-items: center;
-    max-width: 100%;
     overflow: hidden;
-    padding: 50px;
 }
 
 .blogAds {
@@ -66,7 +78,7 @@
     a {
         font-weight: normal;
         font-size: 17px;
-        color: $blogHashtagColor;
+        color: $grey;
         padding-right: 10px;
     }
 }
@@ -85,5 +97,12 @@
     font-size: 17px;
     line-height: 30px;
     text-align: left;
-    color: $blogAuthorColor;
+    color: $darkGrey;
+}
+
+.SearchControls {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-bottom: 50px;
+    text-align: left;
 }

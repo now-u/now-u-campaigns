@@ -23,7 +23,13 @@ const WhoSection = () => {
                     <img src={teamCollage} alt="Team Collage" />
                 </div>
                 <div className={classes.buttonSection}>
-                    <Button variant="secondary" className={classes.meetTeamBtn}>Meet the team</Button>
+                    <Button 
+                        variant="secondary"
+                        className={classes.meetTeamBtn}
+                        onClick={()=> window.open("https://www.linkedin.com/company/now-u/people/", "_blank")}
+                    >
+                        Meet the team
+                    </Button>
                 </div>
             </div>
         </div>

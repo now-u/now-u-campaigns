@@ -1,27 +1,29 @@
 @import '../../../../utils/variables';
 
 .missionSection {
+    position: relative;
+    top: -80px;
     background: $blue;
     box-sizing: border-box;
     display: flex;
-    padding-top: 70px;
+    padding: 70px 0px;
 }
 
 .imageSection {
-    width: 40%;
+    width: 650px;
     height: 603px;
     padding: 0px;
     object-fit: contain;
 
     & img {
         position: relative;
-        left: -100px;
-        width: 100%;
+        left: -150px;
+        height: 100%;
     }
 }
 
 .content {
-    width: 600px;
+    width: 500px;
 }
 
 .missionHeader {
@@ -40,6 +42,9 @@
 }
 
 @media (max-width: $small) {
+    .missionSection {
+        top: 0px;
+    }
     .imageSection {
         display: none;
     }

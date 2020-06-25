@@ -1,0 +1,57 @@
+@import '../../utils/variables';
+
+.aboutUsSection {
+    background: $lightGrey;
+    box-sizing: border-box;
+    display: flex;
+    padding-bottom: 20%;
+}
+
+.content {
+    width: 50%;
+}
+
+.image {
+    width: 50%;
+    & img {
+        max-width: 100%;
+        z-index: 0;
+    }
+}
+
+.pageHeader {
+    margin-left: 84px;
+    margin-top: 86px;
+}
+
+.header {
+    font-size: 60px;
+    font-weight: $bold;
+    line-height: 1.33;
+    color: $black;
+}
+
+.pageHeaderText {
+    margin-left: 138px;
+    margin-top: 52px;
+    font-size: 30px;
+    font-weight: $regular;
+}
+
+@media (max-width: $small) {
+    .content {
+        width: 100%;
+    }
+    .image {
+        display: none;
+    }
+    .pageHeader {
+        margin-left: 0px;
+        margin-top: 0px;
+    }
+
+    .pageHeaderText {
+        margin-left: 0px;
+        margin-top: 0px;
+    }
+}

@@ -1,0 +1,49 @@
+@import '../../../../utils/variables';
+
+.missionSection {
+    background: $blue;
+    box-sizing: border-box;
+    display: flex;
+    padding-top: 70px;
+}
+
+.imageSection {
+    width: 40%;
+    height: 603px;
+    padding: 0px;
+    object-fit: contain;
+
+    & img {
+        position: relative;
+        left: -100px;
+        width: 100%;
+    }
+}
+
+.content {
+    width: 600px;
+}
+
+.missionHeader {
+    margin: 0px;
+    font-size: 40px;
+    font-weight: $blackBold;
+    line-height: 1;
+    color: $white;
+}
+
+.missionText {
+    font-size: 20px;
+    font-weight: $regular;
+    line-height: 1.7;
+    color: $white;
+}
+
+@media (max-width: $small) {
+    .imageSection {
+        display: none;
+    }
+    .content {
+        width: 100%;
+    }
+}

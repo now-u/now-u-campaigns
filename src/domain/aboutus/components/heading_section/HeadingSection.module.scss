@@ -4,7 +4,7 @@
     background: $lightGrey;
     box-sizing: border-box;
     display: flex;
-    padding-bottom: 20%;
+    padding-bottom: 10%;
 }
 
 .content {
@@ -16,7 +16,7 @@
     padding-top: 37.3px;
     & img {
         max-width: 100%;
-        z-index: 0;
+        z-index: -1;
     }
 }
 
@@ -52,7 +52,7 @@
     }
 
     .pageHeaderText {
-        margin-left: 0px;
+        margin-left: 10px;
         margin-top: 0px;
     }
 }

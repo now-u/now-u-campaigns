@@ -8,3 +8,4 @@ export { default as worldIllustration } from './world_illustration.svg';
 export { default as ourStory } from './our_story_img.png';
 export { default as theApp } from './the_app.png';
 export * from './homepage';
+export { default as teamCollage } from './images/team-collage.png';

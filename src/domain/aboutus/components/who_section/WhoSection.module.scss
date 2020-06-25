@@ -1,0 +1,78 @@
+@import '../../../../utils/variables';
+
+.whoSection {
+    position: relative;
+    top: -150px;
+    padding: 0% 15%;
+    height: fit-content;
+    display: flex;
+    box-sizing: border-box;
+    padding-bottom: 50px;
+}
+
+.textSection {
+    width: 50%;
+}
+
+.imageSection {
+    padding-top: 50px;
+    width: 50%;
+}
+
+.header {
+    width: 75%;
+}
+
+.headerText {
+    font-size: 40px;
+    font-weight: $blackBold;
+    line-height: 1;
+    color: $darkGrey;
+}
+
+.contentText {
+    font-size: 20px;
+    font-weight: $regular;
+    line-height: 1.7;
+    color: $grey;
+}
+
+.collage {
+    object-fit: contain;
+    img {
+        width: 100%;
+    }
+}
+
+.buttonSection {
+    padding-top: 20px;
+    text-align: right;
+}
+
+.meetTeamBtn {
+    width: 274px;
+    height: 60px;
+    font-size: 24px;
+    font-weight: $bold;
+    line-height: 1.33;
+    background-color: $white;
+    border: solid 3px $brand;
+}
+
+@media (max-width: $small) {
+    .whoSection {
+        flex-wrap: wrap;
+        position: static;
+        top: 0px;
+        margin: 0% 0%;
+        width: 100%;
+    }
+    .textSection {
+        width: 100%;
+    }
+
+    .imageSection {
+        padding-top: 0px;
+        width: 100%;
+    }
+}

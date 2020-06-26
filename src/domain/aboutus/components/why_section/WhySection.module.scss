@@ -1,0 +1,63 @@
+@import '../../../../utils/variables';
+
+.whySection {
+    position: relative;
+    top: -250px;
+    margin: 0% 10%;
+    background-color: $white;
+    width: 80%;
+    height: fit-content;
+    display: flex;
+    padding: 50px;
+    box-sizing: border-box;
+    box-shadow: 0 45px 60px 0 rgba(0, 0, 0, 0.04);
+}
+
+.image {
+    width: 409px;
+    object-fit: contain;
+    img {
+        width: 100%;
+    }
+}
+
+.content {
+    width: 60%;
+    max-width: 100%;
+    padding: 20px 0px 0px 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+.headerText {
+    font-size: 40px;
+    font-weight: $blackBold;
+    line-height: 1;
+    color: $darkGrey;
+    margin: 0px;
+    max-width: 100%;
+}
+
+.sectionText {
+    font-size: 20px;
+    font-weight: $regular;
+    line-height: 1.7;
+    color: $mediumGrey;
+    max-width: 100%;
+}
+
+@media (max-width: $small) {
+    .whySection {
+        position: static;
+        top: 0px;
+        margin: 0% 0%;
+        width: 100%;
+    }
+    .image {
+        display: none;
+    }
+    .content {
+        width: 100%;
+        padding: 0px;
+    }
+}

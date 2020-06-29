@@ -39,6 +39,23 @@
     max-height: 100%;
 }
 
+.textSection {
+    width: 500px;
+    padding: 50px 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+.contentHeaderText {
+    font-family: $headerFont;
+    font-size: 64px;
+    font-weight: $bold;
+    line-height: 1.09;
+    text-align: left;
+    color: $blue;
+    margin: 0px;
+}
+
 .headingText {
     font-family: $headerFont;
     font-size: 60px;
@@ -48,7 +65,45 @@
     margin: 0px;
 }
 
+.contentText {
+    margin: 20px 0px;
+}
+
+.contentTextParagraph {
+    font-size: 27px;
+    font-weight: $regular;
+    line-height: 1.26;
+    text-align: left;
+    color: $mediumGrey;
+    margin: 0px;
+}
+
+.downloadButtonsText {
+    font-size: 30px;
+    font-weight: $bold;
+    line-height: 1.13;
+    text-align: left;
+    color: $mediumGrey;
+    margin: 0px 0px -1em 0px;
+    padding-bottom: 10px;
+}
+
 .content {
     display: flex;
-    
+    padding: 20px 0px;
+}
+
+.appLinks {
+    margin: 20px 0px;
+}
+
+@media (max-width: $small) {
+    .imageSection {
+        display: none;
+    }
+
+    .textSection {
+        width: 100%;
+        padding-left: 10px;
+    }
 }

@@ -9,7 +9,7 @@
 }
 
 .header {
-    padding: 50px 0px;
+    padding-top: 50px;
     width: 100vw;
     display: flex;
     flex-direction: column;
@@ -18,32 +18,30 @@
 
 .heading {
     width: 100vw;
-    height: 80px;
     text-align: center;
 }
 
 .content {
     width: 100vw;
     display: flex;
-
+    padding-bottom: 80px;
 }
 
 .imageSection {
     width: 50vw;
-    height: 60vh;
-}
-
-.image {
-    display: block;
-    max-width: 100%;
-    max-height: 100%;
+    & img {
+        display: block;
+        width: 80%;
+        margin: auto;
+    }
 }
 
 .textSection {
     width: 500px;
-    padding: 50px 0px;
+    padding-top: 150px;
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 .contentHeaderText {
@@ -53,6 +51,14 @@
     line-height: 1.09;
     text-align: left;
     color: $blue;
+    margin: 0px;
+}
+
+.stepHeaderText {
+    font-size: 40px;
+    font-weight: $blackBold;
+    text-align: left;
+    color: $darkGrey;
     margin: 0px;
 }
 
@@ -88,14 +94,17 @@
     padding-bottom: 10px;
 }
 
-.content {
-    display: flex;
-    padding: 20px 0px;
-}
-
 .appLinks {
     margin: 20px 0px;
 }
+
+.stepBackground {
+    position: absolute;
+    width: 50%;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
 
 @media (max-width: $small) {
     .imageSection {
@@ -106,4 +115,23 @@
         width: 100%;
         padding-left: 10px;
     }
+
+    .step1Background {
+        & .textSection {
+            margin-left: 0px;
+        }
+    }
+}
+
+.step1Background {
+    width: 0px;
+    border-right: 100vw solid $lightGrey;
+    border-bottom: 80px solid transparent;
+    & .textSection {
+        margin-left: 200px;
+    }
+}
+
+.stepContainer .content{
+    padding-top: 80px;
 }

@@ -1,0 +1,75 @@
+@import '../../utils/variables';
+
+.getInTouchContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    text-align: center;
+}
+
+.header {
+    padding: 50px 0px;
+}
+
+.headerText {
+    margin: 0px;
+    font-family: $headerFont;
+    font-size: 60px;
+    font-weight: $bold;
+    color: $brand;
+}
+
+.imageSection {
+    width: 50%;
+}
+
+.textSection {
+    width: 50%;
+    text-align: left;
+    padding: 50px 0px;
+    & p {
+        width: 75%;
+    }
+}
+
+.heading {
+    font-size: 40px;
+    font-weight: $blackBold;
+    color: $white;
+}
+
+.paragraphText {
+    font-size: 30px;
+    line-height: 1.13;
+    color: $lightGrey;
+    & a {
+        font-weight: $semi-bold;
+        color: $brand;
+    }
+}
+
+.content {
+    width: 100%;
+    background-color: $blue;
+    display: flex;
+    padding: 50px 0px;
+}
+
+.roadSignImage {
+    width: 457.1px;
+    height: 362.9px;
+    margin: auto;
+}
+
+@media (max-width: $small) {
+    .imageSection {
+        display: none;
+    }
+    .textSection {
+        width: 100%;
+        padding-left: 10px;
+        & p {
+            width: 90%;
+        }
+    }
+}

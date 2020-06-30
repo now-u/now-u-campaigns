@@ -3,7 +3,7 @@ import React from 'react';
 import classes from './NowUApp.module.scss';
 import { Text, DownloadButtons } from '../../components';
 // eslint-disable-next-line no-unused-vars
-import { app, appStep1, appStep2, appStep3, appStep4, step1 } from '../../assets';
+import { app, appStep1, appStep2, appStep3, appStep4, step1, step2 } from '../../assets';
 
 const AboutUs = () => {
     return (
@@ -53,6 +53,27 @@ const AboutUs = () => {
                         </div>
                         <div className={classes.imageSection}>
                             <img src={appStep1} alt="Step 1" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className={classes.stepContainer}>
+                <div className={classes.content}>
+                    <div className={classes.imageSection}>
+                        <img src={appStep2} alt="Step2" />
+                    </div>
+                    <div className={classes.textSection}>
+                        <img src={step2} alt="Step 2" className={classes.stepBackground} />
+                        <div className={classes.contentHeader}>
+                            <Text type="h2" className={classes.stepHeaderText}>Easy to start your action</Text>
+                        </div>
+                        <div className={classes.contentText}>
+                            <Text type="p" className={classes.contentTextParagraph}>
+                                Various actions people can take to make a difference for each campaign
+                                <br/>
+                                You can filter actions according to campaign, action type and estimated 
+                                completion time in order to find actions you are most willing to do at that time.
+                            </Text>
                         </div>
                     </div>
                 </div>

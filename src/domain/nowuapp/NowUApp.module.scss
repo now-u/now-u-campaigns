@@ -118,7 +118,13 @@
 
     .step1Background {
         & .textSection {
-            margin-left: 0px;
+            margin-left: 0px!important;
+        }
+    }
+
+    .step3Background {
+        & .textSection {
+            margin-left: 0px!important;
         }
     }
 }
@@ -126,6 +132,16 @@
 .step1Background {
     width: 0px;
     border-right: 100vw solid $lightGrey;
+    border-bottom: 80px solid transparent;
+    & .textSection {
+        margin-left: 200px;
+    }
+}
+
+.step3Background {
+    width: 0px;
+    border-right: 100vw solid $lightGrey;
+    border-top: 80px solid transparent;
     border-bottom: 80px solid transparent;
     & .textSection {
         margin-left: 200px;

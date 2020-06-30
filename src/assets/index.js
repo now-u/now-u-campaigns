@@ -10,3 +10,8 @@ export { default as ourStory } from './our_story_img.png';
 export { default as theApp } from './the_app.png';
 export * from './homepage';
 export { default as teamCollage } from './images/team-collage.png';
+export { default as app } from './app/app.svg';
+export { default as appStep1 } from './app/step1.svg';
+export { default as appStep2 } from './app/step2.svg';
+export { default as appStep3 } from './app/step3.svg';
+export { default as appStep4 } from './app/step4.svg';

@@ -1,0 +1,149 @@
+@import '../../utils/variables';
+
+.nowUAppContainer {
+    box-sizing: border-box;
+    background: $white;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.header {
+    padding-top: 50px;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.heading {
+    width: 100vw;
+    text-align: center;
+}
+
+.content {
+    width: 100vw;
+    display: flex;
+    padding-bottom: 80px;
+}
+
+.imageSection {
+    width: 50vw;
+    & img {
+        display: block;
+        width: 80%;
+        margin: auto;
+    }
+}
+
+.textSection {
+    width: 500px;
+    padding-top: 150px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.contentHeaderText {
+    font-family: $headerFont;
+    font-size: 64px;
+    font-weight: $bold;
+    line-height: 1.09;
+    text-align: left;
+    color: $blue;
+    margin: 0px;
+}
+
+.stepHeaderText {
+    font-size: 40px;
+    font-weight: $blackBold;
+    text-align: left;
+    color: $darkGrey;
+    margin: 0px;
+}
+
+.headingText {
+    font-family: $headerFont;
+    font-size: 60px;
+    font-weight: $bold;
+    line-height: 1.33;
+    color: $brand;
+    margin: 0px;
+}
+
+.contentText {
+    margin: 20px 0px;
+}
+
+.contentTextParagraph {
+    font-size: 27px;
+    font-weight: $regular;
+    line-height: 1.26;
+    text-align: left;
+    color: $mediumGrey;
+    margin: 0px;
+}
+
+.downloadButtonsText {
+    font-size: 30px;
+    font-weight: $bold;
+    line-height: 1.13;
+    text-align: left;
+    color: $mediumGrey;
+    margin: 0px 0px -1em 0px;
+    padding-bottom: 10px;
+}
+
+.appLinks {
+    margin: 20px 0px;
+}
+
+.stepBackground {
+    position: absolute;
+    width: 50%;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+
+@media (max-width: $small) {
+    .imageSection {
+        display: none;
+    }
+
+    .textSection {
+        width: 100%;
+        padding-left: 10px;
+    }
+
+    .step1Background {
+        & .textSection {
+            margin-left: 0px!important;
+        }
+    }
+
+    .step3Background {
+        & .textSection {
+            margin-left: 0px!important;
+        }
+    }
+}
+
+.step1Background {
+    width: 0px;
+    border-right: 100vw solid $lightGrey;
+    border-bottom: 80px solid transparent;
+    & .textSection {
+        margin-left: 200px;
+    }
+}
+
+.step3Background {
+    width: 0px;
+    border-right: 100vw solid $lightGrey;
+    border-top: 80px solid transparent;
+    border-bottom: 80px solid transparent;
+    & .textSection {
+        margin-left: 200px;
+    }
+}

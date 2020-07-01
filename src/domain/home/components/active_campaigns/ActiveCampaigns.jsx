@@ -3,8 +3,12 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { Text, Button } from '../../../../components';
 import classes from './ActiveCampaigns.module.scss';
+import { useHistory } from "react-router-dom";
 
 const ActiveCampaign = ({ campaigns }) => {
+
+  const history = useHistory();
+
   return (
     <div id="campaigns" className={classes.activeCampaignsContainer}>
       <div className={classes.activeCampaignsContent}>
@@ -38,7 +42,12 @@ const ActiveCampaign = ({ campaigns }) => {
             </Text>
           )}
         </div>
-        <Button variant="inverted">See all campaigns</Button>
+        <Button 
+          variant="inverted"
+          onClick={() => history.push('/campaigns')}
+        >
+          See all campaigns
+        </Button>
       </div>
     </div>
   );

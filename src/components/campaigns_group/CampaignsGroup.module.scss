@@ -10,10 +10,12 @@
   box-sizing: border-box;
 }
 .sectionHeader {
-  color: $darkGrey;
-  line-height: 1.5;
   text-align: center;
-  min-height: 150px;
+  font-family: $headerFont;
+  font-size: 60px;
+  font-weight: $bold;
+  line-height: 1.33;
+  color: $brand;
 }
 .campaignsRow {
   display: grid;

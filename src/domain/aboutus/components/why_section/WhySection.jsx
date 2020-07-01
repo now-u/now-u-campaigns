@@ -12,12 +12,14 @@ const WhySection = () => {
             <div className={classes.content}>
                 <div className={classes.header}>
                     <Text type="h3" className={classes.headerText}>
-                        Why we started now-u
+                        Our Story
                     </Text>
                 </div>
                 <div className={classes.section}>
                     <Text type="p" className={classes.sectionText}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        now-u was founded in lockdown, inspired by the acts of kindness and solidarity that we saw in our communities. We noticed that many people wanted to do something to help others during these difficult times but didn’t know what they could do, while at the same time there were charities doing amazing work that were in desperate need of support.
+                        <br/><br/>
+                        We decided to create a platform to empower anyone to help tackle causes they care about, and support the charities working on the front lines of global issues.
                     </Text>
                 </div>
             </div>

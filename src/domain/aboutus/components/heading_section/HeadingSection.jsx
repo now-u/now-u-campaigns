@@ -12,7 +12,9 @@ const HeadingSection = () => {
             </div>
             <div className={classes.pageHeaderText}>
                 <Text type="p">
-                We are a non-for-profit organisation composed by over 50 volunteers who want to….blablabla around 5 lines 
+                now-u is a new non-profit app that launched in July 2020 with a mission to inform, involve and inspire people to help tackle some of the world’s most pressing environmental and social problems.
+                <br/><br/>
+                The global lockdown has offered us an opportunity to take stock of what’s really important to us, and a chance to move forward together instead of falling ‘back to normal’. We believe that each of us has the power to create lasting and sustainable change, together. <b>now u!</b>
                 </Text>
             </div>
         </div>

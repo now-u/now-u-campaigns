@@ -17,9 +17,7 @@ const MissionSection = () => {
                 </div>
                 <div className={classes.content}>
                     <Text type="p" className={classes.missionText}>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupida
-                        <br/><br/>
-                        tat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        Our mission is to connect individuals with tangible and effective actions they can take to help tackle important issues through coordinated collective campaigns. We aspire to become the template for a new model of collective action and altruism, bringing people together to create A World of Good in a way that’s simple, meaningful and leads to lasting and sustainable change.
                     </Text>
                 </div>
             </div>

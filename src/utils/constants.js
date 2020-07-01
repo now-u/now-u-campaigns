@@ -1,4 +1,4 @@
-import { privacyNotice } from '../assets';
+// import { privacyNotice } from '../assets';
 
 export const navLinks = [
   { display: 'Campaigns', path: '/campaigns' },
@@ -6,7 +6,7 @@ export const navLinks = [
   { display: 'About us', path: '/aboutus' },
   // { display: 'Blog', path: '/press' },
   { display: 'Get in touch', path: '/get-in-touch' },
-  { display: 'Privacy Policy', external: privacyNotice },
+  // { display: 'Privacy Policy', external: privacyNotice },
   // { display: 'Press', path: '/press' },
 ];
 
@@ -18,7 +18,7 @@ export const mobileNavLinks = [
   // { display: 'FAQ', path: '/press' },
   // { display: 'Blog', path: '/press' },
   // { display: 'Newsletter', path: '/press' },
-  { display: 'Privacy Policy', external: privacyNotice },
+  // { display: 'Privacy Policy', external: privacyNotice },
 ];
 
 export const campaignsURL = 'https://api.now-u.com/api/v1/campaigns';

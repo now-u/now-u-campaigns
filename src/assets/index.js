@@ -4,6 +4,7 @@ export { default as roadSignBlue } from './road-sign-blue.svg';
 export { default as appDownload } from './app-download.svg';
 export { default as appleStore } from './apple-store.png';
 export { default as googleStore } from './google-store.png';
+export { default as googlePlayBadge } from './google-play-badge.png';
 export { default as privacyNotice } from './now-u_privacy-notice.pdf';
 export { default as worldIllustration } from './world_illustration.svg';
 export { default as ourStory } from './our_story_img.png';

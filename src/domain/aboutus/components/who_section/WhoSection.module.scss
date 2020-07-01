@@ -59,7 +59,7 @@
     border: solid 3px $brand;
 }
 
-@media (max-width: $small) {
+@media (max-width: $medium) {
     .whoSection {
         flex-wrap: wrap;
         position: static;

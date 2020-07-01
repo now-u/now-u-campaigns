@@ -1,5 +1,5 @@
 import React from 'react';
-import { googleStore, appleStore } from '../../assets';
+import { googlePlayBadge, appleStore } from '../../assets';
 import classes from './DownloadButtons.module.scss';
 
 const DownloadButtons = () => {
@@ -9,7 +9,7 @@ const DownloadButtons = () => {
         <img src={appleStore} alt="app download from apple store" />
       </a>
       <a href="https://play.google.com/store/apps/details?id=com.nowu.app" target="_blank" rel="noopener noreferrer">
-        <img src={googleStore} alt="app download from google store" />
+        <img src={googlePlayBadge} alt="app download from google store" />
       </a>
     </div>
   );

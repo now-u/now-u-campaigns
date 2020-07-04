@@ -18,10 +18,18 @@
   }
 }
 
-@media (max-width: $medium) {
+@media (max-width: $small) {
   .downloadBtns {
     & a {
       max-height: 50px;
+    }
+  }
+}
+
+@media (max-width: $medium) {
+  .downloadBtns {
+    & a {
+      max-height: 70px;
     }
   }
 }

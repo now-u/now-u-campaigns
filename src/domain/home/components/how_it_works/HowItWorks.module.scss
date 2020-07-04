@@ -114,4 +114,12 @@
   .stepImg {
     display: none;
   }
+  .stepContainer {
+    text-align: center;
+  }
+  .processContainer {
+    & .stepContainer:nth-of-type(2) {
+      text-align: center;
+    }
+  }
 }

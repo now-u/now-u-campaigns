@@ -8,8 +8,11 @@ const Intro = () => {
     <div id="home" className={classes.introContainer}>
       <div className={classes.introContent}>
         <div className={classes.introMesg}>
-          <Text type="h1">It&apos;s time to change together</Text>
-          <Text type="h3">We help you help others: choose a cause to fight for and take action today!</Text>
+          <Text type="h1">It&apos;s time to <br/>change together</Text>
+          <Text type="h3">
+            Download the app to discover simple, meaningful and effective ways to support
+            causes that you care about.
+          </Text>
           <Button variant="secondary" className={classes.watchVideoBtn}>
             <a href="https://www.youtube.com/watch?v=h5vnFpWCOhQ" target="_blank" rel="noopener noreferrer">
               <i className="material-icons">play_arrow</i>

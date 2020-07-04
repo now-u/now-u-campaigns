@@ -24,6 +24,9 @@
 .introMesg {
   width: 55%;
   margin-left: 24px;
+  & h1 { 
+    font-family: $headerFont;
+  }
 }
 .introImg {
   max-width: 48%;
@@ -50,7 +53,7 @@
     font-size: 20px;
   }
 }
-@media (max-width: $small) {
+@media (max-width: $medium) {
   .introMesg {
     width: 100%;
     margin-left: 0;

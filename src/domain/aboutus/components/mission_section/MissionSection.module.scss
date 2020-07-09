@@ -6,7 +6,7 @@
     background: $blue;
     box-sizing: border-box;
     display: flex;
-    padding: 70px 0px;
+    padding-top: 70px;
 }
 
 .imageSection {
@@ -17,8 +17,8 @@
 
     & img {
         position: relative;
-        left: -150px;
-        height: 100%;
+        width: 100%;
+        top: -100px;
     }
 }
 

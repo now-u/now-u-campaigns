@@ -1,13 +1,13 @@
 import React from 'react';
 import classes from './WhySection.module.scss';
 import { Text } from '../../../../components';
-import { roadSignBlue } from '../../../../assets';
+import { ourStoryImg } from '../../../../assets';
 
 const WhySection = () => {
     return (
         <div className={classes.whySection}>
             <div className={classes.image}>
-                <img src={roadSignBlue} alt="Road Sign" />
+                <img src={ourStoryImg} alt="Road Sign" />
             </div>
             <div className={classes.content}>
                 <div className={classes.header}>

@@ -4,7 +4,7 @@
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    width: 660px;
+    max-width: 660px;
     margin: auto;
 }
 
@@ -35,6 +35,19 @@
         margin: auto 0px;
     }
 }
+
+.answerContainerShow{
+    max-width: 665px;
+    min-width: 480px;
+    margin: 0px 10px;
+    animation: open 0.4s ease-out forwards;
+}
+
+@keyframes open {
+    0% { transform: translateY(-15%);}
+    100% { transform: translateY(0); }
+}
+
 
 .answerContainer{
     max-width: 665px;

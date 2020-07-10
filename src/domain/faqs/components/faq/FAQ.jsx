@@ -20,7 +20,7 @@ const FAQ = ( {faq: {id, question, answer}} ) => {
             </div>
 
             { isShow
-                ? <div className={classes.answerContainer}>
+                ? <div className={classes.answerContainerShow}>
                     <div className={classes.answer}>
                         <Text type='p'> {answer} </Text>
                     </div>

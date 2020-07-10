@@ -1,7 +1,7 @@
 import React from 'react';
 import classes from './HeadingSection.module.scss';
 import { Text } from '../../../../components';
-import { roadSignBlue } from '../../../../assets';
+import { aboutUs } from '../../../../assets';
 
 const HeadingSection = () => {
     return (
@@ -19,7 +19,7 @@ const HeadingSection = () => {
             </div>
         </div>
         <div className={classes.image}>
-            <img src={roadSignBlue} alt="Road Sign" />
+            <img src={aboutUs} alt="About Us" />
         </div>
     </div>
     );

@@ -20,3 +20,6 @@ export { default as chooseCause } from './choose_your_causes.png';
 export { default as seeImpact } from './see_your_impact.png';
 export { default as takeAction } from './take_action.png';
 export { default as faq } from './faq/faq.png';
+export { default as aboutUs } from './about-us/about-us.png';
+export { default as ourMission } from './about-us/our-mission.png';
+export { default as ourStoryImg } from './about-us/our-story.png';

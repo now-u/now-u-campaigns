@@ -1,13 +1,13 @@
 import React from 'react';
 import classes from './MissionSection.module.scss';
 import { Text } from '../../../../components';
-import { roadSignBlue } from '../../../../assets';
+import { ourMission } from '../../../../assets';
 
 const MissionSection = () => {
     return (
         <div className={classes.missionSection}>
             <div className={classes.imageSection}>
-                <img src={roadSignBlue} alt="Road Sign" />
+                <img src={ourMission} alt="Road Sign" />
             </div>
             <div className={classes.textSection}>
                 <div className={classes.header}>

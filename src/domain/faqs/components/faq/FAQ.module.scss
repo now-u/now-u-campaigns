@@ -1,0 +1,51 @@
+@import '../../../../utils/variables';
+
+.faqContainer {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    width: 660px;
+    margin: auto;
+}
+
+.questionContainer{
+    box-sizing: border-box;
+    background: $white;
+    max-width: 665px;
+    min-width: 480px;
+    margin: 10px 10px;
+    border-radius: 8px;
+    box-shadow: $faqBoxShadow;
+
+}
+
+.question {
+    padding: 15px 15px;
+    & p {
+        font-size: 22px;
+        font-weight: $semi-bold;
+        margin: 0;
+        width: 80%;
+    }
+    & i{
+        float: right;
+        font-size: 32px;
+        color: #888888;
+        cursor: pointer;
+        margin: auto 0px;
+    }
+}
+
+.answerContainer{
+    max-width: 665px;
+    min-width: 480px;
+    margin: 0px 10px;
+}
+
+.answer{
+    display: none;
+    & p{
+        font-size: 20px;
+        margin: 25px 20px 50px;
+    }
+}

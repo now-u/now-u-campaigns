@@ -19,3 +19,4 @@ export { default as appStep4 } from './app/step4.svg';
 export { default as chooseCause } from './choose_your_causes.png';
 export { default as seeImpact } from './see_your_impact.png';
 export { default as takeAction } from './take_action.png';
+export { default as faq } from './faq/faq.png';

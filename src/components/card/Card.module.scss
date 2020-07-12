@@ -5,8 +5,10 @@ $card-height: 100px;
 .cardStyle {
   display: inline-block;
   margin: 15px;
-  border: 1px solid;
-  box-shadow: 5px 10px #888888;
+  border: 1px solid transparent;
+  box-shadow: -5px 10px #eeeeee;
+  text-align: left;
+  padding-left: 15px;
 }
 
 .cardImage {
@@ -15,7 +17,9 @@ $card-height: 100px;
 }
 .mediaName {
   float: left;
+  margin-top: 0px;
 }
 .cardTitle {
   max-width: $card-width;
+  margin-bottom: 5px;
 }

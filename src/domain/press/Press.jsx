@@ -88,7 +88,7 @@ const Press = () => {
                     <Text type="h2" >Press Pack</Text>
                 </div>
                 <div>
-                   {pressPackElement}
+                    {pressPackElement}
                 </div>
             </div>
         </div>

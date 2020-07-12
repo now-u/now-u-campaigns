@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classes from './Card.module.scss';
+import { Text } from '../../components';
 
 const Card = ({ imageUrl, title, mediaName, link }) => {
   return (
@@ -8,8 +9,8 @@ const Card = ({ imageUrl, title, mediaName, link }) => {
         <a href={link}>
             <img src={imageUrl} className={classes.cardImage}/>
         </a>
-        <p className={classes.cardTitle}>{title}</p>
-        <div className={classes.mediaName}>{mediaName}</div>
+        <Text type="h5" className={classes.cardTitle}>{title}</Text>
+        <Text type="h6" className={classes.mediaName}>{mediaName}</Text>
     </div>
     );
 };

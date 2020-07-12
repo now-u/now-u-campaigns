@@ -1,0 +1,21 @@
+@import '../../utils/variables';
+
+$card-width: 300px;
+$card-height: 100px;
+.cardStyle {
+  display: inline-block;
+  margin: 15px;
+  border: 1px solid;
+  box-shadow: 5px 10px #888888;
+}
+
+.cardImage {
+  width: $card-width;
+  height: $card-height;
+}
+.mediaName {
+  float: left;
+}
+.cardTitle {
+  max-width: $card-width;
+}

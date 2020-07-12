@@ -1,0 +1,98 @@
+@import '../../utils/variables';
+
+.getInTouchContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    text-align: center;
+}
+
+.header {
+    padding: 50px 0px;
+}
+
+.headerText {
+    margin: 0px;
+    font-family: $headerFont;
+    font-size: 60px;
+    font-weight: $bold;
+    color: $brand;
+}
+
+.imageSection {
+    width: 50%;
+}
+
+.textSection {
+    width: 50%;
+    text-align: left;
+    padding: 50px 0px 50px 150px;
+    & p {
+        width: 75%;
+    }
+}
+
+.heading {
+    font-size: 40px;
+    font-weight: $blackBold;
+    color: $white;
+}
+
+.paragraphText {
+    font-size: 30px;
+    line-height: 1.13;
+    color: $lightGrey;
+    & a {
+        font-weight: $semi-bold;
+        color: $brand;
+        white-space: nowrap;
+    }
+}
+
+.content {
+    width: 100%;
+    background-color: $blue;
+    display: flex;
+    padding: 50px 0px;
+}
+
+.roadSignImage {
+    width: 457.1px;
+    height: 362.9px;
+    margin: auto;
+}
+.PressCoverageText,
+.PressPack {
+    text-align: left;
+    margin-left: 10%;
+}
+.pressPackButton {
+    width: 350px;
+    height: 60px;
+    font-size: 24px;
+    font-weight: $bold;
+    line-height: 1.33;
+    background-color: $white;
+    border: solid 3px $brand;
+    margin-right: 15px;
+    margin-bottom: 15px;;
+    a {
+        color: #ff8800;
+    }
+}
+@media (max-width: $medium) {
+    .imageSection {
+        display: none;
+    }
+    .textSection {
+        width: 100%;
+        padding: 0px 30px;
+        & p {
+            width: 90%;
+        }
+    }
+    .headerText {
+        font-size: 50px;
+    }
+
+}

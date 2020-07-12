@@ -4,3 +4,4 @@ export { default as Campaign } from './campaigns/campaign_details/CampaignDetail
 export { default as AboutUs } from './aboutus/AboutUs';
 export { default as NowUApp } from './nowuapp/NowUApp';
 export { default as GetInTouch } from './getintouch/GetInTouch';
+export { default as Press } from './press/Press';

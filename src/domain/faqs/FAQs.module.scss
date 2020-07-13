@@ -1,0 +1,66 @@
+@import '../../utils/variables';
+
+.faqsContainer {
+    box-sizing: border-box;
+    background: $white;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    padding: 50px 0px;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.heading {
+    width: 100vw;
+    text-align: center;
+}
+
+.headingText {
+    font-family: $headerFont;
+    font-size: 60px;
+    font-weight: $bold;
+    line-height: 1.33;
+    color: $brand;
+    margin: 0px;
+}
+
+
+.faqsContentContainer{
+    position: relative;
+    background: $lightGrey;
+    padding-bottom: 120px;
+    
+}
+
+.faqsImage{
+    position: absolute;
+    right: 15px;
+    top:  -70px;
+}
+
+.faqsContent{
+    position: relative;
+    margin: 70px auto;
+}
+
+.faqsText{
+    position: relative;
+    margin: auto;
+    width: fit-content;
+    & p{
+        font-size: 30px;
+        font-weight: $regular;
+        color: $mediumGrey;
+        margin: auto 15px;
+        text-align: center;
+    }
+    & p > span{
+        color: #FF8800;
+        font-weight: $semi-bold;
+    }
+}

@@ -7,6 +7,8 @@ import { aboutNowU } from '../../assets';
 import { aboutFounders } from '../../assets';
 import { appDesignWalkThrough } from '../../assets';
 import { pressReleaseAppLaunch } from '../../assets';
+import { nowUBrandGuide } from '../../assets';
+
 
 const Press = () => {
     const [pressCoverage, setpressCoverage] = useState([]);
@@ -34,7 +36,7 @@ const Press = () => {
     }, {
         id: 3,
         text: 'now-u branding',
-        value: appDesignWalkThrough
+        value: nowUBrandGuide
     }, {
         id: 4,
         text: 'Press Release',

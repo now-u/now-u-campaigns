@@ -23,3 +23,4 @@ export const mobileNavLinks = [
 
 export const campaignsURL = 'https://api.now-u.com/api/v1/campaigns';
 export const pressCoverageURL = 'https://api.now-u.com/api/v1/press_coverage';
+export const faqsURL = 'https://api.now-u.com/api/v1/faqs';

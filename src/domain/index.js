@@ -5,3 +5,4 @@ export { default as AboutUs } from './aboutus/AboutUs';
 export { default as NowUApp } from './nowuapp/NowUApp';
 export { default as GetInTouch } from './getintouch/GetInTouch';
 export { default as Press } from './press/Press';
+export { default as FAQs } from './faqs/FAQs';

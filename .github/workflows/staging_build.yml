@@ -44,7 +44,6 @@ jobs:
     needs: test
     # If the push is not to staging then dont do the build
     if: github.event.base_ref == 'refs/heads/staging'
-    if: github.event_name == 'push'
 
     runs-on: ubuntu-latest
 

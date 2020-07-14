@@ -5,21 +5,18 @@ import { err404 } from '../../assets';
 
 const error404 = () => {
     return (
-    <div className={classes.aboutUsSection}>
-        <div className={classes.content}>
-            <div className={classes.pageHeader}>
-                <Text type="h1" className={classes.header}>Oh Dear...</Text>
-            </div>
-            <div className={classes.pageHeaderText}>
+        <div className={classes.box}>
+            <div className={classes.text}>
+                <Text type="h1">
+                    Oh Dear...
+                </Text>
                 <Text type="p">
-                Looks like something’s wrong…
+                    Looks like something’s wrong…
                 </Text>
             </div>
+            <img src={err404} alt="Error 404"/>
         </div>
-        <div className={classes.image}>
-            <img src={err404} alt="Error 404" />
-        </div>
-    </div>
+
     );
 }
 

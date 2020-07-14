@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="317" height="280" viewBox="0 0 317 280">
+  <defs>
+    <linearGradient id="linear-gradient" x1="1.664" y1="6.158" x2="1.664" y2="5.134" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="gray" stop-opacity="0.251"/>
+      <stop offset="0.54" stop-color="gray" stop-opacity="0.122"/>
+      <stop offset="1" stop-color="gray" stop-opacity="0.102"/>
+    </linearGradient>
+    <clipPath id="clip-Artboard_1">
+      <rect width="317" height="280"/>
+    </clipPath>
+  </defs>
+  <g id="Artboard_1" data-name="Artboard – 1" clip-path="url(#clip-Artboard_1)">
+    <g id="Group_17470" data-name="Group 17470" transform="translate(-857 -441)">
+      <g id="Group_17466" data-name="Group 17466" transform="translate(921.457 470.748) rotate(-34)">
+        <path id="Path_2760" data-name="Path 2760" d="M212.915,124.153l8.381.272-1.417-1.049.681-.082-1.131-.245L52.837,0,23.672,61.6,0,117.421l14.2.45-2.7,28.987Z" transform="translate(0 0)" fill="url(#linear-gradient)"/>
+        <path id="Path_2762" data-name="Path 2762" d="M21.614,15.386,0,66.465l205.706,7.972L64.666,0Z" transform="translate(8.679 48.409)" fill="#f9a826"/>
+        <path id="Path_2763" data-name="Path 2763" d="M21.614,15.386,0,66.465l205.706,7.972L64.666,0Z" transform="translate(8.679 48.409)" opacity="0.2"/>
+        <path id="Path_2764" data-name="Path 2764" d="M26.671,0l157.42,115.39L0,56.339Z" transform="translate(30.295 7.455)" fill="#f9a826"/>
+        <path id="Path_2761" data-name="Path 2761" d="M0,62.1,194.121,41.92,5.41,0Z" transform="translate(19.569 79.877)" fill="#f9a826"/>
+      </g>
+      <g id="Group_17467" data-name="Group 17467" transform="translate(841.313 557.715) rotate(-34)">
+        <path id="Path_2760-2" data-name="Path 2760" d="M70.746,41.253l2.785.091-.471-.349.226-.027-.376-.082L17.556,0,7.866,20.468,0,39.016l4.718.149-.9,9.632Z" transform="translate(0 0)" fill="url(#linear-gradient)"/>
+        <path id="Path_2762-2" data-name="Path 2762" d="M7.182,5.112,0,22.085l68.351,2.649L21.487,0Z" transform="translate(2.884 16.085)" fill="#f9a826"/>
+        <path id="Path_2763-2" data-name="Path 2763" d="M7.182,5.112,0,22.085l68.351,2.649L21.487,0Z" transform="translate(2.884 16.085)" opacity="0.2"/>
+        <path id="Path_2764-2" data-name="Path 2764" d="M8.862,0,61.169,38.341,0,18.72Z" transform="translate(10.066 2.477)" fill="#f9a826"/>
+        <path id="Path_2761-2" data-name="Path 2761" d="M0,20.636l64.5-6.707L1.8,0Z" transform="translate(6.502 26.541)" fill="#f9a826"/>
+      </g>
+      <g id="Group_17468" data-name="Group 17468" transform="translate(906.926 656.455) rotate(-34)">
+        <path id="Path_2760-3" data-name="Path 2760" d="M118.256,68.957l4.655.151-.787-.583.378-.045-.628-.136L29.346,0l-16.2,34.213L0,65.218l7.887.25-1.5,16.1Z" transform="translate(0 0)" fill="url(#linear-gradient)"/>
+        <path id="Path_2762-3" data-name="Path 2762" d="M12,8.546,0,36.916l114.252,4.428L35.917,0Z" transform="translate(4.821 26.887)" fill="#f9a826"/>
+        <path id="Path_2763-3" data-name="Path 2763" d="M12,8.546,0,36.916l114.252,4.428L35.917,0Z" transform="translate(4.821 26.887)" opacity="0.2"/>
+        <path id="Path_2764-3" data-name="Path 2764" d="M14.813,0l87.434,64.09L0,31.292Z" transform="translate(16.826 4.141)" fill="#f9a826"/>
+        <path id="Path_2761-3" data-name="Path 2761" d="M0,34.494l107.818-11.21L3,0Z" transform="translate(10.869 44.365)" fill="#f9a826"/>
+      </g>
+    </g>
+  </g>
+</svg>

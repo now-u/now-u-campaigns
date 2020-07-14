@@ -7,3 +7,4 @@ export { default as AnnounceBar } from './announcement_bar/AnnouncementBar';
 export { default as CampaignsGroup } from './campaigns_group/CampaignsGroup';
 export { default as Footer } from './footer/Footer';
 export { default as DownloadButtons } from './download_buttons/DownloadButtons.jsx';
+export { default as Card } from './card/Card';

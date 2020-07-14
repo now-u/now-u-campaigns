@@ -1,7 +1,12 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
+<<<<<<< HEAD
 import { Campaigns, Campaign, Homepage, AboutUs, NowUApp, GetInTouch, FAQs, Blog } from './domain';
 import { AnnounceBar, TopNav, Footer } from './components';
+=======
+import { Campaigns, Campaign, Homepage, Blog } from './domain';
+import { TopNav, AnnounceBar } from './components';
+>>>>>>> 14ade1bb64d1bed40dee54ada2f1d7561ae54109
 import './App.scss';
 
 const App = () => {

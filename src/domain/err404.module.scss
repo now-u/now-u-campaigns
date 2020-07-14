@@ -1,12 +1,11 @@
 @import '../utils/variables';
 
-.aboutUsSection {
-    background: $lightGrey;
-    box-sizing: border-box;
-    display: flex;
-    padding-bottom: 10%;
-}
-
+// .aboutUsSection {
+//     background: $lightGrey;
+//     box-sizing: border-box;
+//     display: flex;
+//     padding-bottom: 10%;
+// }
 
 .box{
     background: $lightGrey;
@@ -14,8 +13,6 @@
     display: block;
     text-align: center;
     object-fit: fill;
-    //padding-left: 150px;
-    //padding-right: 150px;
     padding-top: 10px;
     & img {
         text-align: center;
@@ -38,7 +35,6 @@
     }
 
 }
-
 
 @media (max-width: $small) {
     .box {

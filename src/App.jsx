@@ -20,9 +20,8 @@ const App = () => {
           <Route path="/get-in-touch" exact component={GetInTouch} />
           <Route path="/press" exact component={Press} />
           <Route path="/faqs" exact component={FAQs} />
-          <Route exact component={err404} />
-
           <Route path="/blog" exact component={Blog} />
+          <Route exact component={err404} />
           <Redirect to={'/'} />
         </Switch>
       </div>

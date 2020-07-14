@@ -7,7 +7,7 @@ export const navLinks = [
   // { display: 'Blog', path: '/press' },
   { display: 'Get in touch', path: '/get-in-touch' },
   // { display: 'Privacy Policy', external: privacyNotice },
-  // { display: 'Press', path: '/press' },
+  { display: 'Press', path: '/press' },
 ];
 
 export const mobileNavLinks = [
@@ -16,10 +16,11 @@ export const mobileNavLinks = [
   { display: 'About us', path: '/aboutus' },
   { display: 'Get in touch', path: '/get-in-touch' },
   // { display: 'FAQ', path: '/press' },
-  // { display: 'Blog', path: '/press' },
+  { display: 'Press', path: '/press' },
   // { display: 'Newsletter', path: '/press' },
   // { display: 'Privacy Policy', external: privacyNotice },
 ];
 
 export const campaignsURL = 'https://api.now-u.com/api/v1/campaigns';
+export const pressCoverageURL = 'https://api.now-u.com/api/v1/press_coverage';
 export const faqsURL = 'https://api.now-u.com/api/v1/faqs';

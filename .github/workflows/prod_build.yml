@@ -22,6 +22,7 @@ jobs:
   # See also https://docs.docker.com/docker-hub/builds/automated-testing/
   test:
     runs-on: ubuntu-latest
+    if: github.event.base_ref == 'refs/heads/master'
 
     steps:
       - uses: actions/checkout@v2
@@ -42,7 +43,7 @@ jobs:
     needs: test
 
     runs-on: ubuntu-latest
-    if: github.event_name == 'push'
+    if: github.event.base_ref == 'refs/heads/master'
 
     steps:
       - uses: actions/checkout@v2

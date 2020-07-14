@@ -1,0 +1,12 @@
+@import '../../utils//variables';
+
+.header {
+    background-color: $lightGrey;
+    text-align: center;
+}
+
+.title {
+    color: $brand;
+    margin: 0;
+    padding: 10px;
+}

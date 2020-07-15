@@ -6,9 +6,10 @@
 }
 
 .title {
+    font-family: $headerFont;
     color: $brand;
     margin: 0;
-    padding: 10px;
+    padding: 30px;
 }
 
 .content {

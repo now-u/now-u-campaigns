@@ -23,3 +23,4 @@ export const mobileNavLinks = [
 
 export const campaignsURL = 'https://api.now-u.com/api/v1/campaigns';
 export const faqsURL = 'https://api.now-u.com/api/v1/faqs';
+export const blogsURL = 'http://localhost:3000/blogs';

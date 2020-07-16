@@ -1,11 +1,44 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import classes from './Blog.module.scss';
-
-import { Text, Footer, AppDownloadSquare } from '../../components';
-import { BlogPost } from './components';
+import { Text, AppDownloadSquare } from '../../components';
+import { BlogPoster } from './components';
 import BlogSearchControls from './components/BlogSearchControls';
+import { blogsURL } from '../../utils/constants';
 
 const Blog = () => {
+    const [blogs, setBlogs] = useState([]);
+
+    useEffect(() => {
+        const fetchBlogs = async () => {
+            const resp = await fetch(blogsURL);
+            const blogs = await resp.json();
+            setBlogs(blogs?.data);
+        }
+
+        fetchBlogs();
+    }, []);
+
+    const BlogPosters = () => {
+        const blogItems = [...blogs];
+        const blogHighlighted = blogItems.shift();
+
+        return (
+            <div>
+                {blogHighlighted &&
+                    <div className={classes.highlightedBlog}>
+                        <BlogPoster blog={blogHighlighted} highlighted />
+                    </div>
+                }
+                {blogItems &&
+                    <div className={classes.blogList}>
+                        {blogItems.map((blog, i) => (
+                            <BlogPoster blog={blog} key={i} />
+                        ))}
+                    </div>
+                }
+            </div>
+        );
+    }
 
     return (
         <div className={classes.container}>
@@ -19,58 +52,12 @@ const Blog = () => {
                     <div className={classes.searchContainer}>
                         <BlogSearchControls />
                     </div>
-                    <div className={classes.highlightedBlog}>
-                        <BlogPost
-                            blogTitle="The impacts of climate change on the water crisis"
-                            blogAuthor="Helene McHugh"
-                            blogHashtags={["climatechange", "WASH"]}
-                            blogImageSrc="https://www.onblastblog.com/wp-content/uploads/2018/05/free-images-for-blogs.jpeg"
-                        />
-                    </div>
-                    <div className={classes.blogList}>
-                        <BlogPost
-                            blogTitle="The impacts of climate change on the water crisis"
-                            blogAuthor="Helene McHugh"
-                            blogHashtags={["climatechange", "WASH"]}
-                            blogImageSrc="https://www.onblastblog.com/wp-content/uploads/2018/05/free-images-for-blogs.jpeg"
-                        />
-                        <BlogPost
-                            blogTitle="What do UK policies mean for refugees, asylum seekers and other migrants?"
-                            blogAuthor="Helene McHugh"
-                            blogHashtags={["refugee", "migrants", "UK"]}
-                            blogImageSrc="https://www.onblastblog.com/wp-content/uploads/2018/05/free-images-for-blogs.jpeg"
-                        />
-                        <BlogPost
-                            blogTitle="The impacts of climate change on the water crisis"
-                            blogAuthor="Helene McHugh"
-                            blogHashtags={["climatechange", "WASH"]}
-                            blogImageSrc="https://www.onblastblog.com/wp-content/uploads/2018/05/free-images-for-blogs.jpeg"
-                        />
-                        <BlogPost
-                            blogTitle="The impacts of climate change on the water crisis"
-                            blogAuthor="Helene McHugh"
-                            blogHashtags={["climatechange", "WASH"]}
-                            blogImageSrc="https://www.onblastblog.com/wp-content/uploads/2018/05/free-images-for-blogs.jpeg"
-                        />
-                        <BlogPost
-                            blogTitle="The impacts of climate change on the water crisis"
-                            blogAuthor="Helene McHugh"
-                            blogHashtags={["climatechange", "WASH"]}
-                            blogImageSrc="https://www.onblastblog.com/wp-content/uploads/2018/05/free-images-for-blogs.jpeg"
-                        />
-                        <BlogPost
-                            blogTitle="The impacts of climate change on the water crisis"
-                            blogAuthor="Helene McHugh"
-                            blogHashtags={["climatechange", "WASH"]}
-                            blogImageSrc="https://www.onblastblog.com/wp-content/uploads/2018/05/free-images-for-blogs.jpeg"
-                        />
-                    </div>
+                    <BlogPosters />
                 </div>
                 <div className={classes.blogAds}>
                     <AppDownloadSquare />
                 </div>
             </div>
-            <Footer/>
         </div>
     );
 }

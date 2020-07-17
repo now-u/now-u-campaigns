@@ -1,11 +1,11 @@
 // import { privacyNotice } from '../assets';
 
 export const navLinks = [
-  { display: "Campaigns", path: "/campaigns" },
-  { display: "Now-u app", path: "/now-u-app" },
-  { display: "About us", path: "/aboutus" },
-  // { display: 'Blog', path: '/press' },
-  { display: "Get in touch", path: "/get-in-touch" },
+  { display: 'Campaigns', path: '/campaigns' },
+  { display: 'Now-u app', path: '/now-u-app' },
+  { display: 'About us', path: '/aboutus' },
+  { display: 'Blog', path: '/blog' },
+  { display: 'Get in touch', path: '/get-in-touch' },
   // { display: 'Privacy Policy', external: privacyNotice },
   { display: "Press", path: "/press" },
   { display: "FAQ", path: "/faqs" },

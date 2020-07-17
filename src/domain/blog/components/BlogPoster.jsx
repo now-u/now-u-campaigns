@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import classes from '../Blog.module.scss';
 import { defaultBlogImg } from '../../../assets';
 import { Text } from '../../../components';
+import { Link } from 'react-router-dom';
 
 const BlogPoster = ({ blog, highlighted }) => {
     const blogImageSection = blog.sections.find(section => section.type === 'image_section');
@@ -10,7 +11,7 @@ const BlogPoster = ({ blog, highlighted }) => {
     const blogHashtags = blog.hashtags;
 
     return (
-        <div className={classes.blogPost}>
+        <Link to={`/blog/${blog.id}`} className={classes.blogPost}>
             <div className={classes.blogImage}>
                 <img src={blogImage} />
                 {highlighted &&
@@ -36,7 +37,7 @@ const BlogPoster = ({ blog, highlighted }) => {
                     {blog.user.full_name}
                 </div>
             </div>
-        </div>
+        </Link>
     );
 }
 

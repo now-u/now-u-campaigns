@@ -8,3 +8,4 @@ export { default as err404 } from './404_page/err404';
 export { default as Press } from './press/Press';
 export { default as FAQs } from './faqs/FAQs';
 export { default as Blog } from './blog/Blog';
+export { default as BlogArticle } from './blog/blog_article/BlogArticle.container';

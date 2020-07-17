@@ -12,7 +12,7 @@ const Blog = () => {
         const fetchBlogs = async () => {
             const resp = await fetch(blogsURL);
             const blogs = await resp.json();
-            setBlogs(blogs?.data);
+            setBlogs(blogs?.data ? blogs.data : blogs);
         }
 
         fetchBlogs();

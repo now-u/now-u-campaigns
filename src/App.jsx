@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
-import { Campaigns, Campaign, Homepage, AboutUs, NowUApp, GetInTouch, FAQs, Blog } from './domain';
+import { Campaigns, Campaign, Homepage, AboutUs, NowUApp, GetInTouch, FAQs, Blog, BlogArticle } from './domain';
 import { AnnounceBar, TopNav, Footer } from './components';
 import './App.scss';
 
@@ -19,6 +19,7 @@ const App = () => {
           <Route path="/get-in-touch" exact component={GetInTouch} />
           <Route path="/faqs" exact component={FAQs} />
           <Route path="/blog" exact component={Blog} />
+          <Route path="/blog/:id" exact component={BlogArticle} />
           <Redirect to={'/'} />
         </Switch>
       </div>

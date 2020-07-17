@@ -6,3 +6,4 @@ export { default as NowUApp } from './nowuapp/NowUApp';
 export { default as GetInTouch } from './getintouch/GetInTouch';
 export { default as FAQs } from './faqs/FAQs';
 export { default as Blog } from './blog/Blog';
+export { default as BlogArticle } from './blog/blog_article/BlogArticle.container';

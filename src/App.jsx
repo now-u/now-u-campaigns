@@ -21,7 +21,6 @@ const App = () => {
           <Route path="/press" exact component={Press} />
           <Route path="/faqs" exact component={FAQs} />
           <Route exact component={err404} />
-
         </Switch>
       </div>
       <Footer />

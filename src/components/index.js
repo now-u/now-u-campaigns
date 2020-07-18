@@ -10,3 +10,4 @@ export { default as DownloadButtons } from './download_buttons/DownloadButtons.j
 export { default as Card } from './card/Card';
 export { default as SearchBox } from './search_box/SearchBox';
 export { default as AppDownloadSquare } from './app_download_square/AppDownloadSquare';
+export { default as AppDownloadRectangle } from './app_download_rectangle/AppDownloadRectangle';

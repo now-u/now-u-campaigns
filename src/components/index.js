@@ -9,3 +9,4 @@ export { default as Footer } from './footer/Footer';
 export { default as DownloadButtons } from './download_buttons/DownloadButtons.jsx';
 export { default as SearchBox } from './search_box/SearchBox';
 export { default as AppDownloadSquare } from './app_download_square/AppDownloadSquare';
+export { default as AppDownloadRectangle } from './app_download_rectangle/AppDownloadRectangle';

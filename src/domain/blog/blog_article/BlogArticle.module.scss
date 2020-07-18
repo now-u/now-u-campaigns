@@ -121,3 +121,33 @@
     width: 127px;
     border: 1pt solid $brand;
 }
+
+.authorInfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 20px;
+    border-bottom: 2px solid $lightGrey;
+    line-height: 30px;
+    text-align: left;
+    color: $black;
+
+    .author {
+        display: flex;
+        align-items: center;
+        width: 40%;
+        .authorName {
+            font-weight: $bold;
+            font-size: 30px;
+            margin: 0px;
+            margin-left: 10%;
+        }
+    }
+
+    .authorDescription {
+        width: 60%;
+        font-weight: $regular;
+        font-size: 17px;
+    }
+
+}

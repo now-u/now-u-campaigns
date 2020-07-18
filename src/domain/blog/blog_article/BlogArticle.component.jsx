@@ -65,7 +65,11 @@ const Blog = ({ blog }) => {
                 </div>
                 <AppDownloadRectangle />
                 <div className={classes.authorInfo}>
-                    <Avatar src={user.profile_image} />
+                    <div className={classes.author}>
+                        <Avatar src={user.profile_image} />
+                        <Text type="h4" className={classes.authorName}>{user.full_name}</Text>
+                    </div>
+                    <Text type="p" className={classes.authorDescription}>{user.description}</Text>
                 </div>
             </div>
         </div>

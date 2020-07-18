@@ -7,7 +7,7 @@
     text-align: center;
     object-fit: fill;
     padding: 1em;
-    & img {
+    img {
         text-align: center;
         width: 100%;
         max-width: 800px;
@@ -19,10 +19,10 @@
     left: 48%;
     top: 10%;
     text-align: left;
-    & h2 {
+    h2 {
         margin: 0;
     }
-    & p {
+    p {
         margin: 0;
     }
 }

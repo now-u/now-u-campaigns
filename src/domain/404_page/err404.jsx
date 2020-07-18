@@ -1,7 +1,7 @@
 import React from 'react';
 import classes from './err404.module.scss';
-import { Text } from '../components';
-import { err404 } from '../assets';
+import { Text } from '../../components';
+import { err404 } from '../../assets';
 
 const error404 = () => {
     return (

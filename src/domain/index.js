@@ -4,4 +4,4 @@ export { default as Campaign } from './campaigns/campaign_details/CampaignDetail
 export { default as AboutUs } from './aboutus/AboutUs';
 export { default as NowUApp } from './nowuapp/NowUApp';
 export { default as GetInTouch } from './getintouch/GetInTouch';
-export { default as err404 } from './err404';
+export { default as err404 } from './404_page/err404';

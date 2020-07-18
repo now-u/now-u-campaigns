@@ -1,22 +1,23 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import PropTypes from 'prop-types';
-import { Text, Button } from '../../../../components';
-import classes from './ActiveCampaigns2.module.scss';
-import { useHistory } from "react-router-dom";
+//import { Link } from 'react-router-dom';
+//import PropTypes from 'prop-types';
+import { Text} from '../../../../components';
+import classes from './partners.module.scss';
+//import { useHistory } from "react-router-dom";
 
-const ActiveCampaign = ({ campaigns }) => {
+const Partners = ({ partners }) => {
 
-  const history = useHistory();
+  //const history = useHistory();
 
   return (
-    <div id="campaigns" className={classes.activeCampaignsContainer}>
+    <div id="partners" className={classes.activeCampaignsContainer}>
       <div className={classes.activeCampaignsContent}>
         <div className={classes.header}>
-          <Text type="h1">Active campaigns</Text>
-          <Text type="p">Our monthly campaigns tackle different issues in partnership with trusted institutions</Text>
+          <Text type="h1">Our Partners</Text>
+          <Text type="p">Want to be a partner?</Text>
+          <p>{partners[1]?.name}</p>
         </div>
-        <div className={classes.campaignsRow}>
+        {/* <div className={classes.campaignsRow}>
           {campaigns ? (
             campaigns.map(({ id, title, header_image }) => {
               return (
@@ -41,21 +42,16 @@ const ActiveCampaign = ({ campaigns }) => {
               Check back to see campaigns you can support on the app!
             </Text>
           )}
-        </div>
-        <Button 
-          variant="inverted"
-          onClick={() => history.push('/campaigns')}
-        >
-          See all campaigns
-        </Button>
+        </div> */}
+        
       </div>
     </div>
   );
 };
 
-ActiveCampaign.propTypes = {
-  title: PropTypes.string.isRequired,
-  campaigns: PropTypes.array || null,
-};
+// Partners.propTypes = {
+//   title: PropTypes.string.isRequired,
+//   campaigns: PropTypes.array || null,
+// };
 
-export default ActiveCampaign;
+export default Partners;

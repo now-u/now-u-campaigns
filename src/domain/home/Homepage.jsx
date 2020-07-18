@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { Intro, TheApp, ActiveCampaigns, HowItWorks } from './components/index';
+import { Intro, TheApp, ActiveCampaigns, Partners, HowItWorks } from './components/index';
 import classes from './Homepage.module.scss';
 
 const Homepage = () => {
-  const [campaigns, setCampaigns, partners, setPartners] = useState([]);
+  const [campaigns, setCampaigns] = useState([]);
+  const [partners, setPartners] = useState([]);
 
   useEffect(() => {
     const fetchCampaigns = async () => {
@@ -26,8 +27,8 @@ const Homepage = () => {
       <Intro />
       <HowItWorks />
       <ActiveCampaigns campaigns={campaigns} />
-      <p>{campaigns[1]?.title}</p>
-      <p>{partners[1]?.title}</p>
+      <p>{partners[0]?.name}</p>
+      <Partners partners={partners} />
       <TheApp />
     </div>
   );

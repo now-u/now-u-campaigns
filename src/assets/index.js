@@ -23,10 +23,10 @@ export { default as faq } from './faq/faq.png';
 export { default as aboutUs } from './about-us/about-us.png';
 export { default as ourMission } from './about-us/our-mission.png';
 export { default as ourStoryImg } from './about-us/our-story.png';
+export { default as err404 } from './err_404.png';
 export { default as pressNowU2 } from './press_nowu2.svg';
 export { default as aboutNowU } from './About_now-u.pdf';
 export { default as aboutFounders } from './About_the_founders.pdf';
 export { default as appDesignWalkThrough } from './App_design_walk_through.pdf';
 export { default as pressReleaseAppLaunch } from './Press_Release_now-u_app_launch.pdf';
 export { default as nowUBrandGuide } from './now-u_Brand_Guide.pdf';
-

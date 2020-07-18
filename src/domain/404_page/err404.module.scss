@@ -1,0 +1,38 @@
+@import '../../utils/variables';
+
+.box{
+    background: $lightGrey;
+    position: relative;
+    display: block;
+    text-align: center;
+    object-fit: fill;
+    padding: 1em;
+    img {
+        text-align: center;
+        width: 100%;
+        max-width: 800px;
+    }
+}
+
+.text{
+    position: absolute;
+    left: 48%;
+    top: 10%;
+    text-align: left;
+    h2 {
+        margin: 0;
+    }
+    p {
+        margin: 0;
+    }
+}
+
+@media (max-width: $small) {
+    .text{
+        margin-bottom: 2em;
+        text-align: center;
+        position: unset;
+        padding: 0.5em,
+;
+    }
+}

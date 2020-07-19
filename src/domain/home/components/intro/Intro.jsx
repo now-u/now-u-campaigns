@@ -1,13 +1,12 @@
 import React from 'react';
-import { Text, Button, DownloadButtons } from '../../../../components';
+import { Text, Button, DownloadButtons, NewsletterSignup } from '../../../../components';
 import classes from './Intro.module.scss';
 import { worldIllustration } from '../../../../assets';
 import { ModalService } from '../../../../services';
-import { AboutUs } from "../../../index";
 
 const Intro = () => {
   const openModal = () => {
-    return ModalService.popModal(<AboutUs/>);
+    ModalService.open(NewsletterSignup, {}, {color: 'dark'});
   }
 
   return (

@@ -1,18 +1,40 @@
 @import '../../utils/variables';
 
 .dialog {
-  max-width: 800px;
-  min-width: 600px;
-
+  height: auto;
   max-height: 90%;
-  width: 95%;
+  max-width: 100%;
   position: relative;
+  width: 95%;
+
+  @media (min-width: $medium) {
+    &[data-size='small'] {
+      max-width: 600px;
+      min-width: 400px;
+    }
+
+    &[data-size='medium'] {
+      max-width: 800px;
+      min-width: 600px;
+    }
+
+    &[data-size='large'] {
+      max-width: $max-width;
+    }
+  }
 }
 
 .content {
-  background-color: #fff;
-  border-radius: 10px;
+  border-radius: 18px;
   padding: 32px;
+
+  &.light {
+    background-color: $white;
+  }
+
+  &.dark {
+    background-color: $purple;
+  }
 }
 
 .container {
@@ -22,20 +44,27 @@
   display: flex;
   justify-content: center;
   left: 0;
+  overflow: auto;
   position: fixed;
   right: 0;
   top: 0;
   z-index: 999;
-  overflow: auto;
 }
 
 .closeButton {
   background: none;
   border: none;
-  color: black;
   cursor: pointer;
-  position: absolute;
-  right: 10px;
-  top: 10px;
   padding: 0;
+  position: absolute;
+  right: 14px;
+  top: 14px;
+
+  &.light {
+    color: $darkGrey;
+  }
+
+  &.dark {
+    color: $white;
+  }
 }

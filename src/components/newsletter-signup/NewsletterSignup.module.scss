@@ -1,0 +1,61 @@
+@import '../../utils/variables';
+
+.container {
+  color: $white;
+
+  @media (min-width: $medium) {
+    padding: 8px;
+  }
+}
+
+.header {
+  font-weight: $blackBold;
+  margin-bottom: 16px;
+}
+
+.list {
+  list-style-type: none;
+  margin-bottom: 28px;
+  padding: 0;
+
+  .listCheckmark {
+    color: $brand;
+    margin-right: 12px;
+    margin-top: 2px;
+  }
+
+  .listItem {
+    display: flex;
+    margin-bottom: 4px;
+  }
+
+  .listText {
+    font-size: 20px;
+  }
+}
+
+.emailForm {
+  display: flex;
+  justify-content: center;
+
+  // TODO: Make an input component. This was copied from Homepage.module.scss
+  .emailInput {
+    border-radius: 6px;
+    border: 2px solid transparent;
+    font-family: $bodyFont;
+    margin-right: 12px;
+    min-height: 40px;
+    outline: none;
+    padding-left: 8px;
+    transition: border 0.3s;
+    width: 350px;
+
+    &:focus {
+      border: 2px solid $brand;
+    }
+  }
+
+  .submitButton {
+    width: 200px;
+  }
+}

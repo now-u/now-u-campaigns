@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import classes from './Modal.module.scss';
+import classNames from 'classnames';
 
 export default class Modal extends React.Component {
   constructor(props) {
@@ -10,36 +11,31 @@ export default class Modal extends React.Component {
     this.state = {
       isActive: true
     };
-
-    this.handleClickAway = this.handleClickAway.bind(this);
-    this.handleClose = this.handleClose.bind(this);
-    this.handleKeyDown = this.handleKeyDown.bind(this);
-    this.cleanup = this.cleanup.bind(this);
   }
 
-  handleClose() {
+  handleClose = () =>  {
     this.setState({
       isActive: false
     });
   }
 
-  handleKeyDown(event) {
+  handleKeyDown = (event) => {
     if (event.keyCode === 27) {
       this.handleClose();
     }
   }
 
-  handleClickAway(event) {
+  handleClickAway = (event) =>  {
     if (!this.modalDialog.contains(event.target)) {
       this.handleClose();
     }
   }
 
-  setScrollLock(isLocked) {
+  setScrollLock = (isLocked) => {
     document.body.style.overflow = isLocked ? "hidden" : 'auto';
   }
 
-  cleanup() {
+  cleanup = () => {
     this.setScrollLock(false);
   }
 
@@ -54,28 +50,29 @@ export default class Modal extends React.Component {
   }
 
   render() {
-    const {isActive} = this.state;
+    const { isActive } = this.state;
+    const { color, size } = this.props;
 
     if (!isActive) {
       this.cleanup();
-
       return null;
     }
 
     return ReactDOM.createPortal(
       <aside
-        className={classes.container} id="modal"
-        onKeyDown={this.handleKeyDown}
+        className={classes.container}
         tabIndex="-1"
+        onKeyDown={this.handleKeyDown}
         onClick={this.handleClickAway}
       >
         <div
+          data-size={size}
           className={classes.dialog}
           ref={(modalDialog) => {this.modalDialog = modalDialog}}
         >
-          <div className={classes.content}>
+          <div className={classNames(classes.content, classes[color])}>
             <button
-              className={classes.closeButton}
+              className={classNames(classes.closeButton, classes[color])}
               onClick={this.handleClose}
               ref={(closeButton) => {this.closeButton = closeButton}}
             >
@@ -93,6 +90,12 @@ export default class Modal extends React.Component {
 }
 
 Modal.propTypes = {
+  color: PropTypes.oneOf(['light', 'dark']),
+  size: PropTypes.oneOf(['small', 'medium', 'large']),
   children: PropTypes.node.isRequired,
 };
 
+Modal.defaultProps = {
+  color: 'light',
+  size: 'medium'
+};

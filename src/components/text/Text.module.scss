@@ -21,3 +21,7 @@ h4 {
 p {
   font-size: calc(20px + (30 - 20) * ((100vw - 320px) / (1920 - 320)));
 }
+
+.noMargin {
+  margin: 0;
+}

@@ -37,6 +37,10 @@ export default class Modal extends React.Component {
 
   cleanup = () => {
     this.setScrollLock(false);
+
+    if (this.props.onClose) {
+      this.props.onClose();
+    }
   }
 
   componentDidMount() {
@@ -92,6 +96,7 @@ export default class Modal extends React.Component {
 Modal.propTypes = {
   color: PropTypes.oneOf(['light', 'dark']),
   size: PropTypes.oneOf(['small', 'medium', 'large']),
+  onClose: PropTypes.func,
   children: PropTypes.node.isRequired,
 };
 

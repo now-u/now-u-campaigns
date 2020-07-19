@@ -1,10 +1,37 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 import { Campaigns, Campaign, Homepage, AboutUs, NowUApp, GetInTouch, Press, FAQs } from './domain';
-import { AnnounceBar, TopNav, Footer } from './components';
+import {AnnounceBar, TopNav, Footer, NewsletterSignup} from './components';
 import './App.scss';
+import { ModalService } from "./services";
 
 const App = () => {
+  const openNewsletterSignupModal = () => {
+    const showNewsletterSignup = !sessionStorage.getItem('newsletter-dismissed');
+
+    if (showNewsletterSignup) {
+      ModalService.open(
+        NewsletterSignup,
+        undefined,
+        {
+          color: 'dark',
+          onClose: () => sessionStorage.setItem('newsletter-dismissed', 'true')
+        }
+      );
+    }
+  }
+
+  useEffect(() => {
+    // Display newsletter signup after 30 seconds
+    const timer = setTimeout(() => {
+      openNewsletterSignupModal();
+    }, 30000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  });
+
   return (
     <BrowserRouter>
       <div className="App">

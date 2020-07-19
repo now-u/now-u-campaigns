@@ -1,19 +1,13 @@
 import React from 'react';
-import { Text, Button, DownloadButtons, NewsletterSignup } from '../../../../components';
+import { Text, Button, DownloadButtons } from '../../../../components';
 import classes from './Intro.module.scss';
 import { worldIllustration } from '../../../../assets';
-import { ModalService } from '../../../../services';
 
 const Intro = () => {
-  const openModal = () => {
-    ModalService.open(NewsletterSignup, {}, {color: 'dark'});
-  }
-
   return (
     <div id="home" className={classes.introContainer}>
       <div className={classes.introContent}>
         <div className={classes.introMesg}>
-          <div onClick={openModal}>Pop modal</div>
           <Text type="h1">It&apos;s time to <br/>change together</Text>
           <Text type="h3">
             Download the app to discover simple, meaningful and effective ways to support

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Intro, TheApp, ActiveCampaigns, Partners, HowItWorks } from './components/index';
+//import { Intro, TheApp, ActiveCampaigns, Partners, HowItWorks } from './components/index';
+import {ActiveCampaigns, Partners } from './components/index';
 import classes from './Homepage.module.scss';
 
 const Homepage = () => {
@@ -24,12 +25,12 @@ const Homepage = () => {
 
   return (
     <div className={classes.homepageContainer}>
-      <Intro />
-      <HowItWorks />
+      {/* <Intro />
+      <HowItWorks /> */}
       <ActiveCampaigns campaigns={campaigns} />
       <p>{partners[0]?.name}</p>
       <Partners partners={partners} />
-      <TheApp />
+      {/* <TheApp /> */}
     </div>
   );
 };

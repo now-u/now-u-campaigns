@@ -1,19 +1,18 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 import { Campaigns, Campaign, Homepage, AboutUs, NowUApp, GetInTouch, Press, FAQs } from './domain';
-import {AnnounceBar, TopNav, Footer, NewsletterSignup} from './components';
+import {AnnounceBar, TopNav, Footer, NewsletterSignupModal } from './components';
 import './App.scss';
 import { ModalService } from "./services";
 
 const App = () => {
   const openNewsletterSignupModal = () => {
-    const showNewsletterSignup = true ||
-      !(sessionStorage.getItem('newsletter-signup-dismissed') ||
+    const showNewsletterSignup = !(sessionStorage.getItem('newsletter-signup-dismissed') ||
         localStorage.getItem('newsletter-signup-completed'));
 
     if (showNewsletterSignup) {
       ModalService.open(
-        NewsletterSignup,
+        NewsletterSignupModal,
         undefined,
         {
           color: 'dark',

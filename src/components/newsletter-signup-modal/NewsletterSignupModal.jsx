@@ -1,10 +1,10 @@
 import React, {useState} from 'react';
 import { Text } from '../../components';
-import classes from './NewsletterSignup.module.scss';
+import classes from './NewsletterSignupModal.module.scss';
 import classNames from 'classnames';
 import Button from "../button/Button";
 
-const NewsletterSignup = () => {
+const NewsletterSignupModal = () => {
   const [formStatus, setFormStatus] = useState({
     isSubmitting: false,
     hasSubmitted: false,
@@ -134,4 +134,4 @@ const NewsletterSignup = () => {
     );
 };
 
-export default NewsletterSignup;
+export default NewsletterSignupModal;

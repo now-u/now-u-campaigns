@@ -2,8 +2,9 @@
 
 
 .partnersContainer {
+  background: $lightGrey;
+
   .partnersContent {
-    background: $lightGrey;
     align-items: center;
     width: 100%;
     min-height: 700px;
@@ -11,9 +12,6 @@
     max-width: $max-width;
     margin: auto;
     box-sizing: border-box;
-    button {
-      margin-left: auto;
-    }
   
     .header {
       line-height: 1.5;
@@ -24,14 +22,12 @@
       }
     }
    
-  
     .partnersRow {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      width: 90%;
       align-items: center;
-    
+
       .partner {
         margin: 10px;
         max-width: 30%;
@@ -43,15 +39,13 @@
         min-width: 300px;
         height: 150px;
         transition: box-shadow 0.2s ease-in;
-    
         img {
           max-height: 120px;
         }
-    
         &:hover {
           box-shadow: $boxShadow;
         }
-    
+
         .partnerName {
           padding: 0;
           margin-top: auto;

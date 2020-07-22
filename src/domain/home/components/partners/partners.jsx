@@ -25,7 +25,7 @@ const Partners = ({ partners }) => {
                 return (
                   //<Link key={id} to={`/partners/${id}`}>
                   <div key={id} className={classes.partner}>
-                    <div className={classes.partner}>
+                    <div>
                       <img src={logo_link} alt="parnter img"/>
                     </div>
                     <Text type="p" className={classes.partnerName}>{name}</Text>

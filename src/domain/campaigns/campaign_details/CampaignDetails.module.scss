@@ -24,15 +24,29 @@
   height: auto;
   max-width: $max-width;
   margin: auto;
-  width: calc(100% - 36px);
-  padding: 18px;
+  width: calc(100%);
   & img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    max-height: 550px;
+    max-height: 300px;
   }
 }
+
+.headerImage {
+  background-color: black;
+  & img {
+    opacity: 0.6;
+  }
+}
+
+.centeredHeaderText {
+  position: absolute;
+  top: calc(30%); // I think there is a better way to ensure that the text is ontop of the image
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .navBack {
   display: flex;
   align-items: center;
@@ -71,7 +85,8 @@
   }
 }
 .title {
-  color: $brand;
+  color: white;
+  font-size: 60px;
   font-weight: $blackBold;
 }
 .meta {

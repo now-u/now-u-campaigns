@@ -12,16 +12,21 @@ const Campaign = ({
   return (
     <div className={classes.campaignContainer}>
       <div className={classes.header}>
-        <img src={header_image} alt="header image" />
+        <div className={classes.headerImage}>
+          <img src={header_image} alt="header image" />
+          <div className={classes.centeredHeaderText}>
+            <Text className={classes.title} type="h1">
+              {title}
+            </Text>
+          </div>
+        </div>
+      </div>
+      <div className={classes.summary}>
         <Link className={classes.navBack} to={'/campaigns'}>
           <i className="material-icons">chevron_left</i>
           <Text type="p">Campaigns</Text>
         </Link>
-      </div>
-      <div className={classes.summary}>
-        <Text className={classes.title} type="h1">
-          {title}
-        </Text>
+        
         {number_of_campaigners > 1 && (
           <div className={classes.meta}>
             <div className={classes.participants}>
@@ -39,9 +44,6 @@ const Campaign = ({
         )}
       </div>
       <div className={classes.contentGroup}>
-        <Text className={classes.subtitle} type="h2">
-          What is it about?
-        </Text>
         {/* <Text type="p" className={classes.caption}>
           This is a caption that concludes the key message of the video
         </Text> */}

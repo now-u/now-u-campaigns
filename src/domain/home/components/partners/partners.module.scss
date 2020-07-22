@@ -36,11 +36,11 @@
         border-radius: 5px;
         background-position: center;
         padding: 1em;
-        min-width: 300px;
-        height: 150px;
+        min-width: 250px;
+        height: 130px;
         transition: box-shadow 0.2s ease-in;
         img {
-          max-height: 120px;
+          max-height: 100px;
         }
         &:hover {
           box-shadow: $boxShadow;
@@ -52,6 +52,41 @@
           font-size: 1.4em;
         }
       }
+      
+      @media (max-width: $medium) {
+        .partner {
+          min-width: 190px;
+          height: 105px;
+          padding: 0.8em;
+          img {
+            max-height: 60px;
+          }
+      
+          .partnerName {
+      
+            font-size: 1.2em;
+          }
+        }
+      }
+
+      @media (max-width: $small) {
+        .partner {
+          min-width: 140px;
+          height: 100px;
+          padding: 0.5em;
+          img {
+            max-height: 55px;
+          }
+      
+          .partnerName {
+      
+            font-size: 1.05em;
+          }
+        }
+      }
+
+
     }
   }
 } 
+

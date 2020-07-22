@@ -15,7 +15,6 @@
 
 .list {
   list-style-type: none;
-  margin-bottom: 28px;
   padding: 0;
 
   .listCheckmark {
@@ -34,21 +33,22 @@
   }
 }
 
-.emailForm {
+.formInputs {
   display: flex;
-  justify-content: center;
+  margin-bottom: 12px;
 
   // TODO: Make an input component. This was copied from Homepage.module.scss
-  .emailInput {
+  .formInput {
     border-radius: 6px;
     border: 2px solid transparent;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
     font-family: $bodyFont;
-    margin-right: 12px;
-    min-height: 40px;
+    height: 40px;
+    margin-right: 32px;
     outline: none;
     padding-left: 8px;
     transition: border 0.3s;
-    width: 350px;
+    width: 320px;
 
     &:focus {
       border: 2px solid $brand;
@@ -58,4 +58,8 @@
   .submitButton {
     width: 200px;
   }
+}
+
+.hidden {
+  display: none;
 }

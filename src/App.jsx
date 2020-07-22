@@ -7,7 +7,9 @@ import { ModalService } from "./services";
 
 const App = () => {
   const openNewsletterSignupModal = () => {
-    const showNewsletterSignup = !sessionStorage.getItem('newsletter-dismissed');
+    const showNewsletterSignup = true ||
+      !(sessionStorage.getItem('newsletter-signup-dismissed') ||
+        localStorage.getItem('newsletter-signup-completed'));
 
     if (showNewsletterSignup) {
       ModalService.open(
@@ -15,7 +17,7 @@ const App = () => {
         undefined,
         {
           color: 'dark',
-          onClose: () => sessionStorage.setItem('newsletter-dismissed', 'true')
+          onClose: () => sessionStorage.setItem('newsletter-signup-dismissed', 'true')
         }
       );
     }
@@ -25,7 +27,7 @@ const App = () => {
     // Display newsletter signup after 30 seconds
     const timer = setTimeout(() => {
       openNewsletterSignupModal();
-    }, 30000);
+    }, 3000);
 
     return () => {
       clearTimeout(timer);

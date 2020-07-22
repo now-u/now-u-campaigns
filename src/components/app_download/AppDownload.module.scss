@@ -54,3 +54,22 @@
   right: -30px;
   z-index: 0;
 }
+.downloadBtns {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+  width: 50%;
+  z-index: 2;
+  & button {
+    width: 40%;
+    max-width: 170px;
+    margin-right: 16px;
+  }
+  & img {
+    max-width: 100%;
+  }
+}
+.appDownloadButtonContainer {
+  display: flex;
+  justify-content: center;
+}

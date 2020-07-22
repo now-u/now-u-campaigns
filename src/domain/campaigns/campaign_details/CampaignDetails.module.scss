@@ -134,6 +134,18 @@
 .caption {
   font-weight: $bold;
 }
+.actionFooter {
+  text-align: center; 
+  margin-top: 50px;
+  p {
+    width: 50%;
+    margin-left: 25%;
+    font-size: 18px;
+  }
+  
+  
+}
+
 
 .actionItem {
   display: flex;

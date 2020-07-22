@@ -90,6 +90,7 @@ const NewsletterSignupModal = () => {
                 <label htmlFor="name">Name</label>
                 <input
                   className={classes.formInput}
+                  disabled={isSubmitting}
                   type="text"
                   name="NAME"
                   id="name"
@@ -100,6 +101,7 @@ const NewsletterSignupModal = () => {
                 <label htmlFor="email">Email</label>
                 <input
                   className={classes.formInput}
+                  disabled={isSubmitting}
                   type="email"
                   name="EMAIL"
                   id="email"

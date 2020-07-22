@@ -36,10 +36,10 @@ const Campaign = ({
               </Text>
               <Text type="h4">You can too, on our app</Text>
             </div>
-            {/* <div className={classes.participants}>
+            <div className={classes.participants}>
             <Text type="h4">This campaign is initiated by:</Text>
             <Text type="h4">Let&apos;s Do It Foundation</Text>
-          </div> */}
+          </div>
           </div>
         )}
       </div>
@@ -55,8 +55,10 @@ const Campaign = ({
         ))}
       </div>
       <div className={classes.actionContainer}>
+
+      <div className={classes.actionContent}>
         <Text className={classes.subtitle} type="h2">
-          What are the actions for this week?
+          Take action now!
         </Text>
         <Text type="p" className={classes.caption}>
           Complete weekly actions on our app to help us tackle this challenge. Here are some examples of how you can
@@ -76,6 +78,7 @@ const Campaign = ({
       </div>
       <AppDownload />
     </div>
+      </div>
   );
 };
 

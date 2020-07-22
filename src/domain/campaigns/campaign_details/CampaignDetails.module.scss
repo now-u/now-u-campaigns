@@ -120,6 +120,11 @@
   margin-bottom: 48px;
 }
 .actionContainer {
+  background-color: #F7F8FC;
+  width: 100%;
+}
+
+.actionContent {
   @extend .contentGroup;
   margin-bottom: 80px;
 }

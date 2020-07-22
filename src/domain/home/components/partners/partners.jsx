@@ -25,7 +25,7 @@ const Partners = ({ partners }) => {
                 return (
                   //<Link key={id} to={`/partners/${id}`}>
                   <div key={id} className={classes.partner}>
-                    <div>
+                    <div className={classes.partner}>
                       <img src={logo_link} alt="parnter img"/>
                     </div>
                     <Text type="p" className={classes.partnerName}>{name}</Text>
@@ -37,29 +37,6 @@ const Partners = ({ partners }) => {
               <Text type="p">Loading...</Text>
             </div>)}
         </div>
-        {/* <div className={classes.campaignsRow}>
-          {partners ? (
-            partners.map(({title}) => {
-              return (
-                <Link key={id} to={`/campaigns/${id}`}>
-                  <div
-                    key={id}
-                    className={classes.partner}
-                    style={{
-                      backgroundImage: `linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.6)), url(${header_image})`,
-                    }}
-                  >
-                    <div className={classes.partnerTitle}>
-                      <Text type="h3">{title}</Text>
-                    </div>
-                  </div>
-                </Link>
-              );
-            })
-          ) : (
-          )}
-        </div> */}
-        
       </div>
     </div>
   );

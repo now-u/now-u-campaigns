@@ -28,7 +28,7 @@ const Homepage = () => {
       {/* <Intro />
       <HowItWorks /> */}
       <ActiveCampaigns campaigns={campaigns} />
-      <p>{partners[0]?.name}</p>
+      {/* <p>{partners[0]?.name}</p> */}
       <Partners partners={partners} />
       {/* <TheApp /> */}
     </div>

@@ -16,21 +16,27 @@ const Partners = ({ partners }) => {
           <Text type="h1">Our Partners</Text>
           <Text type="p">We work with many amazing charities and social enterprises. 
           Want to find out more about partnering with now-u? 
-          Download our partnership guide.</Text>
-          <p>{partners[1]?.name}</p>
+          Download our <Link to={`/er`}>partnership guide</Link>.
+          </Text>
         </div>
-        {partners ? (
-            partners.map(({name, id}) => {
-              return (
-                <Link key={id} to={`/partners/${id}`}>
-                    <div className={classes.partnerName}>
-                      <Text type="h3">{name}</Text>
+        <div className={classes.partnersRow}>
+          {partners ? (
+              partners.map(({name, id, logo_link}) => {
+                return (
+                  //<Link key={id} to={`/partners/${id}`}>
+                  <div key={id} className={classes.partner}>
+                    <div>
+                      <img src={logo_link} alt="parnter img"/>
                     </div>
-                </Link>
-              );
-            })
-          ) : (
-        )}
+                    <Text type="p" className={classes.partnerName}>{name}</Text>
+                  </div>
+                  //</Link>
+                );
+              })
+            ) : (<div>
+              <Text type="p">Loading...</Text>
+            </div>)}
+        </div>
         {/* <div className={classes.campaignsRow}>
           {partners ? (
             partners.map(({title}) => {

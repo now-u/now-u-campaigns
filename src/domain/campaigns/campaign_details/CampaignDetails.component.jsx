@@ -85,7 +85,7 @@ const Campaign = ({
       </div>
       {/* <AppDownload /> */}
     </div>
-      </div>
+    </div>
   );
 };
 

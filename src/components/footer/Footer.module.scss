@@ -3,23 +3,37 @@
 .footer {
   padding: 40px;
   display: flex;
-  flex-wrap: wrap-reverse;
-  justify-content: space-between;
+  // flex-wrap: wrap-reverse;
+  justify-content: center;
   font-size: 28px;
+  background-color: #FFF8F1;
   & a {
     color: $black;
     padding: 0 20px;
   }
 }
 
-.links {
+.footerRight {
   font-size: 18px;
+  width: 50%;
+  text-align: center;
+}
+
+.footerLeft {
+  text-align: center;
+  justify-content: center;
+  width: 50%;
+  display: flex;
 }
 
 .socialLinks {
   display: flex;
+  justify-content: center;
 }
 
+.appDownloadLinks {
+  margin: 0 -16px 20px 0 ;
+}
 @media (max-width: $small) {
   .links {
     margin-top: 24px;

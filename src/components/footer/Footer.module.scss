@@ -1,7 +1,7 @@
 @import '../../utils/variables';
 
 .footer {
-  padding: 40px;
+  padding: 40px 100px 100px 100px;
   display: flex;
   // flex-wrap: wrap-reverse;
   justify-content: center;
@@ -20,24 +20,45 @@
 }
 
 .footerLeft {
-  text-align: center;
-  justify-content: center;
+  display: flex;
+  justify-content: flex-start;
   width: 50%;
   display: flex;
 }
 
+.logo {
+  width: 150px;
+  padding-left: 120px;
+  padding-top: 60px;
+}
+.linksColumnOne {
+  width: 100%;
+}
+.linksColumnTwo {
+  width: 100%;
+}
 .socialLinks {
   display: flex;
   justify-content: center;
 }
 
+.footerBackground {
+  background-color: #FFF8F1;
+}
+
+.links {
+  font-size: 20px;
+  padding-bottom: 20px; 
+}
+
+
 .appDownloadLinks {
   margin: 0 -16px 20px 0 ;
 }
 @media (max-width: $small) {
-  .links {
-    margin-top: 24px;
-  }
+  // .links {
+  //   margin-top: 24px;
+  // }
   .footer {
     justify-content: center;
   }

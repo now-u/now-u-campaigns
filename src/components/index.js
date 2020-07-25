@@ -12,3 +12,4 @@ export { default as SearchBox } from './search_box/SearchBox';
 export { default as AppDownloadSquare } from './app_download_square/AppDownloadSquare';
 export { default as AppDownloadRectangle } from './app_download_rectangle/AppDownloadRectangle';
 export { default as Avatar } from './avatar/Avatar';
+export { default as SearchDropdown } from './search_dropdown/SearchDropdown';

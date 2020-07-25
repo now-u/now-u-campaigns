@@ -26,7 +26,10 @@ const Button = ({ id, children, type, variant = 'primary', disabled, size = 'med
 };
 
 Button.propTypes = {
-  id: PropTypes.string | PropTypes.number,
+  id: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number
+  ]),
   children: PropTypes.any.isRequired,
   variant: PropTypes.string,
   disabled: PropTypes.bool,

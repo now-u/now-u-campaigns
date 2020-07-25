@@ -32,3 +32,5 @@ export { default as pressReleaseAppLaunch } from './Press_Release_now-u_app_laun
 export { default as nowUBrandGuide } from './now-u_Brand_Guide.pdf';
 export { default as searchIcon } from './search-icon.svg';
 export { default as defaultBlogImg } from './images/default-blog-img.jpeg';
+export { default as dropDownArrow } from './drop-down-arrow.svg';
+export { default as dropUpArrow } from './drop-up-arrow.svg';

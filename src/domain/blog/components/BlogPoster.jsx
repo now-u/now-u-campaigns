@@ -6,22 +6,21 @@ import { Text } from '../../../components';
 import { Link } from 'react-router-dom';
 
 const BlogPoster = ({ blog, highlighted }) => {
-    const blogImageSection = blog.sections.find(section => section.type === 'image_section');
-    const blogImage = blogImageSection ? blogImageSection["img_url"] : defaultBlogImg;
-    const blogHashtags = blog.hashtags;
+    const blogHeaderImage = blog.header_image ? blog.header_image : defaultBlogImg;
+    const blogHashtags = blog.tags;
 
     return (
         <Link to={`/blog/${blog.id}`} className={classes.blogPost}>
             <div className={classes.blogImage}>
-                <img src={blogImage} />
+                <img src={blogHeaderImage} />
                 {highlighted &&
                     <div><Text type="p">{blog.title}</Text></div>
                 }
             </div>
             <div className={classes.blogPostText}>
                 <div className={classes.blogHashtags}>
-                    {blogHashtags && blogHashtags.map((tag, index) => (
-                        <a key={index} href="#">#{tag}</a>
+                    {blogHashtags && blogHashtags.map(tag => (
+                        <a key={tag.id} href="#">#{tag.tag}</a>
                     ))}
                 </div>
                 <div>

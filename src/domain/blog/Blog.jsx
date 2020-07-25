@@ -20,6 +20,7 @@ const Blog = () => {
 
     const BlogPosters = () => {
         const blogItems = [...blogs];
+        // grab the first blog as the highlighted blog
         const blogHighlighted = blogItems.shift();
 
         return (

@@ -9,7 +9,7 @@ const AppDownloadSquare = ({ adText }) => {
 
     const text = adText ?
                     adText :
-                    'Are you interested? Start taking actions today!';
+                    'Start taking actions today!';
 
     return (
         <div className={classes.appDownloadContainer}>
@@ -21,12 +21,14 @@ const AppDownloadSquare = ({ adText }) => {
                     <Text type="p">Download here:</Text>
                     <div className={classes.downloadBtns}>
                         <Button
+                            id="AppDownloadSquare-AppleAppStore"
                             variant="other"
                             onClick={()=> window.open(appleStoreURL, "_blank")}
                         >
                             <img src={appleStore} alt="app download from apple store" />
                         </Button>
                         <Button
+                            id="AppDownloadSquare-GoogleAppStore"
                             variant="other"
                             onClick={()=> window.open(googleStoreURL, "_blank")}
                         >

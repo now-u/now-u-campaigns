@@ -9,9 +9,6 @@ const AppDownloadRectangle = () => {
         <div className={classes.container}>
             <div className={classes.text}>
                 <Text type="p">
-                    Are you interested?
-                </Text>
-                <Text type="p">
                     Download our app to take part!
                 </Text>
             </div>

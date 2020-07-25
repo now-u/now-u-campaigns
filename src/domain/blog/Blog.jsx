@@ -4,9 +4,12 @@ import { Text, AppDownloadSquare } from '../../components';
 import { BlogPoster } from './components';
 import BlogSearchControls from './components/BlogSearchControls';
 import { blogsURL } from '../../utils/constants';
+import { useBreakpoint } from '../../utils/breakpoint';
 
 const Blog = () => {
     const [blogs, setBlogs] = useState([]);
+    const breakpoints = useBreakpoint();
+    const smallDevice = !!breakpoints.sm;
 
     useEffect(() => {
         const fetchBlogs = async () => {
@@ -21,7 +24,8 @@ const Blog = () => {
     const BlogPosters = () => {
         const blogItems = [...blogs];
         // grab the first blog as the highlighted blog
-        const blogHighlighted = blogItems.shift();
+        // No highlighted blog on small device screens
+        const blogHighlighted = smallDevice ? null : blogItems.shift();
 
         return (
             <div>

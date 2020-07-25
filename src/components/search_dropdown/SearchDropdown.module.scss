@@ -35,7 +35,7 @@
     }
 
     & img {
-        width: 10%;
+        width: 55px;
         height: 100%;
         margin-left: -2%;
         z-index: 2;
@@ -43,7 +43,7 @@
 }
 
 .dropdownList {
-    width: 100%;
+    width: 98%;
     max-height: 220px;
     overflow-y: auto;
     position: absolute;
@@ -68,5 +68,11 @@
         color: $grey;
         padding: 10px 5px;
         border-bottom: 2px solid $lightGrey;
+    }
+}
+
+@media(max-width: $small) {
+    .dropdownContainer {
+        width: 282px;
     }
 }

@@ -21,8 +21,9 @@
 
 .blogs {
     max-width: 100%;
-    padding: 50px;
-    border-right: 1pt solid;
+    margin: 50px 0px;
+    padding: 0px 50px;
+    border-right: 1pt solid $grey;
 }
 
 .highlightedBlog {
@@ -44,8 +45,9 @@
 }
 
 .blogAds {
-    text-align: center;
-    padding: 20px 50px;
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
 }
 
 .blogPost {
@@ -134,4 +136,37 @@
     grid-template-columns: 1fr 1fr;
     padding-bottom: 50px;
     text-align: left;
+}
+
+@media(max-width: $medium) {
+    .content {
+        grid-template-columns: 1fr;
+    }
+    .blogs {
+        border-right: none;
+        border-bottom: 1pt solid $grey;
+    }
+}
+
+@media(max-width: $small) {
+    .content {
+        grid-template-columns: 1fr;
+    }
+
+    .blogs {
+        max-width: 100%;
+        margin: 10px 0px;
+        padding: 0px 10px;
+        border-right: none;
+        border-bottom: 1pt solid $grey;
+    }
+
+    .blogList {
+        grid-template-columns: 1fr;
+    }
+
+    .blogAds {
+        padding: 50px 10px;
+        justify-content: space-evenly;
+    }
 }

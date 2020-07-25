@@ -33,7 +33,8 @@ const BlogPoster = ({ blog, highlighted }) => {
                     </Text>
                 </div>
                 <div className={classes.blogAuthor}>
-                    {blog.user.full_name}
+                    <Text type="p">{blog.user.full_name}</Text>
+                    <Text type="p">{blog.reading_time} mins</Text>
                 </div>
             </div>
         </Link>

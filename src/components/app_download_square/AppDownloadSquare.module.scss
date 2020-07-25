@@ -1,7 +1,7 @@
 @import '../../utils/variables';
 
 .appDownloadContainer{
-    width: 400px;
+    width: 100%;
     height: 300px;
     background-color: $brand;
     border-radius: 0.5em;
@@ -32,6 +32,7 @@
 .downloadBtns {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding-bottom: 20px;
 
     & button {
@@ -44,5 +45,27 @@
         max-height: 100%;
         width: 90%;
         height: 90%;
+    }
+}
+
+@media(max-width: $medium) {
+    .appDownloadContainer {
+        width: 274px;
+        height: 360px;
+    }
+
+    .downloadBtns {
+        flex-direction: column;
+    }
+}
+
+@media(max-width: $medium) {
+    .appDownloadContainer {
+        width: 100%;
+        height: 274px;
+    }
+
+    .downloadBtns {
+        flex-direction: column;
     }
 }

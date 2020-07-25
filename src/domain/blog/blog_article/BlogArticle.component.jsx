@@ -4,8 +4,8 @@ import classes from './BlogArticle.module.scss';
 import { Text, Button, AppDownloadRectangle, Avatar } from '../../../components';
 import { Link } from 'react-router-dom';
 
-const Blog = ({ blog }) => {
-    const { title, subtitle, hashtags, sections, campaign_id, user } = blog;
+const Blog = ({ blog, sections }) => {
+    const { title, subtitle, tags, campaign_id, user } = blog;
     const campaignURL = `/campaigns/${campaign_id}`;
 
     return (
@@ -20,8 +20,11 @@ const Blog = ({ blog }) => {
             </div>
             <div className={classes.articleBody}>
                 <div className={classes.hashtags}>
-                    {hashtags.map((tag, i) => 
-                        <Text type="p" key={i}>#{tag}</Text>)}
+                    {tags.sort((a, b) => a.appearance_order - b.appearance_order)
+                            .map(tag =>
+                                <Text type="p" key={tag.id}>#{tag.tag}</Text>
+                                )
+                    }
                 </div>
                 <div className={classes.blogTitle}>
                     <Text type="h2">{title}</Text>
@@ -30,20 +33,20 @@ const Blog = ({ blog }) => {
                     <Text type="p">{subtitle}</Text>
                 </div>
                 <div className={classes.blogContent}>
-                    {sections.map((section, i) => {
-                        if(section.type === 'image_section') {
+                    {sections.map(section => {
+                        if(section.section_type === 'image_section') {
                             return (
                                 <div className={classes.blogImageSection}>
                                     <img 
-                                        key={i}
+                                        key={section.id}
                                         src={section.img_url}
                                         alt="blog image"
                                     />
                                 </div>
                             )
-                        } else if(section.type === 'text_section') {
+                        } else if(section.section_type === 'text_section') {
                             return(
-                                <div key={i} className={classes.blogTextSection}>
+                                <div key={section.id} className={classes.blogTextSection}>
                                     <Text type="p" className={classes.textSectionTitle}>
                                         {section.title}
                                     </Text>
@@ -59,14 +62,11 @@ const Blog = ({ blog }) => {
                     <Button className={classes.btnCampaignPage} to={campaignURL}>
                         Go to this campaign page
                     </Button>
-                    <Button className={classes.btnShare}>
-                        Share
-                    </Button>
                 </div>
                 <AppDownloadRectangle />
                 <div className={classes.authorInfo}>
                     <div className={classes.author}>
-                        <Avatar src={user.profile_image} />
+                        <Avatar src={user.profile_picture_url} />
                         <Text type="h4" className={classes.authorName}>{user.full_name}</Text>
                     </div>
                     <Text type="p" className={classes.authorDescription}>{user.description}</Text>
@@ -78,7 +78,8 @@ const Blog = ({ blog }) => {
 
 
 Blog.propTypes = {
-    blog: PropTypes.object.isRequired
+    blog: PropTypes.object.isRequired,
+    sections : PropTypes.array
 };
 
 

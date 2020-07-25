@@ -8,13 +8,19 @@ const BlogArticleContainer = () => {
     const { params } = useRouteMatch();
     const history = useHistory();
     const [blog, setBlog] = useState(null);
+    const [sections, setSections] = useState([]);
 
     useEffect(() => {
         const fetchBlog = async () => {
             try {
                 const resp = await fetch(`${blogsURL}/${params.id}`);
-                const blog = await resp.json();
-                setBlog(blog?.data ? blog.data : blog);
+                const blogJson = await resp.json();
+                if (blogJson) {
+                    setBlog(blogJson.data.blog ? blogJson.data.blog : blogJson.blog);
+                    if (blogJson.sections) {
+                        setSections(blogJson.sections);
+                    }
+                }
             } catch (error) {
                 history.push("/404");
             }
@@ -23,7 +29,7 @@ const BlogArticleContainer = () => {
     }, [params.id, history]);
 
     if(!blog) return null;
-    return <Blog blog={blog} />;
+    return <Blog blog={blog} sections={sections} />;
 }
 
 export default BlogArticleContainer;

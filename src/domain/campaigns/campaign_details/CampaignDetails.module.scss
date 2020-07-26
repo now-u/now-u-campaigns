@@ -20,7 +20,10 @@
   justify-content: center;
   background: $whiteGradient;
 }
+
 .header {
+  position: relative;
+  display: inline-block;
   height: auto;
   max-width: $max-width;
   margin: auto;
@@ -41,10 +44,26 @@
 }
 
 .centeredHeaderText {
+  z-index: 999;
+  margin: 0 auto;
+  width: 90%;
+  left: 0;
+  right: 0;        
+  text-align: center;
+  top: 40%; /* Adjust this value to move the positioned div up and down */
   position: absolute;
-  top: calc(30%); // I think there is a better way to ensure that the text is ontop of the image
-  left: 50%;
-  transform: translate(-50%, -50%);
+  @media screen and (max-width: 900px) {
+    top: calc(25%);
+    h1 {
+      font-size: 45px;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    top: calc(25%);
+    h1 {
+      font-size: 35px;
+    }
+  }
 }
 
 .navBack {

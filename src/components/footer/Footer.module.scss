@@ -55,11 +55,21 @@
 .appDownloadLinks {
   margin: 0 -16px 20px 0 ;
 }
-@media (max-width: $small) {
-  // .links {
-  //   margin-top: 24px;
-  // }
+@media (max-width: 900px) {
   .footer {
-    justify-content: center;
+    display: list-item;
+    width: auto;
+    padding: 50px 0 50px 0
+  }
+  .footerLeft {
+    width: 100%;
+    text-align: center;
+  }
+  .footerRight {
+    width: 100%;
+  }
+  .logo {
+    margin: auto;
+    padding: 50px 0 0 0  
   }
 }

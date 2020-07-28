@@ -5,11 +5,29 @@ import ReactPlayer from 'react-player';
 // import { AppDownload, Text } from '../../../components';
 import { Text, AppDownloadButtons } from '../../../components';
 import classes from './CampaignDetails.module.scss';
+import GetInvolvedIcon from '../../../assets/action_svg/GetInvolved.svg'
+import RaiseMoneyIcon from '../../../assets/action_svg/RaiseMoney.svg'
+import AdvocateIcon from '../../../assets/action_svg/Advocate.svg'
 
 const Campaign = ({
   campaign: { header_image, title, video_link, actions, number_of_campaigners, description_web },
 }) => {
   const descriptionParagraphs = description_web.split('<br>');
+  const GetInvolved = ['volunteer', 'behaviour', 'protest', 'connect']
+  const RaiseMoney = ['donate', 'fundraise']
+  const Advocate = ['awareness', 'sign', 'contact']
+  const action = (title, link, type) => {
+    return (
+      <a key={title} href={link} target="_blank" rel="noopener noreferrer">
+        <div className={classes.actionItem}>
+          <div className={classes.actionIconContainer}>
+            <img src={type} alt="" className={classes.actionIcon}/>
+          </div>
+          <Text type="h4">{title}</Text>
+        </div>
+      </a>
+    );
+  }
   return (
     <div className={classes.campaignContainer}>
       <div className={classes.header}>
@@ -65,16 +83,14 @@ const Campaign = ({
           Complete weekly actions on our app to help us tackle this challenge. Here are some examples of how you can
           help today.
         </Text>
-        {actions.map(({ title, link }) => {
-          return (
-            <a key={title} href={link} target="_blank" rel="noopener noreferrer">
-              <div className={classes.actionItem}>
-                <div className={classes.divider} />
-                <i className="material-icons">assignment_turned_in</i>
-                <Text type="h4">{title}</Text>
-              </div>
-            </a>
-          );
+        {actions.map(({ title, link , type}) => {
+          if (GetInvolved.includes(type)) { 
+            return (action(title, link, GetInvolvedIcon))
+          } else if (RaiseMoney.includes(type)) {
+            return (action(title, link, RaiseMoneyIcon))
+          } else if (Advocate.includes(type)) {
+            return (action(title, link, AdvocateIcon))
+          }
         })}
         <div className={classes.actionFooter}>
           <Text type="p">

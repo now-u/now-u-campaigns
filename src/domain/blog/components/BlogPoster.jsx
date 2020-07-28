@@ -20,7 +20,7 @@ const BlogPoster = ({ blog, highlighted }) => {
             <div className={classes.blogPostText}>
                 <div className={classes.blogHashtags}>
                     {blogHashtags && blogHashtags.map(tag => (
-                        <a key={tag.id} href="#">#{tag.tag}</a>
+                        <span key={tag.id} href="#">#{tag.tag}</span>
                     ))}
                 </div>
                 <div>
@@ -33,8 +33,11 @@ const BlogPoster = ({ blog, highlighted }) => {
                     </Text>
                 </div>
                 <div className={classes.blogAuthor}>
-                    <Text type="p">{blog.user.full_name}</Text>
-                    <Text type="p">{blog.reading_time} mins</Text>
+                    <Text type="p">{blog?.user?.full_name ? blog.user.full_name : ''}</Text>
+                    <Text type="p" className={classes.readingTime}>
+                        <i className="material-icons">schedule</i>
+                        {blog.reading_time} min
+                    </Text>
                 </div>
             </div>
         </Link>

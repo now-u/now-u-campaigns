@@ -5,6 +5,11 @@ import { dropDownArrow, dropUpArrow } from '../../assets';
 
 const SearchDropdown = ({ title, values }) => {
     const [listOpen, setListOpen] = useState(false);
+
+    const onListItemClick = () => {
+        setListOpen(false);
+    }
+
     return (
         <div className={classes.dropdownContainer} tabIndex="0" onBlur={() => setListOpen(false)}>
             <div className={classes.dropdownHeader} onClick={() => setListOpen(!listOpen)}>
@@ -18,7 +23,7 @@ const SearchDropdown = ({ title, values }) => {
             {listOpen &&
                 <div className={classes.dropdownList}>
                     {values.map((value, index) => (
-                        <div className={classes.listItem} key={index} onClick={() => setListOpen(false)}>{value}</div>
+                        <div className={classes.listItem} key={index} onClick={onListItemClick}>{value}</div>
                     ))}
                 </div>
             }

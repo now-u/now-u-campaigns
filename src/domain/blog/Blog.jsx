@@ -36,8 +36,8 @@ const Blog = () => {
                 }
                 {blogItems &&
                     <div className={classes.blogList}>
-                        {blogItems.map((blog, i) => (
-                            <BlogPoster blog={blog} key={i} />
+                        {blogItems.map((blog) => (
+                            <BlogPoster blog={blog} key={blog.id} />
                         ))}
                     </div>
                 }

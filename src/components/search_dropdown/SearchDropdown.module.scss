@@ -30,7 +30,6 @@
         font-weight: $bold;
         font-size: 20px;
         color: $brand;
-        z-index: 1;
 
     }
 
@@ -38,7 +37,7 @@
         width: 55px;
         height: 100%;
         margin-left: -2%;
-        z-index: 2;
+        z-index: 1;
     }
 }
 
@@ -51,8 +50,9 @@
     margin-top: 0.5rem;
     left: 0;
     overflow: hidden;
-    z-index: 2;
+    z-index: 1;
     background: $white;
+    cursor: default;
 
     border: 2px solid $lightGrey;
     border-radius: 15px;

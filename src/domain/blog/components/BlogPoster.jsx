@@ -19,8 +19,8 @@ const BlogPoster = ({ blog, highlighted }) => {
             </div>
             <div className={classes.blogPostText}>
                 <div className={classes.blogHashtags}>
-                    {blogHashtags && blogHashtags.map(tag => (
-                        <span key={tag.id} href="#">#{tag.tag}</span>
+                    {blogHashtags.map(tag => (
+                        <span key={`${blog.id}-${tag.id}`} href="#">#{tag.tag}</span>
                     ))}
                 </div>
                 <div>

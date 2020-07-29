@@ -5,7 +5,7 @@ import { Text, Button, AppDownloadRectangle, Avatar } from '../../../components'
 import { Link } from 'react-router-dom';
 
 const Blog = ({ blog, sections }) => {
-    const { title, subtitle, tags, campaign_id, user } = blog;
+    const { title, subtitle, tags, campaign_id, user, reading_time } = blog;
     const campaignURL = `/campaigns/${campaign_id}`;
 
     return (
@@ -29,9 +29,17 @@ const Blog = ({ blog, sections }) => {
                 <div className={classes.blogTitle}>
                     <Text type="h2">{title}</Text>
                 </div>
-                <div className={classes.blogSubtitle}>
-                    <Text type="p">{subtitle}</Text>
-                </div>
+                {reading_time &&
+                    <div className={classes.readingTime}>
+                        <i className="material-icons">schedule</i>
+                        {reading_time} min
+                    </div>
+                }
+                {subtitle &&
+                    <div className={classes.blogSubtitle}>
+                        <Text type="p">{subtitle}</Text>
+                    </div>
+                }
                 <div className={classes.blogContent}>
                     {sections.map(section => {
                         if(section.section_type === 'image_section') {

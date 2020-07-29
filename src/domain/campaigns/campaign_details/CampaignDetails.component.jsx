@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import ReactPlayer from 'react-player';
-// import { AppDownload, Text } from '../../../components';
 import { Text, AppDownloadButtons } from '../../../components';
 import classes from './CampaignDetails.module.scss';
 import GetInvolvedIcon from '../../../assets/action_svg/GetInvolved.svg'

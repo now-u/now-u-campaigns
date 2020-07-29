@@ -14,3 +14,10 @@
         font-size: 60px;
     }
 }
+
+@media(max-width: $small) {
+    .avatarContainer {
+        width: 24px;
+        height: 24px;
+    }
+}

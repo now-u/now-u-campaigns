@@ -72,13 +72,21 @@ const Blog = ({ blog, sections }) => {
                     </Button>
                 </div>
                 <AppDownloadRectangle />
-                <div className={classes.authorInfo}>
-                    <div className={classes.author}>
-                        <Avatar src={user.profile_picture_url} />
-                        <Text type="h4" className={classes.authorName}>{user.full_name}</Text>
+                {user &&
+                    <div className={classes.authorInfo}>
+                        <div className={classes.author}>
+                            {user.profile_picture_url &&
+                                <Avatar src={user.profile_picture_url} />
+                            }
+                            {user.full_name && 
+                                <Text type="h4" className={classes.authorName}>{user.full_name}</Text>
+                            }
+                        </div>
+                        {user.description &&
+                            <Text type="p" className={classes.authorDescription}>{user.description}</Text>
+                        }
                     </div>
-                    <Text type="p" className={classes.authorDescription}>{user.description}</Text>
-                </div>
+                }
             </div>
         </div>
     );

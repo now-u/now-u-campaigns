@@ -38,7 +38,7 @@
 
 .headerImage {
   background-color: black;
-  & img {
+  img {
     opacity: 0.6;
   }
 }
@@ -178,7 +178,6 @@
 .actionItem {
   display: flex;
   background: white;
-  // box-shadow: $campaignBoxShadow;
   padding: 16px;
   font-size: 20px;
   margin-bottom: 24px;

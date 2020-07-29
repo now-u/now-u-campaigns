@@ -21,6 +21,8 @@ jobs:
   # Run tests.
   # See also https://docs.docker.com/docker-hub/builds/automated-testing/
   test:
+    # If the push is not to staging then dont do the build
+    if: github.event.base_ref == 'refs/heads/staging'
     runs-on: ubuntu-latest
 
     steps:
@@ -40,6 +42,9 @@ jobs:
   push:
     # Ensure test job passes before pushing image.
     needs: test
+    # If the push is not to staging then dont do the build
+    if: github.event.base_ref == 'refs/heads/staging'
+    if: github.event_name == 'push'
 
     runs-on: ubuntu-latest
 

@@ -50,7 +50,7 @@
 
 @media(max-width: $medium) {
     .appDownloadContainer {
-        width: 274px;
+        max-width: 274px;
         height: 360px;
     }
 

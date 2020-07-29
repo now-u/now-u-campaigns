@@ -30,7 +30,6 @@
         align-items: center;
         font-weight: $bold;
         font-size: 32px;
-        text-align: left;
         & * {
             margin-right: 10px;
         }
@@ -47,6 +46,7 @@
 .hashtags {
     align-items: center;
     display: flex;
+    flex-wrap: wrap;
     font-weight: $regular;
     text-decoration: underline;
     
@@ -163,5 +163,86 @@
 
     & i {
         margin-right: 5px;
+    }
+}
+
+@media(max-width: $medium) {
+    .blogButtonBar {
+        text-align: center;
+    }
+
+    .authorInfo {
+        padding: 50px 0px;
+
+        .author {
+            width: 50%;
+            margin-right: 10px;
+
+            .authorName {
+                font-size: 3.5vw;
+            }
+        }
+    }
+}
+
+@media(max-width: $small) {
+
+    .articleBody {
+        width: 95%;
+    }
+
+    .blogBreadcrumb {
+        & h4 {
+            font-size: 17px;
+            margin-left: 10px;
+        }
+    }
+
+    .hashtags {
+        & p {
+            margin-right: 5px;
+        }
+    }
+    
+    .blogTitle {
+        & * {
+            margin-right: 5px;
+            margin-bottom: 15px;
+            font-size: 27px;
+        }
+    }
+
+    .blogSubtitle {
+        & * {
+            font-size: 17px;
+            line-height: 21px;
+        }
+    }
+
+    .textSectionTitle, .textSectionContent {
+        font-size: 17px;
+    }
+    
+    .authorInfo {
+        width: 95%;
+        padding: 50px 10px;
+        flex-direction: column;
+        justify-content: flex-start;
+
+        .author {
+            width: 100%;
+            margin: 0;
+
+            .authorName {
+                font-size: 17px;
+                margin-left: 10px;
+            }
+        }
+
+        .authorDescription {
+            width: 100%;
+            font-weight: $regular;
+            font-size: 14px;
+        }
     }
 }

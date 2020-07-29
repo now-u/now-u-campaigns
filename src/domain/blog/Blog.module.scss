@@ -110,7 +110,7 @@
 
 .blogTitle{
     font-weight: $bold;
-    font-size: 22px;
+    font-size: 24px;
     line-height: 27px;
     text-align: left;
     color: $black;
@@ -129,7 +129,9 @@
 
     & p {
         margin: 0;
+        margin-right: 10px;
     }
+
 }
 
 .readingTime {
@@ -139,6 +141,13 @@
     letter-spacing: -0.02em;
     line-height: 12px;
     color: $grey;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    & i {
+        margin-right: 5px;
+    }
 }
 
 .SearchControls {

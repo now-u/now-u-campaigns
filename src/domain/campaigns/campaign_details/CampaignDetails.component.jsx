@@ -22,7 +22,7 @@ const Campaign = ({
           <div className={classes.actionIconContainer}>
             <img src={type} alt="" className={classes.actionIcon}/>
           </div>
-          <Text type="h4">{title}</Text>
+          <Text type="h4" className={classes.actionTitle}>{title}</Text>
         </div>
       </a>
     );

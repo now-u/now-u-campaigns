@@ -5,6 +5,7 @@ import { BlogPoster } from './components';
 import BlogSearchControls from './components/BlogSearchControls';
 import { blogsURL } from '../../utils/constants';
 import { useBreakpoint } from '../../utils/breakpoint';
+import { MonthCampaigns } from './components';
 
 const Blog = () => {
     const [blogs, setBlogs] = useState([]);
@@ -61,6 +62,7 @@ const Blog = () => {
                 </div>
                 <div className={classes.blogAds}>
                     <AppDownloadSquare />
+                    <MonthCampaigns />
                 </div>
             </div>
         </div>

@@ -62,9 +62,6 @@ const Campaign = ({
         )}
       </div>
       <div className={classes.contentGroup}>
-        {/* <Text type="p" className={classes.caption}>
-          This is a caption that concludes the key message of the video
-        </Text> */}
         <ReactPlayer className={classes.video} url={video_link} width="100%" height="45vh" />
         {descriptionParagraphs.map((p) => (
           <Text type="p" key={p}>

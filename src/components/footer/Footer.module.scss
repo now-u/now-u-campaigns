@@ -1,9 +1,23 @@
 @import '../../utils/variables';
 
+.logo {
+  width: 150px;
+  padding-left: 120px;
+  padding-top: 60px;
+  @media (max-width: 900px) {
+      margin: auto;
+      padding: 50px 0 0 0  
+    }
+}
+
 .footer {
-  padding: 40px 100px 100px 100px;
+  @media (max-width: 900px) {
+      display: list-item;
+      width: auto;
+      padding: 50px 0 50px 0
+    }
+  padding: 40px 100px 40px 100px;
   display: flex;
-  // flex-wrap: wrap-reverse;
   justify-content: center;
   font-size: 28px;
   background-color: #FFF8F1;
@@ -11,65 +25,43 @@
     color: $black;
     padding: 0 20px;
   }
-}
-
-.footerRight {
-  font-size: 18px;
-  width: 50%;
-  text-align: center;
-}
-
-.footerLeft {
-  display: flex;
-  justify-content: flex-start;
-  width: 50%;
-  display: flex;
-}
-
-.logo {
-  width: 150px;
-  padding-left: 120px;
-  padding-top: 60px;
-}
-.linksColumnOne {
-  width: 100%;
-}
-.linksColumnTwo {
-  width: 100%;
-}
-.socialLinks {
-  display: flex;
-  justify-content: center;
+  .footerRight {
+    font-size: 18px;
+    width: 50%;
+    text-align: center;
+    .socialLinks {
+      display: flex;
+      justify-content: center;
+    }    
+    .appDownloadLinks {
+      margin: 0 -16px 20px 0 ;
+    }    
+    @media (max-width: 900px) {
+        width: 100%;
+      }
+  }
+  .footerLeft {
+    .links {
+      font-size: 20px;
+      padding-bottom: 20px; 
+    }
+    .linksColumnOne {
+      width: 100%;
+    }
+    .linksColumnTwo {
+      width: 100%;
+    }
+    display: flex;
+    justify-content: flex-start;
+    width: 50%;
+    display: flex;
+    @media (max-width: 900px) {
+      width: 100%;
+      text-align: center;
+    }
+  }
 }
 
 .footerBackground {
   background-color: #FFF8F1;
-}
-
-.links {
-  font-size: 20px;
-  padding-bottom: 20px; 
-}
-
-
-.appDownloadLinks {
-  margin: 0 -16px 20px 0 ;
-}
-@media (max-width: 900px) {
-  .footer {
-    display: list-item;
-    width: auto;
-    padding: 50px 0 50px 0
-  }
-  .footerLeft {
-    width: 100%;
-    text-align: center;
-  }
-  .footerRight {
-    width: 100%;
-  }
-  .logo {
-    margin: auto;
-    padding: 50px 0 0 0  
-  }
 }

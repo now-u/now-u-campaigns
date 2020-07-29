@@ -95,7 +95,6 @@ const Campaign = ({
           <AppDownloadButtons />
         </div>
       </div>
-      {/* <AppDownload /> */}
     </div>
     </div>
   );

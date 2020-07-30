@@ -1,10 +1,22 @@
 import React from 'react';
 import classes from './Footer.module.scss';
-// import { nowUOrange } from '../../assets';
 import { privacyNotice, nowUOrange } from '../../assets';
 import { AppDownloadButtons } from '../../components';
 
 const Footer = () => {
+  const footerLinksLeft = [
+    {id: 1, name: 'Campaigns', href: '/campaigns'},
+    {id: 2, name: 'Now-u app', href: '/now-u-app'},
+    {id: 3, name: 'About us', href: '/aboutus'},
+    {id: 4, name: 'Get in touch', href: '/get-in-touch'},
+    {id: 5, name: 'Press', href: '/press'},
+  ]
+  const footerLinksRight = [
+    {id: 1, name: 'FAQ', href: '/faqs'},
+    {id: 2, name: 'Blog', href: '/'},
+    {id: 3, name: 'Newsletter', href: '/'},
+    {id: 4, name: 'Privacy Notice', href: privacyNotice},
+  ]
   return (
     <div className={classes.footerBackground}>
       <div className={classes.logo}>
@@ -13,35 +25,22 @@ const Footer = () => {
       <div className={classes.footer}>
         <div className={classes.footerLeft}>
           <div className={classes.linksColumnOne}>
-            <div className={classes.links}>
-              <a href="/campaigns" className={classes.links}>Campaigns</a>
-            </div>
-            <div className={classes.links}>
-              <a href="/now-u-app" className={classes.links}>Now-u app</a>
-            </div>
-            <div className={classes.links}>
-              <a href="aboutus" className={classes.links}>About us</a>
-            </div>
-            <div className={classes.links}>
-              <a href="get-in-touch" className={classes.links}>Get in touch</a>
-            </div>
-            <div className={classes.links}>
-              <a href="press" className={classes.links}>Press</a>
-            </div>
+            {footerLinksLeft.map(link => {
+              return (
+                <div className={classes.links} key={link.id}>
+                  <a href={link.href} className={classes.links}>{link.name}</a>
+                </div>
+              )
+            })}
           </div>
           <div className={classes.linksColumnTwo}>
-            <div className={classes.links}>
-              <a href="faqs" className={classes.links}>FAQ</a>
-            </div>
-            <div className={classes.links}>
-              <a href="/" className={classes.links}>Blog</a>
-            </div>
-            <div className={classes.links}>
-              <a href="/" className={classes.links}>Newsletter</a>
-            </div>
-            <div className={classes.links} target="_blank" rel="noopener noreferrer">
-              <a href={privacyNotice} >Privacy Notice</a>
-            </div>
+          {footerLinksRight.map(link => {
+              return (
+                <div className={classes.links} key={link.id}>
+                  <a href={link.href} className={classes.links}>{link.name}</a>
+                </div>
+              )
+            })}
           </div>
         </div>
         <div className={classes.footerRight}>

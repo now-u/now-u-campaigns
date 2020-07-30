@@ -176,6 +176,9 @@
       }
       & h4 {
         margin-block-end: 0em;
+        @media (max-width: 500px) {
+          font-size: 15px;
+        }
       }
       .actionIconContainer {
         width: 80px;
@@ -184,11 +187,6 @@
           margin-right: 20px;
           height: 70px;
         }
-        .actionTitle {
-          @media (max-width: 500px) {
-            font-size: 15px;
-          }
-        }    
       }
     }
     .actionFooter {

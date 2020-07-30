@@ -62,7 +62,12 @@ const Campaign = ({
         )}
       </div>
       <div className={classes.contentGroup}>
-        <ReactPlayer className={classes.video} url={video_link} width="100%" height="45vh" />
+        {/* <div className={classes.videoWrapper}>
+          <iframe width="560" height="349" src={video_link} frameBorder="0" allowFullScreen></iframe>
+        </div> */}
+        <div className={classes.videoWrapper}>  
+          <ReactPlayer className={classes.video} url={video_link} width="100%" height="45vh" />
+        </div>
         {descriptionParagraphs.map((p) => (
           <Text type="p" key={p}>
             {p}

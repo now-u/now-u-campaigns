@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { Text} from '../../../../components';
 import classes from './partners.module.scss';
@@ -16,7 +15,7 @@ const Partners = ({ partners }) => {
           <Text type="h1">Our Partners</Text>
           <Text type="p">We work with many amazing charities and social enterprises. 
           Want to find out more about partnering with now-u? 
-          Download our <Link to={`https://share.now-u.com/partners/now-u_charity_collaboration_&_partnership_guide.pdf`}>partnership guide.</Link>
+          Download our <a href={"https://share.now-u.com/partners/now-u_charity_collaboration_&_partnership_guide.pdf"} target="_blank" rel="noopener noreferrer">partnership guide.</a>
           </Text>
         </div>
         <div className={classes.partnersRow}>

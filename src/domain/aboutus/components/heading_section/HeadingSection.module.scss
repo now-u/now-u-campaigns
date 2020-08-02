@@ -32,6 +32,10 @@
         }
         .description {
             margin-top: 0;
+
+            br {
+                height: 200px;
+            }
         }
 
         // .pageHeaderText {

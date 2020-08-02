@@ -1,26 +1,26 @@
 @import '../../../../utils/variables';
 
 .missionSection {
-    position: relative;
-    top: -80px;
+    // position: relative;
+    // top: -80px;
     background: $blue;
     box-sizing: border-box;
     display: flex;
     padding-top: 70px;
 }
 
-.imageSection {
-    width: 650px;
-    height: 603px;
-    padding: 0px;
-    object-fit: contain;
+// .imageSection {
+//     width: 650px;
+//     height: 603px;
+//     padding: 0px;
+//     object-fit: contain;
 
-    & img {
-        position: relative;
-        width: 100%;
-        top: -100px;
-    }
-}
+//     & img {
+//         position: relative;
+//         width: 100%;
+//         top: -100px;
+//     }
+// }
 
 .content {
     width: 500px;

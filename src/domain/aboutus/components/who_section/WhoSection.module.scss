@@ -1,13 +1,14 @@
 @import '../../../../utils/variables';
 
 .whoSection {
-    position: relative;
-    top: -150px;
+    // position: relative;
+    // top: -150px;
     padding: 0% 15%;
     height: fit-content;
     display: flex;
     box-sizing: border-box;
     padding-bottom: 50px;
+    background-color: #fff9f2;
 }
 
 .textSection {

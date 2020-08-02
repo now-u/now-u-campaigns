@@ -15,11 +15,14 @@ $bgColor4: $blue;
         align-items: center;
         flex-direction: column;
 
+        @media (max-width: $max-width) {
+            padding: 100px 70px;
+        }
         @media (max-width: $medium) {
-            padding: 150px 70px;
+            padding: 50px 70px;
         }
         @media (max-width: $small) {
-            padding: 150px 25px;
+            padding: 110px 25px;
         }
     }
     @if $unit == 'content' {
@@ -37,6 +40,9 @@ $bgColor4: $blue;
 
         @media (max-width: $medium) {
             font-size: 60px;
+        }
+        @media (max-width: 555px) {
+            font-size: 55px;
         }
         @media (max-width: $small) {
             font-size: 50px;

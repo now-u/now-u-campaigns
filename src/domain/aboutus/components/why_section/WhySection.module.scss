@@ -1,25 +1,15 @@
 @import '../../../../utils/variables';
 
 .whySection {
-    // position: relative;
-    // top: -150px;
-    // margin: 0% 10%;
     background-color: $white;
-    // width: 80%;
-    // height: fit-content;
-    display: flex;
-    padding: 150px;
     box-sizing: border-box;
-    // box-shadow: 0 45px 60px 0 rgba(0, 0, 0, 0.04);
+    padding: 150px;
+    display: flex;
+    justify-content: center;
     .content {
         width: 1240px;
-        // border: 1px solid magenta;
-        // text-align: center;
-
         display: flex;
         flex-direction: column;
-        // justify-content: center;
-        // align-items: center;
 
         .header {
             font-size: 70px;

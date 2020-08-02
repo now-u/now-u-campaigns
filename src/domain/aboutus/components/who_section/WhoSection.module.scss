@@ -37,6 +37,10 @@
                 object-fit: contain;
                 width: 50%;
 
+                @media (max-width: $max-width) {
+                    width: 60%;
+                    margin-right: 10px;
+                }
                 @media (max-width: $medium) {
                     width: 100%;
                 }
@@ -56,6 +60,9 @@
 
                 @media (max-width: $medium) {
                     margin-top: 25px;
+                }
+                @media (max-width: $small) {
+                    width: 100%;
                 }
             }
         }

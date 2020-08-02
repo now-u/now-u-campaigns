@@ -5,7 +5,8 @@
     @include aboutUs('section');
     background-color: $white;
     .content {
-        width: 1240px;
+        @include aboutUs('content');
+        max-width: 1240px;
         display: flex;
         flex-direction: column;
 
@@ -48,24 +49,24 @@
 //     }
 // }
 
-@media (max-width: $max-width) {
-    .whySection {
-        .content {
-            width: 100%;
-        }
-        //     position: static;
-        //     top: 0px;
-        //     margin: 0% 0%;
-        //     width: 100%;
-        // }
-        // .image {
-        //     display: none;
-        // }
-        // .content {
-        //     width: 100%;
-        //     padding: 0px;
-    }
-}
+// @media (max-width: $max-width) {
+//     .whySection {
+//         .content {
+//             width: 100%;
+//         }
+//     position: static;
+//     top: 0px;
+//     margin: 0% 0%;
+//     width: 100%;
+// }
+// .image {
+//     display: none;
+// }
+// .content {
+//     width: 100%;
+//     padding: 0px;
+//     }
+// }
 @media (max-width: $medium) {
     .whySection {
         padding: 150px 70px;

@@ -6,6 +6,18 @@
         display: flex;
         align-items: center;
         flex-direction: column;
+
+        @media (max-width: $medium) {
+            padding: 150px 70px;
+        }
+        @media (max-width: $small) {
+            padding: 150px 25px;
+        }
+    }
+    @if $unit == 'content' {
+        @media (max-width: $max-width) {
+            width: 100%;
+        }
     }
     @if $unit == 'header' {
         font-family: $headerFont;
@@ -14,6 +26,13 @@
         line-height: 1;
         color: $darkGrey;
         margin: 0 0 25px 0;
+
+        @media (max-width: $medium) {
+            font-size: 60px;
+        }
+        @media (max-width: $small) {
+            font-size: 50px;
+        }
     }
     @if $unit == 'description' {
         font-size: 25px;
@@ -22,5 +41,9 @@
         color: $mediumGrey;
         max-width: 100%;
         margin-bottom: 0;
+
+        @media (max-width: $max-width) {
+            font-size: 21px;
+        }
     }
 }

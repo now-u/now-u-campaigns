@@ -6,7 +6,8 @@
     background: $lightGrey;
 
     .content {
-        width: 900px;
+        @include aboutUs('content');
+        max-width: 900px;
         text-align: center;
 
         display: flex;

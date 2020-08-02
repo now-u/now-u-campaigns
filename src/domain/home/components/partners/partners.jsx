@@ -16,7 +16,7 @@ const Partners = ({ partners }) => {
           <Text type="h1">Our Partners</Text>
           <Text type="p">We work with many amazing charities and social enterprises. 
           Want to find out more about partnering with now-u? 
-          Download our <Link to={`/`}>partnership guide.</Link>
+          Download our <Link to={`https://share.now-u.com/partners/now-u_charity_collaboration_&_partnership_guide.pdf`}>partnership guide.</Link>
           </Text>
         </div>
         <div className={classes.partnersRow}>

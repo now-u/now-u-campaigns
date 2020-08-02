@@ -1,3 +1,7 @@
+# Current version
+3.0.6
+
+# now-u-campaigns
 
 <div style='text-align: center;'><img src='./public/favicons/favicon.png'/><h1>now-u-campaigns</h1></div>
 

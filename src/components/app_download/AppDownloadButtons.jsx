@@ -7,7 +7,7 @@ const AppDownloadButtons = () => {
 
   return (
     <div className={classes.appDownloadButtonContainer}>
-      <div className={classes.downloadBtns}>
+      <div className={classes.downloadBtns2}>
         <Button variant="other">
           <img src={appleStoreNew} alt="app download from apple store" />
         </Button>

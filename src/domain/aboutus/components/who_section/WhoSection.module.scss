@@ -3,7 +3,7 @@
 
 .whoSection {
     @include aboutUs('section');
-    background-color: #fdfdfd;
+    background-color: $bgColor3;
 
     .content {
         @include aboutUs('content');

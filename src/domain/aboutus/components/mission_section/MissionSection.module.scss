@@ -3,7 +3,7 @@
 
 .missionSection {
     @include aboutUs('section');
-    background: $blue;
+    background: $bgColor4;
     color: $white;
 
     .content {

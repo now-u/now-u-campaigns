@@ -1,3 +1,10 @@
+@import '../../utils/variables';
+
+$bgColor1: $lightGrey;
+$bgColor2: $white;
+$bgColor3: #fff9f2;
+$bgColor4: $blue;
+
 @mixin aboutUs($unit) {
     @if $unit == 'section' {
         box-sizing: border-box;

@@ -3,7 +3,7 @@
 
 .aboutUsSection {
     @include aboutUs('section');
-    background: $lightGrey;
+    background: $bgColor1;
 
     .content {
         @include aboutUs('content');

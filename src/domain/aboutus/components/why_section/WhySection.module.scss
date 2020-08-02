@@ -3,7 +3,8 @@
 
 .whySection {
     @include aboutUs('section');
-    background-color: $white;
+    background-color: $bgColor2;
+
     .content {
         @include aboutUs('content');
         max-width: 1240px;

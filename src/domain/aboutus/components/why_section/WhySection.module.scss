@@ -48,18 +48,40 @@
 //     }
 // }
 
-@media (max-width: $medium) {
+@media (max-width: $max-width) {
     .whySection {
-        position: static;
-        top: 0px;
-        margin: 0% 0%;
-        width: 100%;
-    }
-    .image {
-        display: none;
-    }
-    .content {
-        width: 100%;
-        padding: 0px;
+        .content {
+            width: 100%;
+        }
+        //     position: static;
+        //     top: 0px;
+        //     margin: 0% 0%;
+        //     width: 100%;
+        // }
+        // .image {
+        //     display: none;
+        // }
+        // .content {
+        //     width: 100%;
+        //     padding: 0px;
     }
 }
+@media (max-width: $medium) {
+    .whySection {
+        padding: 150px 70px;
+        .content {
+            width: 100%;
+        }
+    }
+}
+@media (max-width: $small) {
+    .whySection {
+        padding: 150px 25px;
+        .content {
+            width: 100%;
+        }
+    }
+}
+// $max-width: 1400px;
+// $medium: 825px;
+// $small: 480px;

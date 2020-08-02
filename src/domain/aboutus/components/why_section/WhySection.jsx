@@ -15,9 +15,9 @@ const WhySection = () => {
                     kindness and solidarity that we saw in our communities
                     during the Covid-19 lockdown. We noticed that many people
                     wanted to do something to help others during these difficult
-                    times but didn't know what they could do, while at the same
-                    time, charities were doing amazing work and in desperate
-                    need of support.
+                    times but didn&apos;t know what they could do, while at the
+                    same time, charities were doing amazing work and in
+                    desperate need of support.
                 </Text>
                 <Text type='p' className={classes.description}>
                     We decided to create a platform to empower anyone to help
@@ -26,10 +26,10 @@ const WhySection = () => {
                 </Text>
                 <Text type='p' className={classes.description}>
                     The global lockdown has offered us an opportunity to take
-                    stock of what's really important to us, and a chance to move
-                    forward together instead of falling 'back to normal'. We
-                    believe that each of us has the power to create lasting and
-                    sustainable change together. now u!
+                    stock of what&apos;s really important to us, and a chance to
+                    move forward together instead of falling &lsquo;back to
+                    normal&rsquo;. We believe that each of us has the power to
+                    create lasting and sustainable change together. now u!
                 </Text>
             </div>
         </section>

@@ -4,10 +4,9 @@
 .aboutUsSection {
     @include aboutUs('section');
     background: $lightGrey;
-    align-items: center;
 
     .content {
-        width: 1080px;
+        width: 900px;
         text-align: center;
 
         display: flex;
@@ -22,23 +21,7 @@
         .description {
             @include aboutUs('description');
         }
-
-        // .pageHeaderText {
-        //     margin-left: 138px;
-        //     margin-top: 52px;
-        //     font-size: 30px;
-        //     font-weight: $regular;
-        // }
     }
-
-    // .image {
-    //     width: 50%;
-    //     padding-top: 37.3px;
-    //     & img {
-    //         max-width: 100%;
-    //         z-index: -1;
-    //     }
-    // }
 }
 
 // @media (max-width: $medium) {

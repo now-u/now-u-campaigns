@@ -8,11 +8,12 @@
         flex-direction: column;
     }
     @if $unit == 'header' {
+        font-family: $headerFont;
         font-size: 70px;
         font-weight: $blackBold;
         line-height: 1;
         color: $darkGrey;
-        margin: 0px;
+        margin: 0 0 25px 0;
     }
     @if $unit == 'description' {
         font-size: 25px;

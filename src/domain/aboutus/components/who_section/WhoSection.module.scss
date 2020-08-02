@@ -3,11 +3,15 @@
 
 .whoSection {
     @include aboutUs('section');
-    background-color: #fff9f2;
+    background-color: #fdfdfd;
 
     .content {
-        width: 1240px;
+        width: 1320px;
+
         .textSection {
+            display: flex;
+            flex-direction: column;
+
             .header {
                 @include aboutUs('header');
             }
@@ -18,7 +22,6 @@
 
         .imageSection {
             padding-top: 50px;
-            // width: 50%;
 
             display: flex;
             justify-content: space-between;

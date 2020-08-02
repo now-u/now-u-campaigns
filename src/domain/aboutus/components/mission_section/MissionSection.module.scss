@@ -1,44 +1,28 @@
 @import '../../../../utils/variables';
+@import '../../aboutUsMixin';
 
 .missionSection {
-    // position: relative;
-    // top: -80px;
+    @include aboutUs('section');
     background: $blue;
-    box-sizing: border-box;
-    display: flex;
-    padding-top: 70px;
-}
-
-// .imageSection {
-//     width: 650px;
-//     height: 603px;
-//     padding: 0px;
-//     object-fit: contain;
-
-//     & img {
-//         position: relative;
-//         width: 100%;
-//         top: -100px;
-//     }
-// }
-
-.content {
-    width: 500px;
-}
-
-.missionHeader {
-    margin: 0px;
-    font-size: 40px;
-    font-weight: $blackBold;
-    line-height: 1;
     color: $white;
-}
 
-.missionText {
-    font-size: 20px;
-    font-weight: $regular;
-    line-height: 1.7;
-    color: $white;
+    .content {
+        width: 915px;
+        text-align: center;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .header {
+            @include aboutUs('header');
+            color: inherit;
+        }
+        .description {
+            @include aboutUs('description');
+            color: inherit;
+        }
+    }
 }
 
 @media (max-width: $medium) {

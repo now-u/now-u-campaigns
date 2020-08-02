@@ -1,147 +1,208 @@
 @import '../../../utils/variables';
 
-.contentGroup {
-  margin: auto;
-  width: 70%;
-  color: $darkGrey;
-  max-width: 1000px;
-  @media screen and (max-width: 400px) {
-    margin-bottom: 40px;
-    width: 100%;
-    box-sizing: border-box;
-    text-align: center;
-    padding: 18px;
-  }
-}
-
 .campaignContainer {
   display: flex;
   flex-direction: column;
   justify-content: center;
   background: $whiteGradient;
-}
-.header {
-  height: auto;
-  max-width: $max-width;
-  margin: auto;
-  width: calc(100% - 36px);
-  padding: 18px;
-  & img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    max-height: 550px;
+  .header {
+    position: relative;
+    display: inline-block;
+    height: auto;
+    max-width: $max-width;
+    margin: auto;
+    width: calc(100%);
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      max-height: 300px;
+    }
+    .headerImage {
+      background-color: black;
+      max-height: 300px;
+      img {
+        opacity: 0.6;
+      }
+      .centeredHeaderText {
+        z-index: 999;
+        margin: 0 auto;
+        width: 90%;
+        left: 0;
+        right: 0;        
+        text-align: center;
+        top: 40%; /* Adjust this value to move the positioned div up and down */
+        position: absolute;
+        @media screen and (max-width: 900px) {
+          top: calc(25%);
+          h1 {
+            font-size: 45px;
+          }
+        }
+        @media screen and (max-width: 600px) {
+          top: calc(25%);
+          h1 {
+            font-size: 35px;
+          }
+        }
+      }
+    }
   }
-}
-.navBack {
-  display: flex;
-  align-items: center;
-  color: $darkGrey;
-  font-weight: $bold;
-  transition: opacity 0.3s;
-  line-height: 2;
-  opacity: 0.7;
-  & i {
-    font-size: 30px;
-  }
-  & p {
-    margin-block-start: 0em;
-    margin-block-end: 0em;
-  }
-  &:hover {
-    opacity: 1;
-  }
-  @media screen and (max-width: 400px) {
-    font-size: 20px;
-  }
-}
-.summary {
-  display: flex;
-  flex-direction: column;
-  margin: auto;
-  width: 70%;
-  max-width: 1000px;
-  box-sizing: border-box;
-  @media screen and (max-width: 400px) {
-    margin: unset;
-    width: 100%;
-    align-items: center;
-    text-align: center;
-    padding: 18px;
-  }
-}
-.title {
-  color: $brand;
-  font-weight: $blackBold;
-}
-.meta {
-  display: flex;
-  align-self: center;
-  width: 100%;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  align-items: center;
-  padding: 1em;
-}
-.participants {
-  display: flex;
-  flex-direction: column;
-  max-height: 100px;
-  margin-right: 16px;
-  align-items: center;
-  & h4 {
+  .summary {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    margin: auto;
+    width: 70%;
+    max-width: 1000px;
+    box-sizing: border-box;
+    @media screen and (max-width: 400px) {
+      margin: unset;
+      width: 100%;
+      align-items: center;
+      text-align: center;
+      padding: 18px;
+    }
+    .navBack {
+      display: flex;
+      align-items: center;
+      color: $darkGrey;
+      font-weight: $bold;
+      transition: opacity 0.3s;
+      line-height: 2;
+      opacity: 0.7;
+      & i {
+        font-size: 30px;
+      }
+      & p {
+        margin-block-start: 0em;
+        margin-block-end: 0em;
+      }
+      &:hover {
+        opacity: 1;
+      }
+      @media screen and (max-width: 400px) {
+        font-size: 20px;
+      }
+    }
   }
-  @media screen and (max-width: 400px) {
+  .meta {
+    display: flex;
+    align-self: center;
     width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
     align-items: center;
-    margin-bottom: 24px;
+    padding: 1em;
+    .participants {
+      display: flex;
+      flex-direction: column;
+      max-height: 100px;
+      margin-right: 16px;
+      align-items: center;
+      & h4 {
+        display: flex;
+        align-items: center;
+      }
+      @media screen and (max-width: 400px) {
+        width: 100%;
+        align-items: center;
+        margin-bottom: 24px;
+      }
+    }
+  }  
+  .contentGroup {
+    margin: auto;
+    width: 70%;
+    color: $darkGrey;
+    max-width: 1000px;
+    @media screen and (max-width: 400px) {
+      margin-bottom: 40px;
+      width: 100%;
+      box-sizing: border-box;
+      text-align: center;
+      padding: 18px;
+    }
+    @media (max-width: 1000px) {
+      .videoWrapper {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 */
+        height: 0;
+      }
+      .videoWrapper iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .video {
+      width: 100%;
+      max-height: 450px;
+      margin-bottom: 48px;
+    }
   }
-}
-.video {
-  width: 100%;
-  max-height: 450px;
-  margin-bottom: 48px;
-}
-.actionContainer {
-  @extend .contentGroup;
-  margin-bottom: 80px;
-}
-.subtitle {
-  color: $darkGrey;
-}
-.caption {
-  font-weight: $bold;
+  
+  .actionContainer {
+    background-color: #F7F8FC;
+    width: 100%;
+    .actionContent {
+      @extend .contentGroup;
+      margin-bottom: 80px;
+    }
+    .subtitle {
+      color: $darkGrey;
+    }
+    .caption {
+      font-weight: $bold;
+    }
+    .actionItem {
+      display: flex;
+      background: white;
+      padding: 16px;
+      font-size: 20px;
+      margin-bottom: 24px;
+      border-radius: 8px;
+      align-items: center;
+      height: 90px;
+      box-sizing: border-box;
+      text-align: left;
+      cursor: pointer;
+      color: $darkGrey;
+      & i {
+        color: $brand;
+        font-size: 30px;
+        margin-right: 16px;
+      }
+      & h4 {
+        margin-block-end: 0em;
+        @media (max-width: 500px) {
+          font-size: 15px;
+        }
+      }
+      .actionIconContainer {
+        width: 80px;
+        .actionIcon {
+          margin-top: 7px;
+          margin-right: 20px;
+          height: 70px;
+        }
+      }
+    }
+    .actionFooter {
+      text-align: center; 
+      margin-top: 50px;
+      p {
+        width: 50%;
+        margin-left: 25%;
+        font-size: 18px;
+      }
+    }
+  }
 }
 
-.actionItem {
-  display: flex;
-  background: white;
-  box-shadow: $campaignBoxShadow;
-  padding: 16px;
-  font-size: 20px;
-  margin-bottom: 24px;
-  border-radius: 8px;
-  align-items: center;
-  height: 90px;
-  box-sizing: border-box;
-  text-align: left;
-  cursor: pointer;
-  color: $darkGrey;
-  & i {
-    color: $brand;
-    font-size: 30px;
-    margin-right: 16px;
-  }
-  & h4 {
-    margin-block-end: 0em;
-  }
-}
-.divider {
-  width: 7px;
-  height: 100%;
-  background: $brand;
-  border-radius: 10px;
-  margin-right: 16px;
+.title {
+  color: white;
+  font-size: 60px;
+  font-weight: $blackBold;
 }

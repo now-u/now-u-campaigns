@@ -1,0 +1,25 @@
+@mixin aboutUs($unit) {
+    @if $unit == 'section' {
+        box-sizing: border-box;
+        padding: 150px;
+
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    @if $unit == 'header' {
+        font-size: 70px;
+        font-weight: $blackBold;
+        line-height: 1;
+        color: $darkGrey;
+        margin: 0px;
+    }
+    @if $unit == 'description' {
+        font-size: 25px;
+        font-weight: $regular;
+        line-height: 1.7;
+        color: $mediumGrey;
+        max-width: 100%;
+        margin-bottom: 0;
+    }
+}

@@ -1,63 +1,48 @@
 @import '../../../../utils/variables';
+@import '../../aboutUsMixin';
 
 .whoSection {
-    // position: relative;
-    // top: -150px;
-    padding: 0% 15%;
-    height: fit-content;
-    display: flex;
-    box-sizing: border-box;
-    padding-bottom: 50px;
+    @include aboutUs('section');
     background-color: #fff9f2;
-}
 
-.textSection {
-    width: 50%;
-}
+    .content {
+        width: 1240px;
+        .textSection {
+            .header {
+                @include aboutUs('header');
+            }
+            .description {
+                @include aboutUs('description');
+            }
+        }
 
-.imageSection {
-    padding-top: 50px;
-    width: 50%;
-}
+        .imageSection {
+            padding-top: 50px;
+            // width: 50%;
 
-.header {
-    width: 75%;
-}
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
 
-.headerText {
-    font-size: 40px;
-    font-weight: $blackBold;
-    line-height: 1;
-    color: $darkGrey;
-}
+            .collage {
+                object-fit: contain;
+                width: 50%;
+                img {
+                    width: 100%;
+                }
+            }
 
-.contentText {
-    font-size: 20px;
-    font-weight: $regular;
-    line-height: 1.7;
-    color: $mediumGrey;
-}
-
-.collage {
-    object-fit: contain;
-    img {
-        width: 100%;
+            .meetTheTeam {
+                width: 274px;
+                height: 60px;
+                font-size: 24px;
+                font-weight: $bold;
+                line-height: 1.33;
+                background-color: transparent;
+                border: solid 3px $brand;
+            }
+        }
     }
-}
-
-.buttonSection {
-    padding-top: 20px;
-    text-align: right;
-}
-
-.meetTeamBtn {
-    width: 274px;
-    height: 60px;
-    font-size: 24px;
-    font-weight: $bold;
-    line-height: 1.33;
-    background-color: $white;
-    border: solid 3px $brand;
 }
 
 @media (max-width: $medium) {

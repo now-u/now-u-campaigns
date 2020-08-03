@@ -6,11 +6,6 @@ $bgColor3: #fff9f2;
 $bgOfTheCollageImage: #fdfdfd;
 $bgColor4: $blue;
 
-$smallHeaderSize: 50px;
-$mediumHeaderSize: 50px;
-$max-widthHeaderSize: 50px;
-$fillSize: 50px;
-
 @mixin aboutUs($unit) {
     @if $unit == 'section' {
         box-sizing: border-box;
@@ -46,11 +41,7 @@ $fillSize: 50px;
         @media (max-width: $medium) {
             font-size: 50px;
         }
-        // @media (max-width: 555px) {
-        //     font-size: 55px;
-        // }
         @media (max-width: $small) {
-            font-size: 50px;
             text-align: center;
         }
     }

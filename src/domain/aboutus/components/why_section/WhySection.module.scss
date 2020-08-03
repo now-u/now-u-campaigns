@@ -13,9 +13,15 @@
 
         .header {
             @include aboutUs('header');
+            @media (max-width: $small) {
+                text-align: left;
+            }
         }
         .description {
             @include aboutUs('description');
+            @media (max-width: $small) {
+                text-align: left;
+            }
         }
     }
 }
@@ -68,22 +74,22 @@
 //     padding: 0px;
 //     }
 // }
-@media (max-width: $medium) {
-    .whySection {
-        padding: 150px 70px;
-        .content {
-            width: 100%;
-        }
-    }
-}
-@media (max-width: $small) {
-    .whySection {
-        padding: 150px 25px;
-        .content {
-            width: 100%;
-        }
-    }
-}
+// @media (max-width: $medium) {
+//     .whySection {
+//         padding: 150px 70px;
+//         .content {
+//             width: 100%;
+//         }
+//     }
+// }
+// @media (max-width: $small) {
+//     .whySection {
+//         padding: 150px 25px;
+//         .content {
+//             width: 100%;
+//         }
+//     }
+// }
 // $max-width: 1400px;
 // $medium: 825px;
 // $small: 480px;

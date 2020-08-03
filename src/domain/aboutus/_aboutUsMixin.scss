@@ -6,10 +6,15 @@ $bgColor3: #fff9f2;
 $bgOfTheCollageImage: #fdfdfd;
 $bgColor4: $blue;
 
+$smallHeaderSize: 50px;
+$mediumHeaderSize: 50px;
+$max-widthHeaderSize: 50px;
+$fillSize: 50px;
+
 @mixin aboutUs($unit) {
     @if $unit == 'section' {
         box-sizing: border-box;
-        padding: 150px;
+        padding: 100px;
 
         display: flex;
         align-items: center;
@@ -36,16 +41,17 @@ $bgColor4: $blue;
         font-weight: $blackBold;
         line-height: 1;
         color: $darkGrey;
-        margin: 0 0 25px 0;
+        margin: 0 0 10px 0;
 
         @media (max-width: $medium) {
-            font-size: 60px;
+            font-size: 50px;
         }
-        @media (max-width: 555px) {
-            font-size: 55px;
-        }
+        // @media (max-width: 555px) {
+        //     font-size: 55px;
+        // }
         @media (max-width: $small) {
             font-size: 50px;
+            text-align: center;
         }
     }
     @if $unit == 'description' {
@@ -58,6 +64,9 @@ $bgColor4: $blue;
 
         @media (max-width: $max-width) {
             font-size: 21px;
+        }
+        @media (max-width: $small) {
+            text-align: center;
         }
     }
 }

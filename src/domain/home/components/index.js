@@ -4,3 +4,4 @@ export { default as TheApp } from './TheApp';
 export { default as GetInvolved } from './GetInvolved';
 export { default as ActiveCampaigns } from './active_campaigns/ActiveCampaigns.jsx';
 export { default as HowItWorks } from './how_it_works/HowItWorks.jsx';
+export { default as Partners } from './partners/partners.jsx';

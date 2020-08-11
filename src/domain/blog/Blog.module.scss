@@ -64,12 +64,12 @@
     flex-grow: 2;
     max-height: 300px;
     position: relative;
-    & img {
+    img {
         max-width: 100%;
         max-height: 300px;
         display: block;
     }
-    & div {
+    div {
         position: absolute;
         left: 0;
         top: 0;
@@ -81,7 +81,7 @@
         padding: 0px 20%;
         background-color: rgba(255, 255, 255, 0.1);
     }
-    & p {
+    p {
         margin: 0px;
         font-weight: $bold;
         font-size: 36px;
@@ -130,7 +130,7 @@
     display: flex;
     align-items: center;
 
-    & p {
+    p {
         margin: 0;
         margin-right: 10px;
     }
@@ -148,7 +148,7 @@
     align-items: center;
     justify-content: space-between;
 
-    & i {
+    i {
         margin-right: 5px;
     }
 }

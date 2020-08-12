@@ -6,8 +6,9 @@
     @include home('section');
     position: relative;
     background: url('../../../../assets/world_illustration.svg') no-repeat 98% 0,
-        $brandGradient;
+        $bgColorIntro;
     padding-bottom: 150px;
+    overflow: hidden;
 
     &::before {
         content: '';
@@ -17,7 +18,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background: $brandGradient;
+        background: $bgColorIntro;
         opacity: 0.7;
     }
     &::after {
@@ -28,7 +29,7 @@
         width: 150%;
         height: 50%;
         border-radius: 1000% 1000% 0 0;
-        background-color: $white;
+        background-color: $bgColorTakeAction;
     }
     .content {
         z-index: 3;
@@ -41,14 +42,13 @@
             'downloadBtns space';
         .textSection {
             grid-area: text;
-            // width: 50%;
             .header {
                 @include home('header');
                 color: $white;
             }
             .description {
                 @include home('description');
-                color: white;
+                color: $white;
             }
         }
         .videoContainer {
@@ -81,117 +81,3 @@
         }
     }
 }
-
-// .introContainer {
-//   color: $white;
-//   background: $brandGradient;
-//   display: flex;
-//   flex-direction: column;
-//   padding: 18px;
-//   position: relative;
-//   box-sizing: border-box;
-//   height: fit-content;
-//   min-height: calc(80vh - 60px);
-//   justify-content: space-between;
-// }
-// .introContent {
-//   display: flex;
-//   max-width: $max-width;
-//   margin: auto;
-//   height: 100%;
-//   width: 100%;
-//   align-items: center;
-//   justify-content: space-between;
-// }
-// .introMesg {
-//   width: 55%;
-//   margin-left: 24px;
-//   & h1 {
-//     font-family: $headerFont;
-//   }
-// }
-// .introImg {
-//   max-width: 48%;
-//   right: -30px;
-//   bottom: -40px;
-//   & img {
-//     max-width: 100%;
-//   }
-// }
-// .watchVideoBtn {
-//   padding: 0.6em 1em;
-//   margin-bottom: 1em;
-//   & a {
-//     display: flex;
-//     align-items: center;
-//     color: $brand;
-//   }
-//   & i {
-//     background: $brand;
-//     color: $white;
-//     padding: 0.2em 0.5em;
-//     border-radius: 8px;
-//     margin-right: 12px;
-//     font-size: 20px;
-//   }
-// }
-// @media (max-width: $medium) {
-//   .introMesg {
-//     width: 100%;
-//     margin-left: 0;
-//   }
-//   .introImg {
-//     display: none;
-//   }
-// }
-
-// .downloadBtns {
-//   display: flex;
-//   margin: 2em 0;
-//   justify-content: space-between;
-//   max-width: 600px;
-
-//   & a {
-//     display: flex;
-//     width: 48%;
-//     max-width: 300px;
-//   }
-//   & img {
-//     max-width: 100%;
-//     width: 90%;
-//   }
-// }
-
-// // our story!
-
-// .actionMesgContainer {
-//   background: $lightGrey;
-//   min-height: 50vh;
-//   display: flex;
-//   padding: 18px;
-//   flex-direction: column;
-// }
-// .downArrow {
-//   font-size: 5em;
-//   color: $grey;
-//   align-self: center;
-//   animation: pulseDown 1s infinite;
-//   right: 50%;
-//   bottom: 0;
-// }
-// @keyframes pulseDown {
-//   0%,
-//   100% {
-//     transform: translateY(0);
-//   }
-//   50% {
-//     transform: translateY(-4px);
-//   }
-// }
-
-// .actionMesg {
-//   color: $blue;
-//   text-align: center;
-//   margin: auto;
-//   max-width: 800px;
-// }

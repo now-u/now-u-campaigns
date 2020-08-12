@@ -1,4 +1,6 @@
 export { default as Intro } from './intro/Intro';
+export { default as TakeAction } from './take_action/TakeAction.jsx';
+
 export { default as OurStory } from './OurStory';
 export { default as TheApp } from './TheApp';
 export { default as GetInvolved } from './GetInvolved';

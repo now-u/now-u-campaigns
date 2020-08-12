@@ -9,13 +9,13 @@ export default class Modal extends React.Component {
     super(props);
 
     this.state = {
-      isActive: true
+      isOpen: true
     };
   }
 
   handleClose = () =>  {
     this.setState({
-      isActive: false
+      isOpen: false
     });
   }
 
@@ -54,10 +54,10 @@ export default class Modal extends React.Component {
   }
 
   render() {
-    const { isActive } = this.state;
+    const { isOpen } = this.state;
     const { color, size } = this.props;
 
-    if (!isActive) {
+    if (!isOpen) {
       this.cleanup();
       return null;
     }

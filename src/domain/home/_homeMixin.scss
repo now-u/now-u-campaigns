@@ -1,0 +1,63 @@
+@import '../../utils/variables';
+
+$bgColor1: $lightGrey;
+$bgColor2: $white;
+$bgColor3: #fff9f2;
+$bgOfTheCollageImage: #fdfdfd;
+$bgColor4: $blue;
+
+@mixin home($unit) {
+    @if $unit == 'section' {
+        box-sizing: border-box;
+        padding: 100px;
+
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        @media (max-width: $max-width) {
+            padding: 100px 70px;
+        }
+        @media (max-width: $medium) {
+            padding: 50px 70px;
+        }
+        @media (max-width: $small) {
+            padding: 110px 25px;
+        }
+    }
+    @if $unit == 'content' {
+        @media (max-width: $max-width) {
+            width: 100%;
+        }
+    }
+    @if $unit == 'header' {
+        font-family: $headerFont;
+        font-size: 70px;
+        font-weight: $blackBold;
+        line-height: 1;
+        color: $darkGrey;
+        margin: 0 0 10px 0;
+
+        @media (max-width: $medium) {
+            font-size: 50px;
+        }
+        @media (max-width: $small) {
+            text-align: center;
+        }
+    }
+    @if $unit == 'description' {
+        font-size: 25px;
+        font-weight: $regular;
+        line-height: 1.7;
+        color: $mediumGrey;
+        max-width: 100%;
+        margin-bottom: 0;
+
+        @media (max-width: $max-width) {
+            font-size: 21px;
+        }
+        @media (max-width: $small) {
+            text-align: center;
+        }
+    }
+}

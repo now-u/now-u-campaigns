@@ -1,6 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import classes from './Homepage.module.scss';
-import { Intro, TheApp, ActiveCampaigns, HowItWorks } from './components/index';
+import {
+    Intro,
+    TakeAction,
+    TheApp,
+    ActiveCampaigns,
+    HowItWorks,
+} from './components/index';
 
 const Homepage = () => {
     const [campaigns, setCampaigns] = useState([]);
@@ -17,8 +23,9 @@ const Homepage = () => {
     return (
         <div className={classes.homepageContainer}>
             <Intro />
-            <HowItWorks />
+            <TakeAction />
             <ActiveCampaigns campaigns={campaigns} />
+            <HowItWorks />
             <TheApp />
         </div>
     );

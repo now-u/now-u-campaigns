@@ -12,7 +12,7 @@
 
     &::before {
         content: '';
-        z-index: 1;
+        z-index: 0.1;
         position: absolute;
         top: 0;
         left: 0;
@@ -23,7 +23,7 @@
     }
     &::after {
         content: '';
-        z-index: 2;
+        z-index: 0.2;
         position: absolute;
         top: 93%;
         width: 150%;
@@ -32,7 +32,7 @@
         background-color: $bgColorTakeAction;
     }
     .content {
-        z-index: 3;
+        z-index: 0;
         display: grid;
         grid-template-columns: 70% 300px;
         grid-template-rows: auto auto auto;

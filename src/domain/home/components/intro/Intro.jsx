@@ -17,16 +17,21 @@ const Intro = () => {
                         effective ways to support causes that you care about.
                     </Text>
                 </div>
-                <Button variant='secondary' className={classes.watchVideoBtn}>
-                    <a
-                        href='https://www.youtube.com/watch?v=h5vnFpWCOhQ'
-                        target='_blank'
-                        rel='noopener noreferrer'
+                <div className={classes.videoContainer}>
+                    <Button
+                        variant='secondary'
+                        className={classes.watchVideoBtn}
                     >
-                        <i className='material-icons'>play_arrow</i>
-                        Watch our video
-                    </a>
-                </Button>
+                        <a
+                            href='https://www.youtube.com/watch?v=h5vnFpWCOhQ'
+                            target='_blank'
+                            rel='noopener noreferrer'
+                        >
+                            <i className='material-icons'>play_arrow</i>
+                            Watch our video
+                        </a>
+                    </Button>
+                </div>
                 <div className={classes.downloadBtnContainer}>
                     <DownloadButtons />
                 </div>

@@ -32,7 +32,16 @@
     }
     .content {
         z-index: 3;
+        display: grid;
+        grid-template-columns: 70% 300px;
+        grid-template-rows: auto auto auto;
+        grid-gap: 20px;
+        grid-template-areas:
+            'text video'
+            'downloadBtns space';
         .textSection {
+            grid-area: text;
+            // width: 50%;
             .header {
                 @include home('header');
                 color: $white;
@@ -42,11 +51,33 @@
                 color: white;
             }
         }
-        .watchVideoBtn {
+        .videoContainer {
+            grid-area: video;
+            align-self: flex-end;
+            .watchVideoBtn {
+                width: 300px;
+                font-size: 25px;
+                padding: 0.6em 1em;
+                margin-bottom: 1em;
+
+                & a {
+                    color: $brand;
+                    display: flex;
+                    justify-content: space-evenly;
+                    align-items: center;
+                }
+                & i {
+                    background: $brand;
+                    color: $white;
+                    padding: 0.2em 0.5em;
+                    border-radius: 8px;
+                    margin-right: 12px;
+                    font-size: 20px;
+                }
+            }
         }
-        // .downloadBtns
         .downloadBtnContainer {
-            height: 70px;
+            grid-area: downloadBtns;
         }
     }
 }

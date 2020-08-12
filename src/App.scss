@@ -16,7 +16,7 @@ a {
 .material-icons {
   font-size: inherit;
 
-  &.tiny {
+  &.xsmall {
     font-size:16px;
   }
 
@@ -30,5 +30,13 @@ a {
 
   &.large {
     font-size: 48px;
+  }
+
+  &.xlarge {
+    font-size: 64px;
+  }
+
+  &.xxlarge {
+    font-size: 128px;
   }
 }

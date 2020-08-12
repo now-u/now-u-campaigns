@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 import { Campaigns, Campaign, Homepage, AboutUs, NowUApp, GetInTouch, Press, FAQs } from './domain';
-import {AnnounceBar, TopNav, Footer, NewsletterSignupModal } from './components';
+import { AnnounceBar, TopNav, Footer, NewsletterSignupModal } from './components';
 import './App.scss';
 import { ModalService } from "./services";
 
@@ -13,9 +13,11 @@ const App = () => {
     const showNewsletterSignup = !(newsletterSignupDismissed || newsletterSignupCompleted);
 
     if (showNewsletterSignup) {
-      ModalService.open(
+      const modalRef = ModalService.open(
         NewsletterSignupModal,
-        undefined,
+        {
+          onSuccessfulSignup: () => { closeNewsletterSignupModal(modalRef) }
+        },
         {
           color: 'dark',
           onClose: () => sessionStorage.setItem('newsletter-signup-dismissed', 'true')
@@ -24,8 +26,15 @@ const App = () => {
     }
   }
 
+  // Close newsletter sign-up modal after 5 seconds
+  const closeNewsletterSignupModal = (modalRef) => {
+    setTimeout(() => {
+      ModalService.close(modalRef);
+    }, 5000);
+  }
+
   useEffect(() => {
-    // Display newsletter signup after 30 seconds
+    // Display newsletter sign-up modal after 30 seconds
     const timer = setTimeout(() => {
       openNewsletterSignupModal();
     }, 30000);

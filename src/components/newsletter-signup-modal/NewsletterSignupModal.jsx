@@ -1,10 +1,11 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import { Text } from '../../components';
 import classes from './NewsletterSignupModal.module.scss';
 import classNames from 'classnames';
 import Button from "../button/Button";
+import PropTypes from 'prop-types';
 
-const NewsletterSignupModal = () => {
+const NewsletterSignupModal = ({ onSuccessfulSignup }) => {
   const [formStatus, setFormStatus] = useState({
     isSubmitting: false,
     hasSubmitted: false,
@@ -47,23 +48,44 @@ const NewsletterSignupModal = () => {
       isSubmitting: false,
       hasSubmitted: true,
     });
+
+    onSuccessfulSignup();
   }
 
   const { isSubmitting, hasSubmitted } = formStatus;
 
+  if (hasSubmitted) {
+    return (
+      <div className={classes.successMessage}>
+        <i className={classNames('xxlarge material-icons', classes.successCheckmark)}>check_circle</i>
+        <Text type="h3" className={classes.successText} removeMargin={true}>
+          Newsletter subscription successful
+        </Text>
+      </div>
+    );
+  }
+
   return (
     <div className={classes.container}>
-      <Text type="h1" className={classes.header}>Now-u newsletter</Text>
-      <Text type="h4">Subscribe to stay up to date with:</Text>
+      <Text type="h1" className={classes.header} removeMargin={true}>
+        Now-u newsletter
+      </Text>
+      <Text type="h2" className={classes.subHeader} removeMargin={true}>
+        Subscribe to stay up to date with:
+      </Text>
 
       <ul className={classes.list}>
         <li className={classes.listItem}>
           <i className={classNames('small material-icons', classes.listCheckmark)}>check_circle</i>
-          <Text className={classes.listText} type="p" removeMargin={true}>Campaign & partnership announcements</Text>
+          <Text className={classes.listText} type="p" removeMargin={true}>
+            Campaign & partnership announcements
+          </Text>
         </li>
         <li className={classes.listItem}>
           <i className={classNames('small material-icons', classes.listCheckmark)}>check_circle</i>
-          <Text className={classes.listText} type="p" removeMargin={true}>Informative blog posts and community updates</Text>
+          <Text className={classes.listText} type="p" removeMargin={true}>
+            Informative blog posts and community updates
+          </Text>
         </li>
         <li className={classes.listItem}>
           <i className={classNames('small material-icons', classes.listCheckmark)}>check_circle</i>
@@ -73,67 +95,64 @@ const NewsletterSignupModal = () => {
         </li>
       </ul>
 
-      {
-        !hasSubmitted ?
-        (
-          <form
-            action="https://now-u.us4.list-manage.com/subscribe/post-json?u=0500f7cdb93e0595e0c9af4d5&amp;id=b604a851dc&c="
-            method="POST"
-            encType="application/x-www-form-urlencoded"
-            autoComplete="off"
-            target="form_submit_response_iframe"
-            rel="noopener noreferrer"
-            onSubmit={formSubmitted}
-          >
-            <div className={classes.formInputs}>
-              <div>
-                <label htmlFor="name">Name</label>
-                <input
-                  className={classes.formInput}
-                  disabled={isSubmitting}
-                  type="text"
-                  name="NAME"
-                  id="name"
-                  placeholder="e.g. John Doe"
-                />
-              </div>
-              <div>
-                <label htmlFor="email">Email</label>
-                <input
-                  className={classes.formInput}
-                  disabled={isSubmitting}
-                  type="email"
-                  name="EMAIL"
-                  id="email"
-                  placeholder="e.g. JohnDoe@email.com"
-                  required
-                />
-              </div>
-            </div>
-
-            <Button
-              className={classes.submitButton}
+      <form
+        action="https://now-u.us4.list-manage.com/subscribe/post-json?u=0500f7cdb93e0595e0c9af4d5&amp;id=b604a851dc&c="
+        method="POST"
+        encType="application/x-www-form-urlencoded"
+        autoComplete="off"
+        target="form_submit_response_iframe"
+        rel="noopener noreferrer"
+        onSubmit={formSubmitted}
+      >
+        <div className={classes.formFields}>
+          <div className={classes.formField}>
+            <label className={classes.formLabel} htmlFor="name">Name</label>
+            <input
+              className={classes.formInput}
               disabled={isSubmitting}
-              type="submit"
-              variant="primary"
-            >
-              Subscribe
-            </Button>
-          </form>
-        ) :
-        (
-          'Success'
-        )
-      }
+              type="text"
+              name="NAME"
+              id="name"
+              placeholder="e.g. John Doe"
+              required
+            />
+          </div>
+          <div className={classes.formField}>
+            <label className={classes.formLabel} htmlFor="email">Email</label>
+            <input
+              className={classes.formInput}
+              disabled={isSubmitting}
+              type="email"
+              name="EMAIL"
+              id="email"
+              placeholder="e.g. JohnDoe@email.com"
+              required
+            />
+          </div>
+        </div>
+
+        <Button
+          className={classes.submitButton}
+          disabled={isSubmitting}
+          type="submit"
+          variant="primary"
+        >
+          Subscribe
+        </Button>
+      </form>
 
       <iframe
         className={classes.hidden}
         name="form_submit_response_iframe"
-        onLoad={responseContentLoaded}
         ref={formResponseIframeRef}
+        onLoad={responseContentLoaded}
       />
     </div>
     );
+};
+
+NewsletterSignupModal.propTypes = {
+  onSuccessfulSignup: PropTypes.func,
 };
 
 export default NewsletterSignupModal;

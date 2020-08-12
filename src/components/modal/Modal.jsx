@@ -46,7 +46,7 @@ export default class Modal extends React.Component {
   componentDidMount() {
     this.setScrollLock(true);
 
-    this.closeButton.focus();
+    this.modalContainer.focus();
   }
 
   componentWillUnmount() {
@@ -68,6 +68,7 @@ export default class Modal extends React.Component {
         tabIndex="-1"
         onKeyDown={this.handleKeyDown}
         onClick={this.handleClickAway}
+        ref={(modalContainer) => {this.modalContainer = modalContainer}}
       >
         <div
           data-size={size}
@@ -78,7 +79,6 @@ export default class Modal extends React.Component {
             <button
               className={classNames(classes.closeButton, classes[color])}
               onClick={this.handleClose}
-              ref={(closeButton) => {this.closeButton = closeButton}}
             >
               <i className="small material-icons">close</i>
             </button>

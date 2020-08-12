@@ -7,7 +7,7 @@ const Card = ({ imageUrl, title, mediaName, link }) => {
   return (
     <div className={classes.cardStyle}>
         <a href={link}>
-            <img src={imageUrl} className={classes.cardImage}/>
+            <img src={imageUrl} className={classes.cardImage} alt='Press card image'/>
         </a>
         <Text type="h5" className={classes.cardTitle}>{title}</Text>
         <Text type="h6" className={classes.mediaName}>{mediaName}</Text>

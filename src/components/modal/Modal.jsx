@@ -64,7 +64,7 @@ export default class Modal extends React.Component {
 
     return ReactDOM.createPortal(
       <aside
-        className={classes.container}
+        className={classes.modalContainer}
         tabIndex="-1"
         onKeyDown={this.handleKeyDown}
         onClick={this.handleClickAway}
@@ -72,19 +72,18 @@ export default class Modal extends React.Component {
       >
         <div
           data-size={size}
-          className={classes.dialog}
+          className={classes.modalDialog}
           ref={(modalDialog) => {this.modalDialog = modalDialog}}
         >
-          <div className={classNames(classes.content, classes[color])}>
+          <div className={classNames(classes.modalContent, classes[color])}>
             <button
-              className={classNames(classes.closeButton, classes[color])}
+              className={classNames(classes.modalCloseButton, classes[color])}
               onClick={this.handleClose}
             >
               <i className="small material-icons">close</i>
             </button>
 
             {this.props.children}
-
           </div>
         </div>
       </aside>,

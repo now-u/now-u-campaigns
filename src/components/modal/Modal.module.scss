@@ -1,6 +1,6 @@
 @import '../../utils/variables';
 
-.dialog {
+.modalDialog {
   height: auto;
   max-height: 90%;
   max-width: 100%;
@@ -29,7 +29,7 @@
   }
 }
 
-.content {
+.modalContent {
   border-radius: 18px;
   padding: 24px;
 
@@ -46,7 +46,7 @@
   }
 }
 
-.container {
+.modalContainer {
   align-items: center;
   background-color: rgba(25, 32, 45, 0.7);
   bottom: 0;
@@ -60,7 +60,7 @@
   z-index: 999;
 }
 
-.closeButton {
+.modalCloseButton {
   background: none;
   border: none;
   cursor: pointer;

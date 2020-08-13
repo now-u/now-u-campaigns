@@ -4,8 +4,11 @@ $bgColorIntro: $brandGradient;
 $bgColorTakeAction: $white;
 $bgColorCampaigns: $lightGrey;
 $bgColorHowItWorks: $bgColorTakeAction;
+$bgColorHowItWorksAlternative: $bgColorCampaigns;
 $bgOfTheCollageImage: #fdfdfd;
 $bgColor4: $blue;
+
+$bgDetailSlantAngle: 80px;
 
 @mixin home($unit, $override: null) {
     @if $unit == 'section' {
@@ -26,16 +29,24 @@ $bgColor4: $blue;
             padding: 110px 25px;
         }
 
-        @if $override == 'sectionNoTopPadding' {
+        @if $override == 'sectionHowItWorks' {
             padding-top: 0;
+            padding-left: 0;
+            padding-right: 0;
             @media (max-width: $max-width) {
                 padding-top: 0;
+                padding-left: 0;
+                padding-right: 0;
             }
             @media (max-width: $medium) {
                 padding-top: 0;
+                padding-left: 0;
+                padding-right: 0;
             }
             @media (max-width: $small) {
                 padding-top: 0;
+                padding-left: 0;
+                padding-right: 0;
             }
         }
         @if $override == 'sectionNoSidePadding' {
@@ -75,6 +86,21 @@ $bgColor4: $blue;
             text-align: center;
         }
     }
+    @if $unit == 'subHeader' {
+        font-family: $headerFont;
+        font-size: 40px;
+        font-weight: $blackBold;
+        line-height: 1;
+        color: $darkGrey;
+        margin: 0;
+
+        // @media (max-width: $medium) {
+        //     font-size: 50px;
+        // }
+        // @media (max-width: $small) {
+        //     text-align: center;
+        // }
+    }
     @if $unit == 'description' {
         font-size: 25px;
         font-weight: $regular;
@@ -82,6 +108,22 @@ $bgColor4: $blue;
         color: $mediumGrey;
         max-width: 100%;
         margin-bottom: 0;
+
+        @media (max-width: $max-width) {
+            font-size: 21px;
+        }
+        @media (max-width: $small) {
+            text-align: center;
+        }
+    }
+    @if $unit == 'subDescription' {
+        font-size: 25px;
+        font-weight: $regular;
+        // line-height: 1.7;
+        color: $mediumGrey;
+        max-width: 100%;
+        margin-bottom: 0;
+        margin-top: 10px;
 
         @media (max-width: $max-width) {
             font-size: 21px;

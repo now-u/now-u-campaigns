@@ -5,7 +5,7 @@ import {
     TakeAction,
     ActiveCampaigns,
     WaveBreak,
-    TheApp,
+    // TheApp,
     HowItWorks,
 } from './components/index';
 
@@ -22,14 +22,19 @@ const Homepage = () => {
     }, []);
 
     return (
-        <div className={classes.homepageContainer}>
+        <main className={classes.homepageContainer}>
             <Intro />
             <TakeAction />
             <ActiveCampaigns campaigns={campaigns} />
             <WaveBreak />
             <HowItWorks />
-            <TheApp />
-        </div>
+            {
+                // remove TheApp
+                // add an OurPartners
+                // add NewsLetter form
+                // <TheApp />
+            }
+        </main>
     );
 };
 

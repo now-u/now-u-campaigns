@@ -3,10 +3,7 @@
 
 .campaignContainer {
     @include home('section', 'sectionNoSidePadding');
-    position: relative;
     background-color: $bgColorCampaigns;
-    padding-left: 0;
-    padding-right: 0;
 
     .content {
         text-align: center;

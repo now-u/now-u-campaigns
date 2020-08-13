@@ -3,7 +3,7 @@
 $bgColorIntro: $brandGradient;
 $bgColorTakeAction: $white;
 $bgColorCampaigns: $lightGrey;
-$bgColor4: $bgColorTakeAction;
+$bgColorHowItWorks: $bgColorTakeAction;
 $bgOfTheCollageImage: #fdfdfd;
 $bgColor4: $blue;
 
@@ -62,3 +62,52 @@ $bgColor4: $blue;
         }
     }
 }
+
+// .buttonContainer {
+//     min-height: 40px;
+//     border-radius: 8px;
+//     border: unset;
+//     padding: 0 18px;
+//     font-size: 17px;
+//     font-weight: $semi-bold;
+//     cursor: pointer;
+//     font-family: 'Nunito', sans-serif;
+//     transition: filter 0.2s;
+//     outline: none;
+//     width: fit-content;
+//     &:hover {
+//       filter: contrast(0.6);
+//     }
+//   }
+//   .primary {
+//     background-color: $brand;
+//     color: $white;
+//   }
+//   .secondary {
+//     color: $brand;
+//   }
+//   .inverted {
+//     border: 1px solid $white;
+//     color: white;
+//     background: transparent;
+//   }
+//   .flat {
+//     color: $brand;
+//   }
+//   .other {
+//     background: transparent;
+//     padding: 0px;
+//   }
+//   .small {
+//     font-size: 14px;
+//     padding: 6px 16px;
+//   }
+//   .large {
+//     height: 60px;
+//     padding: 0 36px;
+//     font-size: 20px;
+//   }
+//   .disabled {
+//     opacity: 0.6;
+//     pointer-events: none;
+//   }

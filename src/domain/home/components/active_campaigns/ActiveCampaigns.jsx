@@ -43,7 +43,7 @@ const ActiveCampaign = ({ campaigns }) => {
                     )}
                 </div>
                 <Button
-                    variant='inverted'
+                    variant='secondary'
                     onClick={() => history.push('/campaigns')}
                 >
                     See all campaigns

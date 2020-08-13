@@ -3,8 +3,9 @@ import classes from './Homepage.module.scss';
 import {
     Intro,
     TakeAction,
-    TheApp,
     ActiveCampaigns,
+    WaveBreak,
+    TheApp,
     HowItWorks,
 } from './components/index';
 
@@ -25,6 +26,7 @@ const Homepage = () => {
             <Intro />
             <TakeAction />
             <ActiveCampaigns campaigns={campaigns} />
+            <WaveBreak />
             <HowItWorks />
             <TheApp />
         </div>

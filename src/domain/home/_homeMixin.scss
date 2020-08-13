@@ -26,7 +26,19 @@ $bgColor4: $blue;
             padding: 110px 25px;
         }
 
-        @if $override == 'sectionNoPadding' {
+        @if $override == 'sectionNoTopPadding' {
+            padding-top: 0;
+            @media (max-width: $max-width) {
+                padding-top: 0;
+            }
+            @media (max-width: $medium) {
+                padding-top: 0;
+            }
+            @media (max-width: $small) {
+                padding-top: 0;
+            }
+        }
+        @if $override == 'sectionNoSidePadding' {
             padding-left: 0;
             padding-right: 0;
             @media (max-width: $max-width) {

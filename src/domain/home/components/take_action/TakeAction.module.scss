@@ -2,8 +2,8 @@
 @import '../../homeMixin';
 
 .takeActionContainer {
-    @include home('section');
-    padding-top: 0 !important;
+    @include home('section', 'sectionNoTopPadding');
+    // padding-top: 0 !important;
 
     .downArrow {
         font-size: 5em;

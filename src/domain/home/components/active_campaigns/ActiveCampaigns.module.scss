@@ -1,12 +1,8 @@
 @import '../../../../utils/variables';
 @import '../../homeMixin';
 
-// #campaignContainer {
-//     padding-left: 0;
-//     padding-right: 0;
-// }
 .campaignContainer {
-    @include home('section', 'sectionNoPadding');
+    @include home('section', 'sectionNoSidePadding');
     position: relative;
     background-color: $bgColorCampaigns;
     padding-left: 0;
@@ -30,9 +26,7 @@
         .campaignSection {
             margin: 50px 0;
             display: grid;
-            // grid-gap: 15px;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            // grid-template-rows: 300px;
             grid-auto-rows: 300px;
         }
         button {

@@ -7,7 +7,7 @@ $bgColorHowItWorks: $bgColorTakeAction;
 $bgOfTheCollageImage: #fdfdfd;
 $bgColor4: $blue;
 
-@mixin home($unit) {
+@mixin home($unit, $override: null) {
     @if $unit == 'section' {
         box-sizing: border-box;
         padding: 100px;
@@ -24,6 +24,23 @@ $bgColor4: $blue;
         }
         @media (max-width: $small) {
             padding: 110px 25px;
+        }
+
+        @if $override == 'sectionNoPadding' {
+            padding-left: 0;
+            padding-right: 0;
+            @media (max-width: $max-width) {
+                padding-left: 0;
+                padding-right: 0;
+            }
+            @media (max-width: $medium) {
+                padding-left: 0;
+                padding-right: 0;
+            }
+            @media (max-width: $small) {
+                padding-left: 0;
+                padding-right: 0;
+            }
         }
     }
     @if $unit == 'content' {
@@ -62,52 +79,3 @@ $bgColor4: $blue;
         }
     }
 }
-
-// .buttonContainer {
-//     min-height: 40px;
-//     border-radius: 8px;
-//     border: unset;
-//     padding: 0 18px;
-//     font-size: 17px;
-//     font-weight: $semi-bold;
-//     cursor: pointer;
-//     font-family: 'Nunito', sans-serif;
-//     transition: filter 0.2s;
-//     outline: none;
-//     width: fit-content;
-//     &:hover {
-//       filter: contrast(0.6);
-//     }
-//   }
-//   .primary {
-//     background-color: $brand;
-//     color: $white;
-//   }
-//   .secondary {
-//     color: $brand;
-//   }
-//   .inverted {
-//     border: 1px solid $white;
-//     color: white;
-//     background: transparent;
-//   }
-//   .flat {
-//     color: $brand;
-//   }
-//   .other {
-//     background: transparent;
-//     padding: 0px;
-//   }
-//   .small {
-//     font-size: 14px;
-//     padding: 6px 16px;
-//   }
-//   .large {
-//     height: 60px;
-//     padding: 0 36px;
-//     font-size: 20px;
-//   }
-//   .disabled {
-//     opacity: 0.6;
-//     pointer-events: none;
-//   }

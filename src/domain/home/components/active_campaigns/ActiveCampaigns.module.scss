@@ -1,23 +1,16 @@
 @import '../../../../utils/variables';
 @import '../../homeMixin';
 
+// #campaignContainer {
+//     padding-left: 0;
+//     padding-right: 0;
+// }
 .campaignContainer {
-    @include home('section');
+    @include home('section', 'sectionNoPadding');
     position: relative;
     background-color: $bgColorCampaigns;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-
-    // &::before {
-    //     content: '';
-    //     position: absolute;
-    //     height: 50%;
-    //     width: 100%;
-    //     right: 10%;
-    //     bottom: -10%;
-    //     border-radius: 100% 100%;
-    //     background-color: greenyellow;
-    // }
+    padding-left: 0;
+    padding-right: 0;
 
     .content {
         text-align: center;

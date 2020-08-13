@@ -3,21 +3,11 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { Text } from '../../../../../components';
 import classes from './CampaignCard.module.scss';
-// import { useHistory } from 'react-router-dom';
 
 const CampaignCard = ({ id, title, header_image }) => {
-    // const history = useHistory();
-
     return (
         <Link to={`/campaigns/${id}`}>
-            <figure
-                className={classes.campaignCard}
-                style={
-                    {
-                        // backgroundImage: `linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.6))`,
-                    }
-                }
-            >
+            <figure className={classes.campaignCard}>
                 <img
                     src={`${header_image}`}
                     alt={`dynamic picture of ${title}`}

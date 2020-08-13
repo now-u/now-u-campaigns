@@ -1,78 +1,70 @@
 @import '../../../../utils/variables';
+@import '../../aboutUsMixin';
 
 .whoSection {
-    position: relative;
-    top: -150px;
-    padding: 0% 15%;
-    height: fit-content;
-    display: flex;
-    box-sizing: border-box;
-    padding-bottom: 50px;
-}
+    @include aboutUs('section');
+    background-color: $bgColor3;
 
-.textSection {
-    width: 50%;
-}
+    .content {
+        @include aboutUs('content');
+        max-width: 1240px;
 
-.imageSection {
-    padding-top: 50px;
-    width: 50%;
-}
+        .textSection {
+            display: flex;
+            flex-direction: column;
 
-.header {
-    width: 75%;
-}
+            .header {
+                @include aboutUs('header');
+            }
+            .description {
+                @include aboutUs('description');
+            }
+        }
 
-.headerText {
-    font-size: 40px;
-    font-weight: $blackBold;
-    line-height: 1;
-    color: $darkGrey;
-}
+        .imageSection {
+            padding-top: 50px;
 
-.contentText {
-    font-size: 20px;
-    font-weight: $regular;
-    line-height: 1.7;
-    color: $mediumGrey;
-}
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
 
-.collage {
-    object-fit: contain;
-    img {
-        width: 100%;
-    }
-}
+            @media (max-width: $medium) {
+                flex-direction: column;
+            }
 
-.buttonSection {
-    padding-top: 20px;
-    text-align: right;
-}
+            .collage {
+                object-fit: contain;
+                width: 50%;
 
-.meetTeamBtn {
-    width: 274px;
-    height: 60px;
-    font-size: 24px;
-    font-weight: $bold;
-    line-height: 1.33;
-    background-color: $white;
-    border: solid 3px $brand;
-}
+                @media (max-width: $max-width) {
+                    width: 60%;
+                    margin-right: 10px;
+                }
+                @media (max-width: $medium) {
+                    width: 100%;
+                }
+                img {
+                    width: 100%;
+                }
+            }
 
-@media (max-width: $medium) {
-    .whoSection {
-        flex-wrap: wrap;
-        position: static;
-        top: 0px;
-        margin: 0% 0%;
-        width: 100%;
-    }
-    .textSection {
-        width: 100%;
-    }
+            .meetTheTeam {
+                width: 274px;
+                height: 60px;
+                font-size: 24px;
+                font-weight: $bold;
+                line-height: 1.33;
+                background-color: transparent;
+                border: solid 3px $brand;
 
-    .imageSection {
-        padding-top: 0px;
-        width: 100%;
+                @media (max-width: $medium) {
+                    margin-top: 25px;
+                }
+                @media (max-width: $small) {
+                    width: 100%;
+                }
+            }
+        }
     }
 }

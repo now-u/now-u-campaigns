@@ -1,62 +1,60 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Text, Button } from '../../../../components';
+import { Text } from '../../../../components';
 import classes from './Partners.module.scss';
-import { useHistory } from 'react-router-dom';
-// import CampaignCard from './campaign_card/CampaignCard';
+// import { useHistory } from 'react-router-dom';
+import PartnerCard from './partner_card/PartnerCard';
 
-// const Partners = ({ campaigns }) => {
-const Partners = () => {
-    const history = useHistory();
+const Partners = ({ partners }) => {
+    //const history = useHistory();
 
     return (
-        <section className={classes.partnersContainer}>
-            <div className={classes.content}>
-                <div className={classes.textSection}>
-                    <Text type='h2' className={classes.header}>
-                        Active campaigns
-                    </Text>
-                    <Text type='p' className={classes.description}>
-                        Our monthly campaigns tackle different issues in
-                        partnership with trusted institutions
-                    </Text>
-                </div>
-                <div className={classes.campaignSection}>
-                    {
-                        //     campaigns ? (
-                        //     campaigns.map(({ id, title, header_image }) => {
-                        //         return (
-                        //             // <CampaignCard
-                        //             //     key={id}
-                        //             //     id={id}
-                        //             //     title={title}
-                        //             //     header_image={header_image}
-                        //             // />
-                        //         );
-                        //     })
-                        // ) : (
-                        //     <div className={classes.textSection}>
-                        //         <Text type='h3' className={classes.noCampaigns}>
-                        //             Check back to see campaigns you can support on
-                        //             the app!
-                        //         </Text>
-                        //     </div>
-                        // )
-                    }
-                </div>
-                <Button
-                    variant='secondary'
-                    onClick={() => history.push('/campaigns')}
-                >
-                    See all campaigns
-                </Button>
+        <section id='partners' className={classes.partnersContainer}>
+            <article className={classes.textSection}>
+                <Text type='h1' className={classes.header}>
+                    Our Partners
+                </Text>
+                <Text type='p' className={classes.description}>
+                    We work with many amazing charities and social enterprises.
+                    Want to find out more about partnering with now-u? Download
+                    our{' '}
+                    <a
+                        href={
+                            'https://share.now-u.com/partners/now-u_charity_collaboration_&_partnership_guide.pdf'
+                        }
+                        target='_blank'
+                        rel='noopener noreferrer'
+                    >
+                        partnership guide.
+                    </a>
+                </Text>
+            </article>
+            <div className={classes.cardSection}>
+                {partners ? (
+                    partners.map(({ name, id, logo_link }) => {
+                        return (
+                            <PartnerCard
+                                key={id}
+                                name={name}
+                                id={id}
+                                logo_link={logo_link}
+                            />
+                        );
+                    })
+                ) : (
+                    <div>
+                        <Text type='p'>Loading...</Text>
+                    </div>
+                )}
             </div>
+            -{' '}
         </section>
     );
 };
 
 Partners.propTypes = {
-    campaigns: PropTypes.array || null,
+    // title: PropTypes.string.isRequired,
+    partners: PropTypes.array || null,
 };
 
 export default Partners;

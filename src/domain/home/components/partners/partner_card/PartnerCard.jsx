@@ -2,29 +2,42 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { Text } from '../../../../../components';
-import classes from './CampaignCard.module.scss';
+import classes from './PartnerCard.module.scss';
 
-const CampaignCard = ({ id, title, header_image }) => {
+const PartnerCard = ({ id, name, logo_link }) => {
     return (
-        <Link to={`/campaigns/${id}`}>
-            <figure className={classes.campaignCard}>
-                <img
-                    src={`${header_image}`}
-                    alt={`dynamic picture of ${title}`}
-                />
-                <figcaption className={classes.campaignTitle}>
-                    <Text type='h3'>{title}</Text>
+        // <Link to={`/campaigns/${id}`}>
+        //     <figure className={classes.campaignCard}>
+        //         <img
+        //             src={`${header_image}`}
+        //             alt={`dynamic picture of ${title}`}
+        //         />
+        //         <figcaption className={classes.campaignTitle}>
+        //             <Text type='h3'>{title}</Text>
+        //         </figcaption>
+        //     </figure>
+        // </Link>
+
+        <Link key={id} to={`/partners/${id}`}>
+            <figure className={classes.partnerCard}>
+                <div className={classes.imageSection}>
+                    <img src={logo_link} alt='one of our beloved partners' />
+                </div>
+                <figcaption className={classes.textSection}>
+                    <Text type='p' className={classes.partnerName}>
+                        {name}
+                    </Text>
                 </figcaption>
             </figure>
         </Link>
     );
 };
 
-CampaignCard.propTypes = {
-    title: PropTypes.string.isRequired,
+PartnerCard.propTypes = {
+    name: PropTypes.string.isRequired,
     id: PropTypes.number,
-    header_image: PropTypes.string,
-    campaigns: PropTypes.array || null,
+    logo_link: PropTypes.string,
+    // campaigns: PropTypes.array || null,
 };
 
-export default CampaignCard;
+export default PartnerCard;

@@ -31,7 +31,7 @@ const TakeAction = () => {
                 <i className='material-icons'>expand_more</i>
             </Link>
             <div className={classes.content}>
-                <div className={classes.textSection}>
+                <article className={classes.textSection}>
                     <Text type='h2' className={classes.header}>
                         We make it easy for anyone to take action!
                     </Text>
@@ -47,7 +47,7 @@ const TakeAction = () => {
                         Our aim is to inform, involve and inspire you to start
                         making a difference, however you can.
                     </Text>
-                </div>
+                </article>
             </div>
         </section>
 

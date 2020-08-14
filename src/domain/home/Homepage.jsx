@@ -5,8 +5,8 @@ import {
     TakeAction,
     ActiveCampaigns,
     WaveBreak,
-    // TheApp,
     HowItWorks,
+    Partners,
 } from './components/index';
 
 const Homepage = () => {
@@ -28,6 +28,7 @@ const Homepage = () => {
             <ActiveCampaigns campaigns={campaigns} />
             <WaveBreak />
             <HowItWorks />
+            <Partners />
             {
                 // remove TheApp
                 // add an OurPartners

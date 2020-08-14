@@ -6,7 +6,7 @@ const Intro = () => {
     return (
         <section className={classes.introContainer}>
             <div className={classes.content}>
-                <div className={classes.textSection}>
+                <article className={classes.textSection}>
                     <Text type='h2' className={classes.header}>
                         It&apos;s time to <br />
                         change together
@@ -15,7 +15,7 @@ const Intro = () => {
                         Download the app to discover simple, meaningful and
                         effective ways to support causes that you care about.
                     </Text>
-                </div>
+                </article>
                 <div className={classes.videoContainer}>
                     <Button
                         variant='secondary'

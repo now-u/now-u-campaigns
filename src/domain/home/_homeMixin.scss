@@ -132,4 +132,7 @@ $bgDetailSlantAngle: 80px;
             text-align: center;
         }
     }
+    @if $unit == 'campaignSteps' {
+        opacity: 0.3;
+    }
 }

@@ -18,6 +18,10 @@ const HomeItWorks = () => {
 
             <div className={classes.stepContainer}>
                 <article className={classes.textSection}>
+                    <span
+                        id={classes.fadedNumberOne}
+                        className={classes.fadedNumber}
+                    ></span>
                     <Text type='h3' className={classes.header}>
                         Join a campaign
                     </Text>
@@ -36,6 +40,10 @@ const HomeItWorks = () => {
                     <img src={takeAction} alt='Take action' />
                 </figure>
                 <article className={classes.textSection}>
+                    <span
+                        id={classes.fadedNumberTwo}
+                        className={classes.fadedNumber}
+                    ></span>
                     <Text type='h3' className={classes.header}>
                         Take action
                     </Text>
@@ -49,8 +57,14 @@ const HomeItWorks = () => {
             </div>
             <div className={classes.stepContainer}>
                 <article className={classes.textSection}>
-                    <Text type='h3'>Join the now-u community!</Text>
-                    <Text type='p'>
+                    <span
+                        id={classes.fadedNumberThree}
+                        className={classes.fadedNumber}
+                    ></span>
+                    <Text type='h3' className={classes.header}>
+                        Join the now-u community!
+                    </Text>
+                    <Text type='p' className={classes.description}>
                         Join a community of changemakers, connect with fellow
                         campaign contributors, and see how your actions are
                         making a difference.

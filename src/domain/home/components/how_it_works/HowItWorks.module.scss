@@ -4,6 +4,7 @@
 // * {
 //     border: 1px solid lightCoral;
 // }
+
 .howItWorksContainer {
     @include home('section', 'sectionHowItWorks');
     background-color: $bgColorHowItWorks;
@@ -26,15 +27,52 @@
         justify-content: space-between;
         align-items: center;
         .textSection {
-            margin-right: 10px;
+            margin: 0 10px;
             position: relative;
             width: 400px;
+
+            display: flex;
+            flex-direction: column;
+
+            // #fadedNumberOne {
+            //     background-image: url('../../../../assets/homepage/step1.svg');
+            //     height: 500px;
+            //     width: 300px;
+            // }
+            .fadedNumber {
+                background-repeat: no-repeat;
+                background-position-x: center;
+                position: absolute;
+                top: -50%;
+                height: 300px;
+                width: 300px;
+                align-self: center;
+            }
+            #fadedNumberOne {
+                background-image: url('../../../../assets/homepage/step1.svg');
+            }
+            #fadedNumberTwo {
+                background-image: url('../../../../assets/homepage/step2.svg');
+            }
+            #fadedNumberThree {
+                background-image: url('../../../../assets/homepage/step3.svg');
+            }
             .header {
                 @include home('subHeader');
             }
             .description {
                 @include home('subDescription');
             }
+
+            // &::after {
+            //     content: '';
+            //     background-image: url('../../../../assets/homepage/step1.svg');
+            //     position: absolute;
+            //     height: 100px;
+            //     width: 100px;
+            //     object-fit: cover;
+            //     object-position: center;
+            // }
         }
         .imageSection {
             height: 400px;

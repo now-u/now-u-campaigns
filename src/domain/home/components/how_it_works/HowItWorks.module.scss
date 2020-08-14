@@ -1,10 +1,6 @@
 @import '../../../../utils/variables';
 @import '../../homeMixin';
 
-// * {
-//     border: 1px solid lightCoral;
-// }
-
 .howItWorksContainer {
     @include home('section', 'sectionHowItWorks');
     background-color: $bgColorHowItWorks;
@@ -31,22 +27,20 @@
             position: relative;
             width: 400px;
 
-            display: flex;
-            flex-direction: column;
+            .header {
+                @include home('subHeader');
+            }
+            .description {
+                @include home('subDescription');
+            }
 
-            // #fadedNumberOne {
-            //     background-image: url('../../../../assets/homepage/step1.svg');
-            //     height: 500px;
-            //     width: 300px;
-            // }
             .fadedNumber {
                 background-repeat: no-repeat;
-                background-position-x: center;
                 position: absolute;
-                top: -50%;
+                top: -60%;
+                left: 25%;
                 height: 300px;
                 width: 300px;
-                align-self: center;
             }
             #fadedNumberOne {
                 background-image: url('../../../../assets/homepage/step1.svg');
@@ -57,22 +51,6 @@
             #fadedNumberThree {
                 background-image: url('../../../../assets/homepage/step3.svg');
             }
-            .header {
-                @include home('subHeader');
-            }
-            .description {
-                @include home('subDescription');
-            }
-
-            // &::after {
-            //     content: '';
-            //     background-image: url('../../../../assets/homepage/step1.svg');
-            //     position: absolute;
-            //     height: 100px;
-            //     width: 100px;
-            //     object-fit: cover;
-            //     object-position: center;
-            // }
         }
         .imageSection {
             height: 400px;

@@ -67,14 +67,14 @@ const NewsletterSignupModal = ({ onSuccessfulSignup }) => {
 
   return (
     <div className={classes.newsletterSignupContainer}>
-      <Text type="h1" className={classes.newsletterSignupHeader} removeMargin={true}>
+      <Text type="h1" className={classes.header} removeMargin={true}>
         Now-u newsletter
       </Text>
-      <Text type="h2" className={classes.newsletterSignupSubHeader} removeMargin={true}>
+      <Text type="h2" className={classes.subHeader} removeMargin={true}>
         Subscribe to stay up to date with:
       </Text>
 
-      <ul className={classes.newsletterSignupBenefitsList}>
+      <ul className={classes.benefitsList}>
         <li className={classes.listItem}>
           <i className={classNames('small material-icons', classes.listCheckmark)}>check_circle</i>
           <Text className={classes.listText} type="p" removeMargin={true}>
@@ -104,7 +104,7 @@ const NewsletterSignupModal = ({ onSuccessfulSignup }) => {
         rel="noopener noreferrer"
         onSubmit={formSubmitted}
       >
-        <div className={classes.newsletterSignupFormFields}>
+        <div className={classes.formFields}>
           <div className={classes.formField}>
             <label className={classes.formLabel} htmlFor="name">Name</label>
             <input
@@ -142,7 +142,7 @@ const NewsletterSignupModal = ({ onSuccessfulSignup }) => {
       </form>
 
       <iframe
-        className={classes.newsletterSignupFormResponseContainer}
+        className={classes.formResponseContainer}
         name="form_submit_response_iframe"
         ref={formResponseIframeRef}
         onLoad={responseContentLoaded}

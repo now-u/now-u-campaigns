@@ -2,12 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Text } from '../../../../components';
 import classes from './Partners.module.scss';
-// import { useHistory } from 'react-router-dom';
 import PartnerCard from './partner_card/PartnerCard';
 
 const Partners = ({ partners }) => {
-    //const history = useHistory();
-
     return (
         <section id='partners' className={classes.partnersContainer}>
             <article className={classes.textSection}>
@@ -43,7 +40,9 @@ const Partners = ({ partners }) => {
                     })
                 ) : (
                     <div>
-                        <Text type='p'>Loading...</Text>
+                        <Text type='p' className={classes.loadingMsg}>
+                            Loading...
+                        </Text>
                     </div>
                 )}
             </div>
@@ -53,7 +52,6 @@ const Partners = ({ partners }) => {
 };
 
 Partners.propTypes = {
-    // title: PropTypes.string.isRequired,
     partners: PropTypes.array || null,
 };
 

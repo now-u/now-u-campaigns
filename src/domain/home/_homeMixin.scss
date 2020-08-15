@@ -124,13 +124,6 @@ $bgDetailSlantAngle: 80px;
         line-height: 1;
         color: $darkGrey;
         margin: 0;
-
-        // @media (max-width: $medium) {
-        //     font-size: 50px;
-        // }
-        // @media (max-width: $small) {
-        //     text-align: center;
-        // }
     }
     @if $unit == 'description' {
         font-size: 25px;
@@ -150,18 +143,10 @@ $bgDetailSlantAngle: 80px;
     @if $unit == 'subDescription' {
         font-size: 25px;
         font-weight: $regular;
-        // line-height: 1.7;
         color: $mediumGrey;
         max-width: 100%;
         margin-bottom: 0;
         margin-top: 10px;
-
-        @media (max-width: $max-width) {
-            font-size: 21px;
-        }
-        @media (max-width: $small) {
-            text-align: center;
-        }
     }
     @if $unit == 'campaignSteps' {
         opacity: 0.3;

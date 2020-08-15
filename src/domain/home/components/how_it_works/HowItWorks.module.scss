@@ -45,6 +45,9 @@
             }
             .description {
                 @include home('subDescription');
+                @media (max-width: $small) {
+                    text-align: left;
+                }
             }
 
             .fadedNumber {

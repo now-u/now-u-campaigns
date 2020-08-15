@@ -66,8 +66,8 @@ const HomeItWorks = () => {
                     </Text>
                     <Text type='p' className={classes.description}>
                         Join a community of changemakers, connect with fellow
-                        campaign contributors, and see how your actions are
-                        making a difference.
+                        campaign contributors, and see how your actions make a
+                        difference.
                     </Text>
                 </article>
                 <figure className={classes.imageSection}>

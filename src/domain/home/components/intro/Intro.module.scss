@@ -32,15 +32,23 @@
     }
     .content {
         z-index: 0;
+        width: 100%;
         display: grid;
-        grid-template-columns: 70% 300px;
-        grid-template-rows: auto auto auto;
+        // grid-template-columns: minmax(510px, 70%) 300px;
+        // grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-template-columns: minmax(500px, 800px) minmax(300px, 1fr);
+        // grid-template-rows: auto auto auto;
+        grid-auto-rows: auto;
         grid-gap: 20px;
-        grid-template-areas:
-            'text video'
-            'downloadBtns space';
+        // grid-template-areas:
+        //     'text video'
+        //     'downloadBtns space';
+
+        @media (max-width: 960px) {
+            grid-template-columns: 1fr;
+        }
         .textSection {
-            grid-area: text;
+            // grid-area: text;
             .header {
                 @include home('header');
                 color: $white;
@@ -51,13 +59,17 @@
             }
         }
         .videoContainer {
-            grid-area: video;
+            justify-self: center;
             align-self: flex-end;
+            width: 300px;
+            @media (max-width: 960px) {
+                justify-self: flex-start;
+            }
             .watchVideoBtn {
                 width: 300px;
                 font-size: 25px;
                 padding: 0.6em 1em;
-                margin-bottom: 1em;
+                // margin-bottom: 1em;
 
                 & a {
                     color: $brand;
@@ -76,7 +88,9 @@
             }
         }
         .downloadBtnContainer {
-            grid-area: downloadBtns;
+            div {
+                margin: 0;
+            }
         }
     }
 }

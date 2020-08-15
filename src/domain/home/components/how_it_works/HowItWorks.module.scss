@@ -6,7 +6,7 @@
     background-color: $bgColorHowItWorks;
 
     h2 {
-        align-self: center;
+        @include home('header');
         margin-bottom: 0;
     }
     .stepContainer {

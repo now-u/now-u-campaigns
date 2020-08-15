@@ -12,7 +12,7 @@ const Intro = () => {
                         change together
                     </Text>
                     <Text type='p' className={classes.description}>
-                        Download the app to discover simple, meaningful and
+                        Download the app to discover simple, meaningful, and
                         effective ways to support causes that you care about.
                     </Text>
                 </article>

@@ -7,6 +7,7 @@ import {
     WaveBreak,
     HowItWorks,
     Partners,
+    Newsletter,
 } from './components/index';
 
 const Homepage = () => {
@@ -39,12 +40,7 @@ const Homepage = () => {
             <WaveBreak />
             <HowItWorks />
             <Partners partners={partners} />
-            {
-                // remove TheApp
-                // add an OurPartners
-                // add NewsLetter form
-                // <TheApp />
-            }
+            <Newsletter />
         </main>
     );
 };

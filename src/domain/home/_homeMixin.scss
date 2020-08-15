@@ -5,8 +5,8 @@ $bgColorTakeAction: $white;
 $bgColorCampaigns: $lightGrey;
 $bgColorHowItWorks: $bgColorTakeAction;
 $bgColorHowItWorksAlternative: $bgColorCampaigns;
-$bgOfTheCollageImage: #fdfdfd;
-$bgColor4: $blue;
+$bgColorPartners: $bgColorCampaigns;
+$bgColorFooter: #fff8f1;
 
 $bgDetailSlantAngle: 80px;
 
@@ -47,6 +47,34 @@ $bgDetailSlantAngle: 80px;
                 padding-top: 0;
                 padding-left: 0;
                 padding-right: 0;
+            }
+        }
+        @if $override == 'sectionNewsletter' {
+            padding-top: 0;
+            padding-bottom: 0;
+            @media (max-width: $max-width) {
+                padding-top: 0;
+                padding-bottom: 0;
+            }
+            @media (max-width: $medium) {
+                padding-top: 0;
+                padding-bottom: 0;
+            }
+            @media (max-width: $small) {
+                padding-top: 0;
+                padding-bottom: 0;
+            }
+        }
+        @if $override == 'sectionNoTopPadding' {
+            padding-top: 0;
+            @media (max-width: $max-width) {
+                padding-top: 0;
+            }
+            @media (max-width: $medium) {
+                padding-top: 0;
+            }
+            @media (max-width: $small) {
+                padding-top: 0;
             }
         }
         @if $override == 'sectionNoSidePadding' {

@@ -4,7 +4,8 @@ export { default as ActiveCampaigns } from './active_campaigns/ActiveCampaigns.j
 export { default as WaveBreak } from './wave_break/WaveBreak.jsx';
 export { default as HowItWorks } from './how_it_works/HowItWorks.jsx';
 export { default as Partners } from './partners/Partners.jsx';
+export { default as Newsletter } from './newsletter/Newsletter.jsx';
 
-export { default as OurStory } from './OurStory';
-export { default as TheApp } from './TheApp';
-export { default as GetInvolved } from './GetInvolved';
+// export { default as OurStory } from './OurStory';
+// export { default as TheApp } from './TheApp';
+// export { default as GetInvolved } from './GetInvolved';

@@ -1,7 +1,8 @@
 import React from 'react';
 import classes from './Footer.module.scss';
-import { privacyNotice, nowUOrange } from '../../assets';
+import { nowUOrange } from '../../assets';
 import { AppDownloadButtons } from '../../components';
+import { privacyPolicyURL, termsAndConditionsURL } from '../../utils/constants';
 
 const Footer = () => {
   const footerLinksLeft = [
@@ -15,7 +16,8 @@ const Footer = () => {
     {id: 1, name: 'FAQ', href: '/faqs'},
     {id: 2, name: 'Blog', href: '/'},
     {id: 3, name: 'Newsletter', href: '/'},
-    {id: 4, name: 'Privacy Notice', href: privacyNotice},
+    {id: 4, name: 'Privacy Notice', href: privacyPolicyURL},
+    {id: 5, name: 'Terms & Conditions', href: termsAndConditionsURL},
   ]
   return (
     <div className={classes.footerBackground}>
@@ -37,7 +39,11 @@ const Footer = () => {
           {footerLinksRight.map(link => {
               return (
                 <div className={classes.links} key={link.id}>
-                  <a href={link.href} className={classes.links}>{link.name}</a>
+                  // Open external links in a new tab
+                  { link.href.includes('https://') 
+                    ? <a href={link.href} className={classes.links} target="_blank" rel="noopener noreferrer">{link.name}</a>
+                    : <a href={link.href} className={classes.links}>{link.name}</a>
+                  }
                 </div>
               )
             })}

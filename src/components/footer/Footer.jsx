@@ -39,9 +39,10 @@ const Footer = () => {
           {footerLinksRight.map(link => {
               return (
                 <div className={classes.links} key={link.id}>
-                  // Open external links in a new tab
                   { link.href.includes('https://') 
+                    // Open external links in a new tab
                     ? <a href={link.href} className={classes.links} target="_blank" rel="noopener noreferrer">{link.name}</a>
+                    // Internal links (routes)
                     : <a href={link.href} className={classes.links}>{link.name}</a>
                   }
                 </div>

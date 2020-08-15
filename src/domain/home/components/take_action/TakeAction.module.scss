@@ -3,8 +3,14 @@
 
 .takeActionContainer {
     @include home('section', 'sectionNoTopPadding');
+    position: relative;
+
+    @media (max-width: $medium) {
+        @include home('section');
+    }
 
     .downArrow {
+        z-index: 1;
         font-size: 5em;
         color: $grey;
         align-self: center;
@@ -12,6 +18,13 @@
         animation: pulseDown 1s infinite;
         right: 50%;
         bottom: 0;
+
+        @media (max-width: $medium) {
+            color: $white;
+            position: absolute;
+            top: -100px;
+            bottom: auto;
+        }
     }
     .content {
         .textSection {

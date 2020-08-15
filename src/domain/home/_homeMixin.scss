@@ -1,4 +1,7 @@
 @import '../../utils/variables';
+html {
+    scroll-behavior: smooth;
+}
 
 $bgColorIntro: $brandGradient;
 $bgColorTakeAction: $white;

@@ -2,7 +2,6 @@
 @import '../../../homeMixin';
 
 .campaignCard {
-    // z-index: 2;
     position: relative;
     overflow: hidden;
     object-fit: cover;
@@ -11,7 +10,20 @@
     height: 100%;
     width: 100%;
     margin-top: 20px;
-    // background: $black;
+
+    .gradient {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 50%;
+        background: linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0),
+            rgba(0, 0, 0, 0.6)
+        );
+    }
+
     img {
         object-position: center;
         object-fit: cover;
@@ -29,7 +41,7 @@
             color: $white;
             font-size: 30px;
             margin: 0;
-            filter: drop-shadow(0px 0px 3px $black);
+            filter: drop-shadow(1px 1px 3px rgba($black, 0.8));
         }
     }
     &::before {

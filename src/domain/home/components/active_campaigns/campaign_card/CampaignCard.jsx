@@ -8,6 +8,7 @@ const CampaignCard = ({ id, title, header_image }) => {
     return (
         <Link to={`/campaigns/${id}`}>
             <figure className={classes.campaignCard}>
+                <span className={classes.gradient}></span>
                 <img
                     src={`${header_image}`}
                     alt={`dynamic picture of ${title}`}

@@ -17,7 +17,7 @@ const Footer = () => {
     {id: 2, name: 'Blog', href: '/'},
     {id: 3, name: 'Newsletter', href: '/'},
     {id: 4, name: 'Privacy Notice', href: privacyPolicyURL},
-    {id: 5, name: 'Terms & Conditions', href: termsAndConditionsURL},
+    {id: 5, name: "Ts & Cs", href: termsAndConditionsURL},
   ]
   return (
     <div className={classes.footerBackground}>

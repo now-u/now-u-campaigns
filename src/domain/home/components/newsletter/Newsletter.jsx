@@ -35,19 +35,19 @@ const Newsletter = () => {
                 <ul>
                     <li>
                         <span className={classes.checkmark}></span>
-                        <Text type='p' className={classes.list}>
+                        <Text type='p' className={classes.listBenefits}>
                             Campaign & partnership announcements
                         </Text>
                     </li>
                     <li>
                         <span className={classes.checkmark}></span>
-                        <Text type='p' className={classes.list}>
+                        <Text type='p' className={classes.listBenefits}>
                             Informative blog posts and community updates
                         </Text>
                     </li>
                     <li>
                         <span className={classes.checkmark}></span>
-                        <Text type='p' className={classes.list}>
+                        <Text type='p' className={classes.listBenefits}>
                             New app features, actions, and special offers from
                             our partners
                         </Text>

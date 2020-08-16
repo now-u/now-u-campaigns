@@ -63,10 +63,13 @@ $bgDetailSlantAngle: 80px;
                 padding-top: 0;
                 padding-bottom: 0;
             }
-            @media (max-width: $small) {
-                padding-top: 0;
-                padding-bottom: 0;
+            @media (max-width: 599px) {
+                padding: 0;
             }
+            // @media (max-width: $small) {
+            //     padding-top: 0;
+            //     padding-bottom: 0;
+            // }
         }
         @if $override == 'sectionNoTopPadding' {
             padding-top: 0;

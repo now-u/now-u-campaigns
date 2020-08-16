@@ -2,8 +2,9 @@
 @import '../../homeMixin';
 
 .partnersContainer {
-    @include home('section');
+    @include home('section', 'sectionNoBottomPadding');
     background-color: $bgColorCampaigns;
+    overflow: visible;
 
     .textSection {
         text-align: center;
@@ -26,7 +27,7 @@
     }
 
     .cardSection {
-        margin: 50px 0;
+        padding: 50px 0 0 0;
         display: grid;
         grid-gap: 20px;
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));

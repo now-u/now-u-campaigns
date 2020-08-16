@@ -24,7 +24,10 @@ const Newsletter = () => {
                 htmlFor='newsletter'
                 className={classes.formSection}
                 action='#'
-                // method='post'
+                method='POST'
+                name='newsletterForm'
+                autoComplete='off'
+                rel='noopener noreferrer'
             >
                 <Text type='h2' className={classes.header}>
                     Now-u newsletter
@@ -56,10 +59,13 @@ const Newsletter = () => {
                 <fieldset>
                     <input
                         type='text'
+                        name='email'
                         placeholder='Enter e-mail'
                         onChange={(event) => handleChange(event)}
                         value={formText}
+                        required
                     />
+
                     <Button
                         className={
                             isValid

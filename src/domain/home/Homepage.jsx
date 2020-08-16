@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import classes from './Homepage.module.scss';
 import {
     Intro,
     TakeAction,
@@ -33,7 +32,7 @@ const Homepage = () => {
     }, []);
 
     return (
-        <main className={classes.homepageContainer}>
+        <main>
             <Intro />
             <TakeAction />
             <ActiveCampaigns campaigns={campaigns} />

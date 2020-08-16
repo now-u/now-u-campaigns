@@ -46,7 +46,6 @@ const Partners = ({ partners }) => {
                     </div>
                 )}
             </div>
-            -{' '}
         </section>
     );
 };

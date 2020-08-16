@@ -12,12 +12,13 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+        align-items: center;
         .header {
             @include home('header');
         }
         .description {
             @include home('description');
-
+            max-width: 1215px;
             a {
                 color: $brand;
             }

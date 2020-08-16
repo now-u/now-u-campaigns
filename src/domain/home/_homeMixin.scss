@@ -54,22 +54,19 @@ $bgDetailSlantAngle: 80px;
         }
         @if $override == 'sectionNewsletter' {
             padding-top: 0;
-            padding-bottom: 0;
+            padding-bottom: 100px;
             @media (max-width: $max-width) {
                 padding-top: 0;
-                padding-bottom: 0;
+                padding-bottom: 100px;
             }
             @media (max-width: $medium) {
                 padding-top: 0;
-                padding-bottom: 0;
+                padding-bottom: 100px;
             }
             @media (max-width: 599px) {
                 padding: 0;
+                padding-bottom: 100px;
             }
-            // @media (max-width: $small) {
-            //     padding-top: 0;
-            //     padding-bottom: 0;
-            // }
         }
         @if $override == 'sectionNoTopPadding' {
             padding-top: 0;

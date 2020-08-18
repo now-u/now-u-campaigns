@@ -20,7 +20,7 @@ const Campaign = ({
       <a key={title} href={link} target="_blank" rel="noopener noreferrer">
         <div className={classes.actionItem}>
           <div className={classes.actionIconContainer}>
-            <img src={type} alt="" className={classes.actionIcon}/>
+            <img src={type} alt="Action icon" className={classes.actionIcon}/>
           </div>
           <Text type="h4" className={classes.actionTitle}>{title}</Text>
         </div>

@@ -15,3 +15,5 @@ export { default as AppDownloadRectangle } from './app_download_rectangle/AppDow
 export { default as Avatar } from './avatar/Avatar';
 export { default as SearchDropdown } from './search_dropdown/SearchDropdown';
 export { default as CampaignAd } from './campaign_ad/CampaignAd';
+export { default as Modal } from './modal/Modal';
+export { default as NewsletterSignupModal } from './newsletter-signup-modal/NewsletterSignupModal';

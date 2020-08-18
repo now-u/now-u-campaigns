@@ -9,3 +9,5 @@ export { default as Footer } from './footer/Footer';
 export { default as DownloadButtons } from './download_buttons/DownloadButtons.jsx';
 export { default as AppDownloadButtons } from './app_download/AppDownloadButtons.jsx';
 export { default as Card } from './card/Card';
+export { default as Modal } from './modal/Modal';
+export { default as NewsletterSignupModal } from './newsletter-signup-modal/NewsletterSignupModal';

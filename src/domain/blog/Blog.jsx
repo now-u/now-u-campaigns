@@ -2,9 +2,11 @@ import React, { useState, useEffect } from 'react';
 import classes from './Blog.module.scss';
 import { Text, AppDownloadSquare } from '../../components';
 import { BlogPoster } from './components';
+// eslint-disable-next-line no-unused-vars
 import BlogSearchControls from './components/BlogSearchControls';
 import { blogsURL } from '../../utils/constants';
 import { useBreakpoint } from '../../utils/breakpoint';
+// eslint-disable-next-line no-unused-vars
 import { MonthCampaigns } from './components';
 
 const Blog = () => {
@@ -55,14 +57,14 @@ const Blog = () => {
             </div>
             <div className={classes.content}>
                 <div className={classes.blogs}>
-                    <div className={classes.searchContainer}>
+                    {/* TODO <div className={classes.searchContainer}>
                         <BlogSearchControls />
-                    </div>
+                    </div> */}
                     <BlogPosters />
                 </div>
                 <div className={classes.blogAds}>
                     <AppDownloadSquare />
-                    <MonthCampaigns />
+                    {/* <MonthCampaigns /> */}
                 </div>
             </div>
         </div>

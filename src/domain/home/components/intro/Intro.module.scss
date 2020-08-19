@@ -76,13 +76,13 @@
                 font-size: 25px;
                 padding: 0.6em 1em;
 
-                & a {
+                a {
                     color: $brand;
                     display: flex;
                     justify-content: space-evenly;
                     align-items: center;
                 }
-                & i {
+                i {
                     background: $brand;
                     color: $white;
                     padding: 0.2em 0.5em;

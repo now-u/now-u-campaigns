@@ -15,7 +15,8 @@ const Newsletter = () => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        alert(formText);
+        setFormText('');
+        setIsValid(false);
     };
 
     return (
@@ -23,11 +24,13 @@ const Newsletter = () => {
             <form
                 htmlFor='newsletter'
                 className={classes.formSection}
-                action='#'
+                action='https://now-u.us4.list-manage.com/subscribe/post-json?u=0500f7cdb93e0595e0c9af4d5&amp;id=b604a851dc&c='
                 method='POST'
+                encType='application/x-www-form-urlencoded'
                 name='newsletterForm'
                 autoComplete='off'
                 rel='noopener noreferrer'
+                onSubmit={handleSubmit}
             >
                 <Text type='h2' className={classes.header}>
                     Now-u newsletter
@@ -67,14 +70,10 @@ const Newsletter = () => {
                     />
 
                     <Button
-                        className={
-                            isValid
-                                ? `${classes.submitButton}`
-                                : `${classes.submitButton} ${classes.disabled}`
-                        }
+                        className={classes.submitButton}
                         type='submit'
                         variant='primary'
-                        onClick={(event) => handleSubmit(event)}
+                        disabled={!isValid}
                     >
                         Subscribe
                     </Button>

@@ -23,3 +23,34 @@
 
   min-height: 150px;
 }
+
+.campaignsHeader {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 200px;
+  margin: auto;
+  background-color: #F7F8FC;
+  .campaignsTitle {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    font-size: 60px;
+  }
+  .appLinks {
+    width: 50%;
+  }
+}
+
+.campaignsAbout {
+  background-color: #F0F2F7;
+  width: 100%;
+  height: 290px;
+  display: flex;
+  align-items: center;
+  p {
+    font-size: 24px;
+    width: 70%;
+    margin: auto;
+  }
+}

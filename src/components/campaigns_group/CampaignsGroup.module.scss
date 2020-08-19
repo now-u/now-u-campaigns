@@ -8,6 +8,7 @@
   min-height: 700px;
   padding: 0 18px 100px 18px;
   box-sizing: border-box;
+  background-color: #FDFDFD;
 }
 .sectionHeader {
   text-align: center;
@@ -18,16 +19,20 @@
   color: $brand;
 }
 .campaignsRow {
-  display: grid;
-  justify-content: center;
   max-width: $max-width;
   align-items: center;
   width: 100%;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 14px;
 }
 .noCampaigns {
   color: $grey;
   text-align: center;
   margin: 18px;
+}
+.proposeCampaign {
+  text-align: center;
+  .button {
+    background-color: white;
+    border: 3px solid #FF8800;
+    color: #FF8800
+  }
 }

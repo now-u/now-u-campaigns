@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { campaignsURL, organizationsURL } from '../../utils/constants';
 import {
     Intro,
     TakeAction,
@@ -15,16 +16,14 @@ const Homepage = () => {
 
     useEffect(() => {
         const fetchCampaigns = async () => {
-            const resp = await fetch('https://api.now-u.com/api/v1/campaigns');
+            const resp = await fetch(campaignsURL);
             const campaigns = await resp.json();
             setCampaigns(campaigns?.data);
         };
         fetchCampaigns();
 
         const fetchPartners = async () => {
-            const respPartners = await fetch(
-                'https://api.now-u.com/api/v1/organisations'
-            );
+            const respPartners = await fetch(organizationsURL);
             const partners = await respPartners.json();
             setPartners(partners?.data);
         };

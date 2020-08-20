@@ -116,7 +116,7 @@
             @media (max-width: $medium) {
                 flex-direction: column;
                 align-items: center;
-                height: 110px;
+                height: auto;
             }
 
             input[type='text'] {
@@ -133,6 +133,7 @@
                 @media (max-width: $medium) {
                     margin-right: 0;
                     width: 100%;
+                    height: 50px;
                     text-align: center;
                     padding-left: 0;
                 }
@@ -141,6 +142,10 @@
                 height: 100%;
                 width: 150px;
                 border-radius: 8px;
+
+                @media (max-width: $medium) {
+                    height: 50px;
+                }
             }
             .disabled {
                 filter: grayscale(70%) brightness(70%);

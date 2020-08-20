@@ -7,6 +7,16 @@ import ReactGA from 'react-ga';
 import TagManager from 'react-gtm-module';
 import ReactPixel from 'react-facebook-pixel';
 
+// Component to use media queries in React
+// Ref: https://medium.com/better-programming/how-to-use-media-queries-programmatically-in-react-4d6562c3bc97
+import { BreakpointProvider } from './utils/breakpoint';
+
+const queries = {
+  max: '(max-width: 1400px)',
+  md: '(max-width: 825px)',
+  sm: '(max-width: 480px)',
+}
+
 const trackingId = 'UA-164779666-1'; // Replace with your Google Analytics tracking ID
 
 ReactGA.initialize(trackingId);
@@ -29,7 +39,9 @@ ReactPixel.pageView();
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <BreakpointProvider queries={queries}>
+      <App />
+    </BreakpointProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

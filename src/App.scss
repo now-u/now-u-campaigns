@@ -2,7 +2,7 @@
 
 body {
   margin: 0;
-  font-family: 'Nunito', sans-serif;
+  font-family: $bodyFont;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -12,6 +12,31 @@ a {
     border-bottom: 3px solid $brand;
   }
 }
+
 .material-icons {
   font-size: inherit;
+
+  &.xsmall {
+    font-size:16px;
+  }
+
+  &.small {
+    font-size: 24px;
+  }
+
+  &.medium {
+    font-size: 32px;
+  }
+
+  &.large {
+    font-size: 48px;
+  }
+
+  &.xlarge {
+    font-size: 64px;
+  }
+
+  &.xxlarge {
+    font-size: 128px;
+  }
 }

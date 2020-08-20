@@ -3,7 +3,7 @@
 .navContainer {
   width: 100%;
   height: auto;
-  z-index: 2;
+  z-index: 20;
   background: transparent;
   box-sizing: border-box;
   max-height: 100px;
@@ -36,7 +36,7 @@
   max-width: 800px;
   width: calc(100% - 250px);
 }
-ul {
+.navRow {
   align-items: center;
   width: 100%;
   justify-content: space-between;

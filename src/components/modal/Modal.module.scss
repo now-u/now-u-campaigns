@@ -1,0 +1,81 @@
+@import '../../utils/variables';
+
+.modalContainer {
+  align-items: center;
+  background-color: rgba(25, 32, 45, 0.7);
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  left: 0;
+  overflow: auto;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 999;
+
+  .modalDialog {
+    height: auto;
+    max-height: 90%;
+    max-width: 100%;
+    position: relative;
+    width: 95%;
+
+    @media (min-width: $medium) {
+      &[data-size='small'] {
+        max-width: 600px;
+        min-width: 400px;
+      }
+
+      &[data-size='medium'] {
+        max-width: 800px;
+        min-width: 600px;
+      }
+
+      &[data-size='large'] {
+        max-width: 1000px;
+        min-width: 800px;
+      }
+
+      &[data-size='xlarge'] {
+        max-width: $max-width;
+      }
+    }
+
+    .modalContent {
+      border-radius: 18px;
+      padding: 24px;
+
+      @media (min-width: $small) {
+        padding: 32px;
+      }
+
+      &.light {
+        background-color: $white;
+      }
+
+      &.dark {
+        background-color: $purple;
+      }
+
+      .modalCloseButton {
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        position: absolute;
+        right: 14px;
+        top: 14px;
+
+        &.light {
+          color: $darkGrey;
+        }
+
+        &.dark {
+          color: $white;
+        }
+      }
+    }
+  }
+}
+
+

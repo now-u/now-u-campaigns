@@ -1,58 +1,26 @@
 @import '../../../../utils/variables';
+@import '../../aboutUsMixin';
 
 .aboutUsSection {
-    background: $lightGrey;
-    box-sizing: border-box;
-    display: flex;
-    padding-bottom: 10%;
-}
+    @include aboutUs('section');
+    background: $bgColor1;
 
-.content {
-    width: 60%;
-}
-
-.image {
-    width: 50%;
-    padding-top: 37.3px;
-    & img {
-        max-width: 100%;
-        z-index: -1;
-    }
-}
-
-.pageHeader {
-    margin-left: 84px;
-    margin-top: 86px;
-}
-
-.header {
-    font-size: 60px;
-    font-weight: $bold;
-    line-height: 1.33;
-    color: $black;
-}
-
-.pageHeaderText {
-    margin-left: 138px;
-    margin-top: 52px;
-    font-size: 30px;
-    font-weight: $regular;
-}
-
-@media (max-width: $medium) {
     .content {
-        width: 100%;
-    }
-    .image {
-        display: none;
-    }
-    .pageHeader {
-        margin-left: 0px;
-        margin-top: 0px;
-    }
+        @include aboutUs('content');
+        max-width: 900px;
+        text-align: center;
 
-    .pageHeaderText {
-        margin-left: 10px;
-        margin-top: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .header {
+            @include aboutUs('header');
+        }
+
+        .description {
+            @include aboutUs('description');
+        }
     }
 }

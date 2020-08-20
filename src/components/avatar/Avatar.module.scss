@@ -1,0 +1,23 @@
+@import '../../utils/variables';
+
+.avatarContainer {
+    width: 60px;
+    height: 60px;
+    background: transparent;
+
+    & > img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+    }
+    & > i {
+        font-size: 60px;
+    }
+}
+
+@media(max-width: $small) {
+    .avatarContainer {
+        width: 24px;
+        height: 24px;
+    }
+}

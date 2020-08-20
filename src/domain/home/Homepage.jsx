@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { campaignsURL, organizationsURL } from '../../utils/constants';
+import { campaignsURL, partnersURL } from '../../utils/constants';
 import {
     Intro,
     TakeAction,
@@ -23,7 +23,7 @@ const Homepage = () => {
         fetchCampaigns();
 
         const fetchPartners = async () => {
-            const respPartners = await fetch(organizationsURL);
+            const respPartners = await fetch(partnersURL);
             const partners = await respPartners.json();
             setPartners(partners?.data);
         };

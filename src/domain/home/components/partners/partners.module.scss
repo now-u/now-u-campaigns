@@ -1,0 +1,40 @@
+@import '../../../../utils/variables';
+@import '../../homeMixin';
+
+.partnersContainer {
+    @include home('section', 'sectionNoBottomPadding');
+    background-color: $bgColorCampaigns;
+    overflow: visible;
+
+    .textSection {
+        text-align: center;
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .header {
+            @include home('header');
+        }
+        .description {
+            @include home('description');
+            max-width: 1215px;
+            a {
+                color: $brand;
+            }
+        }
+    }
+
+    .cardSection {
+        padding: 50px 0 0 0;
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-auto-rows: 200px;
+
+        .loadingMsg {
+            text-align: center;
+        }
+    }
+}

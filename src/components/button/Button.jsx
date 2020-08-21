@@ -7,7 +7,9 @@ import classes from './Button.module.scss';
 const Button = ({ id, children, type, variant = 'primary', disabled, size = 'medium', className, onClick, to }) => {
   const history = useHistory();
   const toPath = () => {
-    history.push(to);
+    if (to) {
+      history.push(to);
+    }
   };
   const buttonClassNames = classNames(className, classes[variant], [classes[size]], {
     [classes.disabled]: disabled,
@@ -26,7 +28,10 @@ const Button = ({ id, children, type, variant = 'primary', disabled, size = 'med
 };
 
 Button.propTypes = {
-  id: PropTypes.string | PropTypes.number,
+  id: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number
+  ]),
   children: PropTypes.any.isRequired,
   variant: PropTypes.string,
   disabled: PropTypes.bool,

@@ -41,115 +41,18 @@
             border-radius: 20px 20px 0 0;
         }
 
-        .header {
-            margin: 0;
-            font-size: 60px;
-            font-weight: $bold;
-
-            @media (max-width: 599px) {
-                text-align: center;
-                line-height: 1;
-            }
-        }
-        .description {
-            margin: 15px 0;
-
-            @media (max-width: 599px) {
-                text-align: center;
-            }
-        }
-
-        ul {
+        form {
             display: flex;
             flex-direction: column;
-            align-items: flex-start;
-            margin: 0;
-            padding: 0;
-
-            @media (max-width: 599px) {
-                margin: 80px 0;
-            }
-            li {
-                display: grid;
-                grid-gap: 10px;
-                margin-bottom: 10px;
-                grid-template-columns: 30px 1fr;
-                align-items: center;
+            align-items: center;
+            & > div {
+                display: flex;
                 justify-content: center;
-
-                @media (max-width: $small) {
-                    margin-bottom: 20px;
-                }
-
-                .checkmark {
-                    position: relative;
-                    height: 20px;
-                    width: 20px;
-                    background-color: $brand;
-                    border-radius: 50%;
-
-                    &::before {
-                        content: '✔';
-                        color: $purple;
-                        display: block;
-                        width: 100%;
-                        height: 100%;
-                        text-align: center;
-                    }
-                }
-                .listBenefits {
-                    font-size: 20px;
-                    margin: 0 0 0 0;
-                }
+                width: 100%;
+                flex-wrap: wrap;
             }
-        }
-        .formInputs {
-            border: none;
-            width: 100%;
-            height: 50px;
-            margin-top: 25px;
-            padding: 0;
-
-            display: flex;
-            justify-content: center;
-
-            @media (max-width: $medium) {
-                flex-direction: column;
-                align-items: center;
-                height: auto;
-            }
-
-            input[type='text'] {
-                height: 100%;
-                width: 50%;
-                padding: 0;
-                border: 0;
-                border-radius: 8px;
-                margin-right: 15px;
-                font-size: 17px;
-                padding-left: 20px;
-                margin-bottom: 15px;
-
-                @media (max-width: $medium) {
-                    margin-right: 0;
-                    width: 100%;
-                    height: 50px;
-                    text-align: center;
-                    padding-left: 0;
-                }
-            }
-            .submitButton {
-                height: 100%;
-                width: 150px;
-                border-radius: 8px;
-                
-                @media (max-width: $medium) {
-                    height: 50px;
-                }
-            }
-            .disabled {
-                filter: grayscale(70%) brightness(70%);
-                border: 1px solid $white;
+            & > div > div {
+                margin-left: 32px;
             }
         }
     }

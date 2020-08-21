@@ -9,6 +9,7 @@ import {
     Partners,
     Newsletter,
 } from './components/index';
+import NewsletterSignupModal from '../../components/newsletter-signup-modal/NewsletterSignupModal';
 
 const Homepage = () => {
     const [campaigns, setCampaigns] = useState([]);
@@ -38,7 +39,9 @@ const Homepage = () => {
             <WaveBreak />
             <HowItWorks />
             <Partners partners={partners} />
-            <Newsletter />
+            <Newsletter>
+                <NewsletterSignupModal />
+            </Newsletter>
         </main>
     );
 };

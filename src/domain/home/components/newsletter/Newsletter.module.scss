@@ -45,14 +45,22 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            & > div {
+
+            > div {
                 display: flex;
-                justify-content: center;
+                justify-content: space-evenly;
                 width: 100%;
                 flex-wrap: wrap;
-            }
-            & > div > div {
-                margin-left: 32px;
+                margin-bottom: 25px;
+
+                > div {
+                    margin-left: 32px;
+
+                    > input[name],
+                    > input[email] {
+                        max-width: 320px;
+                    }
+                }
             }
         }
     }

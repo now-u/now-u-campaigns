@@ -15,8 +15,18 @@
         color: $grey;
         align-self: center;
         justify-self: center;
-        animation: pulseDown 1s infinite;
+        animation: pulseDown 1.5s infinite;
         bottom: 0;
+
+        @keyframes pulseDown {
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-3px);
+            }
+        }
 
         @media (max-width: $medium) {
             color: $white;

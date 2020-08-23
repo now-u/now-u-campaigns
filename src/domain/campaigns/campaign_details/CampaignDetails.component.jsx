@@ -52,11 +52,9 @@ const Campaign = ({
                 <i className="material-icons">group</i>
                 &nbsp;{number_of_campaigners} people have joined
               </Text>
-              <Text type="h4">You can too, on our app</Text>
             </div>
             <div className={classes.participants}>
-            <Text type="h4">This campaign is initiated by:</Text>
-            <Text type="h4">Let&apos;s Do It Foundation</Text>
+              <Text type="h4">You can too, on our app</Text>
           </div>
           </div>
         )}

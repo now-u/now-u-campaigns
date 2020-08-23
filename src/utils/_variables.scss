@@ -3,6 +3,7 @@ $brand: #ff8800;
 
 // font
 $headerFont: Rockwell;
+$bodyFont: Nunito, 'sans serif';
 
 // accent
 $red: #d30001;
@@ -19,6 +20,7 @@ $darkGrey: #454545;
 $activeOverlay: rgba(0, 0, 0, 0.3);
 $pastOverlay: rgba(204, 204, 204, 0.5);
 $whiteGradient: linear-gradient(#fff, #eee 100%);
+$blogHashtagColor: #707070;
 
 // gradients
 $brandGradient: linear-gradient($brand, $red);

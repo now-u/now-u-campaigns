@@ -1,0 +1,74 @@
+@import '../../utils/variables';
+
+.container {
+    width: 400px;
+    height: 210px;
+    position: relative;
+
+    img {
+        width: 100%;
+        height: 210px;
+        -webkit-filter: blur(1px);
+        -moz-filter: blur(1px);
+        -o-filter: blur(1px);
+        -ms-filter: blur(1px);
+        filter: blur(1px);
+    }
+}
+
+.imageText {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: $semi-bold;
+    font-size: 20px;
+    color: $white;
+    text-shadow: -0.5px 0 black, 0 0.5px black, 0.5px 0 black, 0 -0.5px black;
+
+    p {
+        margin: 0;
+    }
+
+    .campaignShortName {
+        font-weight: $bold;
+        font-size: 42px;
+    }
+}
+
+@media(max-width: $medium) {
+    .container {
+        width: 300px;
+        height: 100px;
+
+        img {
+            width: 100%;
+            height: 100px;
+        }
+    }
+
+    .imageText {
+        font-size: 17px;
+
+        .campaignShortName {
+            font-size: 30px;
+        }
+    }
+}
+
+@media(max-width: $small) {
+    .container {
+        width: 280px;
+        height: 100px;
+
+        img {
+            width: 100%;
+            height: 100px;
+        }
+    }
+}

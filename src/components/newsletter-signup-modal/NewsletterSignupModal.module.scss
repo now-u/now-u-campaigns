@@ -1,0 +1,118 @@
+@import '../../utils/variables';
+
+.newsletterSignupContainer {
+  color: $white;
+
+  @media (min-width: $medium) {
+    padding: 8px;
+  }
+
+  .header {
+    font-weight: $blackBold;
+    font-size: 48px;
+    margin-bottom: 8px;
+
+    @media (min-width: $medium) {
+      font-size: 64px;
+    }
+  }
+
+  .subHeader {
+    font-size: 20px;
+
+    @media (min-width: $medium) {
+      font-size: 24px;
+    }
+  }
+
+  .benefitsList {
+    list-style-type: none;
+    padding: 0;
+
+    .listCheckmark {
+      color: $brand;
+      margin-right: 12px;
+    }
+
+    .listItem {
+      display: flex;
+      margin-bottom: 8px;
+    }
+
+    .listText {
+      align-self: center;
+      font-size: 16px;
+
+      @media (min-width: $medium) {
+        font-size: 20px;
+      }
+    }
+  }
+
+  .formFields {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 12px;
+
+    @media (min-width: $medium) {
+      flex-direction: row;
+    }
+
+    .formField {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 12px;
+      margin-right: 32px;
+    }
+
+    .formLabel {
+      margin-right: 12px;
+    }
+
+    // TODO: Make an input component. This was originally copied from Homepage.module.scss
+    .formInput {
+      border-radius: 6px;
+      border: 2px solid transparent;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+      font-family: $bodyFont;
+      height: 40px;
+      margin-right: 0;
+      outline: none;
+      padding: 0 8px;
+      transition: border 0.3s;
+      width: 100%;
+
+      // TODO: Fix width to always be 100% and then constrain in the parent
+      @media (min-width: $medium) {
+        width: 320px;
+      }
+
+      &:focus {
+        border: 2px solid $brand;
+      }
+    }
+
+    .submitButton {
+      width: 200px;
+    }
+  }
+
+  .formResponseContainer {
+    display: none;
+  }
+}
+
+.newsletterSignupSuccessMessage {
+  padding: 48px;
+  text-align: center;
+
+  .successCheckmark {
+    color: $brand;
+    margin-bottom: 24px;
+  }
+
+  .successText {
+    color: $white;
+    font-weight: $blackBold;
+  }
+}

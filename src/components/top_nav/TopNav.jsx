@@ -91,8 +91,8 @@ const TopNav = () => {
                             )}
                         </div>
                         <ul className={classes.navRow}>
-                            {navLinks.map(({ display, path }) => {
-                                let navLink = (
+                            {navLinks.map(({ display, path, external }) => {
+                                return path ? (
                                     <li key={display}>
                                         <Link
                                             activeClassName='selected'
@@ -102,23 +102,19 @@ const TopNav = () => {
                                             {display}
                                         </Link>
                                     </li>
+                                ) : (
+                                    <li key={display}>
+                                        <a
+                                            key={display}
+                                            className={classes.navLink}
+                                            href={external}
+                                            target='_blank'
+                                            rel='noopener noreferrer'
+                                        >
+                                            {display}
+                                        </a>
+                                    </li>
                                 );
-                                if (display === 'Privacy Policy') {
-                                    navLink = (
-                                        <li key={display}>
-                                            <a
-                                                key={display}
-                                                className={classes.navLink}
-                                                href={path}
-                                                target='_blank'
-                                                rel='noopener noreferrer'
-                                            >
-                                                {display}
-                                            </a>
-                                        </li>
-                                    );
-                                }
-                                return navLink;
                             })}
                         </ul>
                     </nav>

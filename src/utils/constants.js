@@ -23,7 +23,7 @@ export const navLinks = [
     { display: 'About us', path: '/aboutus' },
     { display: 'Get in touch', path: '/get-in-touch' },
     { display: 'Press', path: '/press' },
-    { display: 'Privacy Policy', path: privacyPolicyURL },
+    { display: 'Privacy Policy', external: privacyPolicyURL },
 ];
 
 export const mobileNavLinks = [
@@ -35,6 +35,5 @@ export const mobileNavLinks = [
     { display: 'Press', path: '/press' },
     { display: 'Blog', path: '/blog' },
     { display: 'Newsletter', path: '/newsletter' },
-    { display: 'Privacy Policy' },
-    // { display: 'Privacy Policy', external: privacyNotice },
+    { display: 'Privacy Policy', external: privacyPolicyURL },
 ];

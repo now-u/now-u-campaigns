@@ -12,6 +12,7 @@ export const navLinks = [
     { display: 'About us', path: '/aboutus' },
     { display: 'Get in touch', path: '/get-in-touch' },
     { display: 'Press', path: '/press' },
+    { display: 'Privacy Policy' },
 ];
 
 export const mobileNavLinks = [

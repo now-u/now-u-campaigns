@@ -94,7 +94,7 @@
 
             .navigation {
                 display: flex;
-                max-width: 800px;
+                max-width: 1000px;
                 width: calc(100% - 250px);
 
                 @media (max-width: $medium) {

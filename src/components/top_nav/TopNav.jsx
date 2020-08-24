@@ -11,6 +11,7 @@ const TopNav = () => {
 
     return (
         <div className={classes.fullNavContainer}>
+            {/* top section of navigation */}
             <div className={classes.topNavContainer}>
                 <ul className={classes.topNavRow}>
                     {topNavLinks.map(({ display, path }) => {
@@ -28,6 +29,7 @@ const TopNav = () => {
                     })}
                 </ul>
             </div>
+            {/* bottom section of navigation */}
             <div
                 className={classNames(classes.navContainer, {
                     [classes.navClose]: navClose,
@@ -90,7 +92,7 @@ const TopNav = () => {
                         </div>
                         <ul className={classes.navRow}>
                             {navLinks.map(({ display, path }) => {
-                                return (
+                                let navLink = (
                                     <li key={display}>
                                         <Link
                                             activeClassName='selected'
@@ -101,6 +103,22 @@ const TopNav = () => {
                                         </Link>
                                     </li>
                                 );
+                                if (display === 'Privacy Policy') {
+                                    navLink = (
+                                        <li key={display}>
+                                            <a
+                                                key={display}
+                                                className={classes.navLink}
+                                                href={path}
+                                                target='_blank'
+                                                rel='noopener noreferrer'
+                                            >
+                                                {display}
+                                            </a>
+                                        </li>
+                                    );
+                                }
+                                return navLink;
                             })}
                         </ul>
                     </nav>

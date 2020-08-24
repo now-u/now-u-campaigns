@@ -27,15 +27,8 @@
             list-style: none;
             box-sizing: border-box;
 
-            @media (max-width: $medium) {
-                display: none;
-            }
-
             li {
                 margin-left: calc(0.03 * 100vw);
-                @media (max-width: $medium) {
-                    padding: 6px;
-                }
                 .navLink {
                     font-weight: $semi-bold;
                     color: $blue;

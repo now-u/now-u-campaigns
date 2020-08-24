@@ -6,6 +6,7 @@
     top: 0;
     box-shadow: $boxShadow;
 
+    //this is the navbar on top
     .topNavContainer {
         width: 100%;
         height: auto;
@@ -50,6 +51,7 @@
         }
     }
 
+    //this is the navbar on bottom targeting the id
     .navClose {
         #mobileMenu {
             @media (max-width: $medium) {
@@ -59,6 +61,7 @@
         }
     }
 
+    //this is the navbar on bottom
     .navContainer {
         width: 100%;
         height: auto;
@@ -69,7 +72,6 @@
         top: 0;
         position: sticky;
         padding: 12px 18px;
-
         background: $white;
 
         .navContent {
@@ -176,6 +178,10 @@
                     display: flex;
                     list-style: none;
                     box-sizing: border-box;
+
+                    @media (max-width: 915px) {
+                        padding-left: 0;
+                    }
 
                     @media (max-width: $medium) {
                         display: none;

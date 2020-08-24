@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import { Campaigns, Campaign, Homepage, AboutUs, NowUApp, GetInTouch, Press, FAQs, err404, Blog, BlogArticle } from './domain';

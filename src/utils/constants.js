@@ -32,9 +32,15 @@ export const pressCoverageURL = 'https://api.now-u.com/api/v1/press_coverage';
 export const faqsURL = 'https://api.now-u.com/api/v1/faqs';
 export const blogsURL = 'https://api.now-u.com/api/v1/blogs';
 export const appleStoreURL = 'https://apps.apple.com/us/app/now-u/id1516126639';
+<<<<<<< HEAD
 export const googleStoreURL =
     'https://play.google.com/store/apps/details?id=com.nowu.app';
 export const privacyPolicyURL =
     'http://share.now-u.com/legal/now-u_privacy_policy.pdf';
 export const termsAndConditionsURL =
     'https://share.now-u.com/legal/now-u_users_Ts&Cs.pdf';
+=======
+export const googleStoreURL = 'https://play.google.com/store/apps/details?id=com.nowu.app';
+export const privacyPolicyURL = "http://share.now-u.com/legal/now-u_privacy_policy.pdf";
+export const termsAndConditionsURL = "https://share.now-u.com/legal/now-u_users_Ts&Cs.pdf";
+>>>>>>> origin/dev

@@ -1,4 +1,4 @@
-export { default as TopNav } from './top_nav/TopNav';
+export { default as Navbar } from './navbar/Navbar';
 export { default as Button } from './button/Button';
 export { default as Text } from './text/Text';
 export { default as CampaignPoster } from './campaign_poster/CampaignPoster';

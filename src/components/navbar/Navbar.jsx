@@ -1,23 +1,28 @@
 import React, { useState } from 'react';
-import classNames from 'classnames';
+// import classNames from 'classnames';
 import { Link } from 'react-router-dom';
 import { nowUOrange } from '../../assets';
-import { navLinks, mobileNavLinks } from '../../utils/constants';
-import classes from './TopNav.module.scss';
+// import { navLinks, mobileNavLinks } from '../../utils/constants';
+import classes from './Navbar.module.scss';
 
-const TopNav = () => {
-    const [navClose, setNav] = useState(false);
-    const toggleNav = () => setNav((prev) => !prev);
+const Navbar = () => {
+    const [disable, setDisable] = useState(false);
+    const toggleDisable = () => setDisable((prev) => !prev);
 
     return (
-        <section className={classes.navContainer}>
-            <div className={classes.topNav}></div>
-            <div className={classes.bottomNav}>
+        <header className={classes.navContainer}>
+            <div className={classes.topNavBar}></div>
+            <div className={classes.bottomNavBar}>
                 <Link to={'/'} className={classes.logoContainer}>
                     <img className={classes.logo} src={nowUOrange} alt='logo' />
                 </Link>
+                <nav className={disable}></nav>
+                <div
+                    className={classes.navBurger}
+                    onClick={toggleDisable}
+                ></div>
             </div>
-        </section>
+        </header>
         // <div className={classNames(classes.navContainer, { [classes.navClose]: navClose })}>
         //   <div className={classes.navContent}>
         //     <Link to={'/'} className={classes.logoContainer}>
@@ -71,4 +76,4 @@ const TopNav = () => {
     );
 };
 
-export default TopNav;
+export default Navbar;

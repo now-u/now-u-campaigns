@@ -18,6 +18,10 @@
     @media (max-width: 886px) {
         margin: 10px 5px;
     }
+    @media (max-width: 824px) {
+        margin: 10px 5px;
+        font-size: 20px;
+    }
 
     &:hover {
         color: $brand;

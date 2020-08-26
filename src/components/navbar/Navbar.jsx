@@ -2,26 +2,33 @@ import React, { useState } from 'react';
 // import classNames from 'classnames';
 import { Link } from 'react-router-dom';
 import { nowUOrange } from '../../assets';
-// import { navLinks, mobileNavLinks } from '../../utils/constants';
+import { topNavLinks, bottomNavLinks } from '../../utils/constants';
+import NavbarSection from './navBarSection/NavbarSection';
 import classes from './Navbar.module.scss';
 
 const Navbar = () => {
-    const [disable, setDisable] = useState(false);
-    const toggleDisable = () => setDisable((prev) => !prev);
+    const [active, setActive] = useState(false);
+    const toggleActive = () => setActive((prev) => !prev);
 
     return (
         <header className={classes.navContainer}>
-            <div className={classes.topNavBar}></div>
-            <div className={classes.bottomNavBar}>
+            <nav className={classes.topNavbar}>
+                <ul className={classes.linkContainer}>
+                    <NavbarSection navLinkSection={topNavLinks} />
+                </ul>
+            </nav>
+            <nav className={classes.bottomNavbar}>
                 <Link to={'/'} className={classes.logoContainer}>
                     <img className={classes.logo} src={nowUOrange} alt='logo' />
                 </Link>
-                <nav className={disable}></nav>
-                <div
-                    className={classes.navBurger}
-                    onClick={toggleDisable}
-                ></div>
-            </div>
+                <ul className={classes.linkContainer}>
+                    <NavbarSection navLinkSection={bottomNavLinks} />
+                </ul>
+                <div className={classes.navBurger} onClick={toggleActive}>
+                    <div className={classes.burger} />
+                </div>
+            </nav>
+            {active}
         </header>
         // <div className={classNames(classes.navContainer, { [classes.navClose]: navClose })}>
         //   <div className={classes.navContent}>

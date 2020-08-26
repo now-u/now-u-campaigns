@@ -1,95 +1,15 @@
-@import '../../utils/variables';
+@import '../../../utils/variables';
 
-.navContainer {
-    * {
-        box-sizing: border-box;
-    }
-    // .active {
-    //     display: none;
-    // }
+.link {
+    margin: 10px;
+    text-decoration: none;
 
-    .topNavbar,
-    .bottomNavbar {
-        height: 75px;
-        padding: 10px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .linkContainer {
-        height: 100%;
-        width: 100%;
-        box-sizing: border-box;
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-
-        @media (max-width: $medium) {
-            display: none;
-        }
-    }
-
-    .topNavbar {
-        background-color: $topNavBg;
-        @media (max-width: $medium) {
-            display: none;
-        }
-    }
-    .bottomNavbar {
-        background-color: white;
-
-        .logoContainer {
-            display: flex;
-            margin: 0 10px;
-            height: 100%;
-            min-width: 250px;
-
-            .logo {
-            }
-        }
-        nav {
-        }
-        .navBurger {
-            cursor: pointer;
-            margin: 0 10px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 40px;
-            min-width: 40px;
-            display: none;
-
-            @media (max-width: $medium) {
-                display: inherit;
-            }
-
-            .burger {
-                position: relative;
-                width: 90%;
-                height: 3px;
-                background: $blue;
-
-                &::before {
-                    content: '';
-                    width: 100%;
-                    height: 100%;
-                    position: absolute;
-                    top: -12px;
-                    left: 0;
-                    background: inherit;
-                }
-                &::after {
-                    content: '';
-                    width: 100%;
-                    height: 100%;
-                    position: absolute;
-                    bottom: -12px;
-                    left: 0;
-                    background: inherit;
-                }
-            }
-        }
+    font-weight: $semi-bold;
+    color: $blue;
+    font-size: calc(14px + (24 - 14) * ((100vw - 320px) / (1920 - 320)));
+    transition: color 0.4s;
+    &:hover {
+        color: $brand;
     }
 }
 // .navContainer {

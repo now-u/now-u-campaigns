@@ -1,0 +1,50 @@
+@import '../../../utils/variables';
+
+.dropdownContainer {
+    z-index: 1;
+    background-color: $white;
+    position: absolute;
+    display: inherit;
+    top: 0;
+    left: calc(5vw - 10px);
+    width: 90vw;
+    margin: 0 10px 10px 10px;
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    box-shadow: 0px 4px 6px 5px rgba(0, 0, 0, 0.1);
+
+    @media (min-width: $medium) {
+        display: none;
+    }
+
+    header {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        .mobileLogoContainer {
+            position: initial;
+
+            height: auto;
+            display: flex;
+            margin: 0 10px;
+
+            max-width: 250px;
+            width: 100%;
+        }
+        #close {
+            cursor: pointer;
+        }
+    }
+
+    .mobileLinksList {
+        padding: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

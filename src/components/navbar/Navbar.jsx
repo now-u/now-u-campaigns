@@ -8,6 +8,7 @@ import {
     mobileNavLinks,
 } from '../../utils/constants';
 import NavLinkSection from './navLinkSection/NavLinkSection';
+import NavDropdown from './navDropdown/NavDropdown';
 import classes from './Navbar.module.scss';
 
 const Navbar = () => {
@@ -29,37 +30,17 @@ const Navbar = () => {
                     <NavLinkSection navLink={bottomNavLinks} />
                 </ul>
                 <div
-                    className={classes.navBurger}
+                    className={classes.navBurgerContainer}
                     onClick={toggleBurgerNavDisplay}
                 >
                     <div className={classes.burger} />
                 </div>
                 {burgerNavDisplay && (
-                    <nav className={classes.mobileLinkContainer}>
-                        <header>
-                            <Link
-                                to={'/'}
-                                className={classes.mobileLogoContainer}
-                            >
-                                <img
-                                    className={classes.logo}
-                                    src={nowUOrange}
-                                    alt='logo'
-                                />
-                            </Link>
-                            <i
-                                id={classes.close}
-                                className='material-icons medium'
-                                onClick={toggleBurgerNavDisplay}
-                            >
-                                close
-                            </i>
-                        </header>
-
-                        <ul className={classes.mobileLinksList}>
-                            <NavLinkSection navLink={mobileNavLinks} />
-                        </ul>
-                    </nav>
+                    <NavDropdown
+                        navLink={mobileNavLinks}
+                        toggleBurgerNavDisplay={toggleBurgerNavDisplay}
+                        logo={nowUOrange}
+                    />
                 )}
             </nav>
         </header>

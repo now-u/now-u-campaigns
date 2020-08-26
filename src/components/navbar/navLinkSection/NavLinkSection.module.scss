@@ -1,0 +1,25 @@
+@import '../../../utils/variables';
+
+.link {
+    margin: 10px;
+    text-decoration: none;
+    font-weight: $semi-bold;
+    color: $blue;
+    text-align: center;
+    font-size: calc(14px + (24 - 14) * ((100vw - 320px) / (1920 - 320)));
+    transition: color 0.4s;
+
+    @media (min-width: $max-width) {
+        margin: 10px 20px;
+    }
+    @media (max-width: 985px) {
+        font-size: 15px;
+    }
+    @media (max-width: 886px) {
+        margin: 10px 5px;
+    }
+
+    &:hover {
+        color: $brand;
+    }
+}

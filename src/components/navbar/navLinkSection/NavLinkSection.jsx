@@ -1,13 +1,13 @@
 import React, { Fragment } from 'react';
 // import classNames from 'classnames';
 import { Link } from 'react-router-dom';
-import classes from './NavbarSection.module.scss';
+import classes from './NavLinkSection.module.scss';
 import PropTypes from 'prop-types';
 
-const NavbarSection = ({ navLinkSection }) => {
+const NavLinkSection = ({ navLink }) => {
     return (
         <Fragment>
-            {navLinkSection.map(({ display, path, external }) => {
+            {navLink.map(({ display, path, external }) => {
                 return path ? (
                     <Link key={display} className={classes.link} to={path}>
                         {display}
@@ -28,8 +28,8 @@ const NavbarSection = ({ navLinkSection }) => {
     );
 };
 
-NavbarSection.propTypes = {
-    navLinkSection: PropTypes.arrayOf(PropTypes.object),
+NavLinkSection.propTypes = {
+    navLink: PropTypes.arrayOf(PropTypes.object),
 };
 
-export default NavbarSection;
+export default NavLinkSection;

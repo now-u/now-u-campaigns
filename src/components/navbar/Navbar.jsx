@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { nowUOrange } from '../../assets';
 import { topNavLinks, bottomNavLinks } from '../../utils/constants';
-import NavbarSection from './navBarSection/NavbarSection';
+import NavLinkSection from './navLinkSection/NavLinkSection';
 import classes from './Navbar.module.scss';
 
 const Navbar = () => {
@@ -14,7 +14,7 @@ const Navbar = () => {
         <header className={classes.navContainer}>
             <nav className={classes.topNavbar}>
                 <ul className={classes.linkContainer}>
-                    <NavbarSection navLinkSection={topNavLinks} />
+                    <NavLinkSection navLink={topNavLinks} />
                 </ul>
             </nav>
             <nav className={classes.bottomNavbar}>
@@ -22,7 +22,7 @@ const Navbar = () => {
                     <img className={classes.logo} src={nowUOrange} alt='logo' />
                 </Link>
                 <ul className={classes.linkContainer}>
-                    <NavbarSection navLinkSection={bottomNavLinks} />
+                    <NavLinkSection navLink={bottomNavLinks} />
                 </ul>
                 <div className={classes.navBurger} onClick={toggleActive}>
                     <div className={classes.burger} />

@@ -17,7 +17,7 @@ const Campaigns = () => {
   return (
     <div className={classes.campaignsContainer}>
       <div className={classes.campaignsHeader}>
-        <h4 className={classes.campaignsTitle}>Campaigns</h4>
+        <p className={classes.campaignsTitle}>Campaigns</p>
         <div className={classes.appLinks}>
         <AppDownloadButtons />
         </div>

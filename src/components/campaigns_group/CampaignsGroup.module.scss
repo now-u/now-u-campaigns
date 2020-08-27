@@ -9,6 +9,9 @@
   padding: 0 18px 100px 18px;
   box-sizing: border-box;
   background-color: #FDFDFD;
+  @media screen and (max-width: $medium) {
+    padding: 0;
+  }
 }
 .sectionHeader {
   text-align: center;
@@ -16,7 +19,10 @@
   font-size: 60px;
   font-weight: $bold;
   line-height: 1.33;
-  color: $brand;
+  color: black;
+  @media screen and (max-width: $medium) {
+    font-size: 40px;
+  }
 }
 .campaignsRow {
   max-width: $max-width;
@@ -35,4 +41,5 @@
     border: 3px solid #FF8800;
     color: #FF8800
   }
+  margin-bottom: 20px;
 }

@@ -7,7 +7,8 @@ const CampaignPoster = ({ campaign: { id, title = 'Coming soon..', header_image,
   const description = description_web.split('<br>')[0]
   return (
     <div key={id} className={classes.campaignPoster}>
-      <div className={classes.left} style={{ backgroundImage: `url(${header_image})`, backgroundSize: 'cover'}}>
+      <div className={classes.left}>
+        <img src={header_image} alt=""/>
       </div>
       <div className={classes.right}>
         <Text type="h4">{title}</Text>

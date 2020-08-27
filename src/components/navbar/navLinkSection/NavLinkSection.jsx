@@ -1,10 +1,9 @@
 import React, { Fragment } from 'react';
-// import classNames from 'classnames';
 import { Link } from 'react-router-dom';
 import classes from './NavLinkSection.module.scss';
 import PropTypes from 'prop-types';
 
-const NavLinkSection = ({ navLink, toggleBurgerNavDisplay }) => {
+const NavLinkSection = ({ navLink, closeDropdownNav }) => {
     return (
         <Fragment>
             {navLink.map(({ display, path, external }) => {
@@ -13,7 +12,7 @@ const NavLinkSection = ({ navLink, toggleBurgerNavDisplay }) => {
                         key={display}
                         className={classes.link}
                         to={path}
-                        onClick={toggleBurgerNavDisplay}
+                        onMouseDown={closeDropdownNav}
                     >
                         {display}
                     </Link>
@@ -24,7 +23,7 @@ const NavLinkSection = ({ navLink, toggleBurgerNavDisplay }) => {
                         href={external}
                         target='_blank'
                         rel='noopener noreferrer'
-                        onClick={toggleBurgerNavDisplay}
+                        onMouseDown={closeDropdownNav}
                     >
                         {display}
                     </a>
@@ -36,7 +35,7 @@ const NavLinkSection = ({ navLink, toggleBurgerNavDisplay }) => {
 
 NavLinkSection.propTypes = {
     navLink: PropTypes.arrayOf(PropTypes.object),
-    toggleBurgerNavDisplay: PropTypes.func,
+    closeDropdownNav: PropTypes.func,
 };
 
 export default NavLinkSection;

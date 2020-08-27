@@ -5,7 +5,6 @@ $tiny: 348px;
     box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
     position: sticky;
     top: 0;
-
     z-index: 20;
 
     * {
@@ -80,6 +79,7 @@ $tiny: 348px;
                 width: 90%;
                 height: 3px;
                 background: $blue;
+                pointer-events: none;
 
                 &::before {
                     content: '';

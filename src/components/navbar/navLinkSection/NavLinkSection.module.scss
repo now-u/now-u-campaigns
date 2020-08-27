@@ -9,6 +9,9 @@
     font-size: calc(14px + (24 - 14) * ((100vw - 320px) / (1920 - 320)));
     transition: color 0.4s;
 
+    @media (min-width: 2222px) {
+        font-size: 27px;
+    }
     @media (min-width: $max-width) {
         margin: 10px 20px;
     }

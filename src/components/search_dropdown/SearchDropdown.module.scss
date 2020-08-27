@@ -63,11 +63,20 @@
         font-weight: $semi-bold;
         font-size: 18px;
         letter-spacing: -0.02em;
-        line-height: 12px;
+        line-height: 1.5;
         text-align: left;
         color: $grey;
         padding: 10px 5px;
         border-bottom: 2px solid $lightGrey;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+
+        img {
+            padding: 0px 10px;
+        }
     }
 }
 

@@ -2,6 +2,7 @@
 import NewsletterSignupModal from '../components/newsletter-signup-modal/NewsletterSignupModal';
 
 export const campaignsURL = 'https://api.now-u.com/api/v1/campaigns';
+export const partnersURL = 'https://api.now-u.com/api/v1/organisations';
 export const pressCoverageURL = 'https://api.now-u.com/api/v1/press_coverage';
 export const faqsURL = 'https://api.now-u.com/api/v1/faqs';
 export const blogsURL = 'https://api.now-u.com/api/v1/blogs';
@@ -12,6 +13,8 @@ export const privacyPolicyURL =
     'http://share.now-u.com/legal/now-u_privacy_policy.pdf';
 export const termsAndConditionsURL =
     'https://share.now-u.com/legal/now-u_users_Ts&Cs.pdf';
+export const partnershipGuideURL =
+    'https://share.now-u.com/partners/now-u_charity_collaboration_&_partnership_guide.pdf';
 
 export const topNavLinks = [
     { display: 'FAQ', path: '/faqs' },

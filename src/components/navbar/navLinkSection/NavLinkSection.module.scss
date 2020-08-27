@@ -8,6 +8,7 @@
     text-align: center;
     font-size: calc(14px + (24 - 14) * ((100vw - 320px) / (1920 - 320)));
     transition: color 0.4s;
+    cursor: pointer;
 
     @media (min-width: 2222px) {
         font-size: 27px;

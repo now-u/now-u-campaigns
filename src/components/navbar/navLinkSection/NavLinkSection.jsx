@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom';
 import classes from './NavLinkSection.module.scss';
 import PropTypes from 'prop-types';
 
-const NavLinkSection = ({ navLink, closeDropdownNav }) => {
+const NavLinkSection = ({ navLink, closeDropdownNav, toggleNewsModal }) => {
     return (
         <Fragment>
-            {navLink.map(({ display, path, external }) => {
+            {navLink.map(({ display, path, external, modal }) => {
                 return path ? (
                     <Link
                         key={display}
@@ -16,7 +16,7 @@ const NavLinkSection = ({ navLink, closeDropdownNav }) => {
                     >
                         {display}
                     </Link>
-                ) : (
+                ) : external ? (
                     <a
                         key={display}
                         className={classes.link}
@@ -27,7 +27,16 @@ const NavLinkSection = ({ navLink, closeDropdownNav }) => {
                     >
                         {display}
                     </a>
-                );
+                ) : modal ? (
+                    <a
+                        key={display}
+                        className={classes.link}
+                        rel='noopener noreferrer'
+                        onMouseDown={toggleNewsModal}
+                    >
+                        {display}
+                    </a>
+                ) : null;
             })}
         </Fragment>
     );
@@ -36,6 +45,7 @@ const NavLinkSection = ({ navLink, closeDropdownNav }) => {
 NavLinkSection.propTypes = {
     navLink: PropTypes.arrayOf(PropTypes.object),
     closeDropdownNav: PropTypes.func,
+    toggleNewsModal: PropTypes.func,
 };
 
 export default NavLinkSection;

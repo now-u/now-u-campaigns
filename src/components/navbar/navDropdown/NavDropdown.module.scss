@@ -21,6 +21,15 @@
     @media (min-width: $medium) {
         display: none;
     }
+    @media (max-height: 500px) {
+        height: 100vh;
+        width: 100vw;
+        padding: 5px;
+        margin: 0;
+        left: 0;
+
+        overflow: scroll;
+    }
 
     header {
         width: 100%;

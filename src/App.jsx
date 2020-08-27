@@ -23,7 +23,7 @@ import { ModalService } from './services';
 import './App.scss';
 
 const App = () => {
-    const openNewsletterSignupModal = () => {
+    const openNewsletterSignupModal = (show = false) => {
         const newsletterSignupDismissed = sessionStorage.getItem(
             'newsletter-signup-dismissed'
         );
@@ -31,10 +31,12 @@ const App = () => {
             'newsletter-signup-completed'
         );
 
-        const showNewsletterSignup = !(
+        let showNewsletterSignup = !(
             newsletterSignupDismissed || newsletterSignupCompleted
         );
-
+        if (show) {
+            showNewsletterSignup = true;
+        }
         if (showNewsletterSignup) {
             const modalRef = ModalService.open(
                 NewsletterSignupModal,
@@ -77,7 +79,7 @@ const App = () => {
         <BrowserRouter>
             <div className='App'>
                 <AnnounceBar />
-                <Navbar />
+                <Navbar newsModal={openNewsletterSignupModal} />
                 <Switch>
                     <Route path='/' exact component={Homepage} />
                     <Route path='/campaigns' exact component={Campaigns} />

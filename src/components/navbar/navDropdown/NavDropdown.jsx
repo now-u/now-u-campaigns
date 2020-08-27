@@ -4,7 +4,13 @@ import classes from './NavDropdown.module.scss';
 import PropTypes from 'prop-types';
 import NavLinkSection from '../navLinkSection/NavLinkSection';
 
-const NavDropdown = ({ display, navLink, logo, closeDropdownNav }) => {
+const NavDropdown = ({
+    display,
+    navLink,
+    logo,
+    closeDropdownNav,
+    toggleNewsModal,
+}) => {
     const initTransitionStyle = {
         transform: 'translate3d(0, -110%, 0)',
         visibility: 'hidden',
@@ -71,6 +77,7 @@ const NavDropdown = ({ display, navLink, logo, closeDropdownNav }) => {
                 <NavLinkSection
                     navLink={navLink}
                     closeDropdownNav={closeDropdownNav}
+                    toggleNewsModal={toggleNewsModal}
                 />
             </ul>
         </nav>
@@ -82,6 +89,7 @@ NavDropdown.propTypes = {
     navLink: PropTypes.arrayOf(PropTypes.object),
     logo: PropTypes.String,
     closeDropdownNav: PropTypes.func,
+    toggleNewsModal: PropTypes.func,
 };
 
 export default NavDropdown;

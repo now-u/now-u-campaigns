@@ -1,4 +1,5 @@
 // import { privacyNotice } from '../assets';
+import NewsletterSignupModal from '../components/newsletter-signup-modal/NewsletterSignupModal';
 
 export const campaignsURL = 'https://api.now-u.com/api/v1/campaigns';
 export const pressCoverageURL = 'https://api.now-u.com/api/v1/press_coverage';
@@ -15,7 +16,7 @@ export const termsAndConditionsURL =
 export const topNavLinks = [
     { display: 'FAQ', path: '/faqs' },
     { display: 'Blog', path: '/blog' },
-    { display: 'Newsletter', path: '/press' },
+    { display: 'Newsletter', modal: NewsletterSignupModal },
 ];
 export const bottomNavLinks = [
     { display: 'Campaigns', path: '/campaigns' },
@@ -34,6 +35,6 @@ export const mobileNavLinks = [
     { display: 'Get in touch', path: '/get-in-touch' },
     { display: 'Press', path: '/press' },
     { display: 'FAQ', path: '/faqs' },
-    { display: 'Newsletter', path: '/press' },
+    { display: 'Newsletter', modal: NewsletterSignupModal },
     { display: 'Privacy Policy', external: privacyPolicyURL },
 ];

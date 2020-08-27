@@ -2,15 +2,16 @@ import React, { useState, useEffect } from 'react';
 import classes from './Blog.module.scss';
 import { Text, AppDownloadSquare } from '../../components';
 import { BlogPoster } from './components';
-// eslint-disable-next-line no-unused-vars
 import BlogSearchControls from './components/BlogSearchControls';
-import { blogsURL } from '../../utils/constants';
+import { blogsURL, campaignsURL } from '../../utils/constants';
 import { useBreakpoint } from '../../utils/breakpoint';
-// eslint-disable-next-line no-unused-vars
 import { MonthCampaigns } from './components';
 
 const Blog = () => {
     const [blogs, setBlogs] = useState([]);
+    const [filteredBlogs, setFilteredBlogs] = useState([]);
+    const [campaigns, setCampaigns] = useState([]);
+
     const breakpoints = useBreakpoint();
     const smallDevice = !!breakpoints.sm;
 
@@ -19,13 +20,26 @@ const Blog = () => {
             const resp = await fetch(blogsURL);
             const blogs = await resp.json();
             setBlogs(blogs?.data ? blogs.data : blogs);
+            setFilteredBlogs(blogs?.data ? blogs.data : blogs);
         }
-
         fetchBlogs();
     }, []);
 
+    useEffect(() => {
+        const fetchCampaigns = async () => {
+          const resp = await fetch(campaignsURL);
+          const campaigns = await resp.json();
+          setCampaigns(campaigns?.data);
+        };
+        fetchCampaigns();
+    }, []);
+
+    const filterBlogs = (newFilteredBlogs) => {
+        setFilteredBlogs(newFilteredBlogs);
+    }
+
     const BlogPosters = () => {
-        const blogItems = [...blogs];
+        const blogItems = [...filteredBlogs];
         // grab the first blog as the highlighted blog
         // No highlighted blog on small device screens
         const blogHighlighted = smallDevice ? null : blogItems.shift();
@@ -57,14 +71,14 @@ const Blog = () => {
             </div>
             <div className={classes.content}>
                 <div className={classes.blogs}>
-                    {/* TODO <div className={classes.searchContainer}>
-                        <BlogSearchControls />
-                    </div> */}
+                    <div className={classes.searchContainer}>
+                        <BlogSearchControls blogs={blogs} campaigns={campaigns} filterBlogs={filterBlogs} />
+                    </div>
                     <BlogPosters />
                 </div>
                 <div className={classes.blogAds}>
                     <AppDownloadSquare />
-                    {/* <MonthCampaigns /> */}
+                    <MonthCampaigns campaigns={campaigns} />
                 </div>
             </div>
         </div>

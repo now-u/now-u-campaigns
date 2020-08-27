@@ -29,7 +29,7 @@ const Navbar = ({ newsModal }) => {
             newsModal(true);
             toggleNewsModal();
         }
-    }, [showNewsModal]);
+    }, [showNewsModal, newsModal]);
 
     return (
         <header className={classes.navContainer}>

@@ -12,34 +12,37 @@
   @media screen and (max-width: $medium) {
     padding: 0;
   }
-}
-.sectionHeader {
-  text-align: center;
-  font-family: $headerFont;
-  font-size: 60px;
-  font-weight: $bold;
-  line-height: 1.33;
-  color: black;
-  @media screen and (max-width: $medium) {
-    font-size: 40px;
+  .sectionHeader {
+    text-align: left;
+    width: 100%;
+    max-width: $max-width;
+    font-family: $headerFont;
+    font-size: 60px;
+    font-weight: $bold;
+    line-height: 1.33;
+    color: black;
+    @media screen and (max-width: $medium) {
+      font-size: 40px;
+      text-align: center;
+    }
   }
-}
-.campaignsRow {
-  max-width: $max-width;
-  align-items: center;
-  width: 100%;
-}
-.noCampaigns {
-  color: $grey;
-  text-align: center;
-  margin: 18px;
-}
-.proposeCampaign {
-  text-align: center;
-  .button {
-    background-color: white;
-    border: 3px solid #FF8800;
-    color: #FF8800
+  .campaignsRow {
+    max-width: $max-width;
+    align-items: center;
+    width: 100%;
   }
-  margin-bottom: 20px;
+  .noCampaigns {
+    color: $grey;
+    text-align: center;
+    margin: 18px;
+  }
+  .proposeCampaign {
+    text-align: center;
+    .button {
+      background-color: white;
+      border: 3px solid #FF8800;
+      color: #FF8800
+    }
+    margin-bottom: 20px;
+  }
 }

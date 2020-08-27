@@ -5,7 +5,8 @@ import classes from './Campaigns.module.scss';
 
 const Campaigns = () => {
   const [campaigns, setCampaigns] = useState([]);
-
+  const Months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+  const currentDate = new Date()
   useEffect(() => {
     const fetchCampaigns = async () => {
       const resp = await fetch(campaignsURL);
@@ -25,7 +26,7 @@ const Campaigns = () => {
       <div className={classes.campaignsAbout}>
         <p>We partner with trusted charities and social enterprises to bring you focused monthly campaigns with clear and attainable objectives. Each campaign contains informative resources and actions you can complete, curated to inform, involve and inspire now-u users to make a meaningful contribution to each charitable cause.</p>
       </div>
-      <CampaignsGroup title="Active Campaigns" campaigns={campaigns} />
+      <CampaignsGroup title={Months[currentDate.getMonth()] + "'s Campaigns"} campaigns={campaigns} /> 
     </div>
   );
 };

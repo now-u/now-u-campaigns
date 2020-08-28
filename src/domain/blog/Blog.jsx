@@ -34,7 +34,6 @@ const Blog = () => {
           // Fetch Old campaigns as well, as blogs might be linked to them
           const respOldCampaigns = await fetch(`${campaignsURL}?old=true`);
           const oldCampaigns = await respOldCampaigns.json();
-          
           setCampaigns([...campaigns?.data, ...oldCampaigns?.data]);
         };
 

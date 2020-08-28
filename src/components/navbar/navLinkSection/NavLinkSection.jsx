@@ -20,7 +20,7 @@ const NavLinkSection = ({ navLinks, closeNavDropdown }) => {
                         key={display}
                         className={classes.link}
                         to={path}
-                        onMouseDown={closeNavDropdown}
+                        onClick={closeNavDropdown}
                     >
                         {display}
                     </Link>
@@ -31,7 +31,7 @@ const NavLinkSection = ({ navLinks, closeNavDropdown }) => {
                         href={external}
                         target='_blank'
                         rel='noopener noreferrer'
-                        onMouseDown={closeNavDropdown}
+                        onClick={closeNavDropdown}
                     >
                         {display}
                     </a>
@@ -40,7 +40,7 @@ const NavLinkSection = ({ navLinks, closeNavDropdown }) => {
                         key={display}
                         className={classes.link}
                         rel='noopener noreferrer'
-                        onMouseDown={handleNewsletterClick}
+                        onClick={handleNewsletterClick}
                     >
                         {display}
                     </a>

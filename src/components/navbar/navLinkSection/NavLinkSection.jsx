@@ -2,12 +2,21 @@ import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import classes from './NavLinkSection.module.scss';
 import PropTypes from 'prop-types';
+// import NewsletterSignupModal from '../../newsletter-signup-modal/NewsletterSignupModal';
+import { openNewsletterSignupModal } from '../.././../utils/functions';
 
 const NavLinkSection = ({
     navLinks,
     closeNavDropdown,
-    toggleNewsletterSignupModal,
+    // toggleNewsletterSignupModal,
 }) => {
+    const handleNewsletterClick = () => {
+        if (closeNavDropdown) {
+            closeNavDropdown();
+        }
+        openNewsletterSignupModal(true);
+    };
+
     return (
         <Fragment>
             {navLinks.map(({ display, path, external, modal }) => {
@@ -36,7 +45,7 @@ const NavLinkSection = ({
                         key={display}
                         className={classes.link}
                         rel='noopener noreferrer'
-                        onMouseDown={toggleNewsletterSignupModal}
+                        onMouseDown={handleNewsletterClick}
                     >
                         {display}
                     </a>

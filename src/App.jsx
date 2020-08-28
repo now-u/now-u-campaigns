@@ -13,55 +13,11 @@ import {
     Blog,
     BlogArticle,
 } from './domain';
-import {
-    AnnounceBar,
-    Navbar,
-    Footer,
-    NewsletterSignupModal,
-} from './components';
-import { ModalService } from './services';
+import { AnnounceBar, Navbar, Footer } from './components';
 import './App.scss';
+import { openNewsletterSignupModal } from './utils/functions';
 
 const App = () => {
-    const openNewsletterSignupModal = (forceDisplayNewsletter = false) => {
-        const newsletterSignupDismissed = sessionStorage.getItem(
-            'newsletter-signup-dismissed'
-        );
-        const newsletterSignupCompleted = localStorage.getItem(
-            'newsletter-signup-completed'
-        );
-
-        const showNewsletterSignup =
-            forceDisplayNewsletter ||
-            !(newsletterSignupDismissed || newsletterSignupCompleted);
-
-        if (showNewsletterSignup) {
-            const modalRef = ModalService.open(
-                NewsletterSignupModal,
-                {
-                    onSuccessfulSignup: () => {
-                        closeNewsletterSignupModal(modalRef);
-                    },
-                },
-                {
-                    color: 'dark',
-                    onClose: () =>
-                        sessionStorage.setItem(
-                            'newsletter-signup-dismissed',
-                            'true'
-                        ),
-                }
-            );
-        }
-    };
-
-    // Close newsletter sign-up modal after 5 seconds
-    const closeNewsletterSignupModal = (modalRef) => {
-        setTimeout(() => {
-            ModalService.close(modalRef);
-        }, 5000);
-    };
-
     useEffect(() => {
         // Display newsletter sign-up modal after 30 seconds
         const timer = setTimeout(() => {

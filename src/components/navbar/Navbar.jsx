@@ -68,7 +68,7 @@ const Navbar = ({ newsletterSignupModal }) => {
                 <NavDropdown
                     navLinks={mobileNavLinks}
                     displayNavDropdown={displayNavDropdown}
-                    closeNavDropdown={closeNavDropdown}
+                    closeNavDropdown={() => closeNavDropdown()}
                     logo={nowUOrange}
                     toggleNewsletterSignupModal={toggleNewsletterSignupModal}
                 />

@@ -21,7 +21,7 @@ const NavDropdown = ({
         visibility: 'visible',
     };
     const [transitionStyle, setTransitionStyle] = useState(initTransitionStyle);
-    const ref = useRef();
+    const dropdownRef = useRef();
 
     useEffect(() => {
         // mounting animation
@@ -35,25 +35,35 @@ const NavDropdown = ({
         });
 
         // click outside to close component
-        function handleClickOutside(event) {
-            //if click is navBurgerContainer (ref.current.parentElement.children[2]) or if click is ref target (.dropdownContainer)
-            if (event.target === ref.current.parentElement.children[2]) {
-                return;
-            }
-            if (ref.current && !ref.current.contains(event.target)) {
-                closeNavDropdown();
-            }
-        }
-        document.addEventListener('mousedown', handleClickOutside);
-        return () => {
-            document.removeEventListener('mousedown', handleClickOutside);
-        };
-    }, [closeNavDropdown, displayNavDropdown]);
+        // function handleClickOutsideDropdown(event) {
+        //     /* eslint-disable no-debugger */
+        //     debugger;
+        //     /* eslint-enable no-debugger */
+        //     //if click is navBurgerContainer (ref.current.parentElement.children[2]) or if click is ref target (.dropdownContainer)
+        //     if (transitionStyle === terminalTransitionStyle) {
+        //         if (event.target === ref.current.parentElement.children[2]) {
+        //             return;
+        //         }
+        //         if (ref.current && !ref.current.contains(event.target)) {
+        //             closeNavDropdown();
+        //         }
+        //     }
+        // }
+        // document.addEventListener('mousedown', handleClickOutsideDropdown);
+        // return () => {
+        //     document.removeEventListener(
+        //         'mousedown',
+        //         handleClickOutsideDropdown
+        //     );
+        // };
+        // }, []);
+    }, [displayNavDropdown]);
+    // }, [closeNavDropdown, displayNavDropdown]);
 
     return (
         <nav
             className={classes.dropdownContainer}
-            ref={ref}
+            ref={dropdownRef}
             style={transitionStyle}
         >
             <header className={classes.dropdownHead}>

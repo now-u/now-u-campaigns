@@ -59,8 +59,7 @@ $tiny: 348px;
         }
         .navBurgerContainer {
             cursor: pointer;
-            margin: 10px 10px;
-            display: flex;
+            margin: 10px;
             justify-content: center;
             align-items: center;
             min-height: 40px;
@@ -75,30 +74,7 @@ $tiny: 348px;
             }
 
             .burger {
-                position: relative;
-                width: 90%;
-                height: 3px;
-                background: $blue;
                 pointer-events: none;
-
-                &::before {
-                    content: '';
-                    width: 100%;
-                    height: 100%;
-                    position: absolute;
-                    top: -12px;
-                    left: 0;
-                    background: inherit;
-                }
-                &::after {
-                    content: '';
-                    width: 100%;
-                    height: 100%;
-                    position: absolute;
-                    bottom: -12px;
-                    left: 0;
-                    background: inherit;
-                }
             }
         }
     }

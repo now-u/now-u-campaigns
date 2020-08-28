@@ -3,16 +3,20 @@ import { Link } from 'react-router-dom';
 import classes from './NavLinkSection.module.scss';
 import PropTypes from 'prop-types';
 
-const NavLinkSection = ({ navLink, closeDropdownNav, toggleNewsModal }) => {
+const NavLinkSection = ({
+    navLinks,
+    closeNavDropdown,
+    toggleNewsletterSignupModal,
+}) => {
     return (
         <Fragment>
-            {navLink.map(({ display, path, external, modal }) => {
+            {navLinks.map(({ display, path, external, modal }) => {
                 return path ? (
                     <Link
                         key={display}
                         className={classes.link}
                         to={path}
-                        onMouseDown={closeDropdownNav}
+                        onMouseDown={closeNavDropdown}
                     >
                         {display}
                     </Link>
@@ -23,7 +27,7 @@ const NavLinkSection = ({ navLink, closeDropdownNav, toggleNewsModal }) => {
                         href={external}
                         target='_blank'
                         rel='noopener noreferrer'
-                        onMouseDown={closeDropdownNav}
+                        onMouseDown={closeNavDropdown}
                     >
                         {display}
                     </a>
@@ -32,7 +36,7 @@ const NavLinkSection = ({ navLink, closeDropdownNav, toggleNewsModal }) => {
                         key={display}
                         className={classes.link}
                         rel='noopener noreferrer'
-                        onMouseDown={toggleNewsModal}
+                        onMouseDown={toggleNewsletterSignupModal}
                     >
                         {display}
                     </a>
@@ -43,9 +47,9 @@ const NavLinkSection = ({ navLink, closeDropdownNav, toggleNewsModal }) => {
 };
 
 NavLinkSection.propTypes = {
-    navLink: PropTypes.arrayOf(PropTypes.object),
-    closeDropdownNav: PropTypes.func,
-    toggleNewsModal: PropTypes.func,
+    navLinks: PropTypes.arrayOf(PropTypes.object),
+    closeNavDropdown: PropTypes.func,
+    toggleNewsletterSignupModal: PropTypes.func,
 };
 
 export default NavLinkSection;

@@ -1,15 +1,16 @@
 import React, { useEffect, useRef, useState } from 'react';
+import classNames from 'classnames';
 import { Link } from 'react-router-dom';
 import classes from './NavDropdown.module.scss';
 import PropTypes from 'prop-types';
 import NavLinkSection from '../navLinkSection/NavLinkSection';
 
 const NavDropdown = ({
-    display,
-    navLink,
+    displayNavDropdown,
+    navLinks,
     logo,
-    closeDropdownNav,
-    toggleNewsModal,
+    closeNavDropdown,
+    toggleNewsletterSignupModal,
 }) => {
     const initTransitionStyle = {
         transform: 'translate3d(0, -110%, 0)',
@@ -24,35 +25,30 @@ const NavDropdown = ({
 
     useEffect(() => {
         // mounting animation
-        if (display) {
-            setTransitionStyle((prevState) => {
-                return {
-                    ...prevState,
-                    ...terminalTransitionStyle,
-                };
-            });
-        } else {
-            setTransitionStyle((prevState) => {
-                return {
-                    ...prevState,
-                    ...initTransitionStyle,
-                };
-            });
-        }
+        setTransitionStyle((prevState) => {
+            return {
+                ...prevState,
+                ...(displayNavDropdown
+                    ? terminalTransitionStyle
+                    : initTransitionStyle),
+            };
+        });
 
         // click outside to close component
         function handleClickOutside(event) {
             //if click is navBurgerContainer (ref.current.parentElement.children[2]) or if click is ref target (.dropdownContainer)
-            if (event.target === ref.current.parentElement.children[2]) return;
-            else if (ref.current && !ref.current.contains(event.target)) {
-                closeDropdownNav();
+            if (event.target === ref.current.parentElement.children[2]) {
+                return;
+            }
+            if (ref.current && !ref.current.contains(event.target)) {
+                closeNavDropdown();
             }
         }
         document.addEventListener('mousedown', handleClickOutside);
         return () => {
             document.removeEventListener('mousedown', handleClickOutside);
         };
-    }, [closeDropdownNav, display]);
+    }, [closeNavDropdown, displayNavDropdown]);
 
     return (
         <nav
@@ -61,13 +57,19 @@ const NavDropdown = ({
             style={transitionStyle}
         >
             <header className={classes.dropdownHead}>
-                <Link to={'/'} className={classes.mobileLogoContainer}>
+                <Link
+                    to={'/'}
+                    className={classes.mobileLogoContainer}
+                    onMouseDown={closeNavDropdown}
+                >
                     <img className={classes.logo} src={logo} alt='logo' />
                 </Link>
                 <i
-                    id={classes.close}
-                    className='material-icons medium'
-                    onMouseDown={closeDropdownNav}
+                    className={classNames(
+                        'medium material-icons',
+                        classes.close
+                    )}
+                    onMouseDown={closeNavDropdown}
                 >
                     close
                 </i>
@@ -75,9 +77,9 @@ const NavDropdown = ({
 
             <ul className={classes.mobileLinksList}>
                 <NavLinkSection
-                    navLink={navLink}
-                    closeDropdownNav={closeDropdownNav}
-                    toggleNewsModal={toggleNewsModal}
+                    navLinks={navLinks}
+                    closeNavDropdown={closeNavDropdown}
+                    toggleNewsletterSignupModal={toggleNewsletterSignupModal}
                 />
             </ul>
         </nav>
@@ -85,11 +87,11 @@ const NavDropdown = ({
 };
 
 NavDropdown.propTypes = {
-    display: PropTypes.bool,
-    navLink: PropTypes.arrayOf(PropTypes.object),
+    displayNavDropdown: PropTypes.bool,
+    navLinks: PropTypes.arrayOf(PropTypes.object),
     logo: PropTypes.String,
-    closeDropdownNav: PropTypes.func,
-    toggleNewsModal: PropTypes.func,
+    closeNavDropdown: PropTypes.func,
+    toggleNewsletterSignupModal: PropTypes.func,
 };
 
 export default NavDropdown;

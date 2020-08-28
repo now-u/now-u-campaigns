@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { nowUOrange } from '../../assets';
@@ -11,33 +12,35 @@ import NavLinkSection from './navLinkSection/NavLinkSection';
 import NavDropdown from './navDropdown/NavDropdown';
 import classes from './Navbar.module.scss';
 
-// import NewsletterSignupModal from '../newsletter-signup-modal/NewsletterSignupModal';
+const Navbar = ({ newsletterSignupModal }) => {
+    const [displayNavDropdown, setDisplayNavDropdown] = useState(false);
+    const openNavDropdown = () => setDisplayNavDropdown(true);
+    const closeNavDropdown = () => setDisplayNavDropdown(false);
 
-const Navbar = ({ newsModal }) => {
-    const [dropdownNavDisplay, setDropdownNavDisplay] = useState(false);
-    const openDropdownNav = () => setDropdownNavDisplay(true);
-    const closeDropdownNav = () => setDropdownNavDisplay(false);
-
-    const [showNewsModal, setShowNewsModal] = useState(false);
-    const toggleNewsModal = () => {
-        setShowNewsModal((state) => !state);
-        setDropdownNavDisplay(false);
+    const [showNewsletterSignupModal, setShowNewsletterSignupModal] = useState(
+        false
+    );
+    const toggleNewsletterSignupModal = () => {
+        setShowNewsletterSignupModal((state) => !state);
+        setDisplayNavDropdown(false);
     };
 
     useEffect(() => {
-        if (showNewsModal) {
-            newsModal(true);
-            toggleNewsModal();
+        if (showNewsletterSignupModal) {
+            newsletterSignupModal(true);
+            toggleNewsletterSignupModal();
         }
-    }, [showNewsModal, newsModal]);
+    }, [showNewsletterSignupModal, newsletterSignupModal]);
 
     return (
         <header className={classes.navContainer}>
             <nav className={classes.topNavbar}>
                 <ul className={classes.linkContainer}>
                     <NavLinkSection
-                        navLink={topNavLinks}
-                        toggleNewsModal={toggleNewsModal}
+                        navLinks={topNavLinks}
+                        toggleNewsletterSignupModal={
+                            toggleNewsletterSignupModal
+                        }
                     />
                 </ul>
             </nav>
@@ -46,21 +49,28 @@ const Navbar = ({ newsModal }) => {
                     <img className={classes.logo} src={nowUOrange} alt='logo' />
                 </Link>
                 <ul className={classes.linkContainer}>
-                    <NavLinkSection navLink={bottomNavLinks} />
+                    <NavLinkSection navLinks={bottomNavLinks} />
                 </ul>
                 <div
                     className={classes.navBurgerContainer}
-                    onMouseDown={openDropdownNav}
+                    onMouseDown={openNavDropdown}
                 >
-                    <div className={classes.burger} />
+                    <i
+                        className={classNames(
+                            'large material-icons',
+                            classes.burger
+                        )}
+                    >
+                        menu
+                    </i>
                 </div>
 
                 <NavDropdown
-                    display={dropdownNavDisplay}
-                    navLink={mobileNavLinks}
-                    closeDropdownNav={closeDropdownNav}
+                    navLinks={mobileNavLinks}
+                    displayNavDropdown={displayNavDropdown}
+                    closeNavDropdown={closeNavDropdown}
                     logo={nowUOrange}
-                    toggleNewsModal={toggleNewsModal}
+                    toggleNewsletterSignupModal={toggleNewsletterSignupModal}
                 />
             </nav>
         </header>
@@ -68,7 +78,7 @@ const Navbar = ({ newsModal }) => {
 };
 
 Navbar.propTypes = {
-    newsModal: PropTypes.func,
+    newsletterSignupModal: PropTypes.func,
 };
 
 export default Navbar;

@@ -2,14 +2,9 @@ import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import classes from './NavLinkSection.module.scss';
 import PropTypes from 'prop-types';
-// import NewsletterSignupModal from '../../newsletter-signup-modal/NewsletterSignupModal';
 import { openNewsletterSignupModal } from '../.././../utils/functions';
 
-const NavLinkSection = ({
-    navLinks,
-    closeNavDropdown,
-    // toggleNewsletterSignupModal,
-}) => {
+const NavLinkSection = ({ navLinks, closeNavDropdown }) => {
     const handleNewsletterClick = () => {
         if (closeNavDropdown) {
             closeNavDropdown();

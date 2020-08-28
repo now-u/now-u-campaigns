@@ -1,4 +1,5 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
+// import React, { useEffect, useRef, useState } from 'react';
 import classNames from 'classnames';
 import { Link } from 'react-router-dom';
 import classes from './NavDropdown.module.scss';
@@ -10,61 +11,34 @@ const NavDropdown = ({
     navLinks,
     logo,
     closeNavDropdown,
-    toggleNewsletterSignupModal,
 }) => {
-    const initTransitionStyle = {
-        transform: 'translate3d(0, -110%, 0)',
-        visibility: 'hidden',
-    };
-    const terminalTransitionStyle = {
-        transform: 'translate3d(0, 0, 0)',
-        visibility: 'visible',
-    };
-    const [transitionStyle, setTransitionStyle] = useState(initTransitionStyle);
     const dropdownRef = useRef();
 
     useEffect(() => {
-        // mounting animation
-        setTransitionStyle((prevState) => {
-            return {
-                ...prevState,
-                ...(displayNavDropdown
-                    ? terminalTransitionStyle
-                    : initTransitionStyle),
-            };
-        });
-
         // click outside to close component
-        // function handleClickOutsideDropdown(event) {
-        //     /* eslint-disable no-debugger */
-        //     debugger;
-        //     /* eslint-enable no-debugger */
-        //     //if click is navBurgerContainer (ref.current.parentElement.children[2]) or if click is ref target (.dropdownContainer)
-        //     if (transitionStyle === terminalTransitionStyle) {
-        //         if (event.target === ref.current.parentElement.children[2]) {
-        //             return;
-        //         }
-        //         if (ref.current && !ref.current.contains(event.target)) {
-        //             closeNavDropdown();
-        //         }
-        //     }
-        // }
-        // document.addEventListener('mousedown', handleClickOutsideDropdown);
-        // return () => {
-        //     document.removeEventListener(
-        //         'mousedown',
-        //         handleClickOutsideDropdown
-        //     );
-        // };
-        // }, []);
-    }, [displayNavDropdown]);
-    // }, [closeNavDropdown, displayNavDropdown]);
+        function handleClickOutsideDropdown(event) {
+            //if click is navBurgerContainer(dropdownRef.current.parentElement.children[2]) or if click is dropdownRef target (.dropdownContainer)
+            if (
+                event.target === dropdownRef.current.parentElement.children[2]
+            ) {
+                return;
+            }
+            if (
+                dropdownRef.current &&
+                !dropdownRef.current.contains(event.target)
+            ) {
+                closeNavDropdown();
+            }
+        }
+        document.addEventListener('mousedown', handleClickOutsideDropdown);
+    }, [closeNavDropdown]);
 
     return (
         <nav
-            className={classes.dropdownContainer}
+            className={classNames(classes.dropdownContainer, {
+                [classes.active]: displayNavDropdown,
+            })}
             ref={dropdownRef}
-            style={transitionStyle}
         >
             <header className={classes.dropdownHead}>
                 <Link
@@ -89,7 +63,6 @@ const NavDropdown = ({
                 <NavLinkSection
                     navLinks={navLinks}
                     closeNavDropdown={closeNavDropdown}
-                    toggleNewsletterSignupModal={toggleNewsletterSignupModal}
                 />
             </ul>
         </nav>
@@ -101,7 +74,6 @@ NavDropdown.propTypes = {
     navLinks: PropTypes.arrayOf(PropTypes.object),
     logo: PropTypes.String,
     closeNavDropdown: PropTypes.func,
-    toggleNewsletterSignupModal: PropTypes.func,
 };
 
 export default NavDropdown;

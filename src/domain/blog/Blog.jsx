@@ -3,6 +3,7 @@ import classes from './Blog.module.scss';
 import { Text, AppDownloadSquare } from '../../components';
 import { BlogPoster } from './components';
 import BlogSearchControls from './components/BlogSearchControls';
+// eslint-disable-next-line no-unused-vars
 import { blogsURL, campaignsURL } from '../../utils/constants';
 import { useBreakpoint } from '../../utils/breakpoint';
 import { MonthCampaigns } from './components';
@@ -29,9 +30,16 @@ const Blog = () => {
         const fetchCampaigns = async () => {
           const resp = await fetch(campaignsURL);
           const campaigns = await resp.json();
-          setCampaigns(campaigns?.data);
+
+          // Fetch Old campaigns as well, as blogs might be linked to them
+          const respOldCampaigns = await fetch(`${campaignsURL}?old=true`);
+          const oldCampaigns = await respOldCampaigns.json();
+          
+          setCampaigns([...campaigns?.data, ...oldCampaigns?.data]);
         };
+
         fetchCampaigns();
+
     }, []);
 
     const filterBlogs = (newFilteredBlogs) => {

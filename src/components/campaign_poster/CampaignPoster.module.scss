@@ -3,10 +3,8 @@
 .campaignPoster {
   display: flex;
   justify-content: center;
-  height: auto;
   margin-bottom: 2rem;
   box-shadow: 0 0 10px 0px rgba($color: #000000, $alpha: 0.08);
-  background-color: white;
   @media (max-width: $medium) {
     flex-wrap: wrap;
     box-shadow: none;
@@ -20,7 +18,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    overflow: hidden;
+    overflow: hidden; // edge case placeholder
     @media (max-width: $medium) {
       max-height: 200px;
       height: auto;
@@ -49,12 +47,12 @@
       padding: 15px;
       height: auto;
     }
-  }
-}
-.campaignBtn {
-  width: 200px;
-  margin-left: auto;
-  @media (max-width: $medium) {
-    margin: auto;
+    .campaignBtn {
+      width: 200px;
+      margin-left: auto;
+      @media (max-width: $medium) {
+        margin: auto;
+      }
+    }
   }
 }

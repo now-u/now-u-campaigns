@@ -8,7 +8,7 @@ const CampaignPoster = ({ campaign: { id, title = 'Coming soon..', header_image,
   return (
     <div key={id} className={classes.campaignPoster}>
       <div className={classes.left}>
-        <img src={header_image} alt=""/>
+        <img src={header_image} alt={'Poster for ' + title}/>
       </div>
       <div className={classes.right}>
         <Text type="h4">{title}</Text>

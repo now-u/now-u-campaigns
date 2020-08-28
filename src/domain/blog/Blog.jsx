@@ -40,6 +40,16 @@ const Blog = () => {
 
     const BlogPosters = () => {
         const blogItems = [...filteredBlogs];
+        const noBlogsFound = blogItems.length === 0;
+
+        if(noBlogsFound) {
+            return (
+                <div>
+                    No Blogs found!
+                </div>
+            )
+        }
+
         // grab the first blog as the highlighted blog
         // No highlighted blog on small device screens
         const blogHighlighted = smallDevice ? null : blogItems.shift();

@@ -13,8 +13,15 @@ import classes from './Navbar.module.scss';
 
 const Navbar = () => {
     const [displayNavDropdown, setDisplayNavDropdown] = useState(false);
-    const openNavDropdown = () => setDisplayNavDropdown(true);
-    const closeNavDropdown = () => setDisplayNavDropdown(false);
+    const toggleDisplayNav = (...args) => {
+        if (args.length === 0) {
+            setDisplayNavDropdown((prevState) => !prevState);
+        }
+        if (args.length > 0) {
+            const direction = args[0];
+            setDisplayNavDropdown(direction);
+        }
+    };
 
     return (
         <header className={classes.navContainer}>
@@ -32,7 +39,7 @@ const Navbar = () => {
                 </ul>
                 <div
                     className={classes.navBurgerContainer}
-                    onMouseDown={openNavDropdown}
+                    onMouseDown={() => toggleDisplayNav()}
                 >
                     <i
                         className={classNames(
@@ -47,8 +54,7 @@ const Navbar = () => {
                 <NavDropdown
                     navLinks={mobileNavLinks}
                     displayNavDropdown={displayNavDropdown}
-                    closeNavDropdown={() => closeNavDropdown()}
-                    logo={nowUOrange}
+                    toggleDisplayNav={toggleDisplayNav}
                 />
             </nav>
         </header>

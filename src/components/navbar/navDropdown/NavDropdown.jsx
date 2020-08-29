@@ -1,17 +1,13 @@
 import React, { useEffect, useRef } from 'react';
-// import React, { useEffect, useRef, useState } from 'react';
-import classNames from 'classnames';
 import { Link } from 'react-router-dom';
-import classes from './NavDropdown.module.scss';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
+
+import classes from './NavDropdown.module.scss';
+import { nowUOrange } from '../../../assets';
 import NavLinkSection from '../navLinkSection/NavLinkSection';
 
-const NavDropdown = ({
-    displayNavDropdown,
-    navLinks,
-    logo,
-    closeNavDropdown,
-}) => {
+const NavDropdown = ({ displayNavDropdown, navLinks, toggleDisplayNav }) => {
     const dropdownRef = useRef();
 
     useEffect(() => {
@@ -27,11 +23,11 @@ const NavDropdown = ({
                 dropdownRef.current &&
                 !dropdownRef.current.contains(event.target)
             ) {
-                closeNavDropdown();
+                toggleDisplayNav(false);
             }
         }
         document.addEventListener('mousedown', handleClickOutsideDropdown);
-    }, [closeNavDropdown]);
+    }, [toggleDisplayNav, displayNavDropdown]);
 
     return (
         <nav
@@ -44,16 +40,16 @@ const NavDropdown = ({
                 <Link
                     to={'/'}
                     className={classes.mobileLogoContainer}
-                    onMouseDown={closeNavDropdown}
+                    onClick={toggleDisplayNav}
                 >
-                    <img className={classes.logo} src={logo} alt='logo' />
+                    <img className={classes.logo} src={nowUOrange} alt='logo' />
                 </Link>
                 <i
                     className={classNames(
                         'medium material-icons',
                         classes.close
                     )}
-                    onMouseDown={closeNavDropdown}
+                    onClick={toggleDisplayNav}
                 >
                     close
                 </i>
@@ -62,7 +58,7 @@ const NavDropdown = ({
             <ul className={classes.mobileLinksList}>
                 <NavLinkSection
                     navLinks={navLinks}
-                    closeNavDropdown={closeNavDropdown}
+                    toggleDisplayNav={toggleDisplayNav}
                 />
             </ul>
         </nav>
@@ -72,8 +68,7 @@ const NavDropdown = ({
 NavDropdown.propTypes = {
     displayNavDropdown: PropTypes.bool,
     navLinks: PropTypes.arrayOf(PropTypes.object),
-    logo: PropTypes.String,
-    closeNavDropdown: PropTypes.func,
+    toggleDisplayNav: PropTypes.func,
 };
 
 export default NavDropdown;

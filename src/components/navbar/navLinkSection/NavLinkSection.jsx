@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import classes from './NavLinkSection.module.scss';
 import PropTypes from 'prop-types';
@@ -13,10 +13,10 @@ const NavLinkSection = ({ navLinks, toggleDisplayNav }) => {
         openNewsletterSignupModal(true);
     };
 
-    return (
-        <Fragment>
-            {navLinks.map(({ display, path, external, modal }) => {
-                return path ? (
+    const findNavOutput = ({ display, path, external, modal }) => {
+        switch (true) {
+            case path !== undefined:
+                return (
                     <Link
                         key={display}
                         className={classes.link}
@@ -25,7 +25,9 @@ const NavLinkSection = ({ navLinks, toggleDisplayNav }) => {
                     >
                         {display}
                     </Link>
-                ) : external ? (
+                );
+            case external !== undefined:
+                return (
                     <a
                         key={display}
                         className={classes.link}
@@ -36,7 +38,9 @@ const NavLinkSection = ({ navLinks, toggleDisplayNav }) => {
                     >
                         {display}
                     </a>
-                ) : modal ? (
+                );
+            case modal !== undefined:
+                return (
                     <a
                         key={display}
                         className={classes.link}
@@ -45,10 +49,18 @@ const NavLinkSection = ({ navLinks, toggleDisplayNav }) => {
                     >
                         {display}
                     </a>
-                ) : null;
-            })}
-        </Fragment>
-    );
+                );
+            default:
+                return;
+        }
+    };
+
+    const list = [];
+    navLinks.map((navLinkObj) => {
+        list.push(findNavOutput(navLinkObj));
+    });
+
+    return list;
 };
 
 NavLinkSection.propTypes = {

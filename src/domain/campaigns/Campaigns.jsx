@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { CampaignsGroup, AppDownloadButtons } from '../../components';
-import { campaignsURL, pastCampaignsURL } from '../../utils/constants';
+import { campaignsURL, pastCampaignsURL, Months} from '../../utils/constants';
 import classes from './Campaigns.module.scss';
 
 const Campaigns = () => {
   const [campaigns, setCampaigns] = useState([]);
   const [pastCampaigns, setPastCampaigns] = useState([]);
-  const Months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
   const currentDate = new Date()
   useEffect(() => {
     const fetchCampaigns = async () => {

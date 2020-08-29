@@ -28,3 +28,4 @@ export const pressCoverageURL = "https://api.now-u.com/api/v1/press_coverage";
 export const faqsURL = "https://api.now-u.com/api/v1/faqs";
 export const privacyPolicyURL = "http://share.now-u.com/legal/now-u_privacy_policy.pdf";
 export const termsAndConditionsURL = "https://share.now-u.com/legal/now-u_users_Ts&Cs.pdf";
+export const Months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];

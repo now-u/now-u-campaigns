@@ -21,9 +21,6 @@
         @media (max-width: $medium) {
             grid-template-columns: 1fr;
         }
-        @media (max-width: $small) {
-            grid-template-columns: 1fr;
-        }
 
         .blogs {
             max-width: 100%;
@@ -39,8 +36,6 @@
                 max-width: 100%;
                 margin: 10px 0px;
                 padding: 0px 10px;
-                border-right: none;
-                border-bottom: 1pt solid $grey;
             }
 
             .searchControls {

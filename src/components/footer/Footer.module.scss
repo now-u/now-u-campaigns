@@ -35,6 +35,9 @@
     }    
     .appDownloadLinks {
       margin: 0 -16px 20px 0 ;
+      @media (max-width: $medium) {
+        margin: 0;
+      }
     }    
     @media (max-width: 900px) {
         width: 100%;

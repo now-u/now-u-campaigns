@@ -37,3 +37,19 @@ export const termsAndConditionsURL =
     'https://share.now-u.com/legal/now-u_users_Ts&Cs.pdf';
 export const partnershipGuideURL =
     'https://share.now-u.com/partners/now-u_charity_collaboration_&_partnership_guide.pdf';
+export const pastCampaignsURL =
+    'https://api.now-u.com/api/v1/campaigns?old=true';
+export const Months = [
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+    'July',
+    'August',
+    'September',
+    'October',
+    'November',
+    'December',
+];

@@ -65,6 +65,7 @@
     max-height: 300px;
     position: relative;
     img {
+        object-fit: cover;
         max-width: 100%;
         max-height: 300px;
         display: block;
@@ -101,8 +102,7 @@
     }
 }
 
-.blogHashtags{
-    
+.blogHashtags {
     span {
         font-weight: normal;
         font-size: 17px;
@@ -111,7 +111,7 @@
     }
 }
 
-.blogTitle{
+.blogTitle {
     font-weight: $bold;
     font-size: 24px;
     line-height: 27px;
@@ -125,7 +125,7 @@
     -webkit-box-orient: vertical;
 }
 
-.blogAuthor{
+.blogAuthor {
     padding: 0;
     font-weight: normal;
     font-size: 17px;
@@ -139,7 +139,6 @@
         margin: 0;
         margin-right: 10px;
     }
-
 }
 
 .readingTime {
@@ -165,7 +164,7 @@
     text-align: left;
 }
 
-@media(max-width: $medium) {
+@media (max-width: $medium) {
     .content {
         grid-template-columns: 1fr;
     }
@@ -179,7 +178,7 @@
     }
 }
 
-@media(max-width: $small) {
+@media (max-width: $small) {
     .content {
         grid-template-columns: 1fr;
     }

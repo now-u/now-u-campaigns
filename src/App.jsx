@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
-import { BrowserRouter, Switch, Route} from 'react-router-dom';
-import { Campaigns, Campaign, Homepage, AboutUs, NowUApp, GetInTouch, Press, FAQs, err404 } from './domain';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { Campaigns, Campaign, Homepage, AboutUs, NowUApp, GetInTouch, Press, FAQs, err404, Blog, BlogArticle } from './domain';
 import { AnnounceBar, TopNav, Footer, NewsletterSignupModal } from './components';
 import { ModalService } from "./services";
 import './App.scss';
@@ -58,6 +58,8 @@ const App = () => {
           <Route path="/get-in-touch" exact component={GetInTouch} />
           <Route path="/press" exact component={Press} />
           <Route path="/faqs" exact component={FAQs} />
+          <Route path="/blog" exact component={Blog} />
+          <Route path="/blog/:id" exact component={BlogArticle} />
           <Route exact component={err404} />
         </Switch>
       </div>

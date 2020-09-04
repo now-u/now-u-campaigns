@@ -21,7 +21,7 @@
     "build": "react-scripts build",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "lint": "eslint src/**/*.js src/**/*.jsx --fix"
+    "lint": "eslint '**/*.{js,jsx}' --fix"
   },
   "babel": {
     "presets": [

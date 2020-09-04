@@ -7,7 +7,7 @@ const MonthCampaigns = ({ campaigns }) => {
 
     return (
         <div className={classes.container}>
-            <div className={classes.title}>This month campaign</div>
+            <div className={classes.title}>This month&apos;s campaign</div>
             {campaigns.map(campaign => (
                 <CampaignAd campaign={campaign} key={campaign.id} />
             ))}

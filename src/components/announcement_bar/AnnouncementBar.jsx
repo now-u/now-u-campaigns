@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 import classes from "./AnnouncementBar.module.scss";
 
 const App = () => {
-	return (
-		<div className={classes.announcements}>
+  return (
+    <div className={classes.announcements}>
       New campaigns added <Link to={"/campaigns"}> &nbsp;Check them out!</Link>
-		</div>
-	);
+    </div>
+  );
 };
 
 export default App;

@@ -16,6 +16,7 @@ module.exports = {
   "plugins": [
     "react"
   ],
+  "ignorePatterns": [".eslintrc.js"],
   "rules": {
     "indent": [2,2],
     "linebreak-style": [

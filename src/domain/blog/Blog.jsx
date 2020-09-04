@@ -34,15 +34,15 @@ const Blog = () => {
       <div>
         {blogHighlighted &&
                     <div className={classes.highlightedBlog}>
-                    	<BlogPoster blog={blogHighlighted} highlighted />
+                      <BlogPoster blog={blogHighlighted} highlighted />
                     </div>
         }
         {blogItems &&
-                    <div className={classes.blogList}>
-                    	{blogItems.map((blog) => (
-                    		<BlogPoster blog={blog} key={blog.id} />
-                    	))}
-                    </div>
+<div className={classes.blogList}>
+  {blogItems.map((blog) => (
+    <BlogPoster blog={blog} key={blog.id} />
+  ))}
+</div>
         }
       </div>
     );

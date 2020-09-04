@@ -22,9 +22,9 @@ const SearchDropdown = ({ title, values }) => {
       </div>
       {listOpen &&
                 <div className={classes.dropdownList}>
-                	{values.map((value, index) => (
-                		<div className={classes.listItem} key={index} onClick={onListItemClick}>{value}</div>
-                	))}
+                  {values.map((value, index) => (
+                    <div className={classes.listItem} key={index} onClick={onListItemClick}>{value}</div>
+                  ))}
                 </div>
       }
     </div>

@@ -32,14 +32,14 @@ const Blog = ({ blog, sections }) => {
         </div>
         {reading_time &&
                     <div className={classes.readingTime}>
-                    	<i className="material-icons">schedule</i>
-                    	{reading_time} min
+                      <i className="material-icons">schedule</i>
+                      {reading_time} min
                     </div>
         }
         {subtitle &&
-                    <div className={classes.blogSubtitle}>
-                    	<Text type="p">{subtitle}</Text>
-                    </div>
+<div className={classes.blogSubtitle}>
+  <Text type="p">{subtitle}</Text>
+</div>
         }
         <div className={classes.blogContent}>
           {sections.map(section => {
@@ -77,17 +77,17 @@ const Blog = ({ blog, sections }) => {
         <AppDownloadRectangle />
         {user &&
                     <div className={classes.authorInfo}>
-                    	<div className={classes.author}>
-                    		{user.profile_picture_url &&
-                                <Avatar src={user.profile_picture_url} />
-                    		}
-                    		{user.full_name && 
-                                <Text type="h4" className={classes.authorName}>{user.full_name}</Text>
-                    		}
-                    	</div>
-                    	{user.description &&
-                            <Text type="p" className={classes.authorDescription}>{user.description}</Text>
-                    	}
+                      <div className={classes.author}>
+                        {user.profile_picture_url &&
+<Avatar src={user.profile_picture_url} />
+                        }
+                        {user.full_name && 
+<Text type="h4" className={classes.authorName}>{user.full_name}</Text>
+                        }
+                      </div>
+                      {user.description &&
+<Text type="p" className={classes.authorDescription}>{user.description}</Text>
+                      }
                     </div>
         }
       </div>

@@ -11,7 +11,8 @@ import { MonthCampaigns } from './components';
 const Blog = () => {
     const [blogs, setBlogs] = useState([]);
     const [filteredBlogs, setFilteredBlogs] = useState([]);
-    const [campaigns, setCampaigns] = useState([]);
+    const [allCampaigns, setAllCampaigns] = useState([]);
+    const [monthCampaigns, setMonthCampaigns] = useState([]);
 
     const breakpoints = useBreakpoint();
     const smallDevice = !!breakpoints.sm;
@@ -30,11 +31,12 @@ const Blog = () => {
         const fetchCampaigns = async () => {
           const resp = await fetch(campaignsURL);
           const campaigns = await resp.json();
+          setMonthCampaigns(campaigns?.data);
 
           // Fetch Old campaigns as well, as blogs might be linked to them
           const respOldCampaigns = await fetch(`${campaignsURL}?old=true`);
           const oldCampaigns = await respOldCampaigns.json();
-          setCampaigns([...campaigns?.data, ...oldCampaigns?.data]);
+          setAllCampaigns([...campaigns?.data, ...oldCampaigns?.data]);
         };
 
         fetchCampaigns();
@@ -89,13 +91,13 @@ const Blog = () => {
             <div className={classes.content}>
                 <div className={classes.blogs}>
                     <div className={classes.searchContainer}>
-                        <BlogSearchControls blogs={blogs} campaigns={campaigns} filterBlogs={filterBlogs} />
+                        <BlogSearchControls blogs={blogs} campaigns={allCampaigns} filterBlogs={filterBlogs} />
                     </div>
                     <BlogPosters />
                 </div>
                 <div className={classes.blogAds}>
                     <AppDownloadSquare />
-                    <MonthCampaigns campaigns={campaigns} />
+                    <MonthCampaigns campaigns={monthCampaigns} />
                 </div>
             </div>
         </div>

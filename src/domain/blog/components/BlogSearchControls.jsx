@@ -3,12 +3,13 @@ import PropTypes from 'prop-types';
 import classes from '../Blog.module.scss';
 import { SearchDropdown } from '../../../components';
 
-// eslint-disable-next-line no-unused-vars
 const BlogSearchControls = ({ blogs, campaigns, filterBlogs }) => {
 
     const [campaignsToShow, setCampaignsToShow] = useState([]);
 
     useEffect(() => {
+        // Only campaigns that current blogs are linked to, should be shown in the dropdown
+        // Filter the campaigns to include only campaigns linked to blogs
         const filteredCampaigns = campaigns.map(campaign => {
             const campaignBlogExists = blogs.some((blog) => blog.campaign_id === campaign.id);
             if(campaignBlogExists) {
@@ -22,6 +23,7 @@ const BlogSearchControls = ({ blogs, campaigns, filterBlogs }) => {
         setCampaignsToShow(filteredCampaigns);
     }, [blogs, campaigns]);
 
+    // Callback called when a dropdown item is clicked
     const toggleSearchDropdown = (campaignModified) => {
         const filteredCampaigns = campaignsToShow.map(campaign => {
             if(campaign.id === campaignModified.id) {
@@ -33,6 +35,7 @@ const BlogSearchControls = ({ blogs, campaigns, filterBlogs }) => {
         filterBlogsToShow(filteredCampaigns);
     };
 
+    // Callback to filter which blogs to show based on the selected campaigns
     const filterBlogsToShow = (filteredCampaignsToShow) => {
         const filteredBlogs = blogs.map(blog => {
             const showBlog = filteredCampaignsToShow.find(campaign => campaign.id === blog.campaign_id)?.selected;

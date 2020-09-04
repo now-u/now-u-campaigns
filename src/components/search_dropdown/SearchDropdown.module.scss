@@ -44,12 +44,11 @@
 .dropdownList {
     width: 98%;
     max-height: 220px;
-    overflow-y: auto;
+    overflow-y: scroll;
     position: absolute;
     transition: all 0.5s ease;
     margin-top: 0.5rem;
     left: 0;
-    overflow: hidden;
     z-index: 1;
     background: $white;
     cursor: default;
@@ -68,6 +67,10 @@
         color: $grey;
         padding: 10px 5px;
         border-bottom: 2px solid $lightGrey;
+
+        &:last-child {
+            border-bottom: none;
+        }
 
         display: flex;
         flex-direction: row;

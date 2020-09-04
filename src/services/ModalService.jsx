@@ -14,29 +14,29 @@ import ReactDOM from "react-dom";
  * @see Modal for modalProps
  */
 export const open = (modalContentComponent, contentProps, modalProps) => {
-  const modalContentElement = React.createElement(
-    modalContentComponent,
-    contentProps
-  );
+	const modalContentElement = React.createElement(
+		modalContentComponent,
+		contentProps
+	);
 
-  const modalRef = React.createRef();
-  const modalElement = React.createElement(
-    Modal,
-    {
-      ...modalProps,
-      ref: modalRef
-    },
-    modalContentElement
-  );
+	const modalRef = React.createRef();
+	const modalElement = React.createElement(
+		Modal,
+		{
+			...modalProps,
+			ref: modalRef
+		},
+		modalContentElement
+	);
 
-  // Render modal in-place of the newly created div element on the body
-  ReactDOM.render(
-    modalElement,
-    document.createElement("div")
-  );
+	// Render modal in-place of the newly created div element on the body
+	ReactDOM.render(
+		modalElement,
+		document.createElement("div")
+	);
 
-  return modalRef;
-}
+	return modalRef;
+};
 
 /**
  * Closes the open Modal attached to modalRef
@@ -44,10 +44,10 @@ export const open = (modalContentComponent, contentProps, modalProps) => {
  * @param modalRef RefObject for the currently rendered Modal component.
  */
 export const close = (modalRef) => {
-  modalRef.current.handleClose();
-}
+	modalRef.current.handleClose();
+};
 
 export default {
-  open,
-  close,
-}
+	open,
+	close,
+};

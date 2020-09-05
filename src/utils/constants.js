@@ -1,12 +1,9 @@
-// import { privacyNotice } from '../assets';
-
 export const navLinks = [
     { display: 'Campaigns', path: '/campaigns' },
     { display: 'Now-u app', path: '/now-u-app' },
     { display: 'About us', path: '/aboutus' },
     { display: 'Blog', path: '/blog' },
     { display: 'Get in touch', path: '/get-in-touch' },
-    // { display: 'Privacy Policy', external: privacyNotice },
     { display: 'Press', path: '/press' },
     { display: 'FAQ', path: '/faqs' },
 ];
@@ -19,11 +16,10 @@ export const mobileNavLinks = [
     { display: 'Get in touch', path: '/get-in-touch' },
     { display: 'Press', path: '/press' },
     { display: 'FAQ', path: '/faqs' },
-    // { display: 'Newsletter', path: '/press' },
-    // { display: 'Privacy Policy', external: privacyNotice },
 ];
 
 export const campaignsURL = 'https://api.now-u.com/api/v1/campaigns';
+export const pastCampaignsURL = "https://api.now-u.com/api/v1/campaigns?old=true";
 export const partnersURL = 'https://api.now-u.com/api/v1/organisations';
 export const pressCoverageURL = 'https://api.now-u.com/api/v1/press_coverage';
 export const faqsURL = 'https://api.now-u.com/api/v1/faqs';
@@ -37,6 +33,7 @@ export const termsAndConditionsURL =
     'https://share.now-u.com/legal/now-u_users_Ts&Cs.pdf';
 export const partnershipGuideURL =
     'https://share.now-u.com/partners/now-u_charity_collaboration_&_partnership_guide.pdf';
+<<<<<<< HEAD
 export const pastCampaignsURL =
     'https://api.now-u.com/api/v1/campaigns?old=true';
 export const Months = [
@@ -53,3 +50,6 @@ export const Months = [
     'November',
     'December',
 ];
+=======
+export const Months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+>>>>>>> 4cc37992ce24411c6500101728f06c7ad38f30cc

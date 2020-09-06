@@ -1,4 +1,6 @@
 export const campaignsURL = 'https://api.now-u.com/api/v1/campaigns';
+export const pastCampaignsURL =
+    'https://api.now-u.com/api/v1/campaigns?old=true';
 export const partnersURL = 'https://api.now-u.com/api/v1/organisations';
 export const pressCoverageURL = 'https://api.now-u.com/api/v1/press_coverage';
 export const faqsURL = 'https://api.now-u.com/api/v1/faqs';
@@ -37,4 +39,19 @@ export const mobileNavLinks = [
     { display: 'FAQ', path: '/faqs' },
     { display: 'Newsletter', modal: 'NewsletterSignupModal' },
     { display: 'Privacy Policy', external: privacyPolicyURL },
+];
+
+export const Months = [
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+    'July',
+    'August',
+    'September',
+    'October',
+    'November',
+    'December',
 ];

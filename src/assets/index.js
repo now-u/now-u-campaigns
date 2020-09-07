@@ -35,3 +35,4 @@ export { default as searchIcon } from './search-icon.svg';
 export { default as defaultBlogImg } from './images/default-blog-img.jpeg';
 export { default as dropDownArrow } from './drop-down-arrow.svg';
 export { default as dropUpArrow } from './drop-up-arrow.svg';
+export { default as mobileLogin } from './mobileLogin.svg';

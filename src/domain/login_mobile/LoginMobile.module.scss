@@ -1,0 +1,32 @@
+@import '../../utils/variables';
+
+.loginMobileContainer {
+  padding-top: 5%;
+  background-color: #F7F8FC;
+  display: flex;
+  width: 100vw;
+  text-align: center;
+  max-height: 75vh;
+  .messageContent {
+    margin: 100px 0 0 100px;
+    width: 20%;
+    height: 80vh;
+    .messageHeader {
+      font-family: $headerFont;
+      color: black;
+      text-align: left;
+    }
+    .message {
+      text-align: left;
+    }
+  }
+  .image {
+    width: 80%;
+  }
+}
+
+
+
+@media (max-width: $medium) {
+  
+}

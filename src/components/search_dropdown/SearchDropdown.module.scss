@@ -44,12 +44,11 @@
 .dropdownList {
     width: 98%;
     max-height: 220px;
-    overflow-y: auto;
+    overflow-y: scroll;
     position: absolute;
     transition: all 0.5s ease;
     margin-top: 0.5rem;
     left: 0;
-    overflow: hidden;
     z-index: 1;
     background: $white;
     cursor: default;
@@ -63,11 +62,24 @@
         font-weight: $semi-bold;
         font-size: 18px;
         letter-spacing: -0.02em;
-        line-height: 12px;
+        line-height: 1.5;
         text-align: left;
         color: $grey;
         padding: 10px 5px;
         border-bottom: 2px solid $lightGrey;
+
+        &:last-child {
+            border-bottom: none;
+        }
+
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+
+        img {
+            padding: 0px 10px;
+        }
     }
 }
 

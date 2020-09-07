@@ -5,6 +5,7 @@ import { mobileLogin } from '../../assets';
 
 const LoginMobile = () => {
     return (
+      <div className={classes.background}>
         <div className={classes.loginMobileContainer}>
             <div className={classes.messageContent}>
                 <Text type="h2" className={classes.messageHeader}>Oops!</Text>
@@ -14,6 +15,7 @@ const LoginMobile = () => {
               <img src={mobileLogin} alt="Mobile Login Image" className={classes.mobileImage} />
             </div>
         </div>
+      </div>
     );
 }
 

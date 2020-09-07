@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import classes from './SearchDropdown.module.scss';
-import { dropDownArrow, dropUpArrow } from '../../assets';
+import {
+    dropDownArrow,
+    dropUpArrow,
+    checkboxActive,
+    checkboxInactive,
+} from '../../assets';
 
-const SearchDropdown = ({ title, values }) => {
+const SearchDropdown = ({ title, values, onListItemClick }) => {
     const [listOpen, setListOpen] = useState(false);
-
-    const onListItemClick = () => {
-        setListOpen(false);
-    };
 
     return (
         <div
@@ -29,13 +30,21 @@ const SearchDropdown = ({ title, values }) => {
             </div>
             {listOpen && (
                 <div className={classes.dropdownList}>
-                    {values.map((value, index) => (
+                    {values.map((value) => (
                         <div
                             className={classes.listItem}
-                            key={index}
-                            onClick={onListItemClick}
+                            key={value.id}
+                            onClick={() => onListItemClick(value)}
                         >
-                            {value}
+                            {value.selected ? (
+                                <img src={checkboxActive} alt='Selected' />
+                            ) : (
+                                <img
+                                    src={checkboxInactive}
+                                    alt='Value Deselected'
+                                />
+                            )}
+                            {value.title}
                         </div>
                     ))}
                 </div>
@@ -47,7 +56,7 @@ const SearchDropdown = ({ title, values }) => {
 SearchDropdown.propTypes = {
     title: PropTypes.string.isRequired,
     values: PropTypes.array.isRequired,
-    onClickHandler: PropTypes.func,
+    onListItemClick: PropTypes.func,
 };
 
 export default SearchDropdown;

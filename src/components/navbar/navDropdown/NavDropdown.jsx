@@ -2,7 +2,6 @@ import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-
 import classes from './NavDropdown.module.scss';
 import { nowUOrange } from '../../../assets';
 import NavLinkSection from '../navLinkSection/NavLinkSection';
@@ -19,14 +18,16 @@ const NavDropdown = ({ displayNavDropdown, navLinks, toggleDisplayNav }) => {
             ) {
                 return;
             }
-            if (
-                dropdownRef.current &&
-                !dropdownRef.current.contains(event.target)
-            ) {
-                toggleDisplayNav(false);
+            if (!dropdownRef.current.contains(event.target)) {
+                toggleDisplayNav('off');
             }
         }
         document.addEventListener('mousedown', handleClickOutsideDropdown);
+        return () =>
+            document.removeEventListener(
+                'mousedown',
+                handleClickOutsideDropdown
+            );
     }, [toggleDisplayNav, displayNavDropdown]);
 
     return (
@@ -40,7 +41,7 @@ const NavDropdown = ({ displayNavDropdown, navLinks, toggleDisplayNav }) => {
                 <Link
                     to={'/'}
                     className={classes.mobileLogoContainer}
-                    onClick={toggleDisplayNav}
+                    onClick={() => toggleDisplayNav()}
                 >
                     <img className={classes.logo} src={nowUOrange} alt='logo' />
                 </Link>
@@ -49,7 +50,7 @@ const NavDropdown = ({ displayNavDropdown, navLinks, toggleDisplayNav }) => {
                         'medium material-icons',
                         classes.close
                     )}
-                    onClick={toggleDisplayNav}
+                    onClick={() => toggleDisplayNav()}
                 >
                     close
                 </i>

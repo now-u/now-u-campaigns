@@ -13,13 +13,15 @@ import classes from './Navbar.module.scss';
 
 const Navbar = () => {
     const [displayNavDropdown, setDisplayNavDropdown] = useState(false);
-    const toggleDisplayNav = (...args) => {
-        if (args.length === 0) {
+    const toggleDisplayNav = (toggle) => {
+        if (toggle) {
+            if (toggle === 'off') {
+                setDisplayNavDropdown(false);
+            } else {
+                setDisplayNavDropdown(true);
+            }
+        } else {
             setDisplayNavDropdown((prevState) => !prevState);
-        }
-        if (args.length > 0) {
-            const direction = args[0];
-            setDisplayNavDropdown(direction);
         }
     };
 
@@ -39,7 +41,7 @@ const Navbar = () => {
                 </ul>
                 <div
                     className={classes.navBurgerContainer}
-                    onMouseDown={() => toggleDisplayNav()}
+                    onClick={toggleDisplayNav}
                 >
                     <i
                         className={classNames(

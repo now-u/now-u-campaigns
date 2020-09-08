@@ -21,7 +21,9 @@ const NavLinkSection = ({ navLinks, toggleDisplayNav }) => {
                         key={display}
                         className={classes.link}
                         to={path}
-                        onClick={toggleDisplayNav}
+                        onClick={
+                            toggleDisplayNav ? () => toggleDisplayNav() : null
+                        }
                     >
                         {display}
                     </Link>
@@ -34,7 +36,9 @@ const NavLinkSection = ({ navLinks, toggleDisplayNav }) => {
                         href={external}
                         target='_blank'
                         rel='noopener noreferrer'
-                        onClick={toggleDisplayNav}
+                        onClick={
+                            toggleDisplayNav ? () => toggleDisplayNav() : null
+                        }
                     >
                         {display}
                     </a>

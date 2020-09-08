@@ -41,7 +41,7 @@ const Navbar = () => {
                 </ul>
                 <div
                     className={classes.navBurgerContainer}
-                    onClick={toggleDisplayNav}
+                    onClick={() => toggleDisplayNav()}
                 >
                     <i
                         className={classNames(

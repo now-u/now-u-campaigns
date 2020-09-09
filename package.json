@@ -23,7 +23,9 @@
     "lint": "eslint .",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "test": "react-scripts test"
+    "test": "react-scripts test",
+    "test:watch": "jest --watchAll --verbose",
+    "test:coverage": "jest --verbose --coverage"
   },
   "babel": {
     "presets": [

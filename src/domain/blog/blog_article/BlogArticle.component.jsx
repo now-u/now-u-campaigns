@@ -59,7 +59,11 @@ const Blog = ({ blog, sections }) => {
                                     <Text type="p" className={classes.textSectionTitle}>
                                         {section.title}
                                     </Text>
-                                    <ReactMarkdown source={section.content} escapeHtml={false}/>
+                                    <ReactMarkdown 
+                                        className={classes.textSectionContent}
+                                        source={section.content} 
+                                        escapeHtml={false}
+                                    />
                                 </div>
                             )
                         }

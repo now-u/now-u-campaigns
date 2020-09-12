@@ -49,6 +49,7 @@
 .blogAds {
     display: flex;
     flex-direction: column;
+    align-items: center;
     padding: 50px;
     > * {
         margin-bottom: 50px;
@@ -64,12 +65,12 @@
     flex-grow: 2;
     max-height: 300px;
     position: relative;
-    & img {
+    img {
         max-width: 100%;
         max-height: 300px;
         display: block;
     }
-    & div {
+    div {
         position: absolute;
         left: 0;
         top: 0;
@@ -81,7 +82,7 @@
         padding: 0px 20%;
         background-color: rgba(255, 255, 255, 0.1);
     }
-    & p {
+    p {
         margin: 0px;
         font-weight: $bold;
         font-size: 36px;
@@ -118,6 +119,11 @@
     text-align: left;
     color: $black;
     margin: 0px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
 }
 
 .blogAuthor{
@@ -130,7 +136,7 @@
     display: flex;
     align-items: center;
 
-    & p {
+    p {
         margin: 0;
         margin-right: 10px;
     }
@@ -148,7 +154,7 @@
     align-items: center;
     justify-content: space-between;
 
-    & i {
+    i {
         margin-right: 5px;
     }
 }

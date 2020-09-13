@@ -1,0 +1,48 @@
+@import '../../../../utils/variables';
+@import '../../homeMixin';
+
+.takeActionContainer {
+    @include home('section', 'sectionNoTopPadding');
+    position: relative;
+
+    @media (max-width: $medium) {
+        @include home('section');
+    }
+
+    .downArrow {
+        z-index: 1;
+        font-size: 5em;
+        color: $grey;
+        align-self: center;
+        justify-self: center;
+        animation: pulseDown 1.5s infinite;
+        bottom: 0;
+
+        @keyframes pulseDown {
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-3px);
+            }
+        }
+
+        @media (max-width: $medium) {
+            color: $white;
+            position: absolute;
+            top: -100px;
+            bottom: auto;
+        }
+    }
+    .content {
+        .textSection {
+            .header {
+                @include home('header');
+            }
+            .description {
+                @include home('description');
+            }
+        }
+    }
+}

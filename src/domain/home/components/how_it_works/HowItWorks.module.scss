@@ -1,125 +1,134 @@
 @import '../../../../utils/variables';
+@import '../../homeMixin';
 
-.actionMesgContainer {
-  background: $lightGrey;
-  min-height: 50vh;
-  display: flex;
-  padding: 18px;
-  flex-direction: column;
-}
-.downArrow {
-  font-size: 5em;
-  color: $grey;
-  align-self: center;
-  animation: pulseDown 1s infinite;
-  right: 50%;
-  bottom: 0;
-}
-@keyframes pulseDown {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-4px);
-  }
-}
+.howItWorksContainer {
+    @include home('section', 'sectionHowItWorks');
+    background-color: $bgColorHowItWorks;
 
-.actionMesg {
-  color: $blue;
-  text-align: left;
-  margin: auto;
-  max-width: 900px;
-  & h1 {
-    font-family: $headerFont;
-  }
-  & p {
-    padding-bottom: 20px;
-  }
-}
-
-// how it works
-.processContainer {
-  display: flex;
-  flex-direction: column;
-  color: $blue;
-  margin: 4em 0;
-  & h1 {
-    text-align: center;
-  }
-  & .stepContainer:nth-of-type(2) {
-    background: $lightGrey;
-    text-align: left;
-    & .stepContent {
-      flex-wrap: wrap;
+    @media (max-width: $medium) {
+        padding-left: 20px;
+        padding-right: 20px;
     }
-  }
-}
-.stepContainer {
-  padding: 0 18px;
-  text-align: right;
-}
-.stepContent {
-  max-width: 1100px;
-  display: flex;
-  flex-wrap: wrap-reverse;
-  align-items: center;
-  margin: 4em auto;
-  width: 100%;
-  justify-content: space-between;
-}
-.stepDetails {
-  flex: 1 50%;
-  max-width: 400px;
-  position: relative;
-  & h3 {
-    margin-bottom: 0px;
-    font-weight: $blackBold;
-  }
-  & p {
-    margin: 0px;
-  }
-}
-.stepBackground {
-  position: absolute;
-  width: 50%;
-  left: 0;
-  right: 0;
-  margin: auto;
-}
-.stepImg {
-  width: 50%;
-  display: flex;
-  align-items: center;
-  min-width: 300px;
-  max-width: 500px;
-  margin-bottom: 4em;
-  & img {
-    max-width: 100%;
-  }
-}
 
-.cta {
-  text-align: center;
-  margin: auto;
-  padding: 0 18px;
-
-  & h4 {
-    color: $blue;
-    width: 100%;
-  }
-}
-
-@media(max-width: $small) {
-  .stepImg {
-    display: none;
-  }
-  .stepContainer {
-    text-align: center;
-  }
-  .processContainer {
-    & .stepContainer:nth-of-type(2) {
-      text-align: center;
+    h2 {
+        @include home('header');
+        margin-bottom: 0;
     }
-  }
+    .stepContainer {
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+        margin: 10px;
+        margin: 20px;
+        min-height: 500px;
+        width: 95%;
+        max-width: 1000px;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @media (max-width: $medium) {
+            flex-direction: column;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            width: 100%;
+        }
+
+        .textSection {
+            margin: 0 10px;
+            position: relative;
+            max-width: 400px;
+
+            .header {
+                @include home('subHeader');
+            }
+            .description {
+                @include home('subDescription');
+                @media (max-width: $small) {
+                    text-align: left;
+                }
+            }
+
+            .fadedNumber {
+                background-repeat: no-repeat;
+                position: absolute;
+                top: -50%;
+                left: 25%;
+                height: 300px;
+                width: 300px;
+            }
+            #fadedNumberOne {
+                background-image: url('../../../../assets/homepage/step1.svg');
+            }
+            #fadedNumberTwo {
+                background-image: url('../../../../assets/homepage/step2.svg');
+            }
+            #fadedNumberThree {
+                background-image: url('../../../../assets/homepage/step3.svg');
+            }
+        }
+        .imageSection {
+            max-height: 400px;
+            max-width: 400px;
+            margin: 0;
+
+            @media (max-width: $medium) {
+                order: -1;
+                margin-bottom: 100px;
+            }
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+        .backgroundShape {
+            z-index: -1;
+            background-color: $bgColorHowItWorksAlternative;
+            position: absolute;
+            top: 0;
+            right: calc((100vw - 100%) / 2 * -1);
+            bottom: 0;
+            left: calc((100vw - 100%) / 2 * -1);
+
+            @media (max-width: $medium) {
+                top: 100px;
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: $bgDetailSlantAngle;
+                top: -$bgDetailSlantAngle;
+                background-color: $bgColorHowItWorksAlternative;
+                clip-path: polygon(100% 0, 0 100%, 100% 100%);
+            }
+            &::after {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: $bgDetailSlantAngle;
+                bottom: -$bgDetailSlantAngle;
+                background-color: $bgColorHowItWorksAlternative;
+                clip-path: polygon(100% 100%, 100% 0, 0 0);
+            }
+        }
+        &:nth-child(3) {
+            overflow: visible;
+        }
+    }
+    .cta {
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h3 {
+            margin: 0;
+        }
+        .downloadBtnContainer {
+            height: 100px;
+        }
+    }
 }

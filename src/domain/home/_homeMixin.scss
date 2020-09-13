@@ -1,0 +1,150 @@
+@import '../../utils/variables';
+html {
+    scroll-behavior: smooth;
+}
+
+$bgColorIntro: $brandGradient;
+$bgColorTakeAction: $white;
+$bgColorCampaigns: $lightGrey;
+$bgColorHowItWorks: $bgColorTakeAction;
+$bgColorHowItWorksAlternative: $bgColorCampaigns;
+$bgColorPartners: $bgColorCampaigns;
+$bgColorFooter: #fff8f1;
+
+$bgDetailSlantAngle: 80px;
+
+@mixin home($unit, $override: null) {
+    @if $unit == 'section' {
+        box-sizing: border-box;
+        padding: 100px;
+
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        @media (max-width: $max-width) {
+            padding: 100px 70px;
+        }
+        @media (max-width: $medium) {
+            padding: 50px 70px;
+        }
+        @media (max-width: $small) {
+            padding: 110px 25px;
+        }
+
+        @if $override == 'sectionHowItWorks' {
+            padding-top: 0;
+            padding-left: 0;
+            padding-right: 0;
+            @media (max-width: $max-width) {
+                padding-top: 0;
+                padding-left: 0;
+                padding-right: 0;
+            }
+            @media (max-width: $medium) {
+                padding-top: 0;
+                padding-left: 0;
+                padding-right: 0;
+            }
+            @media (max-width: $small) {
+                padding-top: 0;
+                padding-left: 0;
+                padding-right: 0;
+            }
+        }
+        @if $override == 'sectionNoTopPadding' {
+            padding-top: 0;
+            @media (max-width: $max-width) {
+                padding-top: 0;
+            }
+            @media (max-width: $medium) {
+                padding-top: 0;
+            }
+            @media (max-width: $small) {
+                padding-top: 0;
+            }
+        }
+        @if $override == 'sectionNoBottomPadding' {
+            padding-bottom: 3px;
+            @media (max-width: $max-width) {
+                padding-bottom: 3px;
+            }
+            @media (max-width: $medium) {
+                padding-bottom: 3px;
+            }
+            @media (max-width: $small) {
+                padding-bottom: 3px;
+            }
+        }
+        @if $override == 'sectionNoSidePadding' {
+            padding-left: 0;
+            padding-right: 0;
+            @media (max-width: $max-width) {
+                padding-left: 0;
+                padding-right: 0;
+            }
+            @media (max-width: $medium) {
+                padding-left: 0;
+                padding-right: 0;
+            }
+            @media (max-width: $small) {
+                padding-left: 0;
+                padding-right: 0;
+            }
+        }
+    }
+    @if $unit == 'content' {
+        @media (max-width: $max-width) {
+            width: 100%;
+        }
+    }
+    @if $unit == 'header' {
+        font-family: $headerFont;
+        font-size: 70px;
+        font-weight: $blackBold;
+        line-height: 1;
+        color: $darkGrey;
+        margin: 0 0 10px 0;
+
+        @media (max-width: $medium) {
+            font-size: 50px;
+        }
+        @media (max-width: $small) {
+            text-align: center;
+        }
+    }
+    @if $unit == 'subHeader' {
+        font-family: $headerFont;
+        font-size: 40px;
+        font-weight: $blackBold;
+        line-height: 1;
+        color: $darkGrey;
+        margin: 0;
+    }
+    @if $unit == 'description' {
+        font-size: 25px;
+        font-weight: $regular;
+        line-height: 1.7;
+        color: $mediumGrey;
+        max-width: 100%;
+        margin-bottom: 0;
+
+        @media (max-width: $max-width) {
+            font-size: 21px;
+        }
+        @media (max-width: $small) {
+            text-align: center;
+        }
+    }
+    @if $unit == 'subDescription' {
+        font-size: 25px;
+        font-weight: $regular;
+        color: $mediumGrey;
+        max-width: 100%;
+        margin-bottom: 0;
+        margin-top: 10px;
+    }
+    @if $unit == 'campaignSteps' {
+        opacity: 0.3;
+    }
+}

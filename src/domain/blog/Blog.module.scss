@@ -38,19 +38,19 @@
                 padding: 0px 10px;
             }
 
-            .searchControls {
+
+            .SearchControls {
+                //BlogSearchControls component container
                 display: grid;
                 grid-template-columns: 1fr 1fr;
                 padding-bottom: 50px;
                 text-align: left;
-
-                .SearchControls {
-                    //BlogSearchControls component container
-                }
             }
 
             .highlightedBlog,
             .blogList {
+                padding-bottom: 20px;	
+                z-index: 1;
                 //similarities
                 .blogPost {
                     display: flex;

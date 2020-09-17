@@ -1,0 +1,90 @@
+@import '../../utils/variables';
+
+.dropdownContainer {
+    position: relative;
+    width: 545px;
+    height: 55px;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.dropdownHeader {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    div {
+        width: 90%;
+        height: 100%;
+        padding-left: 10px;
+        background: $white;
+        border: 2px solid $lightGrey;
+        border-radius: 15px;
+        filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.05));
+        opacity: 0.9;
+        display: flex;
+        align-items: center;
+        font-weight: $bold;
+        font-size: 20px;
+        color: $brand;
+
+    }
+
+    img {
+        width: 55px;
+        height: 100%;
+        margin-left: -2%;
+        z-index: 1;
+    }
+}
+
+.dropdownList {
+    width: 98%;
+    max-height: 220px;
+    overflow-y: scroll;
+    position: absolute;
+    transition: all 0.5s ease;
+    margin-top: 0.5rem;
+    left: 0;
+    z-index: 1;
+    background: $white;
+    cursor: default;
+
+    border: 2px solid $lightGrey;
+    border-radius: 15px;
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.05));
+    padding: 10px 5px;
+
+    .listItem {
+        font-weight: $semi-bold;
+        font-size: 18px;
+        letter-spacing: -0.02em;
+        line-height: 1.5;
+        text-align: left;
+        color: $grey;
+        padding: 10px 5px;
+        border-bottom: 2px solid $lightGrey;
+
+        &:last-child {
+            border-bottom: none;
+        }
+
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+
+        img {
+            padding: 0px 10px;
+        }
+    }
+}
+
+@media(max-width: $small) {
+    .dropdownContainer {
+        width: 282px;
+    }
+}

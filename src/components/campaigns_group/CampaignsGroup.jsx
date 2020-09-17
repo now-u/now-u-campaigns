@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Text, CampaignPoster } from '../index';
+import { Text, CampaignPoster, Button } from '../index';
 import classes from './CampaignsGroup.module.scss';
+import { proposeCampaignUrl } from '../../utils/constants';
 
 const CampaignsGroup = ({ title, campaigns }) => {
   return (
@@ -19,6 +20,12 @@ const CampaignsGroup = ({ title, campaigns }) => {
             Check back to see campaigns you will be able to support on the app
           </Text>
         )}
+      </div>
+      <div className={classes.proposeCampaign}>
+          <p>What cause do you think we should tackle next?</p>
+          <Button className={classes.button} variant="primary" urlToLaunch={proposeCampaignUrl}>
+            Propose a campaign
+          </Button>
       </div>
     </div>
   );

@@ -2,6 +2,7 @@ import React from 'react';
 import { Text, Button } from '../index';
 import { appDownload, appleStore, googleStore } from '../../assets';
 import classes from './AppDownload.module.scss';
+import { appleStoreURL, googleStoreURL } from '../../utils/constants';
 
 const AppDownload = () => {
   return (
@@ -15,10 +16,16 @@ const AppDownload = () => {
           on the 1st July.
         </Text>
         <div className={classes.downloadBtns}>
-          <Button variant="other">
+          <Button
+            variant="other"
+            onClick={()=> window.open(appleStoreURL, "_blank")}
+          >
             <img src={appleStore} alt="app download from apple store" />
           </Button>
-          <Button variant="other">
+          <Button
+            variant="other"
+            onClick={()=> window.open(googleStoreURL, "_blank")}
+          >
             <img src={googleStore} alt="app download from google store" />
           </Button>
         </div>

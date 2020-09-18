@@ -9,3 +9,4 @@ export { default as Press } from './press/Press';
 export { default as FAQs } from './faqs/FAQs';
 export { default as Blog } from './blog/Blog';
 export { default as BlogArticle } from './blog/blog_article/BlogArticle.container';
+export { default as LoginMobile } from './login_mobile/LoginMobile';

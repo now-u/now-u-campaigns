@@ -2,23 +2,10 @@ import React from 'react';
 import classes from './Footer.module.scss';
 import { nowUOrange } from '../../assets';
 import { AppDownloadButtons } from '../../components';
-import { privacyPolicyURL, termsAndConditionsURL } from '../../utils/constants';
+import { footerLinksLeft, footerLinksRight } from '../../utils/constants'
 
 const Footer = () => {
-  const footerLinksLeft = [
-    {id: 1, name: 'Campaigns', href: '/campaigns'},
-    {id: 2, name: 'Now-u app', href: '/now-u-app'},
-    {id: 3, name: 'About us', href: '/aboutus'},
-    {id: 4, name: 'Get in touch', href: '/get-in-touch'},
-    {id: 5, name: 'Press', href: '/press'},
-  ]
-  const footerLinksRight = [
-    {id: 1, name: 'FAQ', href: '/faqs'},
-    {id: 2, name: 'Blog', href: '/'},
-    {id: 3, name: 'Newsletter', href: '/'},
-    {id: 4, name: 'Privacy Notice', href: privacyPolicyURL},
-    {id: 5, name: "Ts & Cs", href: termsAndConditionsURL},
-  ]
+  
   return (
     <div className={classes.footerBackground}>
       <div className={classes.logo}>

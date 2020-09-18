@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { CampaignsGroup, AppDownloadButtons } from '../../components';
-import { campaignsURL, pastCampaignsURL, Months} from '../../utils/constants';
+import { campaignsURL, pastCampaignsURL} from '../../utils/constants';
 import classes from './Campaigns.module.scss';
 
 const Campaigns = () => {
   const [campaigns, setCampaigns] = useState([]);
   const [pastCampaigns, setPastCampaigns] = useState([]);
-  const currentDate = new Date()
   useEffect(() => {
     const fetchCampaigns = async () => {
       const campaignsResponse = await fetch(campaignsURL);
@@ -29,7 +28,7 @@ const Campaigns = () => {
       <div className={classes.campaignsAbout}>
         <p>We partner with trusted charities and social enterprises to bring you focused monthly campaigns with clear and attainable objectives. Each campaign contains informative resources and actions you can complete, curated to inform, involve and inspire now-u users to make a meaningful contribution to each charitable cause.</p>
       </div>
-      <CampaignsGroup title={Months[currentDate.getMonth()] + "'s Campaigns"} campaigns={campaigns} /> 
+      <CampaignsGroup title="Current campaigns" campaigns={campaigns} /> 
       <CampaignsGroup title="Past Campaigns" campaigns={pastCampaigns} /> 
     </div>
   );

@@ -19,8 +19,9 @@ h4 {
   margin-block-start: 0em;
   font-weight: $bold;
 }
-p {
+p, ul {
   font-size: calc(20px + (30 - 20) * ((100vw - 320px) / (1920 - 320)));
+  font-family: $bodyFont;
 }
 
 .noMargin {

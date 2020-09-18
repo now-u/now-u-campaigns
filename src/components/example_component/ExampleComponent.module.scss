@@ -1,0 +1,11 @@
+@import '../../utils/variables';
+
+.exampleContainer {
+    background-color: black;
+    .exampleTitle {
+        color: red;
+    }
+    .exampleLink {
+        font-size: 20px;
+    }
+}

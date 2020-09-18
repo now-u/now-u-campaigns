@@ -6,14 +6,8 @@ body {
     width: 100%;
 }
 html {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
     overflow-x: hidden;
     overflow-y: scroll;
-}
-::-webkit-scrollbar {
-    width: 0px; /* remove scrollbar space */
-    background: transparent; /* make scrollbar invisible */
 }
 body {
     font-family: $bodyFont;

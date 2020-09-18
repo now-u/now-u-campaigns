@@ -12,6 +12,7 @@ import {
     err404,
     Blog,
     BlogArticle,
+    LoginMobile,
 } from './domain';
 import { AnnounceBar, Navbar, Footer } from './components';
 import './App.scss';
@@ -45,6 +46,7 @@ const App = () => {
                     <Route path='/faqs' exact component={FAQs} />
                     <Route path='/blog' exact component={Blog} />
                     <Route path='/blog/:id' exact component={BlogArticle} />
+                    <Route path='/loginMobile' exact component={LoginMobile} />
                     <Route exact component={err404} />
                 </Switch>
             </div>

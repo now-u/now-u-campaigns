@@ -204,6 +204,9 @@
                 .textSectionContent {
                     font-weight: $regular;
                     line-height: 34px;
+                    a {
+                        color: $brand;
+                    }
                 }
             }
         }

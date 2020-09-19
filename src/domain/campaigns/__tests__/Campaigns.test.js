@@ -1,6 +1,10 @@
 import React from 'react'
 import Campaigns from '../Campaigns'
 import { shallow, mount } from 'enzyme';
+import "whatwg-fetch";
+import { renderHook } from "@testing-library/react-hooks";
+import fetchMock from "fetch-mock";
+import { act } from "react-test-renderer";
 
 describe('testing the campaigns component', () => {
   let wrapper 
@@ -10,7 +14,6 @@ describe('testing the campaigns component', () => {
   })
 
   it('shallow loads the component', () => {
-    console.log(wrapper.state('campaigns'))
     expect(wrapper.exists()).toBe(true)
   })
 
@@ -19,3 +22,25 @@ describe('testing the campaigns component', () => {
   })
 
 })
+
+describe("API call campaigns", () => {
+  beforeAll(() => {
+    global.fetch = fetch;
+  });
+  afterAll(() => {
+    fetchMock.restore();
+  });
+
+  it("should return error as true if api error", async () => {
+    const { result } = renderHook(() => Campaigns());
+
+    fetchMock.mock("test.com", 500);
+
+    await act(async () => {
+      result.current.callApi("test.com");
+    });
+
+    expect(result.current.data).toBe(null);
+    expect(result.current.error).toBe(true);
+  });
+});

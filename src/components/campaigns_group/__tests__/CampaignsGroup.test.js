@@ -16,10 +16,6 @@ describe('testing the campaigns group component', () => {
       description_web: 'I am a web description <br> hello I am another paragraph'
     }
   ]
-
-  const mockCampaignsEmpty = {
-    title: 'an empty mock campaigns!'
-  }
   
   it('renders without crashing', () => {
     container = render(<CampaignsGroup title={mockTitle} campaigns={mockCampaigns}/>)
@@ -31,5 +27,9 @@ describe('testing the campaigns group component', () => {
     expect(getByRole('heading', {name: 'Mock Campaigns Title'})).toBeInTheDocument()
   })
 
+  it('Will display the check back campaigns error message if campaigns is null', () => {
+    const {getByRole} = render(<CampaignsGroup title={mockTitle} />)
+    expect(getByRole('heading', {name: 'Check back to see campaigns you will be able to support on the app'})).toBeInTheDocument()
+  })
 })
 

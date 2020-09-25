@@ -63,6 +63,7 @@ const Blog = ({ blog, sections }) => {
                                         className={classes.textSectionContent}
                                         source={section.content} 
                                         escapeHtml={false}
+                                        linkTarget='_blank'
                                     />
                                 </div>
                             )

@@ -1,9 +1,9 @@
-import React from "react";
-import PropTypes from "prop-types";
-import classNames from "classnames";
-import classes from "./Text.module.scss";
+import React from 'react';
+import PropTypes from 'prop-types';
+import classNames from 'classnames';
+import classes from './Text.module.scss';
 
-const Text = ({ type = "h3", className, removeMargin, children }) => {
+const Text = ({ type = 'h3', className, removeMargin, children }) => {
   const TextComponent = type;
 
   const textClassNames = classNames(

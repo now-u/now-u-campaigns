@@ -1,0 +1,80 @@
+@import '../../utils/variables';
+
+.navContainer {
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
+    position: sticky;
+    top: 0;
+    z-index: 20;
+
+    * {
+        box-sizing: border-box;
+    }
+    .topNavbar,
+    .bottomNavbar {
+        height: 75px;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .linkContainer {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        @media (max-width: $medium) {
+            display: none;
+        }
+    }
+
+    .topNavbar {
+        background-color: $topNavBg;
+        @media (max-width: $medium) {
+            display: none;
+        }
+    }
+    .bottomNavbar {
+        background-color: white;
+        position: relative;
+
+        @media (max-width: $tiny) {
+            flex-direction: column;
+            height: auto;
+        }
+
+        .logoContainer {
+            display: flex;
+            margin: 0 10px;
+            height: 100%;
+            min-width: 250px;
+
+            @media (max-width: $tiny) {
+                min-width: auto;
+                width: 100%;
+                height: auto;
+            }
+        }
+        .navBurgerContainer {
+            cursor: pointer;
+            margin: 10px;
+            justify-content: center;
+            align-items: center;
+            min-height: 40px;
+            min-width: 40px;
+            display: none;
+
+            @media (max-width: $medium) {
+                display: inherit;
+            }
+            @media (max-width: $tiny) {
+                margin-bottom: 0;
+            }
+
+            .burger {
+                pointer-events: none;
+            }
+        }
+    }
+}

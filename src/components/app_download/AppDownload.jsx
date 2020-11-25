@@ -1,8 +1,8 @@
-import React from "react";
-import { Text, Button } from "../index";
-import { appDownload, appleStore, googleStore } from "../../assets";
-import classes from "./AppDownload.module.scss";
-import { appleStoreURL, googleStoreURL } from "../../utils/constants";
+import React from 'react';
+import { Text, Button } from '../index';
+import { appDownload, appleStore, googleStore } from '../../assets';
+import classes from './AppDownload.module.scss';
+import { appleStoreURL, googleStoreURL } from '../../utils/constants';
 
 const AppDownload = () => {
   return (

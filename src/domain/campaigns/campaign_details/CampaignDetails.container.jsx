@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
-import { useRouteMatch, useHistory } from "react-router-dom";
-import { campaignsURL } from "../../../utils/constants";
-import Campaign from "./CampaignDetails.component";
+import React, { useEffect, useState } from 'react';
+import { useRouteMatch, useHistory } from 'react-router-dom';
+import { campaignsURL } from '../../../utils/constants';
+import Campaign from './CampaignDetails.component';
 
 const CampaignContainer = () => {
   const { params } = useRouteMatch();

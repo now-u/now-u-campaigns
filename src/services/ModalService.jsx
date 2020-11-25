@@ -36,7 +36,7 @@ export const open = (modalContentComponent, contentProps, modalProps) => {
   );
 
   return modalRef;
-};
+}
 
 /**
  * Closes the open Modal attached to modalRef
@@ -45,9 +45,9 @@ export const open = (modalContentComponent, contentProps, modalProps) => {
  */
 export const close = (modalRef) => {
   modalRef.current.handleClose();
-};
+}
 
 export default {
   open,
   close,
-};
+}

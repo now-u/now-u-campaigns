@@ -1,7 +1,7 @@
-import React from "react";
-import { googlePlayBadge, appleStore } from "../../assets";
-import classes from "./DownloadButtons.module.scss";
-import { appleStoreURL, googleStoreURL } from "../../utils/constants";
+import React from 'react';
+import { googlePlayBadge, appleStore } from '../../assets';
+import classes from './DownloadButtons.module.scss';
+import { appleStoreURL, googleStoreURL } from '../../utils/constants';
 
 const DownloadButtons = () => {
   return (

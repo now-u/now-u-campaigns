@@ -51,7 +51,10 @@ The above is taken from: https://keepachangelog.com/en/1.0.0/
 
 ### Unreleased
 
-- 
+- #112 [Fixed]      Tablet Optimisation for the now-u app page
+- #110 [Added]      Website login so users can manage their accounts via browser
+- #48 [Security]    Analytics metrics
 
-### Version 1.1.9 - Hot Fix
+### Version 1.?.?
 
+- #109 [Changed]    Fixed the login email on the API codebase

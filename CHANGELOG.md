@@ -55,6 +55,50 @@ The above is taken from: https://keepachangelog.com/en/1.0.0/
 - #110 [Added]      Website login so users can manage their accounts via browser
 - #48 [Security]    Analytics metrics
 
-### Version 1.?.?
+### Version 3.2.0.2
 
 - #109 [Changed]    Fixed the login email on the API codebase
+
+### Version 3.2.0.1
+
+### Version 3.2.0
+
+### Version 3.1
+
+### Version 3.1.1
+
+### Version 3.1
+
+### Version 3.0.6.1
+
+### Version 3.0.6
+
+### Version 3.0.5.2
+
+### Version 3.0.5.1
+
+### Version 3.0.5
+
+### Version 3.0.4.4
+
+### Version 3.0.4.3
+
+### Version 3.0.4.2
+
+### Version 3.0.4.1
+
+### Version 3.0.4
+
+### Version 3.0.3
+
+### Version 3.0.2
+
+### Version 3.0.1
+
+### Version 3.0
+
+### Version 2.3
+
+### Version 2.2.2
+
+### Version 2.2.1

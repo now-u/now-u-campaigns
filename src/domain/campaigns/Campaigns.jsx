@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
-import { CampaignsGroup, AppDownloadButtons } from '../../components';
-import { campaignsURL, pastCampaignsURL} from '../../utils/constants';
-import classes from './Campaigns.module.scss';
+import React, { useEffect, useState } from "react";
+import { CampaignsGroup, AppDownloadButtons } from "../../components";
+import { campaignsURL, pastCampaignsURL} from "../../utils/constants";
+import classes from "./Campaigns.module.scss";
 
 const Campaigns = () => {
   const [campaigns, setCampaigns] = useState([]);
@@ -22,7 +22,7 @@ const Campaigns = () => {
       <div className={classes.campaignsHeader}>
         <p className={classes.campaignsTitle}>Campaigns</p>
         <div className={classes.appLinks}>
-        <AppDownloadButtons />
+          <AppDownloadButtons />
         </div>
       </div>
       <div className={classes.campaignsAbout}>

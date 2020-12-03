@@ -1,7 +1,7 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Text } from '../../../../../components';
-import classes from './PartnerCard.module.scss';
+import React from "react";
+import PropTypes from "prop-types";
+import { Text } from "../../../../../components";
+import classes from "./PartnerCard.module.scss";
 
 const PartnerCard = ({ id, name, logo_link, website }) => {
   return (

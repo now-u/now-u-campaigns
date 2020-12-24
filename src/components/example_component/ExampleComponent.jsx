@@ -1,23 +1,23 @@
-import React, { useState } from 'react';
-import classes from './exampleComponent.module.scss';
-import ExampleChildComponent from './ExampleChildComponent'
+import React, { useState } from "react";
+import classes from "./exampleComponent.module.scss";
+import ExampleChildComponent from "./ExampleChildComponent";
 
 const ExampleComponent = () => {
-  const [exampleState, setExampleState] = useState(0)
+  const [exampleState, setExampleState] = useState(0);
   
   const sayHelloWorld = () => {
-    return 'Hello world!'
-  }
+    return "Hello world!";
+  };
 
   const triggerTimeout = () => {
     setTimeout(() => {
       
     }, 10000);
-  }
+  };
 
   const handleSubmit = (e) => {
-    e.preventDefault()
-  }
+    e.preventDefault();
+  };
   
   return (
     <div className={classes.exampleContainer}>

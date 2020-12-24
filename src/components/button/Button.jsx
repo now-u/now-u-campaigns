@@ -1,10 +1,10 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { useHistory } from 'react-router-dom';
-import classNames from 'classnames';
-import classes from './Button.module.scss';
+import React from "react";
+import PropTypes from "prop-types";
+import { useHistory } from "react-router-dom";
+import classNames from "classnames";
+import classes from "./Button.module.scss";
 
-const Button = ({ id, children, type, variant = 'primary', disabled, size = 'medium', className, onClick, to, urlToLaunch }) => {
+const Button = ({ id, children, type, variant = "primary", disabled, size = "medium", className, onClick, to, urlToLaunch }) => {
   const history = useHistory();
   const buttonClassNames = classNames(className, classes[variant], [classes[size]], {
     [classes.disabled]: disabled,
@@ -17,7 +17,7 @@ const Button = ({ id, children, type, variant = 'primary', disabled, size = 'med
       className={classNames(classes.buttonContainer, buttonClassNames)}
       onClick={() => {
         if (onClick) {
-          onClick()
+          onClick();
         } 
         else if (to) {
           history.push(to);
@@ -26,7 +26,7 @@ const Button = ({ id, children, type, variant = 'primary', disabled, size = 'med
           window.open(urlToLaunch, "_blank");
         }
       }
-    }
+      }
     >
       {children}
     </button>

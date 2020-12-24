@@ -1,1 +1,1 @@
-export { default as ModalService } from './ModalService';
+export { default as ModalService } from "./ModalService";

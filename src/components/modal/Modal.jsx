@@ -1,8 +1,8 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import PropTypes from 'prop-types';
-import classes from './Modal.module.scss';
-import classNames from 'classnames';
+import React from "react";
+import ReactDOM from "react-dom";
+import PropTypes from "prop-types";
+import classes from "./Modal.module.scss";
+import classNames from "classnames";
 
 export default class Modal extends React.Component {
   constructor(props) {
@@ -32,7 +32,7 @@ export default class Modal extends React.Component {
   }
 
   setScrollLock = (isLocked) => {
-    document.body.style.overflow = isLocked ? "hidden" : 'auto';
+    document.body.style.overflow = isLocked ? "hidden" : "auto";
   }
 
   cleanup = () => {
@@ -68,12 +68,12 @@ export default class Modal extends React.Component {
         tabIndex="-1"
         onKeyDown={this.handleKeyDown}
         onClick={this.handleClickAway}
-        ref={(modalContainer) => {this.modalContainer = modalContainer}}
+        ref={(modalContainer) => {this.modalContainer = modalContainer;}}
       >
         <div
           data-size={size}
           className={classes.modalDialog}
-          ref={(modalDialog) => {this.modalDialog = modalDialog}}
+          ref={(modalDialog) => {this.modalDialog = modalDialog;}}
         >
           <div className={classNames(classes.modalContent, classes[color])}>
             <button
@@ -93,13 +93,13 @@ export default class Modal extends React.Component {
 }
 
 Modal.propTypes = {
-  color: PropTypes.oneOf(['light', 'dark']),
-  size: PropTypes.oneOf(['small', 'medium', 'large']),
+  color: PropTypes.oneOf(["light", "dark"]),
+  size: PropTypes.oneOf(["small", "medium", "large"]),
   onClose: PropTypes.func,
   children: PropTypes.node.isRequired,
 };
 
 Modal.defaultProps = {
-  color: 'light',
-  size: 'medium'
+  color: "light",
+  size: "medium"
 };

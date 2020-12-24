@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import classNames from 'classnames';
-import { Link } from 'react-router-dom';
-import { nowUOrange } from '../../assets';
-import { navLinks, mobileNavLinks } from '../../utils/constants';
-import classes from './TopNav.module.scss';
+import React, { useState } from "react";
+import classNames from "classnames";
+import { Link } from "react-router-dom";
+import { nowUOrange } from "../../assets";
+import { navLinks, mobileNavLinks } from "../../utils/constants";
+import classes from "./TopNav.module.scss";
 
 const TopNav = () => {
   const [navClose, setNav] = useState(false);
@@ -12,7 +12,7 @@ const TopNav = () => {
   return (
     <div className={classNames(classes.navContainer, { [classes.navClose]: navClose })}>
       <div className={classes.navContent}>
-        <Link to={'/'} className={classes.logoContainer}>
+        <Link to={"/"} className={classes.logoContainer}>
           <img className={classes.logo} src={nowUOrange} alt="logo" />
         </Link>
         <nav id="navigation" className={classes.navigation}>

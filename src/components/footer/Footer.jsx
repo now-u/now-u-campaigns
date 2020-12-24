@@ -1,8 +1,8 @@
-import React from 'react';
-import classes from './Footer.module.scss';
-import { nowUOrange } from '../../assets';
-import { AppDownloadButtons } from '../../components';
-import { footerLinksLeft, footerLinksRight } from '../../utils/constants'
+import React from "react";
+import classes from "./Footer.module.scss";
+import { nowUOrange } from "../../assets";
+import { AppDownloadButtons } from "../../components";
+import { footerLinksLeft, footerLinksRight } from "../../utils/constants";
 
 const Footer = () => {
   
@@ -19,21 +19,21 @@ const Footer = () => {
                 <div className={classes.links} key={link.id}>
                   <a href={link.href} className={classes.links}>{link.name}</a>
                 </div>
-              )
+              );
             })}
           </div>
           <div className={classes.linksColumnTwo}>
-          {footerLinksRight.map(link => {
+            {footerLinksRight.map(link => {
               return (
                 <div className={classes.links} key={link.id}>
-                  { link.href.includes('https://') 
+                  { link.href.includes("https://") 
                     // Open external links in a new tab
                     ? <a href={link.href} className={classes.links} target="_blank" rel="noopener noreferrer">{link.name}</a>
                     // Internal links (routes)
                     : <a href={link.href} className={classes.links}>{link.name}</a>
                   }
                 </div>
-              )
+              );
             })}
           </div>
         </div>

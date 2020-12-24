@@ -1,8 +1,8 @@
-import React from 'react'
-import { appleStoreNew, googleStoreNew } from '../../assets';
-import { Button } from '../../components';
-import classes from './AppDownload.module.scss';
-import { appleStoreURL, googleStoreURL } from '../../utils/constants';
+import React from "react";
+import { appleStoreNew, googleStoreNew } from "../../assets";
+import { Button } from "../../components";
+import classes from "./AppDownload.module.scss";
+import { appleStoreURL, googleStoreURL } from "../../utils/constants";
 
 const AppDownloadButtons = () => {
 
@@ -23,7 +23,7 @@ const AppDownloadButtons = () => {
         </Button>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default AppDownloadButtons
+export default AppDownloadButtons;

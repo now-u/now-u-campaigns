@@ -1,2 +1,8 @@
 src/serviceWorker.js
 config-overrides.js
+
+# Ignore built files except build/index.js
+build/*
+!build/index.js
+
+src/components/example_component/*

@@ -2,10 +2,14 @@ import React from "react";
 import classes from "./LoginMobile.module.scss";
 import { Text } from "../../components";
 import { mobileLogin } from "../../assets";
+import { Helmet } from "react-helmet";
 
 const LoginMobile = () => {
   return (
     <div className={classes.background}>
+      <Helmet>
+        <title>now-u | Login</title>
+      </Helmet>
       <div className={classes.loginMobileContainer}>
         <div className={classes.messageContent}>
           <Text type="h2" className={classes.messageHeader}>Oops!</Text>

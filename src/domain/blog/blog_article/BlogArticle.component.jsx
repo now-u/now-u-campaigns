@@ -4,6 +4,7 @@ import classes from "./BlogArticle.module.scss";
 import { Text, Button, AppDownloadRectangle, Avatar } from "../../../components";
 import { Link } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
+import { Helmet } from "react-helmet";
 
 const Blog = ({ blog, sections }) => {
   const { title, subtitle, tags, campaign_id, user, reading_time } = blog;
@@ -11,6 +12,9 @@ const Blog = ({ blog, sections }) => {
 
   return (
     <div className={classes.blogArticleContainer}>
+      <Helmet>
+        <title>now-u | {title}</title>
+      </Helmet>
       <div className={classes.blogBreadcrumb}>
         <Link to={"/blog"}>
           <Text type="h4">

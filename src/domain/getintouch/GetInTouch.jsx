@@ -2,10 +2,14 @@ import React from "react";
 import classes from "./GetInTouch.module.scss";
 import { Text } from "../../components";
 import { roadSignBlue } from "../../assets";
+import { Helmet } from "react-helmet";
 
 const GetInTouch = () => {
   return (
     <div className={classes.getInTouchContainer}>
+      <Helmet>
+        <title>now-u | Get in Touch</title>
+      </Helmet>
       <div className={classes.header}>
         <Text type="h2" className={classes.headerText}>Get In Touch</Text>
       </div>

@@ -7,6 +7,7 @@ import BlogSearchControls from "./components/BlogSearchControls";
 import { blogsURL, campaignsURL } from "../../utils/constants";
 import { useBreakpoint } from "../../utils/breakpoint";
 import { MonthCampaigns } from "./components";
+import { Helmet } from "react-helmet";
 
 const Blog = () => {
   const [blogs, setBlogs] = useState([]);
@@ -83,6 +84,9 @@ const Blog = () => {
 
   return (
     <div className={classes.container}>
+      <Helmet>
+        <title>now-u | Blog</title>
+      </Helmet>
       <div className={classes.header}>
         <Text className={classes.title} type="h2">
                     Blog

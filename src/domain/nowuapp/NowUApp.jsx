@@ -4,10 +4,14 @@ import classes from "./NowUApp.module.scss";
 import { Text, DownloadButtons } from "../../components";
 // eslint-disable-next-line no-unused-vars
 import { app, appStep1, appStep2, appStep3, appStep4, step1, step2, step3, step4 } from "../../assets";
+import { Helmet } from "react-helmet";
 
 const AboutUs = () => {
   return (
     <div className={classes.nowUAppContainer}>
+      <Helmet>
+        <title>now-u | Now-u app</title>
+      </Helmet>
       <div className={classes.header}>
         <div className={classes.heading}>
           <Text type="h2" className={classes.headingText}>APP</Text>

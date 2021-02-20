@@ -4,6 +4,7 @@ import { Text } from "../../components";
 import { faq } from "../../assets";
 import { Faq } from "./components";
 import { faqsURL } from "../../utils/constants";
+import { Helmet } from "react-helmet";
 
 const FAQs = () => {
   const [faqs, setFAQs] = useState([]);
@@ -20,6 +21,9 @@ const FAQs = () => {
 
   return (
     <div className={classes.faqsContainer}>
+      <Helmet>
+        <title>now-u | FAQ</title>
+      </Helmet>
       <div className={classes.header}>
         <div className={classes.heading}>
           <Text type="h2" className={classes.headingText}>Frequently asked questions</Text>

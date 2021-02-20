@@ -8,7 +8,7 @@ import { aboutFounders } from "../../assets";
 import { appDesignWalkThrough } from "../../assets";
 import { pressReleaseAppLaunch } from "../../assets";
 import { nowUBrandGuide } from "../../assets";
-
+import { Helmet } from "react-helmet";
 
 const Press = () => {
   const [pressCoverage, setpressCoverage] = useState([]);
@@ -53,6 +53,9 @@ const Press = () => {
   });
   return (
     <div className={classes.getInTouchContainer}>
+      <Helmet>
+        <title>now-u | Press</title>
+      </Helmet>
       <div className={classes.header}>
         <Text type="h2" className={classes.headerText}>Press</Text>
       </div>

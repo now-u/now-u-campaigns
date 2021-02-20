@@ -10,6 +10,7 @@ import {
   Newsletter,
 } from "./components/index";
 import NewsletterSignupModal from "../../components/newsletter-signup-modal/NewsletterSignupModal";
+import { Helmet } from "react-helmet";
 
 const Homepage = () => {
   const [campaigns, setCampaigns] = useState([]);
@@ -33,6 +34,9 @@ const Homepage = () => {
 
   return (
     <main>
+      <Helmet>
+        <title>now-u | Home</title>
+      </Helmet>
       <Intro />
       <TakeAction />
       <ActiveCampaigns campaigns={campaigns} />

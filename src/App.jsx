@@ -14,7 +14,7 @@ import {
   BlogArticle,
   LoginMobile,
 } from "./domain";
-import { AnnounceBar, Navbar, Footer } from "./components";
+import { AnnounceBar, Navbar, Footer, ScrollToTop } from "./components";
 import "./App.scss";
 import { openNewsletterSignupModal } from "./utils/functions";
 
@@ -32,6 +32,7 @@ const App = () => {
 
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <div className='App'>
         <AnnounceBar />
         <Navbar newsletterSignupModal={openNewsletterSignupModal} />

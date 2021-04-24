@@ -22,8 +22,9 @@ const trackingId = "UA-164779666-1"; // Replace with your Google Analytics track
 ReactGA.initialize(trackingId);
 ReactGA.pageview(window.location.pathname + window.location.search);
 
+const trackingIdGTM = "GTM-WFVHWFM";
 const tagManagerArgs = {
-  gtmId: trackingId,
+  gtmId: trackingIdGTM,
 };
 
 TagManager.initialize(tagManagerArgs);

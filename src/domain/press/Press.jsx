@@ -61,9 +61,8 @@ const Press = () => {
       </div>
       <div className={classes.content}>
         <div className={classes.textSection}>
-          <Text type="h2" className={classes.heading}>Press contact: Saul Harris</Text>
           <Text type="p" className={classes.paragraphText}>
-                        To get in touch with Saul, please contact <a href="mailto:press@now-u.com">press@now-u.com</a>
+            Please contact our press team: <a href="mailto:press@now-u.com">press@now-u.com</a>
           </Text>
         </div>
         <div className={classes.imageSection}>

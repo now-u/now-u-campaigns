@@ -47,7 +47,7 @@ export const Months = [
 ];
 
 export const footerLinksLeft = [
-  {id: 1, name: "Campaigns", href: "/campaigns"},
+  {id: 1, name: "Causes", href: "/causes"},
   {id: 2, name: "Now-u app", href: "/now-u-app"},
   {id: 3, name: "About us", href: "/aboutus"},
   {id: 4, name: "Get in touch", href: "/get-in-touch"},

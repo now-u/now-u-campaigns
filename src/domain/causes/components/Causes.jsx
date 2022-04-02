@@ -7,6 +7,7 @@ const Causes = () => {
     <div className={classes.CausesContainer}>
       <Helmet>
         <title>now-u | Causes</title>
+        {/*  Page content to be added once copy and designs finalised */}
       </Helmet>
     </div>
   );

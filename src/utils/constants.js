@@ -24,13 +24,6 @@ export const topNavLinks = [
   { display: "Get in touch", path: "/get-in-touch" },
 ];
 
-export const mobileNavLinks = [
-  { display: "Causes", path: "/causes" },
-  { display: "About us", path: "/aboutus" },
-  { display: "Blog", path: "/blog" },
-  { display: "Get in touch", path: "/get-in-touch" },
-];
-
 export const Months = [
   "January",
   "February",

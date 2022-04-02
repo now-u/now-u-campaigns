@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import { nowUOrange } from "../../assets";
 import {
   topNavLinks,
-  mobileNavLinks,
 } from "../../utils/constants";
 import NavLinkSection from "./navLinkSection/NavLinkSection";
 import NavDropdown from "./navDropdown/NavDropdown";
@@ -48,7 +47,7 @@ const Navbar = () => {
         </div>
 
         <NavDropdown
-          navLinks={mobileNavLinks}
+          navLinks={topNavLinks}
           displayNavDropdown={displayNavDropdown}
           toggleDisplayNav={toggleDisplayNav}
         />

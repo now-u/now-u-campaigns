@@ -3,7 +3,7 @@ import classNames from "classnames";
 import { Link } from "react-router-dom";
 import { nowUOrange } from "../../assets";
 import {
-  bottomNavLinks,
+  topNavLinks,
   mobileNavLinks,
 } from "../../utils/constants";
 import NavLinkSection from "./navLinkSection/NavLinkSection";
@@ -31,7 +31,7 @@ const Navbar = () => {
           <img className={classes.logo} src={nowUOrange} alt='logo' />
         </Link>
         <ul className={classes.linkContainer}>
-          <NavLinkSection navLinks={bottomNavLinks} />
+          <NavLinkSection navLinks={topNavLinks} />
         </ul>
         <div
           className={classes.navBurgerContainer}

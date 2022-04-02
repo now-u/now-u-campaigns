@@ -17,26 +17,18 @@ export const partnershipGuideURL =
 export const proposeCampaignUrl =
     "https://docs.google.com/forms/d/e/1FAIpQLSfPKOVlzOOV2Bsb1zcdECCuZfjHAlrX6ZZMuK1Kv8eqF85hIA/viewform";
 
-export const bottomNavLinks = [
-  { display: "Campaigns", path: "/campaigns" },
-  { display: "Now-u app", path: "/now-u-app" },
+export const topNavLinks = [
+  { display: "Causes", path: "/causes" },
   { display: "About us", path: "/aboutus" },
-  { display: "Get in touch", path: "/get-in-touch" },
-  { display: "Press", path: "/press" },
-  { display: "FAQ", path: "/faqs" },
   { display: "Blog", path: "/blog" },
-  { display: "Newsletter", modal: "NewsletterSignupModal" },
+  { display: "Get in touch", path: "/get-in-touch" },
 ];
 
 export const mobileNavLinks = [
-  { display: "Campaigns", path: "/campaigns" },
-  { display: "Now-u app", path: "/now-u-app" },
+  { display: "Causes", path: "/causes" },
   { display: "About us", path: "/aboutus" },
   { display: "Blog", path: "/blog" },
   { display: "Get in touch", path: "/get-in-touch" },
-  { display: "Press", path: "/press" },
-  { display: "FAQ", path: "/faqs" },
-  { display: "Newsletter", modal: "NewsletterSignupModal" },
 ];
 
 export const Months = [

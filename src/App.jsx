@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import {
+  Campaign,
+  Campaigns,
   Homepage,
   AboutUs,
   NowUApp,
@@ -37,6 +39,8 @@ const App = () => {
         <Navbar newsletterSignupModal={openNewsletterSignupModal} />
         <Switch>
           <Route path='/' exact component={Homepage} />
+          <Route path='/campaigns' exact component={Campaigns} />
+          <Route path='/campaigns/:id' exact component={Campaign} />
           <Route path='/causes' exact component={Causes} />
           <Route path='/aboutus' exact component={AboutUs} />
           <Route path='/now-u-app' exact component={NowUApp} />

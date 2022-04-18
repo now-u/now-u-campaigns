@@ -39,18 +39,13 @@ export const Months = [
   "December",
 ];
 
-export const footerLinksLeft = [
+export const footerLinks = [
   {id: 1, name: "Causes", href: "/causes"},
-  {id: 2, name: "Now-u app", href: "/now-u-app"},
-  {id: 3, name: "About us", href: "/aboutus"},
+  {id: 2, name: "About us", href: "/aboutus"},
+  {id: 3, name: "Blog", href: "/blog"},
   {id: 4, name: "Get in touch", href: "/get-in-touch"},
-  {id: 5, name: "Press", href: "/press"},
-];
-
-export const footerLinksRight = [
-  {id: 1, name: "FAQ", href: "/faqs"},
-  {id: 2, name: "Blog", href: "/blog"},
-  {id: 3, name: "Newsletter", href: "/"},
-  {id: 4, name: "Privacy Notice", href: privacyPolicyURL},
-  {id: 5, name: "Ts & Cs", href: termsAndConditionsURL},
+  {id: 5, name: "FAQs", href: "/faqs"},
+  {id: 6, name: "Press", href: "/press"},
+  {id: 7, name: "Privacy Policy", href: privacyPolicyURL},
+  {id: 8, name: "Terms and Conditions", href: termsAndConditionsURL},
 ];

@@ -2,7 +2,7 @@ import React from "react";
 import classes from "./Footer.module.scss";
 import { nowUOrange } from "../../assets";
 import { AppDownloadButtons } from "../../components";
-import { footerLinksLeft, footerLinksRight } from "../../utils/constants";
+import {footerLinks} from "../../utils/constants";
 
 const Footer = () => {
   
@@ -14,7 +14,7 @@ const Footer = () => {
       <div className={classes.footer}>
         <div className={classes.footerLeft}>
           <div className={classes.linksColumnOne}>
-            {footerLinksLeft.map(link => {
+            {footerLinks.map(link => {
               return (
                 <div className={classes.links} key={link.id}>
                   <a href={link.href} className={classes.links}>{link.name}</a>
@@ -23,7 +23,7 @@ const Footer = () => {
             })}
           </div>
           <div className={classes.linksColumnTwo}>
-            {footerLinksRight.map(link => {
+            {footerLinks.map(link => {
               return (
                 <div className={classes.links} key={link.id}>
                   { link.href.includes("https://") 

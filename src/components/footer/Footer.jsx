@@ -16,7 +16,7 @@ const Footer = () => {
           {footerLinks.map(link => {
             return (
               <div className={classes.links} key={link.id}>
-                <a href={link.href} className={classes.links}>{link.name}</a>
+                <a href={link.href} target={link.newtab ? "_blank" : null} className={classes.links}>{link.name}</a>
               </div>
             );
           })}

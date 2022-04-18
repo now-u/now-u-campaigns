@@ -46,6 +46,6 @@ export const footerLinks = [
   {id: 4, name: "Get in touch", href: "/get-in-touch"},
   {id: 5, name: "FAQs", href: "/faqs"},
   {id: 6, name: "Press", href: "/press"},
-  {id: 7, name: "Privacy Policy", href: privacyPolicyURL},
-  {id: 8, name: "Terms and Conditions", href: termsAndConditionsURL},
+  {id: 7, name: "Privacy Policy", href: privacyPolicyURL, newtab: true},
+  {id: 8, name: "Terms and Conditions", href: termsAndConditionsURL, newtab: true},
 ];

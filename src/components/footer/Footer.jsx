@@ -38,10 +38,13 @@ const Footer = () => {
           </div>
         </div>
         <div className={classes.footerRight}>
-          <div className={classes.appDownloadLinks}>
-            <AppDownloadButtons />
-          </div>
           <div>
+            <a
+              href="https://www.instagram.com/now_u_app/"
+              className="fa fa-instagram fa-2x"
+              target="_blank"
+              rel="noopener noreferrer"
+            ></a>
             <a
               href="https://www.facebook.com/nowufb"
               className="fa fa-facebook fa-2x"
@@ -54,17 +57,14 @@ const Footer = () => {
               rel="noopener noreferrer"
             ></a>
             <a
-              href="https://www.instagram.com/now_u_app/"
-              className="fa fa-instagram fa-2x"
-              target="_blank"
-              rel="noopener noreferrer"
-            ></a>
-            <a
               href="https://www.linkedin.com/company/now-u/?viewAsMember=true"
               className="fa fa-linkedin fa-2x"
               target="_blank"
               rel="noopener noreferrer"
             ></a>
+          </div>
+          <div className={classes.appDownloadLinks}>
+            <AppDownloadButtons />
           </div>
         </div>
       </div>

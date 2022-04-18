@@ -27,7 +27,7 @@
   }
   .footerRight {
     font-size: 18px;
-    width: 50%;
+    width: 30%;
     text-align: right;
     .socialLinks {
       display: flex;
@@ -48,16 +48,9 @@
       font-size: 20px;
       padding-bottom: 20px; 
     }
-    .linksColumnOne {
-      width: 100%;
-    }
-    .linksColumnTwo {
-      width: 100%;
-    }
     display: flex;
     justify-content: flex-start;
-    width: 50%;
-    display: flex;
+    width: 70%;
     @media (max-width: 900px) {
       width: 100%;
       text-align: center;

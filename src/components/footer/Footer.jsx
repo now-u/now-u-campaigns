@@ -13,29 +13,13 @@ const Footer = () => {
       </div>
       <div className={classes.footer}>
         <div className={classes.footerLeft}>
-          <div className={classes.linksColumnOne}>
-            {footerLinks.map(link => {
-              return (
-                <div className={classes.links} key={link.id}>
-                  <a href={link.href} className={classes.links}>{link.name}</a>
-                </div>
-              );
-            })}
-          </div>
-          <div className={classes.linksColumnTwo}>
-            {footerLinks.map(link => {
-              return (
-                <div className={classes.links} key={link.id}>
-                  { link.href.includes("https://") 
-                    // Open external links in a new tab
-                    ? <a href={link.href} className={classes.links} target="_blank" rel="noopener noreferrer">{link.name}</a>
-                    // Internal links (routes)
-                    : <a href={link.href} className={classes.links}>{link.name}</a>
-                  }
-                </div>
-              );
-            })}
-          </div>
+          {footerLinks.map(link => {
+            return (
+              <div className={classes.links} key={link.id}>
+                <a href={link.href} className={classes.links}>{link.name}</a>
+              </div>
+            );
+          })}
         </div>
         <div className={classes.footerRight}>
           <div>

@@ -17,7 +17,7 @@ const Footer = () => {
             return (
               <div className={classes.links} key={link.id}>
                 <a href={link.href} target={link.newtab ? "_blank" : null} title={link.newtab ? "Opens PDF in a new tab" : null} className={classes.links}>{link.name}</a>
-                |
+                {link.id == footerLinks.length ? null : "|"}
               </div>
             );
           })}

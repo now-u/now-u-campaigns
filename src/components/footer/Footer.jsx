@@ -17,6 +17,7 @@ const Footer = () => {
             return (
               <div className={classes.links} key={link.id}>
                 <a href={link.href} target={link.newtab ? "_blank" : null} className={classes.links}>{link.name}</a>
+                |
               </div>
             );
           })}

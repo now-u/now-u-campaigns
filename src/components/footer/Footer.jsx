@@ -21,7 +21,7 @@ const Footer = () => {
               </div>
             );
           })}
-          <div className={classes.footerBottom}>Registered charity number: 000000</div>
+          <div className={classes.footerBottom}>Registered charity number: 1196568</div>
         </div>
         <div className={classes.footerRight}>
           <div>

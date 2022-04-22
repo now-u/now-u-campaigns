@@ -22,7 +22,7 @@ const Footer = () => {
                 </div>
               );
             })}
-            <div className={classes.footerBottom}>Registered charity number: 1196568</div>
+            <div className={classes.footerBottom}>The now-u brand encompasses now-u CIC (registered UK company number: 12709184) and now-u community CIO (registered UK charity number: 1196568)</div>
           </div>
           <div className={classes.footerRight}>
             <div>

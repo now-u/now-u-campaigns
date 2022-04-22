@@ -59,8 +59,20 @@ const Footer = () => {
     );
   } else {
     return (
-      <div>Different footer for mobile
-      </div>  
+      <div className={classes.footerBackground}>
+        <div className={classes.logo}>
+          <img src={nowUOrange} alt="logo" />
+        </div>
+        <div className={classes.footer}>
+          Insert the footernavs here as columns
+        </div>
+        <div className={classes.appDownloadLinksForMobile}>
+          <AppDownloadButtons />
+        </div>
+        <div className={classes.footerBottom}>
+          The now-u brand encompasses now-u CIC (registered UK company number: 12709184) and now-u community CIO (registered UK charity number: 1196568)
+        </div>
+      </div>
     );
   }};
 

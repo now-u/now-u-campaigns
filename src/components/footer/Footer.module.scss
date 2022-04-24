@@ -1,5 +1,17 @@
 @import '../../utils/variables';
 
+.webFooter {
+  @media (max-width: $medium) {
+    display: none;
+  }
+}
+
+.mobileFooter {
+  @media (min-width: $medium) {
+    display: none;
+  }
+}
+
 .logo {
   width: 150px;
   padding-left: 120px;

@@ -10,7 +10,7 @@
         box-sizing: border-box;
     }
     .topNavbar,
-    .bottomNavbar {
+    .navbar {
         height: 75px;
         padding: 10px;
         display: flex;
@@ -35,7 +35,7 @@
             display: none;
         }
     }
-    .bottomNavbar {
+    .navbar {
         background-color: white;
         position: relative;
 

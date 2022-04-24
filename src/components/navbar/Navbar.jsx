@@ -25,7 +25,7 @@ const Navbar = () => {
 
   return (
     <header className={classes.navContainer}>
-      <nav className={classes.bottomNavbar}>
+      <nav className={classes.navbar}>
         <Link to={"/"} className={classes.logoContainer}>
           <img className={classes.logo} src={nowUOrange} alt='logo' />
         </Link>

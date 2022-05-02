@@ -57,11 +57,14 @@
 .downloadBtns2 {
   display: flex;
   flex-flow: wrap;
-  justify-content: flex-end;
   width: 75%;
   z-index: 2;
   @media screen and (max-width: $medium) {
     width: 100%;
+    justify-content: center;
+  }
+  @media (min-width: $medium){
+    justify-content: flex-end;
   }
   button {
     width: 40%;
@@ -78,6 +81,10 @@
 }
 .appDownloadButtonContainer {
   display: flex;
-  justify-content: flex-end;
-  padding-right: 20px;
+  @media (max-width: $medium) {
+    justify-content: flex-start;
+  }
+  @media (min-width: $medium) {
+   justify-content: flex-end;
+  }
 }

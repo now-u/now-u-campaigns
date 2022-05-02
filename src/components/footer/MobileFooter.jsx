@@ -17,7 +17,7 @@ const MobileFooter = () => {
             {footerLinks.map(link => {
               return (
                 <div className={classes.links} key={link.id}>
-                  <a href={link.href} target={link.newtab ? "_blank" : null} title={link.newtab ? "Opens PDF in a new tab" : null} className={classes.links}>{link.name}</a>
+                  <a href={link.href} target={link.newtab ? "_blank" : null} title={link.newtab ? "Opens PDF in a new tab" : null} className={classes.links}>{link.name == "Terms and conditions" ? "Terms" : link.name}</a>
                 </div>
               );
             })}

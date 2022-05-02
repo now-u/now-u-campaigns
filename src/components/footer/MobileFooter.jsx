@@ -4,6 +4,7 @@ import {nowUOrange} from "../../assets";
 import {AppDownloadButtons} from "../index";
 import {footerLinks} from "../../utils/constants";
 
+//This version of the footer layout is for users on small-screen devices
 const MobileFooter = () => {
 
   return (

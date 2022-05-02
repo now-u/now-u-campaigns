@@ -4,7 +4,7 @@ import { nowUOrange } from "../../assets";
 import { AppDownloadButtons } from "../../components";
 import {footerLinks} from "../../utils/constants";
 
-
+//This version of the footer layout is for browser users
 const WebFooter = () => {
   return (
     <div className={classes.webFooter}>

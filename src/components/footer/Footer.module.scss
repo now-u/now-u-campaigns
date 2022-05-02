@@ -10,6 +10,17 @@
   @media (min-width: $medium) {
     display: none;
   }
+  .socialLinks {
+    display: flex;
+    justify-content: center;
+    padding: 10px 10px 10px 10px;
+    font-size: 15px;
+    background-color: #FFF8F1;
+    & a {
+      color: $black;
+      padding: 0 10px;
+    }
+  }
 }
 
 .linkContainer {
@@ -29,8 +40,10 @@
 .footer {
   @media (max-width: 900px) {
       display: list-item;
+      text-align: center;
+      font-size: 20px;
       width: auto;
-      padding: 50px 0 50px 0
+      padding: 20px 10px 20px 10px
     }
   padding: 40px 100px 40px 100px;
   display: flex;

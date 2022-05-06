@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import {
+  Causes,
   Campaign,
   Campaigns,
   Homepage,
@@ -17,7 +18,6 @@ import {
 import { AnnounceBar, Navbar, Footer, ScrollToTop } from "./components";
 import "./App.scss";
 import { openNewsletterSignupModal } from "./utils/functions";
-import Causes from "./domain/causes/components/Causes";
 
 const App = () => {
   useEffect(() => {

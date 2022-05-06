@@ -25,7 +25,7 @@ const MobileFooter = () => {
             })}
           </div>
         </div>
-        <SocialLinks />
+        <SocialLinks className={classes.mobileSocialLinks}/>
         <div className={classes.appDownloadLinksForMobile}>
           <AppDownloadButtons />
         </div>

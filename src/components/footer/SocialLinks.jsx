@@ -1,11 +1,10 @@
 ﻿import React from "react";
-import classes from "./Footer.module.scss";
+import PropTypes from "prop-types";
 
-
-const SocialLinks = () => {
-
+const SocialLinks = ({className}) => {
+  SocialLinks.propTypes = {className: PropTypes.string};
   return (
-    <div className={classes.socialLinks}>
+    <div className={className}>
       <a href="https://www.instagram.com/now_u_app/" className="fa fa-instagram fa-2x" target="_blank" rel="noopener noreferrer"/>
       <a href="https://www.facebook.com/nowufb" className="fa fa-facebook fa-2x" target="_blank" rel="noopener noreferrer"/>
       <a href="https://twitter.com/now_u_app" className="fa fa-twitter fa-2x" target="_blank" rel="noopener noreferrer"/>

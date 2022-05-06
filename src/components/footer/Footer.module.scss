@@ -10,16 +10,28 @@
   @media (min-width: $medium) {
     display: none;
   }
-  .socialLinks {
-    display: flex;
-    justify-content: center;
-    padding: 10px 10px 10px 10px;
-    font-size: 15px;
-    background-color: #FFF8F1;
-    & a {
-      color: $black;
-      padding: 0 10px;
-    }
+}
+
+.mobileSocialLinks {
+  display: flex;
+  justify-content: center;
+  padding: 10px 10px 10px 10px;
+  font-size: 15px;
+  background-color: #FFF8F1;
+  & a {
+    color: $black;
+    padding: 0 10px;
+  }
+}
+.webSocialLinks {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 10px 10px 10px;
+  font-size: 22px;
+  background-color: #FFF8F1;
+  & a {
+    color: $black;
+    padding: 0 10px;
   }
 }
 
@@ -57,17 +69,7 @@
   .footerRight {
     font-size: 18px;
     width: 30%;
-    text-align: right;
-    .socialLinks {
-      display: flex;
-      justify-content: center;
-    }    
-    .appDownloadLinks {
-      margin: 0 -16px 20px 0 ;
-      @media (max-width: $medium) {
-        margin: 0;
-      }
-    }    
+    text-align: right;   
     @media (max-width: 900px) {
         width: 100%;
       }
@@ -86,9 +88,17 @@
       text-align: center;
     }
   }
+  
   .appDownloadLinksForMobile {
     display: flex;
     justify-content: space-between;
+  }
+  
+  .appDownloadLinksForWeb {
+    margin: 0 0 20px 0 ;
+    @media (max-width: $medium) {
+      margin: 0;
+    }
   }
 }
 

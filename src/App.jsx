@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import {
+  Homepage,
   Causes,
   Campaign,
   Campaigns,
-  Homepage,
   AboutUs,
   NowUApp,
   GetInTouch,

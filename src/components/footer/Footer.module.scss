@@ -59,7 +59,7 @@
     }
   padding: 40px 100px 40px 100px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   font-size: 28px;
   background-color: #FFF8F1;
   & a {
@@ -68,7 +68,6 @@
   }
   .footerRight {
     font-size: 18px;
-    width: 30%;
     text-align: right;   
     @media (max-width: 900px) {
         width: 100%;
@@ -82,7 +81,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-    width: 70%;
     @media (max-width: 900px) {
       width: 100%;
       text-align: center;

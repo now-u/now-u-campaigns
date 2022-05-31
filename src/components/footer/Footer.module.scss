@@ -7,11 +7,11 @@
   @media (max-width: $medium) {
     padding: 20px 10px;
   }
-  
+
   a {
     color: $black
   }
-  
+
   .webFooter {
     display: flex;
     justify-content: space-between;
@@ -20,25 +20,28 @@
     @media (max-width: $medium) {
       display: none;
     }
-    
-    .navLinks{
+
+    .navLinks {
       display: flex;
+      flex-wrap: wrap;
       font-size: 18px;
-      .divider{
+      white-space: nowrap;
+      .divider {
         margin: 0 10px;
       }
     }
-    
-    .socialLinks{
-      a{
+
+    .socialLinks {
+      display: flex;
+      a {
         margin: 0 20px;
       }
     }
-    
-    .charityInfo{
+
+    .charityInfo {
       margin-bottom: 10px;
     }
-    
+
   }
 
   .mobileFooter {
@@ -46,13 +49,13 @@
       display: none;
     }
   }
-  
+
   .logo {
     width: 150px;
     padding: 30px 0;
   }
-  
-  .charityInfo{
+
+  .charityInfo {
     color: $grey;
   }
 }

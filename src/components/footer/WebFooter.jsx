@@ -4,12 +4,16 @@ import { AppDownloadButtons } from "../../components";
 import {footerLinks} from "../../utils/constants";
 import SocialLinks from "./SocialLinks";
 import {CharityInfo} from "./CharityInfo";
+import {nowUOrange} from "../../assets";
 
 //This version of the footer layout is for browser users
 const WebFooter = () => {
   return (
-    <>
-      <div className={classes.webFooter}>
+    <div className={classes.webFooter}>
+      <div className={classes.left}>
+        <div className={classes.logo}>
+          <img src={nowUOrange} alt="logo"/>
+        </div>
         <div className={classes.navLinks}>
           {footerLinks.map(link => {
             return (
@@ -20,13 +24,15 @@ const WebFooter = () => {
             );
           })}
         </div>
-        <SocialLinks />
-      </div>
-      <div className={classes.webFooter}>
         <CharityInfo />
-        <AppDownloadButtons />
+
       </div>
-    </>
+      <div className={classes.right}>
+        <SocialLinks />
+        <AppDownloadButtons />
+
+      </div>
+    </div>
   );
 };
 

@@ -59,7 +59,7 @@
   display: flex;
   justify-content: flex-end;
   @media (max-width: $medium) {
-    justify-content: flex-start;
+    justify-content: center;
   }
   button {
     width: 150px;

@@ -11,52 +11,95 @@
   a {
     color: $black
   }
-
-  .webFooter {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    margin-bottom: 10px;
-    @media (max-width: $medium) {
-      display: none;
-    }
-
-    .navLinks {
-      display: flex;
-      flex-wrap: wrap;
-      font-size: 18px;
-      white-space: nowrap;
-      .divider {
-        margin: 0 10px;
-      }
-    }
-
-    .socialLinks {
-      display: flex;
-      a {
-        margin: 0 20px;
-      }
-    }
-
-    .charityInfo {
-      margin-bottom: 10px;
-    }
-
-  }
-
-  .mobileFooter {
-    @media (min-width: $medium) {
-      display: none;
-    }
-  }
-
+  
   .logo {
-    width: 150px;
     padding: 30px 0;
+    img {
+      width: 150px;
+    }
+  }
+
+  .socialLinks {
+    display: flex;
+    a {
+      margin: 0 20px;
+    }
   }
 
   .charityInfo {
     color: $grey;
+  }
+  
+  .webFooter {
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: $medium) {
+      display: none;
+    }
+
+    .left{
+      display: flex;
+      flex-direction: column;
+      margin-right: 20px;
+      
+      .navLinks {
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 18px;
+        white-space: nowrap;
+        margin-bottom: 10px;
+        
+        .divider {
+          margin: 0 10px;
+        }
+      }
+
+      .charityInfo {
+        margin-bottom: 10px;
+      }
+    }
+    
+    .right{
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      
+      .socialLinks{
+        justify-content: flex-end;
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+  
+  .mobileFooter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @media (min-width: $medium) {
+      display: none;
+    }
+
+    .logo {
+      display: flex;
+      justify-content: center;
+    }
+    
+    .navLinks{
+      columns: auto 2;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    
+    .socialLinks{
+      justify-content: center;
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }  
+    
+    .charityInfo {
+      text-align: center;
+    }
   }
 }
 

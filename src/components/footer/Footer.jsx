@@ -1,12 +1,12 @@
 import React from "react";
 import classes from "./Footer.module.scss";
-import WebFooter from "./WebFooter.jsx";
+import DesktopFooter from "./DesktopFooter.jsx";
 import MobileFooter from "./MobileFooter.jsx";
 
 const Footer = () => {
   return (
     <div className={classes.footer}>
-      <WebFooter />
+      <DesktopFooter />
       <MobileFooter />
     </div>
   );};

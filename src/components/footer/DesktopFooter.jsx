@@ -7,9 +7,9 @@ import {CharityInfo} from "./CharityInfo";
 import {nowUOrange} from "../../assets";
 
 //This version of the footer layout is for browser users
-const WebFooter = () => {
+const DesktopFooter = () => {
   return (
-    <div className={classes.webFooter}>
+    <div className={classes.desktopFooter}>
       <div className={classes.left}>
         <div className={classes.logo}>
           <img src={nowUOrange} alt="logo"/>
@@ -36,4 +36,4 @@ const WebFooter = () => {
   );
 };
 
-export default WebFooter;
+export default DesktopFooter;

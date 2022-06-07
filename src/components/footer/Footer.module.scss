@@ -30,7 +30,7 @@
     color: $grey;
   }
   
-  .webFooter {
+  .desktopFooter {
     display: flex;
     justify-content: space-between;
     @media (max-width: $medium) {

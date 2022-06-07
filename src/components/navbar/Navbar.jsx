@@ -3,8 +3,7 @@ import classNames from "classnames";
 import { Link } from "react-router-dom";
 import { nowUOrange } from "../../assets";
 import {
-  bottomNavLinks,
-  mobileNavLinks,
+  topNavLinks,
 } from "../../utils/constants";
 import NavLinkSection from "./navLinkSection/NavLinkSection";
 import NavDropdown from "./navDropdown/NavDropdown";
@@ -26,12 +25,12 @@ const Navbar = () => {
 
   return (
     <header className={classes.navContainer}>
-      <nav className={classes.bottomNavbar}>
+      <nav className={classes.navbar}>
         <Link to={"/"} className={classes.logoContainer}>
           <img className={classes.logo} src={nowUOrange} alt='logo' />
         </Link>
         <ul className={classes.linkContainer}>
-          <NavLinkSection navLinks={bottomNavLinks} />
+          <NavLinkSection navLinks={topNavLinks} />
         </ul>
         <div
           className={classes.navBurgerContainer}
@@ -48,7 +47,7 @@ const Navbar = () => {
         </div>
 
         <NavDropdown
-          navLinks={mobileNavLinks}
+          navLinks={topNavLinks}
           displayNavDropdown={displayNavDropdown}
           toggleDisplayNav={toggleDisplayNav}
         />

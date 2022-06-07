@@ -10,7 +10,7 @@
         box-sizing: border-box;
     }
     .topNavbar,
-    .bottomNavbar {
+    .navbar {
         height: 75px;
         padding: 10px;
         display: flex;
@@ -35,7 +35,7 @@
             display: none;
         }
     }
-    .bottomNavbar {
+    .navbar {
         background-color: white;
         position: relative;
 
@@ -50,9 +50,9 @@
             height: 100%;
             min-width: 250px;
 
-            @media (max-width: $tiny) {
+            @media (max-width: $medium) {
                 min-width: auto;
-                width: 100%;
+                width: 70%;
                 height: auto;
             }
         }

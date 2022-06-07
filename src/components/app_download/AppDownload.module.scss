@@ -54,19 +54,16 @@
   right: -30px;
   z-index: 0;
 }
-.downloadBtns2 {
+
+.appDownloadButtonContainer {
   display: flex;
-  flex-flow: wrap;
-  justify-content: center;
-  width: 50%;
-  z-index: 2;
-  @media screen and (max-width: $medium) {
-    width: 100%;
+  justify-content: flex-end;
+  @media (max-width: $medium) {
+    justify-content: center;
   }
   button {
-    width: 40%;
-    max-width: 170px;
-    margin: 5px;
+    width: 150px;
+    margin: 0 10px;
     @media screen and (max-width: $medium) {
       margin: 0;
       padding: 10px;
@@ -75,8 +72,4 @@
   img {
     max-width: 100%;
   }
-}
-.appDownloadButtonContainer {
-  display: flex;
-  justify-content: center;
 }

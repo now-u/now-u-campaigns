@@ -17,26 +17,11 @@ export const partnershipGuideURL =
 export const proposeCampaignUrl =
     "https://docs.google.com/forms/d/e/1FAIpQLSfPKOVlzOOV2Bsb1zcdECCuZfjHAlrX6ZZMuK1Kv8eqF85hIA/viewform";
 
-export const bottomNavLinks = [
-  { display: "Campaigns", path: "/campaigns" },
-  { display: "Now-u app", path: "/now-u-app" },
-  { display: "About us", path: "/aboutus" },
-  { display: "Get in touch", path: "/get-in-touch" },
-  { display: "Press", path: "/press" },
-  { display: "FAQ", path: "/faqs" },
-  { display: "Blog", path: "/blog" },
-  { display: "Newsletter", modal: "NewsletterSignupModal" },
-];
-
-export const mobileNavLinks = [
-  { display: "Campaigns", path: "/campaigns" },
-  { display: "Now-u app", path: "/now-u-app" },
+export const topNavLinks = [
+  { display: "Causes", path: "/causes" },
   { display: "About us", path: "/aboutus" },
   { display: "Blog", path: "/blog" },
   { display: "Get in touch", path: "/get-in-touch" },
-  { display: "Press", path: "/press" },
-  { display: "FAQ", path: "/faqs" },
-  { display: "Newsletter", modal: "NewsletterSignupModal" },
 ];
 
 export const Months = [
@@ -54,18 +39,13 @@ export const Months = [
   "December",
 ];
 
-export const footerLinksLeft = [
-  {id: 1, name: "Campaigns", href: "/campaigns"},
-  {id: 2, name: "Now-u app", href: "/now-u-app"},
-  {id: 3, name: "About us", href: "/aboutus"},
+export const footerLinks = [
+  {id: 1, name: "Causes", href: "/causes"},
+  {id: 2, name: "About us", href: "/aboutus"},
+  {id: 3, name: "Blog", href: "/blog"},
   {id: 4, name: "Get in touch", href: "/get-in-touch"},
-  {id: 5, name: "Press", href: "/press"},
-];
-
-export const footerLinksRight = [
-  {id: 1, name: "FAQ", href: "/faqs"},
-  {id: 2, name: "Blog", href: "/blog"},
-  {id: 3, name: "Newsletter", href: "/"},
-  {id: 4, name: "Privacy Notice", href: privacyPolicyURL},
-  {id: 5, name: "Ts & Cs", href: termsAndConditionsURL},
+  {id: 5, name: "FAQs", href: "/faqs"},
+  {id: 6, name: "Press", href: "/press"},
+  {id: 7, name: "Privacy Policy", href: privacyPolicyURL, newtab: true},
+  {id: 8, name: "Terms and conditions", href: termsAndConditionsURL, newtab: true},
 ];

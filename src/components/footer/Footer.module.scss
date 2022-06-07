@@ -1,7 +1,7 @@
 @import '../../utils/variables';
 
 .footer {
-  background-color: #FFF8F1;
+  background-color: $bgColorFooter;
   padding: 40px 100px;
 
   @media (max-width: $medium) {

@@ -49,7 +49,7 @@ const Blog = ({ blog, sections }) => {
           {sections.map(section => {
             if(section.section_type === "image_section") {
               return (
-                <div className={classes.blogImageSection}>
+                <div className={classes.blogImageSection} key={section.id}>
                   <img 
                     key={section.id}
                     src={section.img_url}

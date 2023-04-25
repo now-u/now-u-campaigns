@@ -63,12 +63,13 @@ const Blog = ({ blog, sections }) => {
                   <Text type="p" className={classes.textSectionTitle}>
                     {section.title}
                   </Text>
-                  <ReactMarkdown 
+                  <ReactMarkdown
                     className={classes.textSectionContent}
-                    source={section.content} 
                     escapeHtml={false}
                     linkTarget='_blank'
-                  />
+                  >
+                    {section.content}
+                  </ReactMarkdown>
                 </div>
               );
             }
